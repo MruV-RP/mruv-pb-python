@@ -44,10 +44,10 @@ class MruVEstateServiceStub(object):
         request_serializer=estates_dot_estates__pb2.AddGateRequest.SerializeToString,
         response_deserializer=estates_dot_estates__pb2.AddGateResponse.FromString,
         )
-    self.DeleteGate = channel.unary_unary(
-        '/mruv.estates.MruVEstateService/DeleteGate',
-        request_serializer=estates_dot_estates__pb2.DeleteGateRequest.SerializeToString,
-        response_deserializer=estates_dot_estates__pb2.DeleteGateResponse.FromString,
+    self.RemoveGate = channel.unary_unary(
+        '/mruv.estates.MruVEstateService/RemoveGate',
+        request_serializer=estates_dot_estates__pb2.RemoveGateRequest.SerializeToString,
+        response_deserializer=estates_dot_estates__pb2.RemoveGateResponse.FromString,
         )
     self.GetEstateGates = channel.unary_unary(
         '/mruv.estates.MruVEstateService/GetEstateGates',
@@ -117,7 +117,7 @@ class MruVEstateServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def DeleteGate(self, request, context):
+  def RemoveGate(self, request, context):
     """Delete a gate from estate.
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -185,10 +185,10 @@ def add_MruVEstateServiceServicer_to_server(servicer, server):
           request_deserializer=estates_dot_estates__pb2.AddGateRequest.FromString,
           response_serializer=estates_dot_estates__pb2.AddGateResponse.SerializeToString,
       ),
-      'DeleteGate': grpc.unary_unary_rpc_method_handler(
-          servicer.DeleteGate,
-          request_deserializer=estates_dot_estates__pb2.DeleteGateRequest.FromString,
-          response_serializer=estates_dot_estates__pb2.DeleteGateResponse.SerializeToString,
+      'RemoveGate': grpc.unary_unary_rpc_method_handler(
+          servicer.RemoveGate,
+          request_deserializer=estates_dot_estates__pb2.RemoveGateRequest.FromString,
+          response_serializer=estates_dot_estates__pb2.RemoveGateResponse.SerializeToString,
       ),
       'GetEstateGates': grpc.unary_unary_rpc_method_handler(
           servicer.GetEstateGates,

@@ -14,6 +14,8 @@ _sym_db = _symbol_database.Default()
 
 
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from entrances import entrances_pb2 as entrances_dot_entrances__pb2
+from gates import gates_pb2 as gates_dot_gates__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -21,9 +23,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='mruv.estates',
   syntax='proto3',
   serialized_options=_b('Z%github.com/MruV-RP/mruv-pb-go/estates'),
-  serialized_pb=_b('\n\x15\x65states/estates.proto\x12\x0cmruv.estates\x1a\x1cgoogle/api/annotations.proto\"|\n\x06\x45state\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x11\n\tentrances\x18\x04 \x03(\r\x12\r\n\x05gates\x18\x05 \x03(\r\x12\r\n\x05rooms\x18\x06 \x03(\r\x12\x12\n\nproduct_id\x18\x07 \x01(\r\"8\n\x13\x43reateEstateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\"\n\x14\x43reateEstateResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1e\n\x10GetEstateRequest\x12\n\n\x02id\x18\x01 \x01(\r\"D\n\x13UpdateEstateRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\"\x16\n\x14UpdateEstateResponse\"!\n\x13\x44\x65leteEstateRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x16\n\x14\x44\x65leteEstateResponse\"0\n\x11GetEstatesRequest\x12\x0c\n\x04\x66rom\x18\x01 \x01(\r\x12\r\n\x05limit\x18\x02 \x01(\r\"\x14\n\x12GetEstatesResponse\"4\n\x0e\x41\x64\x64GateRequest\x12\x11\n\testate_id\x18\x01 \x01(\r\x12\x0f\n\x07gate_id\x18\x02 \x01(\r\"%\n\x0f\x41\x64\x64GateResponse\x12\x12\n\ngate_count\x18\x01 \x01(\r\"7\n\x11\x44\x65leteGateRequest\x12\x11\n\testate_id\x18\x01 \x01(\r\x12\x0f\n\x07gate_id\x18\x02 \x01(\r\"(\n\x12\x44\x65leteGateResponse\x12\x12\n\ngate_count\x18\x01 \x01(\r\"*\n\x15GetEstateGatesRequest\x12\x11\n\testate_id\x18\x01 \x01(\r\"?\n\x16GetEstateGatesResponse\x12%\n\x07\x65states\x18\x01 \x03(\x0b\x32\x14.mruv.estates.Estate\"<\n\x12\x41\x64\x64\x45ntranceRequest\x12\x11\n\testate_id\x18\x01 \x01(\r\x12\x13\n\x0b\x65ntrance_id\x18\x02 \x01(\r\"-\n\x13\x41\x64\x64\x45ntranceResponse\x12\x16\n\x0e\x65ntrance_count\x18\x01 \x01(\r\"?\n\x15RemoveEntranceRequest\x12\x11\n\testate_id\x18\x01 \x01(\r\x12\x13\n\x0b\x65ntrance_id\x18\x02 \x01(\r\"0\n\x16RemoveEntranceResponse\x12\x16\n\x0e\x65ntrance_count\x18\x01 \x01(\r\".\n\x19GetEstateEntrancesRequest\x12\x11\n\testate_id\x18\x01 \x01(\r\"\x1c\n\x1aGetEstateEntrancesResponse2\xc4\n\n\x11MruVEstateService\x12j\n\x0c\x43reateEstate\x12!.mruv.estates.CreateEstateRequest\x1a\".mruv.estates.CreateEstateResponse\"\x13\x82\xd3\xe4\x93\x02\r\"\x0b/v1/estates\x12[\n\tGetEstate\x12\x1e.mruv.estates.GetEstateRequest\x1a\x14.mruv.estates.Estate\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/estates/{id}\x12o\n\x0cUpdateEstate\x12!.mruv.estates.UpdateEstateRequest\x1a\".mruv.estates.UpdateEstateResponse\"\x18\x82\xd3\xe4\x93\x02\x12\x32\x10/v1/estates/{id}\x12o\n\x0c\x44\x65leteEstate\x12!.mruv.estates.DeleteEstateRequest\x1a\".mruv.estates.DeleteEstateResponse\"\x18\x82\xd3\xe4\x93\x02\x12*\x10/v1/estates/{id}\x12\x64\n\nGetEstates\x12\x1f.mruv.estates.GetEstatesRequest\x1a .mruv.estates.GetEstatesResponse\"\x13\x82\xd3\xe4\x93\x02\r\x12\x0b/v1/estates\x12m\n\x07\x41\x64\x64Gate\x12\x1c.mruv.estates.AddGateRequest\x1a\x1d.mruv.estates.AddGateResponse\"%\x82\xd3\xe4\x93\x02\x1f\"\x1d/v1/estates/{estate_id}/gates\x12\x80\x01\n\nDeleteGate\x12\x1f.mruv.estates.DeleteGateRequest\x1a .mruv.estates.DeleteGateResponse\"/\x82\xd3\xe4\x93\x02)*\'/v1/estates/{estate_id}/gates/{gate_id}\x12\x81\x01\n\x0eGetEstateGates\x12#.mruv.estates.GetEstateGatesRequest\x1a$.mruv.estates.GetEstateGatesResponse\"$\x82\xd3\xe4\x93\x02\x1e\x12\x1c/v1/estate/{estate_id}/gates\x12}\n\x0b\x41\x64\x64\x45ntrance\x12 .mruv.estates.AddEntranceRequest\x1a!.mruv.estates.AddEntranceResponse\")\x82\xd3\xe4\x93\x02#\"!/v1/estates/{estate_id}/entrances\x12\x94\x01\n\x0eRemoveEntrance\x12#.mruv.estates.RemoveEntranceRequest\x1a$.mruv.estates.RemoveEntranceResponse\"7\x82\xd3\xe4\x93\x02\x31*//v1/estates/{estate_id}/entrances/{entrance_id}\x12\x91\x01\n\x12GetEstateEntrances\x12\'.mruv.estates.GetEstateEntrancesRequest\x1a(.mruv.estates.GetEstateEntrancesResponse\"(\x82\xd3\xe4\x93\x02\"\x12 /v1/estate/{estate_id}/entrancesB\'Z%github.com/MruV-RP/mruv-pb-go/estatesb\x06proto3')
+  serialized_pb=_b('\n\x15\x65states/estates.proto\x12\x0cmruv.estates\x1a\x1cgoogle/api/annotations.proto\x1a\x19\x65ntrances/entrances.proto\x1a\x11gates/gates.proto\"|\n\x06\x45state\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x11\n\tentrances\x18\x04 \x03(\r\x12\r\n\x05gates\x18\x05 \x03(\r\x12\r\n\x05rooms\x18\x06 \x03(\r\x12\x12\n\nproduct_id\x18\x07 \x01(\r\"8\n\x13\x43reateEstateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\"\n\x14\x43reateEstateResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1e\n\x10GetEstateRequest\x12\n\n\x02id\x18\x01 \x01(\r\"D\n\x13UpdateEstateRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\"\x16\n\x14UpdateEstateResponse\"!\n\x13\x44\x65leteEstateRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x16\n\x14\x44\x65leteEstateResponse\"0\n\x11GetEstatesRequest\x12\x0c\n\x04\x66rom\x18\x01 \x01(\r\x12\r\n\x05limit\x18\x02 \x01(\r\";\n\x12GetEstatesResponse\x12%\n\x07\x65states\x18\x01 \x03(\x0b\x32\x14.mruv.estates.Estate\"4\n\x0e\x41\x64\x64GateRequest\x12\x11\n\testate_id\x18\x01 \x01(\r\x12\x0f\n\x07gate_id\x18\x02 \x01(\r\"\x11\n\x0f\x41\x64\x64GateResponse\"7\n\x11RemoveGateRequest\x12\x11\n\testate_id\x18\x01 \x01(\r\x12\x0f\n\x07gate_id\x18\x02 \x01(\r\"\x14\n\x12RemoveGateResponse\"*\n\x15GetEstateGatesRequest\x12\x11\n\testate_id\x18\x01 \x01(\r\"9\n\x16GetEstateGatesResponse\x12\x1f\n\x05gates\x18\x01 \x03(\x0b\x32\x10.mruv.gates.Gate\"<\n\x12\x41\x64\x64\x45ntranceRequest\x12\x11\n\testate_id\x18\x01 \x01(\r\x12\x13\n\x0b\x65ntrance_id\x18\x02 \x01(\r\"\x15\n\x13\x41\x64\x64\x45ntranceResponse\"?\n\x15RemoveEntranceRequest\x12\x11\n\testate_id\x18\x01 \x01(\r\x12\x13\n\x0b\x65ntrance_id\x18\x02 \x01(\r\"\x18\n\x16RemoveEntranceResponse\".\n\x19GetEstateEntrancesRequest\x12\x11\n\testate_id\x18\x01 \x01(\r\"I\n\x1aGetEstateEntrancesResponse\x12+\n\tentrances\x18\x01 \x03(\x0b\x32\x18.mruv.entrances.Entrance2\xc4\n\n\x11MruVEstateService\x12j\n\x0c\x43reateEstate\x12!.mruv.estates.CreateEstateRequest\x1a\".mruv.estates.CreateEstateResponse\"\x13\x82\xd3\xe4\x93\x02\r\"\x0b/v1/estates\x12[\n\tGetEstate\x12\x1e.mruv.estates.GetEstateRequest\x1a\x14.mruv.estates.Estate\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/estates/{id}\x12o\n\x0cUpdateEstate\x12!.mruv.estates.UpdateEstateRequest\x1a\".mruv.estates.UpdateEstateResponse\"\x18\x82\xd3\xe4\x93\x02\x12\x32\x10/v1/estates/{id}\x12o\n\x0c\x44\x65leteEstate\x12!.mruv.estates.DeleteEstateRequest\x1a\".mruv.estates.DeleteEstateResponse\"\x18\x82\xd3\xe4\x93\x02\x12*\x10/v1/estates/{id}\x12\x64\n\nGetEstates\x12\x1f.mruv.estates.GetEstatesRequest\x1a .mruv.estates.GetEstatesResponse\"\x13\x82\xd3\xe4\x93\x02\r\x12\x0b/v1/estates\x12m\n\x07\x41\x64\x64Gate\x12\x1c.mruv.estates.AddGateRequest\x1a\x1d.mruv.estates.AddGateResponse\"%\x82\xd3\xe4\x93\x02\x1f\"\x1d/v1/estates/{estate_id}/gates\x12\x80\x01\n\nRemoveGate\x12\x1f.mruv.estates.RemoveGateRequest\x1a .mruv.estates.RemoveGateResponse\"/\x82\xd3\xe4\x93\x02)*\'/v1/estates/{estate_id}/gates/{gate_id}\x12\x81\x01\n\x0eGetEstateGates\x12#.mruv.estates.GetEstateGatesRequest\x1a$.mruv.estates.GetEstateGatesResponse\"$\x82\xd3\xe4\x93\x02\x1e\x12\x1c/v1/estate/{estate_id}/gates\x12}\n\x0b\x41\x64\x64\x45ntrance\x12 .mruv.estates.AddEntranceRequest\x1a!.mruv.estates.AddEntranceResponse\")\x82\xd3\xe4\x93\x02#\"!/v1/estates/{estate_id}/entrances\x12\x94\x01\n\x0eRemoveEntrance\x12#.mruv.estates.RemoveEntranceRequest\x1a$.mruv.estates.RemoveEntranceResponse\"7\x82\xd3\xe4\x93\x02\x31*//v1/estates/{estate_id}/entrances/{entrance_id}\x12\x91\x01\n\x12GetEstateEntrances\x12\'.mruv.estates.GetEstateEntrancesRequest\x1a(.mruv.estates.GetEstateEntrancesResponse\"(\x82\xd3\xe4\x93\x02\"\x12 /v1/estate/{estate_id}/entrancesB\'Z%github.com/MruV-RP/mruv-pb-go/estatesb\x06proto3')
   ,
-  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,entrances_dot_entrances__pb2.DESCRIPTOR,gates_dot_gates__pb2.DESCRIPTOR,])
 
 
 
@@ -96,8 +98,8 @@ _ESTATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=69,
-  serialized_end=193,
+  serialized_start=115,
+  serialized_end=239,
 )
 
 
@@ -134,8 +136,8 @@ _CREATEESTATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=195,
-  serialized_end=251,
+  serialized_start=241,
+  serialized_end=297,
 )
 
 
@@ -165,8 +167,8 @@ _CREATEESTATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=253,
-  serialized_end=287,
+  serialized_start=299,
+  serialized_end=333,
 )
 
 
@@ -196,8 +198,8 @@ _GETESTATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=289,
-  serialized_end=319,
+  serialized_start=335,
+  serialized_end=365,
 )
 
 
@@ -241,8 +243,8 @@ _UPDATEESTATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=321,
-  serialized_end=389,
+  serialized_start=367,
+  serialized_end=435,
 )
 
 
@@ -265,8 +267,8 @@ _UPDATEESTATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=391,
-  serialized_end=413,
+  serialized_start=437,
+  serialized_end=459,
 )
 
 
@@ -296,8 +298,8 @@ _DELETEESTATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=415,
-  serialized_end=448,
+  serialized_start=461,
+  serialized_end=494,
 )
 
 
@@ -320,8 +322,8 @@ _DELETEESTATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=450,
-  serialized_end=472,
+  serialized_start=496,
+  serialized_end=518,
 )
 
 
@@ -358,8 +360,8 @@ _GETESTATESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=474,
-  serialized_end=522,
+  serialized_start=520,
+  serialized_end=568,
 )
 
 
@@ -370,6 +372,13 @@ _GETESTATESRESPONSE = _descriptor.Descriptor(
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='estates', full_name='mruv.estates.GetEstatesResponse.estates', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -382,8 +391,8 @@ _GETESTATESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=524,
-  serialized_end=544,
+  serialized_start=570,
+  serialized_end=629,
 )
 
 
@@ -420,8 +429,8 @@ _ADDGATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=546,
-  serialized_end=598,
+  serialized_start=631,
+  serialized_end=683,
 )
 
 
@@ -432,13 +441,6 @@ _ADDGATERESPONSE = _descriptor.Descriptor(
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
-    _descriptor.FieldDescriptor(
-      name='gate_count', full_name='mruv.estates.AddGateResponse.gate_count', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -451,27 +453,27 @@ _ADDGATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=600,
-  serialized_end=637,
+  serialized_start=685,
+  serialized_end=702,
 )
 
 
-_DELETEGATEREQUEST = _descriptor.Descriptor(
-  name='DeleteGateRequest',
-  full_name='mruv.estates.DeleteGateRequest',
+_REMOVEGATEREQUEST = _descriptor.Descriptor(
+  name='RemoveGateRequest',
+  full_name='mruv.estates.RemoveGateRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='estate_id', full_name='mruv.estates.DeleteGateRequest.estate_id', index=0,
+      name='estate_id', full_name='mruv.estates.RemoveGateRequest.estate_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='gate_id', full_name='mruv.estates.DeleteGateRequest.gate_id', index=1,
+      name='gate_id', full_name='mruv.estates.RemoveGateRequest.gate_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -489,25 +491,18 @@ _DELETEGATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=639,
-  serialized_end=694,
+  serialized_start=704,
+  serialized_end=759,
 )
 
 
-_DELETEGATERESPONSE = _descriptor.Descriptor(
-  name='DeleteGateResponse',
-  full_name='mruv.estates.DeleteGateResponse',
+_REMOVEGATERESPONSE = _descriptor.Descriptor(
+  name='RemoveGateResponse',
+  full_name='mruv.estates.RemoveGateResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
-    _descriptor.FieldDescriptor(
-      name='gate_count', full_name='mruv.estates.DeleteGateResponse.gate_count', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -520,8 +515,8 @@ _DELETEGATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=696,
-  serialized_end=736,
+  serialized_start=761,
+  serialized_end=781,
 )
 
 
@@ -551,8 +546,8 @@ _GETESTATEGATESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=738,
-  serialized_end=780,
+  serialized_start=783,
+  serialized_end=825,
 )
 
 
@@ -564,7 +559,7 @@ _GETESTATEGATESRESPONSE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='estates', full_name='mruv.estates.GetEstateGatesResponse.estates', index=0,
+      name='gates', full_name='mruv.estates.GetEstateGatesResponse.gates', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -582,8 +577,8 @@ _GETESTATEGATESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=782,
-  serialized_end=845,
+  serialized_start=827,
+  serialized_end=884,
 )
 
 
@@ -620,8 +615,8 @@ _ADDENTRANCEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=847,
-  serialized_end=907,
+  serialized_start=886,
+  serialized_end=946,
 )
 
 
@@ -632,13 +627,6 @@ _ADDENTRANCERESPONSE = _descriptor.Descriptor(
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
-    _descriptor.FieldDescriptor(
-      name='entrance_count', full_name='mruv.estates.AddEntranceResponse.entrance_count', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -651,8 +639,8 @@ _ADDENTRANCERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=909,
-  serialized_end=954,
+  serialized_start=948,
+  serialized_end=969,
 )
 
 
@@ -689,8 +677,8 @@ _REMOVEENTRANCEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=956,
-  serialized_end=1019,
+  serialized_start=971,
+  serialized_end=1034,
 )
 
 
@@ -701,13 +689,6 @@ _REMOVEENTRANCERESPONSE = _descriptor.Descriptor(
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
-    _descriptor.FieldDescriptor(
-      name='entrance_count', full_name='mruv.estates.RemoveEntranceResponse.entrance_count', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -720,8 +701,8 @@ _REMOVEENTRANCERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1021,
-  serialized_end=1069,
+  serialized_start=1036,
+  serialized_end=1060,
 )
 
 
@@ -751,8 +732,8 @@ _GETESTATEENTRANCESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1071,
-  serialized_end=1117,
+  serialized_start=1062,
+  serialized_end=1108,
 )
 
 
@@ -763,6 +744,13 @@ _GETESTATEENTRANCESRESPONSE = _descriptor.Descriptor(
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='entrances', full_name='mruv.estates.GetEstateEntrancesResponse.entrances', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -775,11 +763,13 @@ _GETESTATEENTRANCESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1119,
-  serialized_end=1147,
+  serialized_start=1110,
+  serialized_end=1183,
 )
 
-_GETESTATEGATESRESPONSE.fields_by_name['estates'].message_type = _ESTATE
+_GETESTATESRESPONSE.fields_by_name['estates'].message_type = _ESTATE
+_GETESTATEGATESRESPONSE.fields_by_name['gates'].message_type = gates_dot_gates__pb2._GATE
+_GETESTATEENTRANCESRESPONSE.fields_by_name['entrances'].message_type = entrances_dot_entrances__pb2._ENTRANCE
 DESCRIPTOR.message_types_by_name['Estate'] = _ESTATE
 DESCRIPTOR.message_types_by_name['CreateEstateRequest'] = _CREATEESTATEREQUEST
 DESCRIPTOR.message_types_by_name['CreateEstateResponse'] = _CREATEESTATERESPONSE
@@ -792,8 +782,8 @@ DESCRIPTOR.message_types_by_name['GetEstatesRequest'] = _GETESTATESREQUEST
 DESCRIPTOR.message_types_by_name['GetEstatesResponse'] = _GETESTATESRESPONSE
 DESCRIPTOR.message_types_by_name['AddGateRequest'] = _ADDGATEREQUEST
 DESCRIPTOR.message_types_by_name['AddGateResponse'] = _ADDGATERESPONSE
-DESCRIPTOR.message_types_by_name['DeleteGateRequest'] = _DELETEGATEREQUEST
-DESCRIPTOR.message_types_by_name['DeleteGateResponse'] = _DELETEGATERESPONSE
+DESCRIPTOR.message_types_by_name['RemoveGateRequest'] = _REMOVEGATEREQUEST
+DESCRIPTOR.message_types_by_name['RemoveGateResponse'] = _REMOVEGATERESPONSE
 DESCRIPTOR.message_types_by_name['GetEstateGatesRequest'] = _GETESTATEGATESREQUEST
 DESCRIPTOR.message_types_by_name['GetEstateGatesResponse'] = _GETESTATEGATESRESPONSE
 DESCRIPTOR.message_types_by_name['AddEntranceRequest'] = _ADDENTRANCEREQUEST
@@ -888,19 +878,19 @@ AddGateResponse = _reflection.GeneratedProtocolMessageType('AddGateResponse', (_
   })
 _sym_db.RegisterMessage(AddGateResponse)
 
-DeleteGateRequest = _reflection.GeneratedProtocolMessageType('DeleteGateRequest', (_message.Message,), {
-  'DESCRIPTOR' : _DELETEGATEREQUEST,
+RemoveGateRequest = _reflection.GeneratedProtocolMessageType('RemoveGateRequest', (_message.Message,), {
+  'DESCRIPTOR' : _REMOVEGATEREQUEST,
   '__module__' : 'estates.estates_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.estates.DeleteGateRequest)
+  # @@protoc_insertion_point(class_scope:mruv.estates.RemoveGateRequest)
   })
-_sym_db.RegisterMessage(DeleteGateRequest)
+_sym_db.RegisterMessage(RemoveGateRequest)
 
-DeleteGateResponse = _reflection.GeneratedProtocolMessageType('DeleteGateResponse', (_message.Message,), {
-  'DESCRIPTOR' : _DELETEGATERESPONSE,
+RemoveGateResponse = _reflection.GeneratedProtocolMessageType('RemoveGateResponse', (_message.Message,), {
+  'DESCRIPTOR' : _REMOVEGATERESPONSE,
   '__module__' : 'estates.estates_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.estates.DeleteGateResponse)
+  # @@protoc_insertion_point(class_scope:mruv.estates.RemoveGateResponse)
   })
-_sym_db.RegisterMessage(DeleteGateResponse)
+_sym_db.RegisterMessage(RemoveGateResponse)
 
 GetEstateGatesRequest = _reflection.GeneratedProtocolMessageType('GetEstateGatesRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETESTATEGATESREQUEST,
@@ -967,8 +957,8 @@ _MRUVESTATESERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1150,
-  serialized_end=2498,
+  serialized_start=1186,
+  serialized_end=2534,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateEstate',
@@ -1025,12 +1015,12 @@ _MRUVESTATESERVICE = _descriptor.ServiceDescriptor(
     serialized_options=_b('\202\323\344\223\002\037\"\035/v1/estates/{estate_id}/gates'),
   ),
   _descriptor.MethodDescriptor(
-    name='DeleteGate',
-    full_name='mruv.estates.MruVEstateService.DeleteGate',
+    name='RemoveGate',
+    full_name='mruv.estates.MruVEstateService.RemoveGate',
     index=6,
     containing_service=None,
-    input_type=_DELETEGATEREQUEST,
-    output_type=_DELETEGATERESPONSE,
+    input_type=_REMOVEGATEREQUEST,
+    output_type=_REMOVEGATERESPONSE,
     serialized_options=_b('\202\323\344\223\002)*\'/v1/estates/{estate_id}/gates/{gate_id}'),
   ),
   _descriptor.MethodDescriptor(
