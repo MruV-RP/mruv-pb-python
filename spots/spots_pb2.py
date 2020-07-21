@@ -21,78 +21,78 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='mruv.spots',
   syntax='proto3',
   serialized_options=_b('Z#github.com/MruV-RP/mruv-pb-go/spots'),
-  serialized_pb=_b('\n\x11spots/spots.proto\x12\nmruv.spots\x1a\x1cgoogle/api/annotations.proto\"\x8a\x01\n\x11\x43reateSpotRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x0c\n\x04icon\x18\x03 \x01(\x05\x12\x0e\n\x06marker\x18\x04 \x01(\x05\x12\t\n\x01x\x18\x05 \x01(\x02\x12\t\n\x01y\x18\x06 \x01(\x02\x12\t\n\x01z\x18\x07 \x01(\x02\x12\n\n\x02vw\x18\x08 \x01(\x05\x12\x0b\n\x03int\x18\t \x01(\x05\" \n\x12\x43reateSpotResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1c\n\x0eGetSpotRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x88\x01\n\x0fGetSpotResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x0c\n\x04icon\x18\x03 \x01(\x05\x12\x0e\n\x06marker\x18\x04 \x01(\x05\x12\t\n\x01x\x18\x05 \x01(\x02\x12\t\n\x01y\x18\x06 \x01(\x02\x12\t\n\x01z\x18\x07 \x01(\x02\x12\n\n\x02vw\x18\x08 \x01(\x05\x12\x0b\n\x03int\x18\t \x01(\x05\"\x96\x01\n\x11UpdateSpotRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0f\n\x07message\x18\x03 \x01(\t\x12\x0c\n\x04icon\x18\x04 \x01(\x05\x12\x0e\n\x06marker\x18\x05 \x01(\x05\x12\t\n\x01x\x18\x06 \x01(\x02\x12\t\n\x01y\x18\x07 \x01(\x02\x12\t\n\x01z\x18\x08 \x01(\x02\x12\n\n\x02vw\x18\t \x01(\x05\x12\x0b\n\x03int\x18\n \x01(\x05\"\x14\n\x12UpdateSpotResponse\"\x1f\n\x11\x44\x65leteSpotRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x14\n\x12\x44\x65leteSpotResponse2\x98\x03\n\x10MruVSpotsService\x12^\n\nCreateSpot\x12\x1d.mruv.spots.CreateSpotRequest\x1a\x1e.mruv.spots.CreateSpotResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\"\t/v1/spots\x12Z\n\x07GetSpot\x12\x1a.mruv.spots.GetSpotRequest\x1a\x1b.mruv.spots.GetSpotResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/spots/{id}\x12\x63\n\nUpdateSpot\x12\x1d.mruv.spots.UpdateSpotRequest\x1a\x1e.mruv.spots.UpdateSpotResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x32\x0e/v1/spots/{id}\x12\x63\n\nDeleteSpot\x12\x1d.mruv.spots.DeleteSpotRequest\x1a\x1e.mruv.spots.DeleteSpotResponse\"\x16\x82\xd3\xe4\x93\x02\x10*\x0e/v1/spots/{id}B%Z#github.com/MruV-RP/mruv-pb-go/spotsb\x06proto3')
+  serialized_pb=_b('\n\x11spots/spots.proto\x12\nmruv.spots\x1a\x1cgoogle/api/annotations.proto\"}\n\x04Spot\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x0c\n\x04icon\x18\x03 \x01(\x05\x12\x0e\n\x06marker\x18\x04 \x01(\x05\x12\t\n\x01x\x18\x05 \x01(\x02\x12\t\n\x01y\x18\x06 \x01(\x02\x12\t\n\x01z\x18\x07 \x01(\x02\x12\n\n\x02vw\x18\x08 \x01(\x05\x12\x0b\n\x03int\x18\t \x01(\x05\"3\n\x11\x43reateSpotRequest\x12\x1e\n\x04spot\x18\x01 \x01(\x0b\x32\x10.mruv.spots.Spot\" \n\x12\x43reateSpotResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1c\n\x0eGetSpotRequest\x12\n\n\x02id\x18\x01 \x01(\r\"1\n\x0fGetSpotResponse\x12\x1e\n\x04spot\x18\x01 \x01(\x0b\x32\x10.mruv.spots.Spot\"?\n\x11UpdateSpotRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x1e\n\x04spot\x18\x02 \x01(\x0b\x32\x10.mruv.spots.Spot\"\x14\n\x12UpdateSpotResponse\"\x1f\n\x11\x44\x65leteSpotRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x14\n\x12\x44\x65leteSpotResponse2\x98\x03\n\x10MruVSpotsService\x12^\n\nCreateSpot\x12\x1d.mruv.spots.CreateSpotRequest\x1a\x1e.mruv.spots.CreateSpotResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\"\t/v1/spots\x12Z\n\x07GetSpot\x12\x1a.mruv.spots.GetSpotRequest\x1a\x1b.mruv.spots.GetSpotResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/spots/{id}\x12\x63\n\nUpdateSpot\x12\x1d.mruv.spots.UpdateSpotRequest\x1a\x1e.mruv.spots.UpdateSpotResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x32\x0e/v1/spots/{id}\x12\x63\n\nDeleteSpot\x12\x1d.mruv.spots.DeleteSpotRequest\x1a\x1e.mruv.spots.DeleteSpotResponse\"\x16\x82\xd3\xe4\x93\x02\x10*\x0e/v1/spots/{id}B%Z#github.com/MruV-RP/mruv-pb-go/spotsb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
 
 
 
-_CREATESPOTREQUEST = _descriptor.Descriptor(
-  name='CreateSpotRequest',
-  full_name='mruv.spots.CreateSpotRequest',
+_SPOT = _descriptor.Descriptor(
+  name='Spot',
+  full_name='mruv.spots.Spot',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='mruv.spots.CreateSpotRequest.name', index=0,
+      name='name', full_name='mruv.spots.Spot.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='message', full_name='mruv.spots.CreateSpotRequest.message', index=1,
+      name='message', full_name='mruv.spots.Spot.message', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='icon', full_name='mruv.spots.CreateSpotRequest.icon', index=2,
+      name='icon', full_name='mruv.spots.Spot.icon', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='marker', full_name='mruv.spots.CreateSpotRequest.marker', index=3,
+      name='marker', full_name='mruv.spots.Spot.marker', index=3,
       number=4, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='x', full_name='mruv.spots.CreateSpotRequest.x', index=4,
+      name='x', full_name='mruv.spots.Spot.x', index=4,
       number=5, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='y', full_name='mruv.spots.CreateSpotRequest.y', index=5,
+      name='y', full_name='mruv.spots.Spot.y', index=5,
       number=6, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='z', full_name='mruv.spots.CreateSpotRequest.z', index=6,
+      name='z', full_name='mruv.spots.Spot.z', index=6,
       number=7, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='vw', full_name='mruv.spots.CreateSpotRequest.vw', index=7,
+      name='vw', full_name='mruv.spots.Spot.vw', index=7,
       number=8, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='int', full_name='mruv.spots.CreateSpotRequest.int', index=8,
+      name='int', full_name='mruv.spots.Spot.int', index=8,
       number=9, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -110,8 +110,39 @@ _CREATESPOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=64,
-  serialized_end=202,
+  serialized_start=63,
+  serialized_end=188,
+)
+
+
+_CREATESPOTREQUEST = _descriptor.Descriptor(
+  name='CreateSpotRequest',
+  full_name='mruv.spots.CreateSpotRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='spot', full_name='mruv.spots.CreateSpotRequest.spot', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=190,
+  serialized_end=241,
 )
 
 
@@ -141,8 +172,8 @@ _CREATESPOTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=204,
-  serialized_end=236,
+  serialized_start=243,
+  serialized_end=275,
 )
 
 
@@ -172,8 +203,8 @@ _GETSPOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=238,
-  serialized_end=266,
+  serialized_start=277,
+  serialized_end=305,
 )
 
 
@@ -185,65 +216,9 @@ _GETSPOTRESPONSE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='mruv.spots.GetSpotResponse.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='message', full_name='mruv.spots.GetSpotResponse.message', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='icon', full_name='mruv.spots.GetSpotResponse.icon', index=2,
-      number=3, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='marker', full_name='mruv.spots.GetSpotResponse.marker', index=3,
-      number=4, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='x', full_name='mruv.spots.GetSpotResponse.x', index=4,
-      number=5, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='y', full_name='mruv.spots.GetSpotResponse.y', index=5,
-      number=6, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='z', full_name='mruv.spots.GetSpotResponse.z', index=6,
-      number=7, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='vw', full_name='mruv.spots.GetSpotResponse.vw', index=7,
-      number=8, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='int', full_name='mruv.spots.GetSpotResponse.int', index=8,
-      number=9, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      name='spot', full_name='mruv.spots.GetSpotResponse.spot', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -259,8 +234,8 @@ _GETSPOTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=269,
-  serialized_end=405,
+  serialized_start=307,
+  serialized_end=356,
 )
 
 
@@ -279,65 +254,9 @@ _UPDATESPOTREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='name', full_name='mruv.spots.UpdateSpotRequest.name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='message', full_name='mruv.spots.UpdateSpotRequest.message', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='icon', full_name='mruv.spots.UpdateSpotRequest.icon', index=3,
-      number=4, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='marker', full_name='mruv.spots.UpdateSpotRequest.marker', index=4,
-      number=5, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='x', full_name='mruv.spots.UpdateSpotRequest.x', index=5,
-      number=6, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='y', full_name='mruv.spots.UpdateSpotRequest.y', index=6,
-      number=7, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='z', full_name='mruv.spots.UpdateSpotRequest.z', index=7,
-      number=8, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='vw', full_name='mruv.spots.UpdateSpotRequest.vw', index=8,
-      number=9, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='int', full_name='mruv.spots.UpdateSpotRequest.int', index=9,
-      number=10, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      name='spot', full_name='mruv.spots.UpdateSpotRequest.spot', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -353,8 +272,8 @@ _UPDATESPOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=408,
-  serialized_end=558,
+  serialized_start=358,
+  serialized_end=421,
 )
 
 
@@ -377,8 +296,8 @@ _UPDATESPOTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=560,
-  serialized_end=580,
+  serialized_start=423,
+  serialized_end=443,
 )
 
 
@@ -408,8 +327,8 @@ _DELETESPOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=582,
-  serialized_end=613,
+  serialized_start=445,
+  serialized_end=476,
 )
 
 
@@ -432,10 +351,14 @@ _DELETESPOTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=615,
-  serialized_end=635,
+  serialized_start=478,
+  serialized_end=498,
 )
 
+_CREATESPOTREQUEST.fields_by_name['spot'].message_type = _SPOT
+_GETSPOTRESPONSE.fields_by_name['spot'].message_type = _SPOT
+_UPDATESPOTREQUEST.fields_by_name['spot'].message_type = _SPOT
+DESCRIPTOR.message_types_by_name['Spot'] = _SPOT
 DESCRIPTOR.message_types_by_name['CreateSpotRequest'] = _CREATESPOTREQUEST
 DESCRIPTOR.message_types_by_name['CreateSpotResponse'] = _CREATESPOTRESPONSE
 DESCRIPTOR.message_types_by_name['GetSpotRequest'] = _GETSPOTREQUEST
@@ -445,6 +368,13 @@ DESCRIPTOR.message_types_by_name['UpdateSpotResponse'] = _UPDATESPOTRESPONSE
 DESCRIPTOR.message_types_by_name['DeleteSpotRequest'] = _DELETESPOTREQUEST
 DESCRIPTOR.message_types_by_name['DeleteSpotResponse'] = _DELETESPOTRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+Spot = _reflection.GeneratedProtocolMessageType('Spot', (_message.Message,), {
+  'DESCRIPTOR' : _SPOT,
+  '__module__' : 'spots.spots_pb2'
+  # @@protoc_insertion_point(class_scope:mruv.spots.Spot)
+  })
+_sym_db.RegisterMessage(Spot)
 
 CreateSpotRequest = _reflection.GeneratedProtocolMessageType('CreateSpotRequest', (_message.Message,), {
   'DESCRIPTOR' : _CREATESPOTREQUEST,
@@ -511,8 +441,8 @@ _MRUVSPOTSSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=638,
-  serialized_end=1046,
+  serialized_start=501,
+  serialized_end=909,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateSpot',
