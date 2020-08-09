@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='mruv.objects',
   syntax='proto3',
   serialized_options=_b('Z%github.com/MruV-RP/mruv-pb-go/objects'),
-  serialized_pb=_b('\n\x15objects/movable.proto\x12\x0cmruv.objects\x1a\x1cgoogle/api/annotations.proto\x1a\x15objects/objects.proto\"Z\n\x05State\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\t\n\x01x\x18\x02 \x01(\x02\x12\t\n\x01y\x18\x03 \x01(\x02\x12\t\n\x01z\x18\x04 \x01(\x02\x12\n\n\x02rx\x18\x05 \x01(\x02\x12\n\n\x02ry\x18\x06 \x01(\x02\x12\n\n\x02rz\x18\x07 \x01(\x02\"Z\n\rMovableObject\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\x12#\n\x06states\x18\x02 \x03(\x0b\x32\x13.mruv.objects.State\"g\n\x1a\x43reateMovableObjectRequest\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\x12#\n\x06states\x18\x02 \x03(\x0b\x32\x13.mruv.objects.State\")\n\x1b\x43reateMovableObjectResponse\x12\n\n\x02id\x18\x01 \x01(\r\"%\n\x17GetMovableObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x9b\x01\n\x18GetMovableObjectResponse\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\x12#\n\x06states\x18\x02 \x03(\x0b\x32\x13.mruv.objects.State\x12\x18\n\x10\x63urrent_state_id\x18\x03 \x01(\r\x12\x1a\n\x12\x63urrent_state_name\x18\x04 \x01(\t\"`\n\x1aUpdateMovableObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x11\n\tobject_id\x18\x02 \x01(\r\x12#\n\x06states\x18\x03 \x03(\x0b\x32\x13.mruv.objects.State\"\x1d\n\x1bUpdateMovableObjectResponse\"(\n\x1a\x44\x65leteMovableObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x1d\n\x1b\x44\x65leteMovableObjectResponse\"\"\n\x11MoveObjectRequest\x12\r\n\x05state\x18\x01 \x01(\r\"\x14\n\x12MoveObjectResponse\"#\n\x15MoveObjectNextRequest\x12\n\n\x02id\x18\x01 \x01(\r\">\n\x16MoveObjectNextResponse\x12\x10\n\x08state_id\x18\x01 \x01(\r\x12\x12\n\nstate_name\x18\x02 \x01(\t\"\'\n\x19MoveObjectPreviousRequest\x12\n\n\x02id\x18\x01 \x01(\r\"B\n\x1aMoveObjectPreviousResponse\x12\x10\n\x08state_id\x18\x01 \x01(\r\x12\x12\n\nstate_name\x18\x02 \x01(\t2\xc2\x07\n\x19MruVMovableObjectsService\x12\x86\x01\n\x13\x43reateMovableObject\x12(.mruv.objects.CreateMovableObjectRequest\x1a).mruv.objects.CreateMovableObjectResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\"\x12/v1/movableObjects\x12}\n\x10GetMovableObject\x12%.mruv.objects.GetMovableObjectRequest\x1a&.mruv.objects.GetMovableObjectResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x12\x12/v1/movableObjects\x12\x86\x01\n\x13UpdateMovableObject\x12(.mruv.objects.UpdateMovableObjectRequest\x1a).mruv.objects.UpdateMovableObjectResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x32\x12/v1/movableObjects\x12\x86\x01\n\x13\x44\x65leteMovableObject\x12(.mruv.objects.DeleteMovableObjectRequest\x1a).mruv.objects.DeleteMovableObjectResponse\"\x1a\x82\xd3\xe4\x93\x02\x14*\x12/v1/movableObjects\x12q\n\nMoveObject\x12\x1f.mruv.objects.MoveObjectRequest\x1a .mruv.objects.MoveObjectResponse\" \x82\xd3\xe4\x93\x02\x1a\"\x18/v1/movableObjects/moves\x12\x82\x01\n\x0eMoveObjectNext\x12#.mruv.objects.MoveObjectNextRequest\x1a$.mruv.objects.MoveObjectNextResponse\"%\x82\xd3\xe4\x93\x02\x1f\"\x1d/v1/movableObjects/moves/next\x12\x92\x01\n\x12MoveObjectPrevious\x12\'.mruv.objects.MoveObjectPreviousRequest\x1a(.mruv.objects.MoveObjectPreviousResponse\")\x82\xd3\xe4\x93\x02#\"!/v1/movableObjects/moves/previousB\'Z%github.com/MruV-RP/mruv-pb-go/objectsb\x06proto3')
+  serialized_pb=_b('\n\x15objects/movable.proto\x12\x0cmruv.objects\x1a\x1cgoogle/api/annotations.proto\x1a\x15objects/objects.proto\"t\n\x05State\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\t\n\x01x\x18\x02 \x01(\x02\x12\t\n\x01y\x18\x03 \x01(\x02\x12\t\n\x01z\x18\x04 \x01(\x02\x12\n\n\x02rx\x18\x05 \x01(\x02\x12\n\n\x02ry\x18\x06 \x01(\x02\x12\n\n\x02rz\x18\x07 \x01(\x02\x12\x18\n\x10transition_speed\x18\x08 \x01(\x02\"Z\n\rMovableObject\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\x12#\n\x06states\x18\x02 \x03(\x0b\x32\x13.mruv.objects.State\"g\n\x1a\x43reateMovableObjectRequest\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\x12#\n\x06states\x18\x02 \x03(\x0b\x32\x13.mruv.objects.State\")\n\x1b\x43reateMovableObjectResponse\x12\n\n\x02id\x18\x01 \x01(\r\"%\n\x17GetMovableObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x9b\x01\n\x18GetMovableObjectResponse\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\x12#\n\x06states\x18\x02 \x03(\x0b\x32\x13.mruv.objects.State\x12\x18\n\x10\x63urrent_state_id\x18\x03 \x01(\r\x12\x1a\n\x12\x63urrent_state_name\x18\x04 \x01(\t\"`\n\x1aUpdateMovableObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x11\n\tobject_id\x18\x02 \x01(\r\x12#\n\x06states\x18\x03 \x03(\x0b\x32\x13.mruv.objects.State\"\x1d\n\x1bUpdateMovableObjectResponse\"(\n\x1a\x44\x65leteMovableObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x1d\n\x1b\x44\x65leteMovableObjectResponse\"\"\n\x11MoveObjectRequest\x12\r\n\x05state\x18\x01 \x01(\r\"\x14\n\x12MoveObjectResponse\"#\n\x15MoveObjectNextRequest\x12\n\n\x02id\x18\x01 \x01(\r\">\n\x16MoveObjectNextResponse\x12\x10\n\x08state_id\x18\x01 \x01(\r\x12\x12\n\nstate_name\x18\x02 \x01(\t\"\'\n\x19MoveObjectPreviousRequest\x12\n\n\x02id\x18\x01 \x01(\r\"B\n\x1aMoveObjectPreviousResponse\x12\x10\n\x08state_id\x18\x01 \x01(\r\x12\x12\n\nstate_name\x18\x02 \x01(\t2\xc2\x07\n\x19MruVMovableObjectsService\x12\x86\x01\n\x13\x43reateMovableObject\x12(.mruv.objects.CreateMovableObjectRequest\x1a).mruv.objects.CreateMovableObjectResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\"\x12/v1/movableObjects\x12}\n\x10GetMovableObject\x12%.mruv.objects.GetMovableObjectRequest\x1a&.mruv.objects.GetMovableObjectResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x12\x12/v1/movableObjects\x12\x86\x01\n\x13UpdateMovableObject\x12(.mruv.objects.UpdateMovableObjectRequest\x1a).mruv.objects.UpdateMovableObjectResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x32\x12/v1/movableObjects\x12\x86\x01\n\x13\x44\x65leteMovableObject\x12(.mruv.objects.DeleteMovableObjectRequest\x1a).mruv.objects.DeleteMovableObjectResponse\"\x1a\x82\xd3\xe4\x93\x02\x14*\x12/v1/movableObjects\x12q\n\nMoveObject\x12\x1f.mruv.objects.MoveObjectRequest\x1a .mruv.objects.MoveObjectResponse\" \x82\xd3\xe4\x93\x02\x1a\"\x18/v1/movableObjects/moves\x12\x82\x01\n\x0eMoveObjectNext\x12#.mruv.objects.MoveObjectNextRequest\x1a$.mruv.objects.MoveObjectNextResponse\"%\x82\xd3\xe4\x93\x02\x1f\"\x1d/v1/movableObjects/moves/next\x12\x92\x01\n\x12MoveObjectPrevious\x12\'.mruv.objects.MoveObjectPreviousRequest\x1a(.mruv.objects.MoveObjectPreviousResponse\")\x82\xd3\xe4\x93\x02#\"!/v1/movableObjects/moves/previousB\'Z%github.com/MruV-RP/mruv-pb-go/objectsb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,objects_dot_objects__pb2.DESCRIPTOR,])
 
@@ -85,6 +85,13 @@ _STATE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='transition_speed', full_name='mruv.objects.State.transition_speed', index=7,
+      number=8, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -98,7 +105,7 @@ _STATE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=92,
-  serialized_end=182,
+  serialized_end=208,
 )
 
 
@@ -135,8 +142,8 @@ _MOVABLEOBJECT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=184,
-  serialized_end=274,
+  serialized_start=210,
+  serialized_end=300,
 )
 
 
@@ -173,8 +180,8 @@ _CREATEMOVABLEOBJECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=276,
-  serialized_end=379,
+  serialized_start=302,
+  serialized_end=405,
 )
 
 
@@ -204,8 +211,8 @@ _CREATEMOVABLEOBJECTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=381,
-  serialized_end=422,
+  serialized_start=407,
+  serialized_end=448,
 )
 
 
@@ -235,8 +242,8 @@ _GETMOVABLEOBJECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=424,
-  serialized_end=461,
+  serialized_start=450,
+  serialized_end=487,
 )
 
 
@@ -287,8 +294,8 @@ _GETMOVABLEOBJECTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=464,
-  serialized_end=619,
+  serialized_start=490,
+  serialized_end=645,
 )
 
 
@@ -332,8 +339,8 @@ _UPDATEMOVABLEOBJECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=621,
-  serialized_end=717,
+  serialized_start=647,
+  serialized_end=743,
 )
 
 
@@ -356,8 +363,8 @@ _UPDATEMOVABLEOBJECTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=719,
-  serialized_end=748,
+  serialized_start=745,
+  serialized_end=774,
 )
 
 
@@ -387,8 +394,8 @@ _DELETEMOVABLEOBJECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=750,
-  serialized_end=790,
+  serialized_start=776,
+  serialized_end=816,
 )
 
 
@@ -411,8 +418,8 @@ _DELETEMOVABLEOBJECTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=792,
-  serialized_end=821,
+  serialized_start=818,
+  serialized_end=847,
 )
 
 
@@ -442,8 +449,8 @@ _MOVEOBJECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=823,
-  serialized_end=857,
+  serialized_start=849,
+  serialized_end=883,
 )
 
 
@@ -466,8 +473,8 @@ _MOVEOBJECTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=859,
-  serialized_end=879,
+  serialized_start=885,
+  serialized_end=905,
 )
 
 
@@ -497,8 +504,8 @@ _MOVEOBJECTNEXTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=881,
-  serialized_end=916,
+  serialized_start=907,
+  serialized_end=942,
 )
 
 
@@ -535,8 +542,8 @@ _MOVEOBJECTNEXTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=918,
-  serialized_end=980,
+  serialized_start=944,
+  serialized_end=1006,
 )
 
 
@@ -566,8 +573,8 @@ _MOVEOBJECTPREVIOUSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=982,
-  serialized_end=1021,
+  serialized_start=1008,
+  serialized_end=1047,
 )
 
 
@@ -604,8 +611,8 @@ _MOVEOBJECTPREVIOUSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1023,
-  serialized_end=1089,
+  serialized_start=1049,
+  serialized_end=1115,
 )
 
 _MOVABLEOBJECT.fields_by_name['object'].message_type = objects_dot_objects__pb2._OBJECT
@@ -754,8 +761,8 @@ _MRUVMOVABLEOBJECTSSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1092,
-  serialized_end=2054,
+  serialized_start=1118,
+  serialized_end=2080,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateMovableObject',

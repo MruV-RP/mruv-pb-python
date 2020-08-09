@@ -21,147 +21,11 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='mruv.objects',
   syntax='proto3',
   serialized_options=_b('Z%github.com/MruV-RP/mruv-pb-go/objects'),
-  serialized_pb=_b('\n\x15objects/objects.proto\x12\x0cmruv.objects\x1a\x1cgoogle/api/annotations.proto\"\xb7\x02\n\x0bObjectModel\x12\r\n\x05model\x18\x01 \x01(\r\x12\x12\n\nmodel_name\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x10\n\x08\x63\x61tegory\x18\r \x01(\t\x12\x12\n\nproduct_id\x18\x04 \x01(\r\x12\x0e\n\x06length\x18\x05 \x01(\x01\x12\r\n\x05width\x18\x06 \x01(\x01\x12\x0e\n\x06height\x18\x07 \x01(\x01\x12\x0c\n\x04size\x18\x08 \x01(\x01\x12\x0c\n\x04tags\x18\t \x03(\t\x12\x15\n\rhas_collision\x18\n \x01(\x08\x12\x15\n\rbreaks_on_hit\x18\x0b \x01(\x08\x12\x15\n\rhas_animation\x18\x0c \x01(\x08\x12\x17\n\x0fvisible_by_time\x18\x10 \x01(\x08\x12\x14\n\x0cvisible_from\x18\x11 \x01(\r\x12\x12\n\nvisible_to\x18\x12 \x01(\r\"\xfc\x01\n\x06Object\x12\r\n\x05model\x18\x01 \x01(\r\x12\x11\n\testate_id\x18\x02 \x01(\r\x12\t\n\x01x\x18\x03 \x01(\x02\x12\t\n\x01y\x18\x04 \x01(\x02\x12\t\n\x01z\x18\x05 \x01(\x02\x12\n\n\x02rx\x18\x06 \x01(\x02\x12\n\n\x02ry\x18\x07 \x01(\x02\x12\n\n\x02rz\x18\x08 \x01(\x02\x12\x10\n\x08world_id\x18\t \x01(\x05\x12\x13\n\x0binterior_id\x18\n \x01(\x05\x12\x11\n\tplayer_id\x18\x0b \x01(\x05\x12\x0f\n\x07\x61rea_id\x18\x0c \x01(\x05\x12\x17\n\x0fstream_distance\x18\r \x01(\x02\x12\x15\n\rdraw_distance\x18\x0e \x01(\x02\x12\x10\n\x08priority\x18\x0f \x01(\x05\"J\n\x18\x43reateObjectModelRequest\x12.\n\x0bobject_type\x18\x01 \x01(\x0b\x32\x19.mruv.objects.ObjectModel\"\'\n\x19\x43reateObjectModelResponse\x12\n\n\x02id\x18\x01 \x01(\r\"&\n\x15GetObjectModelRequest\x12\r\n\x05model\x18\x01 \x01(\r\"H\n\x16GetObjectModelResponse\x12.\n\x0bobject_type\x18\x01 \x01(\x0b\x32\x19.mruv.objects.ObjectModel\"J\n\x18UpdateObjectModelRequest\x12.\n\x0bobject_type\x18\x01 \x01(\x0b\x32\x19.mruv.objects.ObjectModel\"\x1b\n\x19UpdateObjectModelResponse\")\n\x18\x44\x65leteObjectModelRequest\x12\r\n\x05model\x18\x01 \x01(\r\"\x1b\n\x19\x44\x65leteObjectModelResponse\";\n\x13\x43reateObjectRequest\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\"\"\n\x14\x43reateObjectResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1e\n\x10GetObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\"9\n\x11GetObjectResponse\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\"G\n\x13UpdateObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12$\n\x06object\x18\x02 \x01(\x0b\x32\x14.mruv.objects.Object\"\x16\n\x14UpdateObjectResponse\"!\n\x13\x44\x65leteObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x16\n\x14\x44\x65leteObjectResponse2\xe1\x07\n\x12MruVObjectsService\x12}\n\x11\x43reateObjectModel\x12&.mruv.objects.CreateObjectModelRequest\x1a\'.mruv.objects.CreateObjectModelResponse\"\x17\x82\xd3\xe4\x93\x02\x11\"\x0f/v1/objectTypes\x12|\n\x0eGetObjectModel\x12#.mruv.objects.GetObjectModelRequest\x1a$.mruv.objects.GetObjectModelResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/v1/objectTypes/{model}\x12\x91\x01\n\x11UpdateObjectModel\x12&.mruv.objects.UpdateObjectModelRequest\x1a\'.mruv.objects.UpdateObjectModelResponse\"+\x82\xd3\xe4\x93\x02%2#/v1/objectTypes/{object_type.model}\x12\x85\x01\n\x11\x44\x65leteObjectModel\x12&.mruv.objects.DeleteObjectModelRequest\x1a\'.mruv.objects.DeleteObjectModelResponse\"\x1f\x82\xd3\xe4\x93\x02\x19*\x17/v1/objectTypes/{model}\x12i\n\x0c\x43reateObject\x12!.mruv.objects.CreateObjectRequest\x1a\".mruv.objects.CreateObjectResponse\"\x12\x82\xd3\xe4\x93\x02\x0c\"\n/v1/object\x12\x65\n\tGetObject\x12\x1e.mruv.objects.GetObjectRequest\x1a\x1f.mruv.objects.GetObjectResponse\"\x17\x82\xd3\xe4\x93\x02\x11\x12\x0f/v1/object/{id}\x12o\n\x0cUpdateObject\x12!.mruv.objects.UpdateObjectRequest\x1a\".mruv.objects.UpdateObjectResponse\"\x18\x82\xd3\xe4\x93\x02\x12\x32\x10/v1/objects/{id}\x12o\n\x0c\x44\x65leteObject\x12!.mruv.objects.DeleteObjectRequest\x1a\".mruv.objects.DeleteObjectResponse\"\x18\x82\xd3\xe4\x93\x02\x12*\x10/v1/objects/{id}B\'Z%github.com/MruV-RP/mruv-pb-go/objectsb\x06proto3')
+  serialized_pb=_b('\n\x15objects/objects.proto\x12\x0cmruv.objects\x1a\x1cgoogle/api/annotations.proto\"\xe9\x01\n\x06Object\x12\r\n\x05model\x18\x01 \x01(\r\x12\t\n\x01x\x18\x02 \x01(\x02\x12\t\n\x01y\x18\x03 \x01(\x02\x12\t\n\x01z\x18\x04 \x01(\x02\x12\n\n\x02rx\x18\x05 \x01(\x02\x12\n\n\x02ry\x18\x06 \x01(\x02\x12\n\n\x02rz\x18\x07 \x01(\x02\x12\x10\n\x08world_id\x18\x08 \x01(\x05\x12\x13\n\x0binterior_id\x18\t \x01(\x05\x12\x11\n\tplayer_id\x18\n \x01(\x05\x12\x0f\n\x07\x61rea_id\x18\x0b \x01(\x05\x12\x17\n\x0fstream_distance\x18\x0c \x01(\x02\x12\x15\n\rdraw_distance\x18\r \x01(\x02\x12\x10\n\x08priority\x18\x0f \x01(\x05\";\n\x13\x43reateObjectRequest\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\"\"\n\x14\x43reateObjectResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1e\n\x10GetObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\"9\n\x11GetObjectResponse\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\"G\n\x13UpdateObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12$\n\x06object\x18\x02 \x01(\x0b\x32\x14.mruv.objects.Object\"\x16\n\x14UpdateObjectResponse\"!\n\x13\x44\x65leteObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x16\n\x14\x44\x65leteObjectResponse2\xc8\x03\n\x12MruVObjectsService\x12i\n\x0c\x43reateObject\x12!.mruv.objects.CreateObjectRequest\x1a\".mruv.objects.CreateObjectResponse\"\x12\x82\xd3\xe4\x93\x02\x0c\"\n/v1/object\x12\x65\n\tGetObject\x12\x1e.mruv.objects.GetObjectRequest\x1a\x1f.mruv.objects.GetObjectResponse\"\x17\x82\xd3\xe4\x93\x02\x11\x12\x0f/v1/object/{id}\x12o\n\x0cUpdateObject\x12!.mruv.objects.UpdateObjectRequest\x1a\".mruv.objects.UpdateObjectResponse\"\x18\x82\xd3\xe4\x93\x02\x12\x32\x10/v1/objects/{id}\x12o\n\x0c\x44\x65leteObject\x12!.mruv.objects.DeleteObjectRequest\x1a\".mruv.objects.DeleteObjectResponse\"\x18\x82\xd3\xe4\x93\x02\x12*\x10/v1/objects/{id}B\'Z%github.com/MruV-RP/mruv-pb-go/objectsb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
 
-
-
-_OBJECTMODEL = _descriptor.Descriptor(
-  name='ObjectModel',
-  full_name='mruv.objects.ObjectModel',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='model', full_name='mruv.objects.ObjectModel.model', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='model_name', full_name='mruv.objects.ObjectModel.model_name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='name', full_name='mruv.objects.ObjectModel.name', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='category', full_name='mruv.objects.ObjectModel.category', index=3,
-      number=13, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='product_id', full_name='mruv.objects.ObjectModel.product_id', index=4,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='length', full_name='mruv.objects.ObjectModel.length', index=5,
-      number=5, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='width', full_name='mruv.objects.ObjectModel.width', index=6,
-      number=6, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='height', full_name='mruv.objects.ObjectModel.height', index=7,
-      number=7, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='size', full_name='mruv.objects.ObjectModel.size', index=8,
-      number=8, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='tags', full_name='mruv.objects.ObjectModel.tags', index=9,
-      number=9, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='has_collision', full_name='mruv.objects.ObjectModel.has_collision', index=10,
-      number=10, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='breaks_on_hit', full_name='mruv.objects.ObjectModel.breaks_on_hit', index=11,
-      number=11, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='has_animation', full_name='mruv.objects.ObjectModel.has_animation', index=12,
-      number=12, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='visible_by_time', full_name='mruv.objects.ObjectModel.visible_by_time', index=13,
-      number=16, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='visible_from', full_name='mruv.objects.ObjectModel.visible_from', index=14,
-      number=17, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='visible_to', full_name='mruv.objects.ObjectModel.visible_to', index=15,
-      number=18, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=70,
-  serialized_end=381,
-)
 
 
 _OBJECT = _descriptor.Descriptor(
@@ -179,98 +43,91 @@ _OBJECT = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='estate_id', full_name='mruv.objects.Object.estate_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      name='x', full_name='mruv.objects.Object.x', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='x', full_name='mruv.objects.Object.x', index=2,
+      name='y', full_name='mruv.objects.Object.y', index=2,
       number=3, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='y', full_name='mruv.objects.Object.y', index=3,
+      name='z', full_name='mruv.objects.Object.z', index=3,
       number=4, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='z', full_name='mruv.objects.Object.z', index=4,
+      name='rx', full_name='mruv.objects.Object.rx', index=4,
       number=5, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='rx', full_name='mruv.objects.Object.rx', index=5,
+      name='ry', full_name='mruv.objects.Object.ry', index=5,
       number=6, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ry', full_name='mruv.objects.Object.ry', index=6,
+      name='rz', full_name='mruv.objects.Object.rz', index=6,
       number=7, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='rz', full_name='mruv.objects.Object.rz', index=7,
-      number=8, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
+      name='world_id', full_name='mruv.objects.Object.world_id', index=7,
+      number=8, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='world_id', full_name='mruv.objects.Object.world_id', index=8,
+      name='interior_id', full_name='mruv.objects.Object.interior_id', index=8,
       number=9, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='interior_id', full_name='mruv.objects.Object.interior_id', index=9,
+      name='player_id', full_name='mruv.objects.Object.player_id', index=9,
       number=10, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='player_id', full_name='mruv.objects.Object.player_id', index=10,
+      name='area_id', full_name='mruv.objects.Object.area_id', index=10,
       number=11, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='area_id', full_name='mruv.objects.Object.area_id', index=11,
-      number=12, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      name='stream_distance', full_name='mruv.objects.Object.stream_distance', index=11,
+      number=12, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='stream_distance', full_name='mruv.objects.Object.stream_distance', index=12,
+      name='draw_distance', full_name='mruv.objects.Object.draw_distance', index=12,
       number=13, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='draw_distance', full_name='mruv.objects.Object.draw_distance', index=13,
-      number=14, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='priority', full_name='mruv.objects.Object.priority', index=14,
+      name='priority', full_name='mruv.objects.Object.priority', index=13,
       number=15, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -288,242 +145,8 @@ _OBJECT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=384,
-  serialized_end=636,
-)
-
-
-_CREATEOBJECTMODELREQUEST = _descriptor.Descriptor(
-  name='CreateObjectModelRequest',
-  full_name='mruv.objects.CreateObjectModelRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='object_type', full_name='mruv.objects.CreateObjectModelRequest.object_type', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=638,
-  serialized_end=712,
-)
-
-
-_CREATEOBJECTMODELRESPONSE = _descriptor.Descriptor(
-  name='CreateObjectModelResponse',
-  full_name='mruv.objects.CreateObjectModelResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.objects.CreateObjectModelResponse.id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=714,
-  serialized_end=753,
-)
-
-
-_GETOBJECTMODELREQUEST = _descriptor.Descriptor(
-  name='GetObjectModelRequest',
-  full_name='mruv.objects.GetObjectModelRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='model', full_name='mruv.objects.GetObjectModelRequest.model', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=755,
-  serialized_end=793,
-)
-
-
-_GETOBJECTMODELRESPONSE = _descriptor.Descriptor(
-  name='GetObjectModelResponse',
-  full_name='mruv.objects.GetObjectModelResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='object_type', full_name='mruv.objects.GetObjectModelResponse.object_type', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=795,
-  serialized_end=867,
-)
-
-
-_UPDATEOBJECTMODELREQUEST = _descriptor.Descriptor(
-  name='UpdateObjectModelRequest',
-  full_name='mruv.objects.UpdateObjectModelRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='object_type', full_name='mruv.objects.UpdateObjectModelRequest.object_type', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=869,
-  serialized_end=943,
-)
-
-
-_UPDATEOBJECTMODELRESPONSE = _descriptor.Descriptor(
-  name='UpdateObjectModelResponse',
-  full_name='mruv.objects.UpdateObjectModelResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=945,
-  serialized_end=972,
-)
-
-
-_DELETEOBJECTMODELREQUEST = _descriptor.Descriptor(
-  name='DeleteObjectModelRequest',
-  full_name='mruv.objects.DeleteObjectModelRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='model', full_name='mruv.objects.DeleteObjectModelRequest.model', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=974,
-  serialized_end=1015,
-)
-
-
-_DELETEOBJECTMODELRESPONSE = _descriptor.Descriptor(
-  name='DeleteObjectModelResponse',
-  full_name='mruv.objects.DeleteObjectModelResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1017,
-  serialized_end=1044,
+  serialized_start=70,
+  serialized_end=303,
 )
 
 
@@ -553,8 +176,8 @@ _CREATEOBJECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1046,
-  serialized_end=1105,
+  serialized_start=305,
+  serialized_end=364,
 )
 
 
@@ -584,8 +207,8 @@ _CREATEOBJECTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1107,
-  serialized_end=1141,
+  serialized_start=366,
+  serialized_end=400,
 )
 
 
@@ -615,8 +238,8 @@ _GETOBJECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1143,
-  serialized_end=1173,
+  serialized_start=402,
+  serialized_end=432,
 )
 
 
@@ -646,8 +269,8 @@ _GETOBJECTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1175,
-  serialized_end=1232,
+  serialized_start=434,
+  serialized_end=491,
 )
 
 
@@ -684,8 +307,8 @@ _UPDATEOBJECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1234,
-  serialized_end=1305,
+  serialized_start=493,
+  serialized_end=564,
 )
 
 
@@ -708,8 +331,8 @@ _UPDATEOBJECTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1307,
-  serialized_end=1329,
+  serialized_start=566,
+  serialized_end=588,
 )
 
 
@@ -739,8 +362,8 @@ _DELETEOBJECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1331,
-  serialized_end=1364,
+  serialized_start=590,
+  serialized_end=623,
 )
 
 
@@ -763,26 +386,14 @@ _DELETEOBJECTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1366,
-  serialized_end=1388,
+  serialized_start=625,
+  serialized_end=647,
 )
 
-_CREATEOBJECTMODELREQUEST.fields_by_name['object_type'].message_type = _OBJECTMODEL
-_GETOBJECTMODELRESPONSE.fields_by_name['object_type'].message_type = _OBJECTMODEL
-_UPDATEOBJECTMODELREQUEST.fields_by_name['object_type'].message_type = _OBJECTMODEL
 _CREATEOBJECTREQUEST.fields_by_name['object'].message_type = _OBJECT
 _GETOBJECTRESPONSE.fields_by_name['object'].message_type = _OBJECT
 _UPDATEOBJECTREQUEST.fields_by_name['object'].message_type = _OBJECT
-DESCRIPTOR.message_types_by_name['ObjectModel'] = _OBJECTMODEL
 DESCRIPTOR.message_types_by_name['Object'] = _OBJECT
-DESCRIPTOR.message_types_by_name['CreateObjectModelRequest'] = _CREATEOBJECTMODELREQUEST
-DESCRIPTOR.message_types_by_name['CreateObjectModelResponse'] = _CREATEOBJECTMODELRESPONSE
-DESCRIPTOR.message_types_by_name['GetObjectModelRequest'] = _GETOBJECTMODELREQUEST
-DESCRIPTOR.message_types_by_name['GetObjectModelResponse'] = _GETOBJECTMODELRESPONSE
-DESCRIPTOR.message_types_by_name['UpdateObjectModelRequest'] = _UPDATEOBJECTMODELREQUEST
-DESCRIPTOR.message_types_by_name['UpdateObjectModelResponse'] = _UPDATEOBJECTMODELRESPONSE
-DESCRIPTOR.message_types_by_name['DeleteObjectModelRequest'] = _DELETEOBJECTMODELREQUEST
-DESCRIPTOR.message_types_by_name['DeleteObjectModelResponse'] = _DELETEOBJECTMODELRESPONSE
 DESCRIPTOR.message_types_by_name['CreateObjectRequest'] = _CREATEOBJECTREQUEST
 DESCRIPTOR.message_types_by_name['CreateObjectResponse'] = _CREATEOBJECTRESPONSE
 DESCRIPTOR.message_types_by_name['GetObjectRequest'] = _GETOBJECTREQUEST
@@ -793,75 +404,12 @@ DESCRIPTOR.message_types_by_name['DeleteObjectRequest'] = _DELETEOBJECTREQUEST
 DESCRIPTOR.message_types_by_name['DeleteObjectResponse'] = _DELETEOBJECTRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-ObjectModel = _reflection.GeneratedProtocolMessageType('ObjectModel', (_message.Message,), {
-  'DESCRIPTOR' : _OBJECTMODEL,
-  '__module__' : 'objects.objects_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.objects.ObjectModel)
-  })
-_sym_db.RegisterMessage(ObjectModel)
-
 Object = _reflection.GeneratedProtocolMessageType('Object', (_message.Message,), {
   'DESCRIPTOR' : _OBJECT,
   '__module__' : 'objects.objects_pb2'
   # @@protoc_insertion_point(class_scope:mruv.objects.Object)
   })
 _sym_db.RegisterMessage(Object)
-
-CreateObjectModelRequest = _reflection.GeneratedProtocolMessageType('CreateObjectModelRequest', (_message.Message,), {
-  'DESCRIPTOR' : _CREATEOBJECTMODELREQUEST,
-  '__module__' : 'objects.objects_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.objects.CreateObjectModelRequest)
-  })
-_sym_db.RegisterMessage(CreateObjectModelRequest)
-
-CreateObjectModelResponse = _reflection.GeneratedProtocolMessageType('CreateObjectModelResponse', (_message.Message,), {
-  'DESCRIPTOR' : _CREATEOBJECTMODELRESPONSE,
-  '__module__' : 'objects.objects_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.objects.CreateObjectModelResponse)
-  })
-_sym_db.RegisterMessage(CreateObjectModelResponse)
-
-GetObjectModelRequest = _reflection.GeneratedProtocolMessageType('GetObjectModelRequest', (_message.Message,), {
-  'DESCRIPTOR' : _GETOBJECTMODELREQUEST,
-  '__module__' : 'objects.objects_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.objects.GetObjectModelRequest)
-  })
-_sym_db.RegisterMessage(GetObjectModelRequest)
-
-GetObjectModelResponse = _reflection.GeneratedProtocolMessageType('GetObjectModelResponse', (_message.Message,), {
-  'DESCRIPTOR' : _GETOBJECTMODELRESPONSE,
-  '__module__' : 'objects.objects_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.objects.GetObjectModelResponse)
-  })
-_sym_db.RegisterMessage(GetObjectModelResponse)
-
-UpdateObjectModelRequest = _reflection.GeneratedProtocolMessageType('UpdateObjectModelRequest', (_message.Message,), {
-  'DESCRIPTOR' : _UPDATEOBJECTMODELREQUEST,
-  '__module__' : 'objects.objects_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.objects.UpdateObjectModelRequest)
-  })
-_sym_db.RegisterMessage(UpdateObjectModelRequest)
-
-UpdateObjectModelResponse = _reflection.GeneratedProtocolMessageType('UpdateObjectModelResponse', (_message.Message,), {
-  'DESCRIPTOR' : _UPDATEOBJECTMODELRESPONSE,
-  '__module__' : 'objects.objects_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.objects.UpdateObjectModelResponse)
-  })
-_sym_db.RegisterMessage(UpdateObjectModelResponse)
-
-DeleteObjectModelRequest = _reflection.GeneratedProtocolMessageType('DeleteObjectModelRequest', (_message.Message,), {
-  'DESCRIPTOR' : _DELETEOBJECTMODELREQUEST,
-  '__module__' : 'objects.objects_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.objects.DeleteObjectModelRequest)
-  })
-_sym_db.RegisterMessage(DeleteObjectModelRequest)
-
-DeleteObjectModelResponse = _reflection.GeneratedProtocolMessageType('DeleteObjectModelResponse', (_message.Message,), {
-  'DESCRIPTOR' : _DELETEOBJECTMODELRESPONSE,
-  '__module__' : 'objects.objects_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.objects.DeleteObjectModelResponse)
-  })
-_sym_db.RegisterMessage(DeleteObjectModelResponse)
 
 CreateObjectRequest = _reflection.GeneratedProtocolMessageType('CreateObjectRequest', (_message.Message,), {
   'DESCRIPTOR' : _CREATEOBJECTREQUEST,
@@ -928,49 +476,13 @@ _MRUVOBJECTSSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1391,
-  serialized_end=2384,
+  serialized_start=650,
+  serialized_end=1106,
   methods=[
-  _descriptor.MethodDescriptor(
-    name='CreateObjectModel',
-    full_name='mruv.objects.MruVObjectsService.CreateObjectModel',
-    index=0,
-    containing_service=None,
-    input_type=_CREATEOBJECTMODELREQUEST,
-    output_type=_CREATEOBJECTMODELRESPONSE,
-    serialized_options=_b('\202\323\344\223\002\021\"\017/v1/objectTypes'),
-  ),
-  _descriptor.MethodDescriptor(
-    name='GetObjectModel',
-    full_name='mruv.objects.MruVObjectsService.GetObjectModel',
-    index=1,
-    containing_service=None,
-    input_type=_GETOBJECTMODELREQUEST,
-    output_type=_GETOBJECTMODELRESPONSE,
-    serialized_options=_b('\202\323\344\223\002\031\022\027/v1/objectTypes/{model}'),
-  ),
-  _descriptor.MethodDescriptor(
-    name='UpdateObjectModel',
-    full_name='mruv.objects.MruVObjectsService.UpdateObjectModel',
-    index=2,
-    containing_service=None,
-    input_type=_UPDATEOBJECTMODELREQUEST,
-    output_type=_UPDATEOBJECTMODELRESPONSE,
-    serialized_options=_b('\202\323\344\223\002%2#/v1/objectTypes/{object_type.model}'),
-  ),
-  _descriptor.MethodDescriptor(
-    name='DeleteObjectModel',
-    full_name='mruv.objects.MruVObjectsService.DeleteObjectModel',
-    index=3,
-    containing_service=None,
-    input_type=_DELETEOBJECTMODELREQUEST,
-    output_type=_DELETEOBJECTMODELRESPONSE,
-    serialized_options=_b('\202\323\344\223\002\031*\027/v1/objectTypes/{model}'),
-  ),
   _descriptor.MethodDescriptor(
     name='CreateObject',
     full_name='mruv.objects.MruVObjectsService.CreateObject',
-    index=4,
+    index=0,
     containing_service=None,
     input_type=_CREATEOBJECTREQUEST,
     output_type=_CREATEOBJECTRESPONSE,
@@ -979,7 +491,7 @@ _MRUVOBJECTSSERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetObject',
     full_name='mruv.objects.MruVObjectsService.GetObject',
-    index=5,
+    index=1,
     containing_service=None,
     input_type=_GETOBJECTREQUEST,
     output_type=_GETOBJECTRESPONSE,
@@ -988,7 +500,7 @@ _MRUVOBJECTSSERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='UpdateObject',
     full_name='mruv.objects.MruVObjectsService.UpdateObject',
-    index=6,
+    index=2,
     containing_service=None,
     input_type=_UPDATEOBJECTREQUEST,
     output_type=_UPDATEOBJECTRESPONSE,
@@ -997,7 +509,7 @@ _MRUVOBJECTSSERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='DeleteObject',
     full_name='mruv.objects.MruVObjectsService.DeleteObject',
-    index=7,
+    index=3,
     containing_service=None,
     input_type=_DELETEOBJECTREQUEST,
     output_type=_DELETEOBJECTRESPONSE,
