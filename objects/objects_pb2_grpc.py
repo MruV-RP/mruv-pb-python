@@ -15,42 +15,42 @@ class MruVObjectsServiceStub(object):
       channel: A grpc.Channel.
     """
     self.CreateObjectModel = channel.unary_unary(
-        '/mruv.gates.MruVObjectsService/CreateObjectModel',
+        '/mruv.objects.MruVObjectsService/CreateObjectModel',
         request_serializer=objects_dot_objects__pb2.CreateObjectModelRequest.SerializeToString,
         response_deserializer=objects_dot_objects__pb2.CreateObjectModelResponse.FromString,
         )
     self.GetObjectModel = channel.unary_unary(
-        '/mruv.gates.MruVObjectsService/GetObjectModel',
+        '/mruv.objects.MruVObjectsService/GetObjectModel',
         request_serializer=objects_dot_objects__pb2.GetObjectModelRequest.SerializeToString,
         response_deserializer=objects_dot_objects__pb2.GetObjectModelResponse.FromString,
         )
     self.UpdateObjectModel = channel.unary_unary(
-        '/mruv.gates.MruVObjectsService/UpdateObjectModel',
+        '/mruv.objects.MruVObjectsService/UpdateObjectModel',
         request_serializer=objects_dot_objects__pb2.UpdateObjectModelRequest.SerializeToString,
         response_deserializer=objects_dot_objects__pb2.UpdateObjectModelResponse.FromString,
         )
     self.DeleteObjectModel = channel.unary_unary(
-        '/mruv.gates.MruVObjectsService/DeleteObjectModel',
+        '/mruv.objects.MruVObjectsService/DeleteObjectModel',
         request_serializer=objects_dot_objects__pb2.DeleteObjectModelRequest.SerializeToString,
         response_deserializer=objects_dot_objects__pb2.DeleteObjectModelResponse.FromString,
         )
     self.CreateObject = channel.unary_unary(
-        '/mruv.gates.MruVObjectsService/CreateObject',
+        '/mruv.objects.MruVObjectsService/CreateObject',
         request_serializer=objects_dot_objects__pb2.CreateObjectRequest.SerializeToString,
         response_deserializer=objects_dot_objects__pb2.CreateObjectResponse.FromString,
         )
     self.GetObject = channel.unary_unary(
-        '/mruv.gates.MruVObjectsService/GetObject',
+        '/mruv.objects.MruVObjectsService/GetObject',
         request_serializer=objects_dot_objects__pb2.GetObjectRequest.SerializeToString,
         response_deserializer=objects_dot_objects__pb2.GetObjectResponse.FromString,
         )
     self.UpdateObject = channel.unary_unary(
-        '/mruv.gates.MruVObjectsService/UpdateObject',
+        '/mruv.objects.MruVObjectsService/UpdateObject',
         request_serializer=objects_dot_objects__pb2.UpdateObjectRequest.SerializeToString,
         response_deserializer=objects_dot_objects__pb2.UpdateObjectResponse.FromString,
         )
     self.DeleteObject = channel.unary_unary(
-        '/mruv.gates.MruVObjectsService/DeleteObject',
+        '/mruv.objects.MruVObjectsService/DeleteObject',
         request_serializer=objects_dot_objects__pb2.DeleteObjectRequest.SerializeToString,
         response_deserializer=objects_dot_objects__pb2.DeleteObjectResponse.FromString,
         )
@@ -161,5 +161,5 @@ def add_MruVObjectsServiceServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'mruv.gates.MruVObjectsService', rpc_method_handlers)
+      'mruv.objects.MruVObjectsService', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))
