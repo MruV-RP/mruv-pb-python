@@ -15,6 +15,7 @@ _sym_db = _symbol_database.Default()
 
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from objects import movable_pb2 as objects_dot_movable__pb2
+from spots import spots_pb2 as spots_dot_spots__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -22,9 +23,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='mruv.gates',
   syntax='proto3',
   serialized_options=_b('Z#github.com/MruV-RP/mruv-pb-go/gates'),
-  serialized_pb=_b('\n\x11gates/gates.proto\x12\nmruv.gates\x1a\x1cgoogle/api/annotations.proto\x1a\x15objects/movable.proto\"\x06\n\x04Gate\"T\n\x11\x43reateGateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x31\n\x0cgate_objects\x18\x02 \x03(\x0b\x32\x1b.mruv.objects.MovableObject\" \n\x12\x43reateGateResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1c\n\x0eGetGateRequest\x12\n\n\x02id\x18\x01 \x01(\r\"r\n\x0fGetGateResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x31\n\x0cgate_objects\x18\x02 \x03(\x0b\x32\x1b.mruv.objects.MovableObject\x12\x0e\n\x06opened\x18\x03 \x01(\x08\x12\x0e\n\x06locked\x18\x04 \x01(\x08\"-\n\x11UpdateGateRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"\x14\n\x12UpdateGateResponse\"\x1f\n\x11\x44\x65leteGateRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x14\n\x12\x44\x65leteGateResponse\"\x19\n\x0bLockRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x0e\n\x0cLockResponse\"\x1b\n\rUnlockRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x10\n\x0eUnlockResponse\"\x19\n\x0bOpenRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x0e\n\x0cOpenResponse\"\x1a\n\x0c\x43loseRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x0f\n\rCloseResponse\"O\n\x16\x46indNearestGateRequest\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02\x12\t\n\x01z\x18\x03 \x01(\x02\x12\x14\n\x0cmax_distance\x18\x04 \x01(\x02\"7\n\x17\x46indNearestGateResponse\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08\x64istance\x18\x02 \x01(\x02\x32\xfb\x06\n\x10MruVGatesService\x12^\n\nCreateGate\x12\x1d.mruv.gates.CreateGateRequest\x1a\x1e.mruv.gates.CreateGateResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\"\t/v1/gates\x12Z\n\x07GetGate\x12\x1a.mruv.gates.GetGateRequest\x1a\x1b.mruv.gates.GetGateResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/gates/{id}\x12\x63\n\nUpdateGate\x12\x1d.mruv.gates.UpdateGateRequest\x1a\x1e.mruv.gates.UpdateGateResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x32\x0e/v1/gates/{id}\x12\x63\n\nDeleteGate\x12\x1d.mruv.gates.DeleteGateRequest\x1a\x1e.mruv.gates.DeleteGateResponse\"\x16\x82\xd3\xe4\x93\x02\x10*\x0e/v1/gates/{id}\x12V\n\x04Lock\x12\x17.mruv.gates.LockRequest\x1a\x18.mruv.gates.LockResponse\"\x1b\x82\xd3\xe4\x93\x02\x15\"\x13/v1/gates/{id}/lock\x12^\n\x06Unlock\x12\x19.mruv.gates.UnlockRequest\x1a\x1a.mruv.gates.UnlockResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\"\x15/v1/gates/{id}/unlock\x12V\n\x04Open\x12\x17.mruv.gates.OpenRequest\x1a\x18.mruv.gates.OpenResponse\"\x1b\x82\xd3\xe4\x93\x02\x15\"\x13/v1/gates/{id}/open\x12Z\n\x05\x43lose\x12\x18.mruv.gates.CloseRequest\x1a\x19.mruv.gates.CloseResponse\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x14/v1/gates/{id}/close\x12u\n\x0f\x46indNearestGate\x12\".mruv.gates.FindNearestGateRequest\x1a#.mruv.gates.FindNearestGateResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/v1/gates/nearestB%Z#github.com/MruV-RP/mruv-pb-go/gatesb\x06proto3')
+  serialized_pb=_b('\n\x11gates/gates.proto\x12\nmruv.gates\x1a\x1cgoogle/api/annotations.proto\x1a\x15objects/movable.proto\x1a\x11spots/spots.proto\"\x87\x01\n\x04Gate\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x31\n\x0cgate_objects\x18\x02 \x03(\x0b\x32\x1b.mruv.objects.MovableObject\x12\x1e\n\x04spot\x18\x03 \x01(\x0b\x32\x10.mruv.spots.Spot\x12\x0e\n\x06opened\x18\x04 \x01(\x08\x12\x0e\n\x06locked\x18\x05 \x01(\x08\"t\n\x11\x43reateGateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x31\n\x0cgate_objects\x18\x02 \x03(\x0b\x32\x1b.mruv.objects.MovableObject\x12\x1e\n\x04spot\x18\x03 \x01(\x0b\x32\x10.mruv.spots.Spot\" \n\x12\x43reateGateResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1c\n\x0eGetGateRequest\x12\n\n\x02id\x18\x01 \x01(\r\"}\n\x0fGetGateResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x1c\n\x14gate_movable_objects\x18\x02 \x03(\r\x12\x1e\n\x04spot\x18\x03 \x01(\x0b\x32\x10.mruv.spots.Spot\x12\x0e\n\x06opened\x18\x04 \x01(\x08\x12\x0e\n\x06locked\x18\x05 \x01(\x08\"\\\n\x11UpdateGateRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0f\n\x07spot_id\x18\x03 \x01(\r\x12\x1c\n\x14gate_movable_objects\x18\x04 \x03(\r\"\x14\n\x12UpdateGateResponse\"\x1f\n\x11\x44\x65leteGateRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x14\n\x12\x44\x65leteGateResponse\"\x19\n\x0bLockRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x0e\n\x0cLockResponse\"\x1b\n\rUnlockRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x10\n\x0eUnlockResponse\"\x19\n\x0bOpenRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x0e\n\x0cOpenResponse\"\x1a\n\x0c\x43loseRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x0f\n\rCloseResponse\"O\n\x16\x46indNearestGateRequest\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02\x12\t\n\x01z\x18\x03 \x01(\x02\x12\x14\n\x0cmax_distance\x18\x04 \x01(\x02\"7\n\x17\x46indNearestGateResponse\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08\x64istance\x18\x02 \x01(\x02\x32\xfb\x06\n\x10MruVGatesService\x12^\n\nCreateGate\x12\x1d.mruv.gates.CreateGateRequest\x1a\x1e.mruv.gates.CreateGateResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\"\t/v1/gates\x12Z\n\x07GetGate\x12\x1a.mruv.gates.GetGateRequest\x1a\x1b.mruv.gates.GetGateResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/gates/{id}\x12\x63\n\nUpdateGate\x12\x1d.mruv.gates.UpdateGateRequest\x1a\x1e.mruv.gates.UpdateGateResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x32\x0e/v1/gates/{id}\x12\x63\n\nDeleteGate\x12\x1d.mruv.gates.DeleteGateRequest\x1a\x1e.mruv.gates.DeleteGateResponse\"\x16\x82\xd3\xe4\x93\x02\x10*\x0e/v1/gates/{id}\x12V\n\x04Lock\x12\x17.mruv.gates.LockRequest\x1a\x18.mruv.gates.LockResponse\"\x1b\x82\xd3\xe4\x93\x02\x15\"\x13/v1/gates/{id}/lock\x12^\n\x06Unlock\x12\x19.mruv.gates.UnlockRequest\x1a\x1a.mruv.gates.UnlockResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\"\x15/v1/gates/{id}/unlock\x12V\n\x04Open\x12\x17.mruv.gates.OpenRequest\x1a\x18.mruv.gates.OpenResponse\"\x1b\x82\xd3\xe4\x93\x02\x15\"\x13/v1/gates/{id}/open\x12Z\n\x05\x43lose\x12\x18.mruv.gates.CloseRequest\x1a\x19.mruv.gates.CloseResponse\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x14/v1/gates/{id}/close\x12u\n\x0f\x46indNearestGate\x12\".mruv.gates.FindNearestGateRequest\x1a#.mruv.gates.FindNearestGateResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/v1/gates/nearestB%Z#github.com/MruV-RP/mruv-pb-go/gatesb\x06proto3')
   ,
-  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,objects_dot_movable__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,objects_dot_movable__pb2.DESCRIPTOR,spots_dot_spots__pb2.DESCRIPTOR,])
 
 
 
@@ -36,6 +37,41 @@ _GATE = _descriptor.Descriptor(
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='mruv.gates.Gate.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='gate_objects', full_name='mruv.gates.Gate.gate_objects', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='spot', full_name='mruv.gates.Gate.spot', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='opened', full_name='mruv.gates.Gate.opened', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='locked', full_name='mruv.gates.Gate.locked', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -48,8 +84,8 @@ _GATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=86,
-  serialized_end=92,
+  serialized_start=106,
+  serialized_end=241,
 )
 
 
@@ -74,6 +110,13 @@ _CREATEGATEREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='spot', full_name='mruv.gates.CreateGateRequest.spot', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -86,8 +129,8 @@ _CREATEGATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=94,
-  serialized_end=178,
+  serialized_start=243,
+  serialized_end=359,
 )
 
 
@@ -117,8 +160,8 @@ _CREATEGATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=180,
-  serialized_end=212,
+  serialized_start=361,
+  serialized_end=393,
 )
 
 
@@ -148,8 +191,8 @@ _GETGATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=214,
-  serialized_end=242,
+  serialized_start=395,
+  serialized_end=423,
 )
 
 
@@ -168,22 +211,29 @@ _GETGATERESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='gate_objects', full_name='mruv.gates.GetGateResponse.gate_objects', index=1,
-      number=2, type=11, cpp_type=10, label=3,
+      name='gate_movable_objects', full_name='mruv.gates.GetGateResponse.gate_movable_objects', index=1,
+      number=2, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='opened', full_name='mruv.gates.GetGateResponse.opened', index=2,
-      number=3, type=8, cpp_type=7, label=1,
+      name='spot', full_name='mruv.gates.GetGateResponse.spot', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='opened', full_name='mruv.gates.GetGateResponse.opened', index=3,
+      number=4, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='locked', full_name='mruv.gates.GetGateResponse.locked', index=3,
-      number=4, type=8, cpp_type=7, label=1,
+      name='locked', full_name='mruv.gates.GetGateResponse.locked', index=4,
+      number=5, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -200,8 +250,8 @@ _GETGATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=244,
-  serialized_end=358,
+  serialized_start=425,
+  serialized_end=550,
 )
 
 
@@ -226,6 +276,20 @@ _UPDATEGATEREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='spot_id', full_name='mruv.gates.UpdateGateRequest.spot_id', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='gate_movable_objects', full_name='mruv.gates.UpdateGateRequest.gate_movable_objects', index=3,
+      number=4, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -238,8 +302,8 @@ _UPDATEGATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=360,
-  serialized_end=405,
+  serialized_start=552,
+  serialized_end=644,
 )
 
 
@@ -262,8 +326,8 @@ _UPDATEGATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=407,
-  serialized_end=427,
+  serialized_start=646,
+  serialized_end=666,
 )
 
 
@@ -293,8 +357,8 @@ _DELETEGATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=429,
-  serialized_end=460,
+  serialized_start=668,
+  serialized_end=699,
 )
 
 
@@ -317,8 +381,8 @@ _DELETEGATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=462,
-  serialized_end=482,
+  serialized_start=701,
+  serialized_end=721,
 )
 
 
@@ -348,8 +412,8 @@ _LOCKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=484,
-  serialized_end=509,
+  serialized_start=723,
+  serialized_end=748,
 )
 
 
@@ -372,8 +436,8 @@ _LOCKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=511,
-  serialized_end=525,
+  serialized_start=750,
+  serialized_end=764,
 )
 
 
@@ -403,8 +467,8 @@ _UNLOCKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=527,
-  serialized_end=554,
+  serialized_start=766,
+  serialized_end=793,
 )
 
 
@@ -427,8 +491,8 @@ _UNLOCKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=556,
-  serialized_end=572,
+  serialized_start=795,
+  serialized_end=811,
 )
 
 
@@ -458,8 +522,8 @@ _OPENREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=574,
-  serialized_end=599,
+  serialized_start=813,
+  serialized_end=838,
 )
 
 
@@ -482,8 +546,8 @@ _OPENRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=601,
-  serialized_end=615,
+  serialized_start=840,
+  serialized_end=854,
 )
 
 
@@ -513,8 +577,8 @@ _CLOSEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=617,
-  serialized_end=643,
+  serialized_start=856,
+  serialized_end=882,
 )
 
 
@@ -537,8 +601,8 @@ _CLOSERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=645,
-  serialized_end=660,
+  serialized_start=884,
+  serialized_end=899,
 )
 
 
@@ -589,8 +653,8 @@ _FINDNEARESTGATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=662,
-  serialized_end=741,
+  serialized_start=901,
+  serialized_end=980,
 )
 
 
@@ -627,12 +691,15 @@ _FINDNEARESTGATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=743,
-  serialized_end=798,
+  serialized_start=982,
+  serialized_end=1037,
 )
 
+_GATE.fields_by_name['gate_objects'].message_type = objects_dot_movable__pb2._MOVABLEOBJECT
+_GATE.fields_by_name['spot'].message_type = spots_dot_spots__pb2._SPOT
 _CREATEGATEREQUEST.fields_by_name['gate_objects'].message_type = objects_dot_movable__pb2._MOVABLEOBJECT
-_GETGATERESPONSE.fields_by_name['gate_objects'].message_type = objects_dot_movable__pb2._MOVABLEOBJECT
+_CREATEGATEREQUEST.fields_by_name['spot'].message_type = spots_dot_spots__pb2._SPOT
+_GETGATERESPONSE.fields_by_name['spot'].message_type = spots_dot_spots__pb2._SPOT
 DESCRIPTOR.message_types_by_name['Gate'] = _GATE
 DESCRIPTOR.message_types_by_name['CreateGateRequest'] = _CREATEGATEREQUEST
 DESCRIPTOR.message_types_by_name['CreateGateResponse'] = _CREATEGATERESPONSE
@@ -796,8 +863,8 @@ _MRUVGATESSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=801,
-  serialized_end=1692,
+  serialized_start=1040,
+  serialized_end=1931,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateGate',
