@@ -54,6 +54,11 @@ class MruVEntrancesServiceStub(object):
         request_serializer=entrances_dot_entrances__pb2.EnterRequest.SerializeToString,
         response_deserializer=entrances_dot_entrances__pb2.EnterResponse.FromString,
         )
+    self.Exit = channel.unary_unary(
+        '/mruv.entrances.MruVEntrancesService/Exit',
+        request_serializer=entrances_dot_entrances__pb2.ExitRequest.SerializeToString,
+        response_deserializer=entrances_dot_entrances__pb2.ExitResponse.FromString,
+        )
 
 
 class MruVEntrancesServiceServicer(object):
@@ -110,7 +115,14 @@ class MruVEntrancesServiceServicer(object):
     raise NotImplementedError('Method not implemented!')
 
   def Enter(self, request, context):
-    """Enter an entrance
+    """Enter an entrance (player teleport from in spot position to out spot position).
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def Exit(self, request, context):
+    """Exit from entrance (player teleport from out spot position to in spot position).
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
@@ -158,6 +170,11 @@ def add_MruVEntrancesServiceServicer_to_server(servicer, server):
           servicer.Enter,
           request_deserializer=entrances_dot_entrances__pb2.EnterRequest.FromString,
           response_serializer=entrances_dot_entrances__pb2.EnterResponse.SerializeToString,
+      ),
+      'Exit': grpc.unary_unary_rpc_method_handler(
+          servicer.Exit,
+          request_deserializer=entrances_dot_entrances__pb2.ExitRequest.FromString,
+          response_serializer=entrances_dot_entrances__pb2.ExitResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

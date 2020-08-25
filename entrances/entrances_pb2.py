@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='mruv.entrances',
   syntax='proto3',
   serialized_options=_b('Z\'github.com/MruV-RP/mruv-pb-go/entrances'),
-  serialized_pb=_b('\n\x19\x65ntrances/entrances.proto\x12\x0emruv.entrances\x1a\x1cgoogle/api/annotations.proto\x1a\x11spots/spots.proto\"U\n\x08\x45ntrance\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x1d\n\x03out\x18\x02 \x01(\x0b\x32\x10.mruv.spots.Spot\x12\x1c\n\x02in\x18\x03 \x01(\x0b\x32\x10.mruv.spots.Spot\"b\n\x15\x43reateEntranceRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x1d\n\x03out\x18\x02 \x01(\x0b\x32\x10.mruv.spots.Spot\x12\x1c\n\x02in\x18\x03 \x01(\x0b\x32\x10.mruv.spots.Spot\"$\n\x16\x43reateEntranceResponse\x12\n\n\x02id\x18\x01 \x01(\r\" \n\x12GetEntranceRequest\x12\n\n\x02id\x18\x01 \x01(\r\"j\n\x13GetEntranceResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12!\n\x07in_spot\x18\x02 \x01(\x0b\x32\x10.mruv.spots.Spot\x12\"\n\x08out_spot\x18\x03 \x01(\x0b\x32\x10.mruv.spots.Spot\"L\n\x15UpdateEntranceRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x12\n\nin_spot_id\x18\x02 \x01(\r\x12\x13\n\x0bout_spot_id\x18\x03 \x01(\r\"\x18\n\x16UpdateEntranceResponse\"#\n\x15\x44\x65leteEntranceRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x18\n\x16\x44\x65leteEntranceResponse\"\x19\n\x0bLockRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x0e\n\x0cLockResponse\"\x1b\n\rUnlockRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x10\n\x0eUnlockResponse\"S\n\x1a\x46indNearestEntranceRequest\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02\x12\t\n\x01z\x18\x03 \x01(\x02\x12\x14\n\x0cmax_distance\x18\x04 \x01(\x02\";\n\x1b\x46indNearestEntranceResponse\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08\x64istance\x18\x02 \x01(\x02\"\x1a\n\x0c\x45nterRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x0f\n\rEnterResponse2\xc4\x07\n\x14MruVEntrancesService\x12v\n\x0e\x43reateEntrance\x12%.mruv.entrances.CreateEntranceRequest\x1a&.mruv.entrances.CreateEntranceResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\"\r/v1/entrances\x12r\n\x0bGetEntrance\x12\".mruv.entrances.GetEntranceRequest\x1a#.mruv.entrances.GetEntranceResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x12\x12/v1/entrances/{id}\x12{\n\x0eUpdateEntrance\x12%.mruv.entrances.UpdateEntranceRequest\x1a&.mruv.entrances.UpdateEntranceResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x32\x12/v1/entrances/{id}\x12{\n\x0e\x44\x65leteEntrance\x12%.mruv.entrances.DeleteEntranceRequest\x1a&.mruv.entrances.DeleteEntranceResponse\"\x1a\x82\xd3\xe4\x93\x02\x14*\x12/v1/entrances/{id}\x12\x62\n\x04Lock\x12\x1b.mruv.entrances.LockRequest\x1a\x1c.mruv.entrances.LockResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\"\x17/v1/entrances/{id}/lock\x12j\n\x06Unlock\x12\x1d.mruv.entrances.UnlockRequest\x1a\x1e.mruv.entrances.UnlockResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x19/v1/entrances/{id}/unlock\x12\x8d\x01\n\x13\x46indNearestEntrance\x12*.mruv.entrances.FindNearestEntranceRequest\x1a+.mruv.entrances.FindNearestEntranceResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/v1/entrances/nearest\x12\x66\n\x05\x45nter\x12\x1c.mruv.entrances.EnterRequest\x1a\x1d.mruv.entrances.EnterResponse\" \x82\xd3\xe4\x93\x02\x1a\"\x18/v1/entrances/{id}/enterB)Z\'github.com/MruV-RP/mruv-pb-go/entrancesb\x06proto3')
+  serialized_pb=_b('\n\x19\x65ntrances/entrances.proto\x12\x0emruv.entrances\x1a\x1cgoogle/api/annotations.proto\x1a\x11spots/spots.proto\"U\n\x08\x45ntrance\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x1d\n\x03out\x18\x02 \x01(\x0b\x32\x10.mruv.spots.Spot\x12\x1c\n\x02in\x18\x03 \x01(\x0b\x32\x10.mruv.spots.Spot\"b\n\x15\x43reateEntranceRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x1d\n\x03out\x18\x02 \x01(\x0b\x32\x10.mruv.spots.Spot\x12\x1c\n\x02in\x18\x03 \x01(\x0b\x32\x10.mruv.spots.Spot\"$\n\x16\x43reateEntranceResponse\x12\n\n\x02id\x18\x01 \x01(\r\" \n\x12GetEntranceRequest\x12\n\n\x02id\x18\x01 \x01(\r\"j\n\x13GetEntranceResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12!\n\x07in_spot\x18\x02 \x01(\x0b\x32\x10.mruv.spots.Spot\x12\"\n\x08out_spot\x18\x03 \x01(\x0b\x32\x10.mruv.spots.Spot\"L\n\x15UpdateEntranceRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x12\n\nin_spot_id\x18\x02 \x01(\r\x12\x13\n\x0bout_spot_id\x18\x03 \x01(\r\"\x18\n\x16UpdateEntranceResponse\"#\n\x15\x44\x65leteEntranceRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x18\n\x16\x44\x65leteEntranceResponse\"\x19\n\x0bLockRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x0e\n\x0cLockResponse\"\x1b\n\rUnlockRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x10\n\x0eUnlockResponse\"S\n\x1a\x46indNearestEntranceRequest\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02\x12\t\n\x01z\x18\x03 \x01(\x02\x12\x14\n\x0cmax_distance\x18\x04 \x01(\x02\"K\n\x1b\x46indNearestEntranceResponse\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08\x64istance\x18\x02 \x01(\x02\x12\x0e\n\x06inside\x18\x03 \x01(\x08\"\x1a\n\x0c\x45nterRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x0f\n\rEnterResponse\"\x19\n\x0b\x45xitRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x0e\n\x0c\x45xitResponse2\xa8\x08\n\x14MruVEntrancesService\x12v\n\x0e\x43reateEntrance\x12%.mruv.entrances.CreateEntranceRequest\x1a&.mruv.entrances.CreateEntranceResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\"\r/v1/entrances\x12r\n\x0bGetEntrance\x12\".mruv.entrances.GetEntranceRequest\x1a#.mruv.entrances.GetEntranceResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x12\x12/v1/entrances/{id}\x12{\n\x0eUpdateEntrance\x12%.mruv.entrances.UpdateEntranceRequest\x1a&.mruv.entrances.UpdateEntranceResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x32\x12/v1/entrances/{id}\x12{\n\x0e\x44\x65leteEntrance\x12%.mruv.entrances.DeleteEntranceRequest\x1a&.mruv.entrances.DeleteEntranceResponse\"\x1a\x82\xd3\xe4\x93\x02\x14*\x12/v1/entrances/{id}\x12\x62\n\x04Lock\x12\x1b.mruv.entrances.LockRequest\x1a\x1c.mruv.entrances.LockResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\"\x17/v1/entrances/{id}/lock\x12j\n\x06Unlock\x12\x1d.mruv.entrances.UnlockRequest\x1a\x1e.mruv.entrances.UnlockResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x19/v1/entrances/{id}/unlock\x12\x8d\x01\n\x13\x46indNearestEntrance\x12*.mruv.entrances.FindNearestEntranceRequest\x1a+.mruv.entrances.FindNearestEntranceResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/v1/entrances/nearest\x12\x66\n\x05\x45nter\x12\x1c.mruv.entrances.EnterRequest\x1a\x1d.mruv.entrances.EnterResponse\" \x82\xd3\xe4\x93\x02\x1a\"\x18/v1/entrances/{id}/enter\x12\x62\n\x04\x45xit\x12\x1b.mruv.entrances.ExitRequest\x1a\x1c.mruv.entrances.ExitResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\"\x17/v1/entrances/{id}/exitB)Z\'github.com/MruV-RP/mruv-pb-go/entrancesb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,spots_dot_spots__pb2.DESCRIPTOR,])
 
@@ -533,6 +533,13 @@ _FINDNEARESTENTRANCERESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='inside', full_name='mruv.entrances.FindNearestEntranceResponse.inside', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -546,7 +553,7 @@ _FINDNEARESTENTRANCERESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=803,
-  serialized_end=862,
+  serialized_end=878,
 )
 
 
@@ -576,8 +583,8 @@ _ENTERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=864,
-  serialized_end=890,
+  serialized_start=880,
+  serialized_end=906,
 )
 
 
@@ -600,8 +607,63 @@ _ENTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=892,
-  serialized_end=907,
+  serialized_start=908,
+  serialized_end=923,
+)
+
+
+_EXITREQUEST = _descriptor.Descriptor(
+  name='ExitRequest',
+  full_name='mruv.entrances.ExitRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='mruv.entrances.ExitRequest.id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=925,
+  serialized_end=950,
+)
+
+
+_EXITRESPONSE = _descriptor.Descriptor(
+  name='ExitResponse',
+  full_name='mruv.entrances.ExitResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=952,
+  serialized_end=966,
 )
 
 _ENTRANCE.fields_by_name['out'].message_type = spots_dot_spots__pb2._SPOT
@@ -627,6 +689,8 @@ DESCRIPTOR.message_types_by_name['FindNearestEntranceRequest'] = _FINDNEARESTENT
 DESCRIPTOR.message_types_by_name['FindNearestEntranceResponse'] = _FINDNEARESTENTRANCERESPONSE
 DESCRIPTOR.message_types_by_name['EnterRequest'] = _ENTERREQUEST
 DESCRIPTOR.message_types_by_name['EnterResponse'] = _ENTERRESPONSE
+DESCRIPTOR.message_types_by_name['ExitRequest'] = _EXITREQUEST
+DESCRIPTOR.message_types_by_name['ExitResponse'] = _EXITRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Entrance = _reflection.GeneratedProtocolMessageType('Entrance', (_message.Message,), {
@@ -748,6 +812,20 @@ EnterResponse = _reflection.GeneratedProtocolMessageType('EnterResponse', (_mess
   })
 _sym_db.RegisterMessage(EnterResponse)
 
+ExitRequest = _reflection.GeneratedProtocolMessageType('ExitRequest', (_message.Message,), {
+  'DESCRIPTOR' : _EXITREQUEST,
+  '__module__' : 'entrances.entrances_pb2'
+  # @@protoc_insertion_point(class_scope:mruv.entrances.ExitRequest)
+  })
+_sym_db.RegisterMessage(ExitRequest)
+
+ExitResponse = _reflection.GeneratedProtocolMessageType('ExitResponse', (_message.Message,), {
+  'DESCRIPTOR' : _EXITRESPONSE,
+  '__module__' : 'entrances.entrances_pb2'
+  # @@protoc_insertion_point(class_scope:mruv.entrances.ExitResponse)
+  })
+_sym_db.RegisterMessage(ExitResponse)
+
 
 DESCRIPTOR._options = None
 
@@ -757,8 +835,8 @@ _MRUVENTRANCESSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=910,
-  serialized_end=1874,
+  serialized_start=969,
+  serialized_end=2033,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateEntrance',
@@ -831,6 +909,15 @@ _MRUVENTRANCESSERVICE = _descriptor.ServiceDescriptor(
     input_type=_ENTERREQUEST,
     output_type=_ENTERRESPONSE,
     serialized_options=_b('\202\323\344\223\002\032\"\030/v1/entrances/{id}/enter'),
+  ),
+  _descriptor.MethodDescriptor(
+    name='Exit',
+    full_name='mruv.entrances.MruVEntrancesService.Exit',
+    index=8,
+    containing_service=None,
+    input_type=_EXITREQUEST,
+    output_type=_EXITRESPONSE,
+    serialized_options=_b('\202\323\344\223\002\031\"\027/v1/entrances/{id}/exit'),
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_MRUVENTRANCESSERVICE)
