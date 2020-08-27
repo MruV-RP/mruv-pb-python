@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='mruv.objects',
   syntax='proto3',
   serialized_options=_b('Z%github.com/MruV-RP/mruv-pb-go/objects'),
-  serialized_pb=_b('\n\x15objects/objects.proto\x12\x0cmruv.objects\x1a\x1cgoogle/api/annotations.proto\"\xe9\x01\n\x06Object\x12\r\n\x05model\x18\x01 \x01(\r\x12\t\n\x01x\x18\x02 \x01(\x02\x12\t\n\x01y\x18\x03 \x01(\x02\x12\t\n\x01z\x18\x04 \x01(\x02\x12\n\n\x02rx\x18\x05 \x01(\x02\x12\n\n\x02ry\x18\x06 \x01(\x02\x12\n\n\x02rz\x18\x07 \x01(\x02\x12\x10\n\x08world_id\x18\x08 \x01(\x05\x12\x13\n\x0binterior_id\x18\t \x01(\x05\x12\x11\n\tplayer_id\x18\n \x01(\x05\x12\x0f\n\x07\x61rea_id\x18\x0b \x01(\x05\x12\x17\n\x0fstream_distance\x18\x0c \x01(\x02\x12\x15\n\rdraw_distance\x18\r \x01(\x02\x12\x10\n\x08priority\x18\x0f \x01(\x05\";\n\x13\x43reateObjectRequest\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\"\"\n\x14\x43reateObjectResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1e\n\x10GetObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\"9\n\x11GetObjectResponse\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\"G\n\x13UpdateObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12$\n\x06object\x18\x02 \x01(\x0b\x32\x14.mruv.objects.Object\"\x16\n\x14UpdateObjectResponse\"!\n\x13\x44\x65leteObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x16\n\x14\x44\x65leteObjectResponse2\xc8\x03\n\x12MruVObjectsService\x12i\n\x0c\x43reateObject\x12!.mruv.objects.CreateObjectRequest\x1a\".mruv.objects.CreateObjectResponse\"\x12\x82\xd3\xe4\x93\x02\x0c\"\n/v1/object\x12\x65\n\tGetObject\x12\x1e.mruv.objects.GetObjectRequest\x1a\x1f.mruv.objects.GetObjectResponse\"\x17\x82\xd3\xe4\x93\x02\x11\x12\x0f/v1/object/{id}\x12o\n\x0cUpdateObject\x12!.mruv.objects.UpdateObjectRequest\x1a\".mruv.objects.UpdateObjectResponse\"\x18\x82\xd3\xe4\x93\x02\x12\x32\x10/v1/objects/{id}\x12o\n\x0c\x44\x65leteObject\x12!.mruv.objects.DeleteObjectRequest\x1a\".mruv.objects.DeleteObjectResponse\"\x18\x82\xd3\xe4\x93\x02\x12*\x10/v1/objects/{id}B\'Z%github.com/MruV-RP/mruv-pb-go/objectsb\x06proto3')
+  serialized_pb=_b('\n\x15objects/objects.proto\x12\x0cmruv.objects\x1a\x1cgoogle/api/annotations.proto\"\xfc\x01\n\x06Object\x12\r\n\x05model\x18\x01 \x01(\r\x12\t\n\x01x\x18\x02 \x01(\x02\x12\t\n\x01y\x18\x03 \x01(\x02\x12\t\n\x01z\x18\x04 \x01(\x02\x12\n\n\x02rx\x18\x05 \x01(\x02\x12\n\n\x02ry\x18\x06 \x01(\x02\x12\n\n\x02rz\x18\x07 \x01(\x02\x12\x10\n\x08world_id\x18\x08 \x01(\x05\x12\x13\n\x0binterior_id\x18\t \x01(\x05\x12\x11\n\tplayer_id\x18\n \x01(\x05\x12\x0f\n\x07\x61rea_id\x18\x0b \x01(\x05\x12\x17\n\x0fstream_distance\x18\x0c \x01(\x02\x12\x15\n\rdraw_distance\x18\r \x01(\x02\x12\x10\n\x08priority\x18\x0f \x01(\x05\x12\x11\n\testate_id\x18\x10 \x01(\r\";\n\x13\x43reateObjectRequest\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\"\"\n\x14\x43reateObjectResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1e\n\x10GetObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\"9\n\x11GetObjectResponse\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\"G\n\x13UpdateObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12$\n\x06object\x18\x02 \x01(\x0b\x32\x14.mruv.objects.Object\"\x16\n\x14UpdateObjectResponse\"!\n\x13\x44\x65leteObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x16\n\x14\x44\x65leteObjectResponse2\xc8\x03\n\x12MruVObjectsService\x12i\n\x0c\x43reateObject\x12!.mruv.objects.CreateObjectRequest\x1a\".mruv.objects.CreateObjectResponse\"\x12\x82\xd3\xe4\x93\x02\x0c\"\n/v1/object\x12\x65\n\tGetObject\x12\x1e.mruv.objects.GetObjectRequest\x1a\x1f.mruv.objects.GetObjectResponse\"\x17\x82\xd3\xe4\x93\x02\x11\x12\x0f/v1/object/{id}\x12o\n\x0cUpdateObject\x12!.mruv.objects.UpdateObjectRequest\x1a\".mruv.objects.UpdateObjectResponse\"\x18\x82\xd3\xe4\x93\x02\x12\x32\x10/v1/objects/{id}\x12o\n\x0c\x44\x65leteObject\x12!.mruv.objects.DeleteObjectRequest\x1a\".mruv.objects.DeleteObjectResponse\"\x18\x82\xd3\xe4\x93\x02\x12*\x10/v1/objects/{id}B\'Z%github.com/MruV-RP/mruv-pb-go/objectsb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -133,6 +133,13 @@ _OBJECT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='estate_id', full_name='mruv.objects.Object.estate_id', index=14,
+      number=16, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -146,7 +153,7 @@ _OBJECT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=70,
-  serialized_end=303,
+  serialized_end=322,
 )
 
 
@@ -176,8 +183,8 @@ _CREATEOBJECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=305,
-  serialized_end=364,
+  serialized_start=324,
+  serialized_end=383,
 )
 
 
@@ -207,8 +214,8 @@ _CREATEOBJECTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=366,
-  serialized_end=400,
+  serialized_start=385,
+  serialized_end=419,
 )
 
 
@@ -238,8 +245,8 @@ _GETOBJECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=402,
-  serialized_end=432,
+  serialized_start=421,
+  serialized_end=451,
 )
 
 
@@ -269,8 +276,8 @@ _GETOBJECTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=434,
-  serialized_end=491,
+  serialized_start=453,
+  serialized_end=510,
 )
 
 
@@ -307,8 +314,8 @@ _UPDATEOBJECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=493,
-  serialized_end=564,
+  serialized_start=512,
+  serialized_end=583,
 )
 
 
@@ -331,8 +338,8 @@ _UPDATEOBJECTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=566,
-  serialized_end=588,
+  serialized_start=585,
+  serialized_end=607,
 )
 
 
@@ -362,8 +369,8 @@ _DELETEOBJECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=590,
-  serialized_end=623,
+  serialized_start=609,
+  serialized_end=642,
 )
 
 
@@ -386,8 +393,8 @@ _DELETEOBJECTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=625,
-  serialized_end=647,
+  serialized_start=644,
+  serialized_end=666,
 )
 
 _CREATEOBJECTREQUEST.fields_by_name['object'].message_type = _OBJECT
@@ -476,8 +483,8 @@ _MRUVOBJECTSSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=650,
-  serialized_end=1106,
+  serialized_start=669,
+  serialized_end=1125,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateObject',

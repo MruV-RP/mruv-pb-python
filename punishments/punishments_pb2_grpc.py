@@ -44,6 +44,11 @@ class MruVPunishmentsServiceStub(object):
         request_serializer=punishments_dot_punishments__pb2.UnBanRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.UnBanResponse.FromString,
         )
+    self.UnBlock = channel.unary_unary(
+        '/mruv.economy.MruVPunishmentsService/UnBlock',
+        request_serializer=punishments_dot_punishments__pb2.UnBlockRequest.SerializeToString,
+        response_deserializer=punishments_dot_punishments__pb2.UnBlockResponse.FromString,
+        )
     self.UnWarn = channel.unary_unary(
         '/mruv.economy.MruVPunishmentsService/UnWarn',
         request_serializer=punishments_dot_punishments__pb2.UnWarnRequest.SerializeToString,
@@ -204,6 +209,13 @@ class MruVPunishmentsServiceServicer(object):
 
   def UnBan(self, request, context):
     """Deactivate a specific player ban.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def UnBlock(self, request, context):
+    """Deactivate a character block.
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
@@ -402,6 +414,11 @@ def add_MruVPunishmentsServiceServicer_to_server(servicer, server):
           servicer.UnBan,
           request_deserializer=punishments_dot_punishments__pb2.UnBanRequest.FromString,
           response_serializer=punishments_dot_punishments__pb2.UnBanResponse.SerializeToString,
+      ),
+      'UnBlock': grpc.unary_unary_rpc_method_handler(
+          servicer.UnBlock,
+          request_deserializer=punishments_dot_punishments__pb2.UnBlockRequest.FromString,
+          response_serializer=punishments_dot_punishments__pb2.UnBlockResponse.SerializeToString,
       ),
       'UnWarn': grpc.unary_unary_rpc_method_handler(
           servicer.UnWarn,
