@@ -34,6 +34,41 @@ class MruVObjectsServiceStub(object):
         request_serializer=objects_dot_objects__pb2.DeleteObjectRequest.SerializeToString,
         response_deserializer=objects_dot_objects__pb2.DeleteObjectResponse.FromString,
         )
+    self.AddObjectMaterial = channel.unary_unary(
+        '/mruv.objects.MruVObjectsService/AddObjectMaterial',
+        request_serializer=objects_dot_objects__pb2.AddObjectMaterialRequest.SerializeToString,
+        response_deserializer=objects_dot_objects__pb2.AddObjectMaterialResponse.FromString,
+        )
+    self.GetObjectMaterials = channel.unary_unary(
+        '/mruv.objects.MruVObjectsService/GetObjectMaterials',
+        request_serializer=objects_dot_objects__pb2.GetObjectMaterialsRequest.SerializeToString,
+        response_deserializer=objects_dot_objects__pb2.GetObjectMaterialsResponse.FromString,
+        )
+    self.DeleteObjectMaterial = channel.unary_unary(
+        '/mruv.objects.MruVObjectsService/DeleteObjectMaterial',
+        request_serializer=objects_dot_objects__pb2.DeleteObjectMaterialRequest.SerializeToString,
+        response_deserializer=objects_dot_objects__pb2.DeleteObjectMaterialResponse.FromString,
+        )
+    self.AddObjectMaterialText = channel.unary_unary(
+        '/mruv.objects.MruVObjectsService/AddObjectMaterialText',
+        request_serializer=objects_dot_objects__pb2.AddObjectMaterialTextRequest.SerializeToString,
+        response_deserializer=objects_dot_objects__pb2.AddObjectMaterialTextResponse.FromString,
+        )
+    self.GetObjectMaterialTexts = channel.unary_unary(
+        '/mruv.objects.MruVObjectsService/GetObjectMaterialTexts',
+        request_serializer=objects_dot_objects__pb2.GetObjectMaterialTextsRequest.SerializeToString,
+        response_deserializer=objects_dot_objects__pb2.GetObjectMaterialTextsResponse.FromString,
+        )
+    self.DeleteObjectMaterialText = channel.unary_unary(
+        '/mruv.objects.MruVObjectsService/DeleteObjectMaterialText',
+        request_serializer=objects_dot_objects__pb2.DeleteObjectMaterialTextRequest.SerializeToString,
+        response_deserializer=objects_dot_objects__pb2.DeleteObjectMaterialTextResponse.FromString,
+        )
+    self.FetchAll = channel.unary_unary(
+        '/mruv.objects.MruVObjectsService/FetchAll',
+        request_serializer=objects_dot_objects__pb2.FetchAllRequest.SerializeToString,
+        response_deserializer=objects_dot_objects__pb2.FetchAllResponse.FromString,
+        )
 
 
 class MruVObjectsServiceServicer(object):
@@ -68,6 +103,55 @@ class MruVObjectsServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def AddObjectMaterial(self, request, context):
+    """Add a material to existing object.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetObjectMaterials(self, request, context):
+    """Get all object materials.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def DeleteObjectMaterial(self, request, context):
+    """Delete a material assigned to an object.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def AddObjectMaterialText(self, request, context):
+    """Add a material text to existing object.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetObjectMaterialTexts(self, request, context):
+    """Get all object material texts.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def DeleteObjectMaterialText(self, request, context):
+    """Delete a material text assigned to an object.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def FetchAll(self, request, context):
+    """Fetch all existing objects.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_MruVObjectsServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -90,6 +174,41 @@ def add_MruVObjectsServiceServicer_to_server(servicer, server):
           servicer.DeleteObject,
           request_deserializer=objects_dot_objects__pb2.DeleteObjectRequest.FromString,
           response_serializer=objects_dot_objects__pb2.DeleteObjectResponse.SerializeToString,
+      ),
+      'AddObjectMaterial': grpc.unary_unary_rpc_method_handler(
+          servicer.AddObjectMaterial,
+          request_deserializer=objects_dot_objects__pb2.AddObjectMaterialRequest.FromString,
+          response_serializer=objects_dot_objects__pb2.AddObjectMaterialResponse.SerializeToString,
+      ),
+      'GetObjectMaterials': grpc.unary_unary_rpc_method_handler(
+          servicer.GetObjectMaterials,
+          request_deserializer=objects_dot_objects__pb2.GetObjectMaterialsRequest.FromString,
+          response_serializer=objects_dot_objects__pb2.GetObjectMaterialsResponse.SerializeToString,
+      ),
+      'DeleteObjectMaterial': grpc.unary_unary_rpc_method_handler(
+          servicer.DeleteObjectMaterial,
+          request_deserializer=objects_dot_objects__pb2.DeleteObjectMaterialRequest.FromString,
+          response_serializer=objects_dot_objects__pb2.DeleteObjectMaterialResponse.SerializeToString,
+      ),
+      'AddObjectMaterialText': grpc.unary_unary_rpc_method_handler(
+          servicer.AddObjectMaterialText,
+          request_deserializer=objects_dot_objects__pb2.AddObjectMaterialTextRequest.FromString,
+          response_serializer=objects_dot_objects__pb2.AddObjectMaterialTextResponse.SerializeToString,
+      ),
+      'GetObjectMaterialTexts': grpc.unary_unary_rpc_method_handler(
+          servicer.GetObjectMaterialTexts,
+          request_deserializer=objects_dot_objects__pb2.GetObjectMaterialTextsRequest.FromString,
+          response_serializer=objects_dot_objects__pb2.GetObjectMaterialTextsResponse.SerializeToString,
+      ),
+      'DeleteObjectMaterialText': grpc.unary_unary_rpc_method_handler(
+          servicer.DeleteObjectMaterialText,
+          request_deserializer=objects_dot_objects__pb2.DeleteObjectMaterialTextRequest.FromString,
+          response_serializer=objects_dot_objects__pb2.DeleteObjectMaterialTextResponse.SerializeToString,
+      ),
+      'FetchAll': grpc.unary_unary_rpc_method_handler(
+          servicer.FetchAll,
+          request_deserializer=objects_dot_objects__pb2.FetchAllRequest.FromString,
+          response_serializer=objects_dot_objects__pb2.FetchAllResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
