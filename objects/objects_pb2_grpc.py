@@ -64,6 +64,21 @@ class MruVObjectsServiceStub(object):
         request_serializer=objects_dot_objects__pb2.DeleteObjectMaterialTextRequest.SerializeToString,
         response_deserializer=objects_dot_objects__pb2.DeleteObjectMaterialTextResponse.FromString,
         )
+    self.AddRemoveBuilding = channel.unary_unary(
+        '/mruv.objects.MruVObjectsService/AddRemoveBuilding',
+        request_serializer=objects_dot_objects__pb2.AddRemoveBuildingRequest.SerializeToString,
+        response_deserializer=objects_dot_objects__pb2.AddRemoveBuildingResponse.FromString,
+        )
+    self.GetRemovedBuildings = channel.unary_unary(
+        '/mruv.objects.MruVObjectsService/GetRemovedBuildings',
+        request_serializer=objects_dot_objects__pb2.GetRemovedBuildingsRequest.SerializeToString,
+        response_deserializer=objects_dot_objects__pb2.GetRemovedBuildingsResponse.FromString,
+        )
+    self.DeleteRemoveBuilding = channel.unary_unary(
+        '/mruv.objects.MruVObjectsService/DeleteRemoveBuilding',
+        request_serializer=objects_dot_objects__pb2.DeleteRemoveBuildingRequest.SerializeToString,
+        response_deserializer=objects_dot_objects__pb2.DeleteRemoveBuildingResponse.FromString,
+        )
     self.FetchAll = channel.unary_unary(
         '/mruv.objects.MruVObjectsService/FetchAll',
         request_serializer=objects_dot_objects__pb2.FetchAllRequest.SerializeToString,
@@ -145,6 +160,27 @@ class MruVObjectsServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def AddRemoveBuilding(self, request, context):
+    """Removes a object from GTA SA map.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetRemovedBuildings(self, request, context):
+    """Get all removed objects.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def DeleteRemoveBuilding(self, request, context):
+    """Delete removed buildings.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
   def FetchAll(self, request, context):
     """Fetch all existing objects.
     """
@@ -204,6 +240,21 @@ def add_MruVObjectsServiceServicer_to_server(servicer, server):
           servicer.DeleteObjectMaterialText,
           request_deserializer=objects_dot_objects__pb2.DeleteObjectMaterialTextRequest.FromString,
           response_serializer=objects_dot_objects__pb2.DeleteObjectMaterialTextResponse.SerializeToString,
+      ),
+      'AddRemoveBuilding': grpc.unary_unary_rpc_method_handler(
+          servicer.AddRemoveBuilding,
+          request_deserializer=objects_dot_objects__pb2.AddRemoveBuildingRequest.FromString,
+          response_serializer=objects_dot_objects__pb2.AddRemoveBuildingResponse.SerializeToString,
+      ),
+      'GetRemovedBuildings': grpc.unary_unary_rpc_method_handler(
+          servicer.GetRemovedBuildings,
+          request_deserializer=objects_dot_objects__pb2.GetRemovedBuildingsRequest.FromString,
+          response_serializer=objects_dot_objects__pb2.GetRemovedBuildingsResponse.SerializeToString,
+      ),
+      'DeleteRemoveBuilding': grpc.unary_unary_rpc_method_handler(
+          servicer.DeleteRemoveBuilding,
+          request_deserializer=objects_dot_objects__pb2.DeleteRemoveBuildingRequest.FromString,
+          response_serializer=objects_dot_objects__pb2.DeleteRemoveBuildingResponse.SerializeToString,
       ),
       'FetchAll': grpc.unary_unary_rpc_method_handler(
           servicer.FetchAll,
