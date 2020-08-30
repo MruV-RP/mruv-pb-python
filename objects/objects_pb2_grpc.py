@@ -79,7 +79,7 @@ class MruVObjectsServiceStub(object):
         request_serializer=objects_dot_objects__pb2.DeleteRemoveBuildingRequest.SerializeToString,
         response_deserializer=objects_dot_objects__pb2.DeleteRemoveBuildingResponse.FromString,
         )
-    self.FetchAll = channel.unary_unary(
+    self.FetchAll = channel.unary_stream(
         '/mruv.objects.MruVObjectsService/FetchAll',
         request_serializer=objects_dot_objects__pb2.FetchAllRequest.SerializeToString,
         response_deserializer=objects_dot_objects__pb2.FetchAllResponse.FromString,
@@ -256,7 +256,7 @@ def add_MruVObjectsServiceServicer_to_server(servicer, server):
           request_deserializer=objects_dot_objects__pb2.DeleteRemoveBuildingRequest.FromString,
           response_serializer=objects_dot_objects__pb2.DeleteRemoveBuildingResponse.SerializeToString,
       ),
-      'FetchAll': grpc.unary_unary_rpc_method_handler(
+      'FetchAll': grpc.unary_stream_rpc_method_handler(
           servicer.FetchAll,
           request_deserializer=objects_dot_objects__pb2.FetchAllRequest.FromString,
           response_serializer=objects_dot_objects__pb2.FetchAllResponse.SerializeToString,
