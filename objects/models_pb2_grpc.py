@@ -34,8 +34,8 @@ class MruVObjectModelsServiceStub(object):
         request_serializer=objects_dot_models__pb2.DeleteObjectModelRequest.SerializeToString,
         response_deserializer=objects_dot_models__pb2.DeleteObjectModelResponse.FromString,
         )
-    self.FetchAll = channel.unary_stream(
-        '/mruv.objects.MruVObjectModelsService/FetchAll',
+    self.FetchAllModels = channel.unary_stream(
+        '/mruv.objects.MruVObjectModelsService/FetchAllModels',
         request_serializer=objects_dot_models__pb2.FetchAllModelsRequest.SerializeToString,
         response_deserializer=objects_dot_models__pb2.FetchAllModelsResponse.FromString,
         )
@@ -73,7 +73,7 @@ class MruVObjectModelsServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def FetchAll(self, request, context):
+  def FetchAllModels(self, request, context):
     """Get all models.
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -103,8 +103,8 @@ def add_MruVObjectModelsServiceServicer_to_server(servicer, server):
           request_deserializer=objects_dot_models__pb2.DeleteObjectModelRequest.FromString,
           response_serializer=objects_dot_models__pb2.DeleteObjectModelResponse.SerializeToString,
       ),
-      'FetchAll': grpc.unary_stream_rpc_method_handler(
-          servicer.FetchAll,
+      'FetchAllModels': grpc.unary_stream_rpc_method_handler(
+          servicer.FetchAllModels,
           request_deserializer=objects_dot_models__pb2.FetchAllModelsRequest.FromString,
           response_serializer=objects_dot_models__pb2.FetchAllModelsResponse.SerializeToString,
       ),
