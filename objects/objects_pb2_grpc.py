@@ -81,8 +81,8 @@ class MruVObjectsServiceStub(object):
         )
     self.FetchAll = channel.unary_stream(
         '/mruv.objects.MruVObjectsService/FetchAll',
-        request_serializer=objects_dot_objects__pb2.FetchAllRequest.SerializeToString,
-        response_deserializer=objects_dot_objects__pb2.FetchAllResponse.FromString,
+        request_serializer=objects_dot_objects__pb2.FetchAllObjectsRequest.SerializeToString,
+        response_deserializer=objects_dot_objects__pb2.FetchAllObjectsResponse.FromString,
         )
 
 
@@ -258,8 +258,8 @@ def add_MruVObjectsServiceServicer_to_server(servicer, server):
       ),
       'FetchAll': grpc.unary_stream_rpc_method_handler(
           servicer.FetchAll,
-          request_deserializer=objects_dot_objects__pb2.FetchAllRequest.FromString,
-          response_serializer=objects_dot_objects__pb2.FetchAllResponse.SerializeToString,
+          request_deserializer=objects_dot_objects__pb2.FetchAllObjectsRequest.FromString,
+          response_serializer=objects_dot_objects__pb2.FetchAllObjectsResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

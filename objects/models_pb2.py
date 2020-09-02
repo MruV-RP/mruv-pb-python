@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='mruv.objects',
   syntax='proto3',
   serialized_options=_b('Z%github.com/MruV-RP/mruv-pb-go/objects'),
-  serialized_pb=_b('\n\x14objects/models.proto\x12\x0cmruv.objects\x1a\x1cgoogle/api/annotations.proto\"\xa3\x02\n\x0bObjectModel\x12\r\n\x05model\x18\x01 \x01(\r\x12\x12\n\nmodel_name\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x10\n\x08\x63\x61tegory\x18\x04 \x01(\t\x12\x0e\n\x06length\x18\x05 \x01(\x01\x12\r\n\x05width\x18\x06 \x01(\x01\x12\x0e\n\x06height\x18\x07 \x01(\x01\x12\x0c\n\x04size\x18\x08 \x01(\x01\x12\x0c\n\x04tags\x18\t \x03(\t\x12\x15\n\rhas_collision\x18\n \x01(\x08\x12\x15\n\rbreaks_on_hit\x18\x0b \x01(\x08\x12\x15\n\rhas_animation\x18\x0c \x01(\x08\x12\x17\n\x0fvisible_by_time\x18\x10 \x01(\x08\x12\x14\n\x0cvisible_from\x18\x11 \x01(\r\x12\x12\n\nvisible_to\x18\x12 \x01(\r\"J\n\x18\x43reateObjectModelRequest\x12.\n\x0bobject_type\x18\x01 \x01(\x0b\x32\x19.mruv.objects.ObjectModel\"\'\n\x19\x43reateObjectModelResponse\x12\n\n\x02id\x18\x01 \x01(\r\"&\n\x15GetObjectModelRequest\x12\r\n\x05model\x18\x01 \x01(\r\"H\n\x16GetObjectModelResponse\x12.\n\x0bobject_type\x18\x01 \x01(\x0b\x32\x19.mruv.objects.ObjectModel\"J\n\x18UpdateObjectModelRequest\x12.\n\x0bobject_type\x18\x01 \x01(\x0b\x32\x19.mruv.objects.ObjectModel\"\x1b\n\x19UpdateObjectModelResponse\")\n\x18\x44\x65leteObjectModelRequest\x12\r\n\x05model\x18\x01 \x01(\r\"\x1b\n\x19\x44\x65leteObjectModelResponse2\xb2\x04\n\x17MruVObjectModelsService\x12}\n\x11\x43reateObjectModel\x12&.mruv.objects.CreateObjectModelRequest\x1a\'.mruv.objects.CreateObjectModelResponse\"\x17\x82\xd3\xe4\x93\x02\x11\"\x0f/v1/objectTypes\x12|\n\x0eGetObjectModel\x12#.mruv.objects.GetObjectModelRequest\x1a$.mruv.objects.GetObjectModelResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/v1/objectTypes/{model}\x12\x91\x01\n\x11UpdateObjectModel\x12&.mruv.objects.UpdateObjectModelRequest\x1a\'.mruv.objects.UpdateObjectModelResponse\"+\x82\xd3\xe4\x93\x02%2#/v1/objectTypes/{object_type.model}\x12\x85\x01\n\x11\x44\x65leteObjectModel\x12&.mruv.objects.DeleteObjectModelRequest\x1a\'.mruv.objects.DeleteObjectModelResponse\"\x1f\x82\xd3\xe4\x93\x02\x19*\x17/v1/objectTypes/{model}B\'Z%github.com/MruV-RP/mruv-pb-go/objectsb\x06proto3')
+  serialized_pb=_b('\n\x14objects/models.proto\x12\x0cmruv.objects\x1a\x1cgoogle/api/annotations.proto\"\xa3\x02\n\x0bObjectModel\x12\r\n\x05model\x18\x01 \x01(\x05\x12\x12\n\nmodel_name\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x10\n\x08\x63\x61tegory\x18\x04 \x01(\t\x12\x0e\n\x06length\x18\x05 \x01(\x01\x12\r\n\x05width\x18\x06 \x01(\x01\x12\x0e\n\x06height\x18\x07 \x01(\x01\x12\x0c\n\x04size\x18\x08 \x01(\x01\x12\x0c\n\x04tags\x18\t \x03(\t\x12\x15\n\rhas_collision\x18\n \x01(\x08\x12\x15\n\rbreaks_on_hit\x18\x0b \x01(\x08\x12\x15\n\rhas_animation\x18\x0c \x01(\x08\x12\x17\n\x0fvisible_by_time\x18\x10 \x01(\x08\x12\x14\n\x0cvisible_from\x18\x11 \x01(\r\x12\x12\n\nvisible_to\x18\x12 \x01(\r\"J\n\x18\x43reateObjectModelRequest\x12.\n\x0bobject_type\x18\x01 \x01(\x0b\x32\x19.mruv.objects.ObjectModel\"\'\n\x19\x43reateObjectModelResponse\x12\n\n\x02id\x18\x01 \x01(\r\"&\n\x15GetObjectModelRequest\x12\r\n\x05model\x18\x01 \x01(\x05\"H\n\x16GetObjectModelResponse\x12.\n\x0bobject_type\x18\x01 \x01(\x0b\x32\x19.mruv.objects.ObjectModel\"J\n\x18UpdateObjectModelRequest\x12.\n\x0bobject_type\x18\x01 \x01(\x0b\x32\x19.mruv.objects.ObjectModel\"\x1b\n\x19UpdateObjectModelResponse\")\n\x18\x44\x65leteObjectModelRequest\x12\r\n\x05model\x18\x01 \x01(\x05\"\x1b\n\x19\x44\x65leteObjectModelResponse\"+\n\x15\x46\x65tchAllModelsRequest\x12\x12\n\nchunk_size\x18\x01 \x01(\r\"\xa4\x01\n\x16\x46\x65tchAllModelsResponse\x12@\n\x06models\x18\x01 \x03(\x0b\x32\x30.mruv.objects.FetchAllModelsResponse.ModelsEntry\x1aH\n\x0bModelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12(\n\x05value\x18\x02 \x01(\x0b\x32\x19.mruv.objects.ObjectModel:\x02\x38\x01\x32\xa4\x05\n\x17MruVObjectModelsService\x12}\n\x11\x43reateObjectModel\x12&.mruv.objects.CreateObjectModelRequest\x1a\'.mruv.objects.CreateObjectModelResponse\"\x17\x82\xd3\xe4\x93\x02\x11\"\x0f/v1/objectTypes\x12|\n\x0eGetObjectModel\x12#.mruv.objects.GetObjectModelRequest\x1a$.mruv.objects.GetObjectModelResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/v1/objectTypes/{model}\x12\x91\x01\n\x11UpdateObjectModel\x12&.mruv.objects.UpdateObjectModelRequest\x1a\'.mruv.objects.UpdateObjectModelResponse\"+\x82\xd3\xe4\x93\x02%2#/v1/objectTypes/{object_type.model}\x12\x85\x01\n\x11\x44\x65leteObjectModel\x12&.mruv.objects.DeleteObjectModelRequest\x1a\'.mruv.objects.DeleteObjectModelResponse\"\x1f\x82\xd3\xe4\x93\x02\x19*\x17/v1/objectTypes/{model}\x12p\n\x08\x46\x65tchAll\x12#.mruv.objects.FetchAllModelsRequest\x1a$.mruv.objects.FetchAllModelsResponse\"\x17\x82\xd3\xe4\x93\x02\x11\x12\x0f/v1/objectTypes0\x01\x42\'Z%github.com/MruV-RP/mruv-pb-go/objectsb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -37,7 +37,7 @@ _OBJECTMODEL = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='model', full_name='mruv.objects.ObjectModel.model', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -228,7 +228,7 @@ _GETOBJECTMODELREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='model', full_name='mruv.objects.GetObjectModelRequest.model', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -345,7 +345,7 @@ _DELETEOBJECTMODELREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='model', full_name='mruv.objects.DeleteObjectModelRequest.model', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -390,9 +390,111 @@ _DELETEOBJECTMODELRESPONSE = _descriptor.Descriptor(
   serialized_end=768,
 )
 
+
+_FETCHALLMODELSREQUEST = _descriptor.Descriptor(
+  name='FetchAllModelsRequest',
+  full_name='mruv.objects.FetchAllModelsRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='chunk_size', full_name='mruv.objects.FetchAllModelsRequest.chunk_size', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=770,
+  serialized_end=813,
+)
+
+
+_FETCHALLMODELSRESPONSE_MODELSENTRY = _descriptor.Descriptor(
+  name='ModelsEntry',
+  full_name='mruv.objects.FetchAllModelsResponse.ModelsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='mruv.objects.FetchAllModelsResponse.ModelsEntry.key', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='mruv.objects.FetchAllModelsResponse.ModelsEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=_b('8\001'),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=908,
+  serialized_end=980,
+)
+
+_FETCHALLMODELSRESPONSE = _descriptor.Descriptor(
+  name='FetchAllModelsResponse',
+  full_name='mruv.objects.FetchAllModelsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='models', full_name='mruv.objects.FetchAllModelsResponse.models', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_FETCHALLMODELSRESPONSE_MODELSENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=816,
+  serialized_end=980,
+)
+
 _CREATEOBJECTMODELREQUEST.fields_by_name['object_type'].message_type = _OBJECTMODEL
 _GETOBJECTMODELRESPONSE.fields_by_name['object_type'].message_type = _OBJECTMODEL
 _UPDATEOBJECTMODELREQUEST.fields_by_name['object_type'].message_type = _OBJECTMODEL
+_FETCHALLMODELSRESPONSE_MODELSENTRY.fields_by_name['value'].message_type = _OBJECTMODEL
+_FETCHALLMODELSRESPONSE_MODELSENTRY.containing_type = _FETCHALLMODELSRESPONSE
+_FETCHALLMODELSRESPONSE.fields_by_name['models'].message_type = _FETCHALLMODELSRESPONSE_MODELSENTRY
 DESCRIPTOR.message_types_by_name['ObjectModel'] = _OBJECTMODEL
 DESCRIPTOR.message_types_by_name['CreateObjectModelRequest'] = _CREATEOBJECTMODELREQUEST
 DESCRIPTOR.message_types_by_name['CreateObjectModelResponse'] = _CREATEOBJECTMODELRESPONSE
@@ -402,6 +504,8 @@ DESCRIPTOR.message_types_by_name['UpdateObjectModelRequest'] = _UPDATEOBJECTMODE
 DESCRIPTOR.message_types_by_name['UpdateObjectModelResponse'] = _UPDATEOBJECTMODELRESPONSE
 DESCRIPTOR.message_types_by_name['DeleteObjectModelRequest'] = _DELETEOBJECTMODELREQUEST
 DESCRIPTOR.message_types_by_name['DeleteObjectModelResponse'] = _DELETEOBJECTMODELRESPONSE
+DESCRIPTOR.message_types_by_name['FetchAllModelsRequest'] = _FETCHALLMODELSREQUEST
+DESCRIPTOR.message_types_by_name['FetchAllModelsResponse'] = _FETCHALLMODELSRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ObjectModel = _reflection.GeneratedProtocolMessageType('ObjectModel', (_message.Message,), {
@@ -467,8 +571,31 @@ DeleteObjectModelResponse = _reflection.GeneratedProtocolMessageType('DeleteObje
   })
 _sym_db.RegisterMessage(DeleteObjectModelResponse)
 
+FetchAllModelsRequest = _reflection.GeneratedProtocolMessageType('FetchAllModelsRequest', (_message.Message,), {
+  'DESCRIPTOR' : _FETCHALLMODELSREQUEST,
+  '__module__' : 'objects.models_pb2'
+  # @@protoc_insertion_point(class_scope:mruv.objects.FetchAllModelsRequest)
+  })
+_sym_db.RegisterMessage(FetchAllModelsRequest)
+
+FetchAllModelsResponse = _reflection.GeneratedProtocolMessageType('FetchAllModelsResponse', (_message.Message,), {
+
+  'ModelsEntry' : _reflection.GeneratedProtocolMessageType('ModelsEntry', (_message.Message,), {
+    'DESCRIPTOR' : _FETCHALLMODELSRESPONSE_MODELSENTRY,
+    '__module__' : 'objects.models_pb2'
+    # @@protoc_insertion_point(class_scope:mruv.objects.FetchAllModelsResponse.ModelsEntry)
+    })
+  ,
+  'DESCRIPTOR' : _FETCHALLMODELSRESPONSE,
+  '__module__' : 'objects.models_pb2'
+  # @@protoc_insertion_point(class_scope:mruv.objects.FetchAllModelsResponse)
+  })
+_sym_db.RegisterMessage(FetchAllModelsResponse)
+_sym_db.RegisterMessage(FetchAllModelsResponse.ModelsEntry)
+
 
 DESCRIPTOR._options = None
+_FETCHALLMODELSRESPONSE_MODELSENTRY._options = None
 
 _MRUVOBJECTMODELSSERVICE = _descriptor.ServiceDescriptor(
   name='MruVObjectModelsService',
@@ -476,8 +603,8 @@ _MRUVOBJECTMODELSSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=771,
-  serialized_end=1333,
+  serialized_start=983,
+  serialized_end=1659,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateObjectModel',
@@ -514,6 +641,15 @@ _MRUVOBJECTMODELSSERVICE = _descriptor.ServiceDescriptor(
     input_type=_DELETEOBJECTMODELREQUEST,
     output_type=_DELETEOBJECTMODELRESPONSE,
     serialized_options=_b('\202\323\344\223\002\031*\027/v1/objectTypes/{model}'),
+  ),
+  _descriptor.MethodDescriptor(
+    name='FetchAll',
+    full_name='mruv.objects.MruVObjectModelsService.FetchAll',
+    index=4,
+    containing_service=None,
+    input_type=_FETCHALLMODELSREQUEST,
+    output_type=_FETCHALLMODELSRESPONSE,
+    serialized_options=_b('\202\323\344\223\002\021\022\017/v1/objectTypes'),
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_MRUVOBJECTMODELSSERVICE)

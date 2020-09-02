@@ -59,6 +59,11 @@ class MruVGatesServiceStub(object):
         request_serializer=gates_dot_gates__pb2.FindNearestGateRequest.SerializeToString,
         response_deserializer=gates_dot_gates__pb2.FindNearestGateResponse.FromString,
         )
+    self.FetchAll = channel.unary_stream(
+        '/mruv.gates.MruVGatesService/FetchAll',
+        request_serializer=gates_dot_gates__pb2.FetchAllGatesRequest.SerializeToString,
+        response_deserializer=gates_dot_gates__pb2.FetchAllGatesResponse.FromString,
+        )
 
 
 class MruVGatesServiceServicer(object):
@@ -128,6 +133,13 @@ class MruVGatesServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def FetchAll(self, request, context):
+    """
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_MruVGatesServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -175,6 +187,11 @@ def add_MruVGatesServiceServicer_to_server(servicer, server):
           servicer.FindNearestGate,
           request_deserializer=gates_dot_gates__pb2.FindNearestGateRequest.FromString,
           response_serializer=gates_dot_gates__pb2.FindNearestGateResponse.SerializeToString,
+      ),
+      'FetchAll': grpc.unary_stream_rpc_method_handler(
+          servicer.FetchAll,
+          request_deserializer=gates_dot_gates__pb2.FetchAllGatesRequest.FromString,
+          response_serializer=gates_dot_gates__pb2.FetchAllGatesResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

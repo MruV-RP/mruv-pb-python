@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='mruv.objects',
   syntax='proto3',
   serialized_options=_b('Z%github.com/MruV-RP/mruv-pb-go/objects'),
-  serialized_pb=_b('\n\x15objects/movable.proto\x12\x0cmruv.objects\x1a\x1cgoogle/api/annotations.proto\x1a\x15objects/objects.proto\"t\n\x05State\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\t\n\x01x\x18\x02 \x01(\x02\x12\t\n\x01y\x18\x03 \x01(\x02\x12\t\n\x01z\x18\x04 \x01(\x02\x12\n\n\x02rx\x18\x05 \x01(\x02\x12\n\n\x02ry\x18\x06 \x01(\x02\x12\n\n\x02rz\x18\x07 \x01(\x02\x12\x18\n\x10transition_speed\x18\x08 \x01(\x02\"Z\n\rMovableObject\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\x12#\n\x06states\x18\x02 \x03(\x0b\x32\x13.mruv.objects.State\"g\n\x1a\x43reateMovableObjectRequest\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\x12#\n\x06states\x18\x02 \x03(\x0b\x32\x13.mruv.objects.State\")\n\x1b\x43reateMovableObjectResponse\x12\n\n\x02id\x18\x01 \x01(\r\"%\n\x17GetMovableObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x9b\x01\n\x18GetMovableObjectResponse\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\x12#\n\x06states\x18\x02 \x03(\x0b\x32\x13.mruv.objects.State\x12\x18\n\x10\x63urrent_state_id\x18\x03 \x01(\r\x12\x1a\n\x12\x63urrent_state_name\x18\x04 \x01(\t\"`\n\x1aUpdateMovableObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x11\n\tobject_id\x18\x02 \x01(\r\x12#\n\x06states\x18\x03 \x03(\x0b\x32\x13.mruv.objects.State\"\x1d\n\x1bUpdateMovableObjectResponse\"(\n\x1a\x44\x65leteMovableObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x1d\n\x1b\x44\x65leteMovableObjectResponse\"\"\n\x11MoveObjectRequest\x12\r\n\x05state\x18\x01 \x01(\r\"\x14\n\x12MoveObjectResponse\"#\n\x15MoveObjectNextRequest\x12\n\n\x02id\x18\x01 \x01(\r\">\n\x16MoveObjectNextResponse\x12\x10\n\x08state_id\x18\x01 \x01(\r\x12\x12\n\nstate_name\x18\x02 \x01(\t\"\'\n\x19MoveObjectPreviousRequest\x12\n\n\x02id\x18\x01 \x01(\r\"B\n\x1aMoveObjectPreviousResponse\x12\x10\n\x08state_id\x18\x01 \x01(\r\x12\x12\n\nstate_name\x18\x02 \x01(\t2\xc2\x07\n\x19MruVMovableObjectsService\x12\x86\x01\n\x13\x43reateMovableObject\x12(.mruv.objects.CreateMovableObjectRequest\x1a).mruv.objects.CreateMovableObjectResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\"\x12/v1/movableObjects\x12}\n\x10GetMovableObject\x12%.mruv.objects.GetMovableObjectRequest\x1a&.mruv.objects.GetMovableObjectResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x12\x12/v1/movableObjects\x12\x86\x01\n\x13UpdateMovableObject\x12(.mruv.objects.UpdateMovableObjectRequest\x1a).mruv.objects.UpdateMovableObjectResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x32\x12/v1/movableObjects\x12\x86\x01\n\x13\x44\x65leteMovableObject\x12(.mruv.objects.DeleteMovableObjectRequest\x1a).mruv.objects.DeleteMovableObjectResponse\"\x1a\x82\xd3\xe4\x93\x02\x14*\x12/v1/movableObjects\x12q\n\nMoveObject\x12\x1f.mruv.objects.MoveObjectRequest\x1a .mruv.objects.MoveObjectResponse\" \x82\xd3\xe4\x93\x02\x1a\"\x18/v1/movableObjects/moves\x12\x82\x01\n\x0eMoveObjectNext\x12#.mruv.objects.MoveObjectNextRequest\x1a$.mruv.objects.MoveObjectNextResponse\"%\x82\xd3\xe4\x93\x02\x1f\"\x1d/v1/movableObjects/moves/next\x12\x92\x01\n\x12MoveObjectPrevious\x12\'.mruv.objects.MoveObjectPreviousRequest\x1a(.mruv.objects.MoveObjectPreviousResponse\")\x82\xd3\xe4\x93\x02#\"!/v1/movableObjects/moves/previousB\'Z%github.com/MruV-RP/mruv-pb-go/objectsb\x06proto3')
+  serialized_pb=_b('\n\x15objects/movable.proto\x12\x0cmruv.objects\x1a\x1cgoogle/api/annotations.proto\x1a\x15objects/objects.proto\"t\n\x05State\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\t\n\x01x\x18\x02 \x01(\x02\x12\t\n\x01y\x18\x03 \x01(\x02\x12\t\n\x01z\x18\x04 \x01(\x02\x12\n\n\x02rx\x18\x05 \x01(\x02\x12\n\n\x02ry\x18\x06 \x01(\x02\x12\n\n\x02rz\x18\x07 \x01(\x02\x12\x18\n\x10transition_speed\x18\x08 \x01(\x02\"Z\n\rMovableObject\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\x12#\n\x06states\x18\x02 \x03(\x0b\x32\x13.mruv.objects.State\"g\n\x1a\x43reateMovableObjectRequest\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\x12#\n\x06states\x18\x02 \x03(\x0b\x32\x13.mruv.objects.State\")\n\x1b\x43reateMovableObjectResponse\x12\n\n\x02id\x18\x01 \x01(\r\"%\n\x17GetMovableObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x9b\x01\n\x18GetMovableObjectResponse\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\x12#\n\x06states\x18\x02 \x03(\x0b\x32\x13.mruv.objects.State\x12\x18\n\x10\x63urrent_state_id\x18\x03 \x01(\r\x12\x1a\n\x12\x63urrent_state_name\x18\x04 \x01(\t\"`\n\x1aUpdateMovableObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x11\n\tobject_id\x18\x02 \x01(\r\x12#\n\x06states\x18\x03 \x03(\x0b\x32\x13.mruv.objects.State\"\x1d\n\x1bUpdateMovableObjectResponse\"(\n\x1a\x44\x65leteMovableObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x1d\n\x1b\x44\x65leteMovableObjectResponse\"\"\n\x11MoveObjectRequest\x12\r\n\x05state\x18\x01 \x01(\r\"\x14\n\x12MoveObjectResponse\"#\n\x15MoveObjectNextRequest\x12\n\n\x02id\x18\x01 \x01(\r\">\n\x16MoveObjectNextResponse\x12\x10\n\x08state_id\x18\x01 \x01(\r\x12\x12\n\nstate_name\x18\x02 \x01(\t\"\'\n\x19MoveObjectPreviousRequest\x12\n\n\x02id\x18\x01 \x01(\r\"B\n\x1aMoveObjectPreviousResponse\x12\x10\n\x08state_id\x18\x01 \x01(\r\x12\x12\n\nstate_name\x18\x02 \x01(\t\"3\n\x1d\x46\x65tchAllMovableObjectsRequest\x12\x12\n\nchunk_size\x18\x01 \x01(\r\"\xcf\x01\n\x1e\x46\x65tchAllMovableObjectsResponse\x12Y\n\x0fmovable_objects\x18\x01 \x03(\x0b\x32@.mruv.objects.FetchAllMovableObjectsResponse.MovableObjectsEntry\x1aR\n\x13MovableObjectsEntry\x12\x0b\n\x03key\x18\x01 \x01(\r\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x1b.mruv.objects.MovableObject:\x02\x38\x01\x32\xbd\x08\n\x19MruVMovableObjectsService\x12\x86\x01\n\x13\x43reateMovableObject\x12(.mruv.objects.CreateMovableObjectRequest\x1a).mruv.objects.CreateMovableObjectResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\"\x12/v1/movableObjects\x12\x82\x01\n\x10GetMovableObject\x12%.mruv.objects.GetMovableObjectRequest\x1a&.mruv.objects.GetMovableObjectResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/v1/movableObjects/{id}\x12\x8b\x01\n\x13UpdateMovableObject\x12(.mruv.objects.UpdateMovableObjectRequest\x1a).mruv.objects.UpdateMovableObjectResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\x32\x17/v1/movableObjects/{id}\x12\x8b\x01\n\x13\x44\x65leteMovableObject\x12(.mruv.objects.DeleteMovableObjectRequest\x1a).mruv.objects.DeleteMovableObjectResponse\"\x1f\x82\xd3\xe4\x93\x02\x19*\x17/v1/movableObjects/{id}\x12q\n\nMoveObject\x12\x1f.mruv.objects.MoveObjectRequest\x1a .mruv.objects.MoveObjectResponse\" \x82\xd3\xe4\x93\x02\x1a\"\x18/v1/movableObjects/moves\x12\x82\x01\n\x0eMoveObjectNext\x12#.mruv.objects.MoveObjectNextRequest\x1a$.mruv.objects.MoveObjectNextResponse\"%\x82\xd3\xe4\x93\x02\x1f\"\x1d/v1/movableObjects/moves/next\x12\x92\x01\n\x12MoveObjectPrevious\x12\'.mruv.objects.MoveObjectPreviousRequest\x1a(.mruv.objects.MoveObjectPreviousResponse\")\x82\xd3\xe4\x93\x02#\"!/v1/movableObjects/moves/previous\x12i\n\x08\x46\x65tchAll\x12+.mruv.objects.FetchAllMovableObjectsRequest\x1a,.mruv.objects.FetchAllMovableObjectsResponse\"\x00\x30\x01\x42\'Z%github.com/MruV-RP/mruv-pb-go/objectsb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,objects_dot_objects__pb2.DESCRIPTOR,])
 
@@ -615,6 +615,105 @@ _MOVEOBJECTPREVIOUSRESPONSE = _descriptor.Descriptor(
   serialized_end=1115,
 )
 
+
+_FETCHALLMOVABLEOBJECTSREQUEST = _descriptor.Descriptor(
+  name='FetchAllMovableObjectsRequest',
+  full_name='mruv.objects.FetchAllMovableObjectsRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='chunk_size', full_name='mruv.objects.FetchAllMovableObjectsRequest.chunk_size', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1117,
+  serialized_end=1168,
+)
+
+
+_FETCHALLMOVABLEOBJECTSRESPONSE_MOVABLEOBJECTSENTRY = _descriptor.Descriptor(
+  name='MovableObjectsEntry',
+  full_name='mruv.objects.FetchAllMovableObjectsResponse.MovableObjectsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='mruv.objects.FetchAllMovableObjectsResponse.MovableObjectsEntry.key', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='mruv.objects.FetchAllMovableObjectsResponse.MovableObjectsEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=_b('8\001'),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1296,
+  serialized_end=1378,
+)
+
+_FETCHALLMOVABLEOBJECTSRESPONSE = _descriptor.Descriptor(
+  name='FetchAllMovableObjectsResponse',
+  full_name='mruv.objects.FetchAllMovableObjectsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='movable_objects', full_name='mruv.objects.FetchAllMovableObjectsResponse.movable_objects', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_FETCHALLMOVABLEOBJECTSRESPONSE_MOVABLEOBJECTSENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1171,
+  serialized_end=1378,
+)
+
 _MOVABLEOBJECT.fields_by_name['object'].message_type = objects_dot_objects__pb2._OBJECT
 _MOVABLEOBJECT.fields_by_name['states'].message_type = _STATE
 _CREATEMOVABLEOBJECTREQUEST.fields_by_name['object'].message_type = objects_dot_objects__pb2._OBJECT
@@ -622,6 +721,9 @@ _CREATEMOVABLEOBJECTREQUEST.fields_by_name['states'].message_type = _STATE
 _GETMOVABLEOBJECTRESPONSE.fields_by_name['object'].message_type = objects_dot_objects__pb2._OBJECT
 _GETMOVABLEOBJECTRESPONSE.fields_by_name['states'].message_type = _STATE
 _UPDATEMOVABLEOBJECTREQUEST.fields_by_name['states'].message_type = _STATE
+_FETCHALLMOVABLEOBJECTSRESPONSE_MOVABLEOBJECTSENTRY.fields_by_name['value'].message_type = _MOVABLEOBJECT
+_FETCHALLMOVABLEOBJECTSRESPONSE_MOVABLEOBJECTSENTRY.containing_type = _FETCHALLMOVABLEOBJECTSRESPONSE
+_FETCHALLMOVABLEOBJECTSRESPONSE.fields_by_name['movable_objects'].message_type = _FETCHALLMOVABLEOBJECTSRESPONSE_MOVABLEOBJECTSENTRY
 DESCRIPTOR.message_types_by_name['State'] = _STATE
 DESCRIPTOR.message_types_by_name['MovableObject'] = _MOVABLEOBJECT
 DESCRIPTOR.message_types_by_name['CreateMovableObjectRequest'] = _CREATEMOVABLEOBJECTREQUEST
@@ -638,6 +740,8 @@ DESCRIPTOR.message_types_by_name['MoveObjectNextRequest'] = _MOVEOBJECTNEXTREQUE
 DESCRIPTOR.message_types_by_name['MoveObjectNextResponse'] = _MOVEOBJECTNEXTRESPONSE
 DESCRIPTOR.message_types_by_name['MoveObjectPreviousRequest'] = _MOVEOBJECTPREVIOUSREQUEST
 DESCRIPTOR.message_types_by_name['MoveObjectPreviousResponse'] = _MOVEOBJECTPREVIOUSRESPONSE
+DESCRIPTOR.message_types_by_name['FetchAllMovableObjectsRequest'] = _FETCHALLMOVABLEOBJECTSREQUEST
+DESCRIPTOR.message_types_by_name['FetchAllMovableObjectsResponse'] = _FETCHALLMOVABLEOBJECTSRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 State = _reflection.GeneratedProtocolMessageType('State', (_message.Message,), {
@@ -752,8 +856,31 @@ MoveObjectPreviousResponse = _reflection.GeneratedProtocolMessageType('MoveObjec
   })
 _sym_db.RegisterMessage(MoveObjectPreviousResponse)
 
+FetchAllMovableObjectsRequest = _reflection.GeneratedProtocolMessageType('FetchAllMovableObjectsRequest', (_message.Message,), {
+  'DESCRIPTOR' : _FETCHALLMOVABLEOBJECTSREQUEST,
+  '__module__' : 'objects.movable_pb2'
+  # @@protoc_insertion_point(class_scope:mruv.objects.FetchAllMovableObjectsRequest)
+  })
+_sym_db.RegisterMessage(FetchAllMovableObjectsRequest)
+
+FetchAllMovableObjectsResponse = _reflection.GeneratedProtocolMessageType('FetchAllMovableObjectsResponse', (_message.Message,), {
+
+  'MovableObjectsEntry' : _reflection.GeneratedProtocolMessageType('MovableObjectsEntry', (_message.Message,), {
+    'DESCRIPTOR' : _FETCHALLMOVABLEOBJECTSRESPONSE_MOVABLEOBJECTSENTRY,
+    '__module__' : 'objects.movable_pb2'
+    # @@protoc_insertion_point(class_scope:mruv.objects.FetchAllMovableObjectsResponse.MovableObjectsEntry)
+    })
+  ,
+  'DESCRIPTOR' : _FETCHALLMOVABLEOBJECTSRESPONSE,
+  '__module__' : 'objects.movable_pb2'
+  # @@protoc_insertion_point(class_scope:mruv.objects.FetchAllMovableObjectsResponse)
+  })
+_sym_db.RegisterMessage(FetchAllMovableObjectsResponse)
+_sym_db.RegisterMessage(FetchAllMovableObjectsResponse.MovableObjectsEntry)
+
 
 DESCRIPTOR._options = None
+_FETCHALLMOVABLEOBJECTSRESPONSE_MOVABLEOBJECTSENTRY._options = None
 
 _MRUVMOVABLEOBJECTSSERVICE = _descriptor.ServiceDescriptor(
   name='MruVMovableObjectsService',
@@ -761,8 +888,8 @@ _MRUVMOVABLEOBJECTSSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1118,
-  serialized_end=2080,
+  serialized_start=1381,
+  serialized_end=2466,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateMovableObject',
@@ -780,7 +907,7 @@ _MRUVMOVABLEOBJECTSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_GETMOVABLEOBJECTREQUEST,
     output_type=_GETMOVABLEOBJECTRESPONSE,
-    serialized_options=_b('\202\323\344\223\002\024\022\022/v1/movableObjects'),
+    serialized_options=_b('\202\323\344\223\002\031\022\027/v1/movableObjects/{id}'),
   ),
   _descriptor.MethodDescriptor(
     name='UpdateMovableObject',
@@ -789,7 +916,7 @@ _MRUVMOVABLEOBJECTSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_UPDATEMOVABLEOBJECTREQUEST,
     output_type=_UPDATEMOVABLEOBJECTRESPONSE,
-    serialized_options=_b('\202\323\344\223\002\0242\022/v1/movableObjects'),
+    serialized_options=_b('\202\323\344\223\002\0312\027/v1/movableObjects/{id}'),
   ),
   _descriptor.MethodDescriptor(
     name='DeleteMovableObject',
@@ -798,7 +925,7 @@ _MRUVMOVABLEOBJECTSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_DELETEMOVABLEOBJECTREQUEST,
     output_type=_DELETEMOVABLEOBJECTRESPONSE,
-    serialized_options=_b('\202\323\344\223\002\024*\022/v1/movableObjects'),
+    serialized_options=_b('\202\323\344\223\002\031*\027/v1/movableObjects/{id}'),
   ),
   _descriptor.MethodDescriptor(
     name='MoveObject',
@@ -826,6 +953,15 @@ _MRUVMOVABLEOBJECTSSERVICE = _descriptor.ServiceDescriptor(
     input_type=_MOVEOBJECTPREVIOUSREQUEST,
     output_type=_MOVEOBJECTPREVIOUSRESPONSE,
     serialized_options=_b('\202\323\344\223\002#\"!/v1/movableObjects/moves/previous'),
+  ),
+  _descriptor.MethodDescriptor(
+    name='FetchAll',
+    full_name='mruv.objects.MruVMovableObjectsService.FetchAll',
+    index=7,
+    containing_service=None,
+    input_type=_FETCHALLMOVABLEOBJECTSREQUEST,
+    output_type=_FETCHALLMOVABLEOBJECTSRESPONSE,
+    serialized_options=None,
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_MRUVMOVABLEOBJECTSSERVICE)

@@ -34,6 +34,11 @@ class MruVSpotsServiceStub(object):
         request_serializer=spots_dot_spots__pb2.DeleteSpotRequest.SerializeToString,
         response_deserializer=spots_dot_spots__pb2.DeleteSpotResponse.FromString,
         )
+    self.FetchAll = channel.unary_stream(
+        '/mruv.spots.MruVSpotsService/FetchAll',
+        request_serializer=spots_dot_spots__pb2.FetchAllSpotsRequest.SerializeToString,
+        response_deserializer=spots_dot_spots__pb2.FetchAllSpotsResponse.FromString,
+        )
 
 
 class MruVSpotsServiceServicer(object):
@@ -68,6 +73,13 @@ class MruVSpotsServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def FetchAll(self, request, context):
+    """Fetch all spots.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_MruVSpotsServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -90,6 +102,11 @@ def add_MruVSpotsServiceServicer_to_server(servicer, server):
           servicer.DeleteSpot,
           request_deserializer=spots_dot_spots__pb2.DeleteSpotRequest.FromString,
           response_serializer=spots_dot_spots__pb2.DeleteSpotResponse.SerializeToString,
+      ),
+      'FetchAll': grpc.unary_stream_rpc_method_handler(
+          servicer.FetchAll,
+          request_deserializer=spots_dot_spots__pb2.FetchAllSpotsRequest.FromString,
+          response_serializer=spots_dot_spots__pb2.FetchAllSpotsResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

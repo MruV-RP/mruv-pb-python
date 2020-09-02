@@ -49,6 +49,11 @@ class MruVMovableObjectsServiceStub(object):
         request_serializer=objects_dot_movable__pb2.MoveObjectPreviousRequest.SerializeToString,
         response_deserializer=objects_dot_movable__pb2.MoveObjectPreviousResponse.FromString,
         )
+    self.FetchAll = channel.unary_stream(
+        '/mruv.objects.MruVMovableObjectsService/FetchAll',
+        request_serializer=objects_dot_movable__pb2.FetchAllMovableObjectsRequest.SerializeToString,
+        response_deserializer=objects_dot_movable__pb2.FetchAllMovableObjectsResponse.FromString,
+        )
 
 
 class MruVMovableObjectsServiceServicer(object):
@@ -104,6 +109,13 @@ class MruVMovableObjectsServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def FetchAll(self, request, context):
+    """
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_MruVMovableObjectsServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -141,6 +153,11 @@ def add_MruVMovableObjectsServiceServicer_to_server(servicer, server):
           servicer.MoveObjectPrevious,
           request_deserializer=objects_dot_movable__pb2.MoveObjectPreviousRequest.FromString,
           response_serializer=objects_dot_movable__pb2.MoveObjectPreviousResponse.SerializeToString,
+      ),
+      'FetchAll': grpc.unary_stream_rpc_method_handler(
+          servicer.FetchAll,
+          request_deserializer=objects_dot_movable__pb2.FetchAllMovableObjectsRequest.FromString,
+          response_serializer=objects_dot_movable__pb2.FetchAllMovableObjectsResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

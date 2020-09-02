@@ -69,6 +69,11 @@ class MruVEstateServiceStub(object):
         request_serializer=estates_dot_estates__pb2.GetEstateEntrancesRequest.SerializeToString,
         response_deserializer=estates_dot_estates__pb2.GetEstateEntrancesResponse.FromString,
         )
+    self.FetchAll = channel.unary_stream(
+        '/mruv.estates.MruVEstateService/FetchAll',
+        request_serializer=estates_dot_estates__pb2.FetchAllEstatesRequest.SerializeToString,
+        response_deserializer=estates_dot_estates__pb2.FetchAllEstatesResponse.FromString,
+        )
 
 
 class MruVEstateServiceServicer(object):
@@ -152,6 +157,13 @@ class MruVEstateServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def FetchAll(self, request, context):
+    """Get full estates data
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_MruVEstateServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -209,6 +221,11 @@ def add_MruVEstateServiceServicer_to_server(servicer, server):
           servicer.GetEstateEntrances,
           request_deserializer=estates_dot_estates__pb2.GetEstateEntrancesRequest.FromString,
           response_serializer=estates_dot_estates__pb2.GetEstateEntrancesResponse.SerializeToString,
+      ),
+      'FetchAll': grpc.unary_stream_rpc_method_handler(
+          servicer.FetchAll,
+          request_deserializer=estates_dot_estates__pb2.FetchAllEstatesRequest.FromString,
+          response_serializer=estates_dot_estates__pb2.FetchAllEstatesResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

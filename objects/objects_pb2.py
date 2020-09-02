@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='mruv.objects',
   syntax='proto3',
   serialized_options=_b('Z%github.com/MruV-RP/mruv-pb-go/objects'),
-  serialized_pb=_b('\n\x15objects/objects.proto\x12\x0cmruv.objects\x1a\x1cgoogle/api/annotations.proto\"\x91\x04\n\x06Object\x12\r\n\x05model\x18\x01 \x01(\r\x12\t\n\x01x\x18\x02 \x01(\x02\x12\t\n\x01y\x18\x03 \x01(\x02\x12\t\n\x01z\x18\x04 \x01(\x02\x12\n\n\x02rx\x18\x05 \x01(\x02\x12\n\n\x02ry\x18\x06 \x01(\x02\x12\n\n\x02rz\x18\x07 \x01(\x02\x12\x10\n\x08world_id\x18\x08 \x01(\x05\x12\x13\n\x0binterior_id\x18\t \x01(\x05\x12\x11\n\tplayer_id\x18\n \x01(\x05\x12\x0f\n\x07\x61rea_id\x18\x0b \x01(\x05\x12\x17\n\x0fstream_distance\x18\x0c \x01(\x02\x12\x15\n\rdraw_distance\x18\r \x01(\x02\x12\x10\n\x08priority\x18\x0f \x01(\x05\x12\x11\n\testate_id\x18\x10 \x01(\r\x12\x36\n\tmaterials\x18\x11 \x03(\x0b\x32#.mruv.objects.Object.MaterialsEntry\x12?\n\x0ematerial_texts\x18\x12 \x03(\x0b\x32\'.mruv.objects.Object.MaterialTextsEntry\x1aH\n\x0eMaterialsEntry\x12\x0b\n\x03key\x18\x01 \x01(\r\x12%\n\x05value\x18\x02 \x01(\x0b\x32\x16.mruv.objects.Material:\x02\x38\x01\x1aP\n\x12MaterialTextsEntry\x12\x0b\n\x03key\x18\x01 \x01(\r\x12)\n\x05value\x18\x02 \x01(\x0b\x32\x1a.mruv.objects.MaterialText:\x02\x38\x01\"\\\n\x08Material\x12\x10\n\x08model_id\x18\x01 \x01(\x05\x12\x10\n\x08txd_name\x18\x02 \x01(\t\x12\x14\n\x0ctexture_name\x18\x03 \x01(\t\x12\x16\n\x0ematerial_color\x18\x04 \x01(\x05\"\xc3\x01\n\x0cMaterialText\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x31\n\rmaterial_size\x18\x02 \x01(\x0e\x32\x1a.mruv.objects.MaterialSize\x12\x11\n\tfont_face\x18\x03 \x01(\t\x12\x11\n\tfont_size\x18\x04 \x01(\r\x12\x0c\n\x04\x62old\x18\x05 \x01(\x08\x12\x12\n\nfont_color\x18\x06 \x01(\x05\x12\x12\n\nback_color\x18\x07 \x01(\x05\x12\x16\n\x0etext_alignment\x18\x08 \x01(\x05\"d\n\x0fRemovedBuilding\x12\r\n\x05model\x18\x01 \x01(\r\x12\t\n\x01x\x18\x02 \x01(\x02\x12\t\n\x01y\x18\x03 \x01(\x02\x12\t\n\x01z\x18\x04 \x01(\x02\x12\x0e\n\x06radius\x18\x05 \x01(\x02\x12\x11\n\testate_id\x18\x06 \x01(\r\";\n\x13\x43reateObjectRequest\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\"\"\n\x14\x43reateObjectResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1e\n\x10GetObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\"9\n\x11GetObjectResponse\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\"G\n\x13UpdateObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12$\n\x06object\x18\x02 \x01(\x0b\x32\x14.mruv.objects.Object\"\x16\n\x14UpdateObjectResponse\"!\n\x13\x44\x65leteObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x16\n\x14\x44\x65leteObjectResponse\"f\n\x18\x41\x64\x64ObjectMaterialRequest\x12\x11\n\tobject_id\x18\x01 \x01(\r\x12\r\n\x05index\x18\x02 \x01(\r\x12(\n\x08material\x18\x03 \x01(\x0b\x32\x16.mruv.objects.Material\"\x1b\n\x19\x41\x64\x64ObjectMaterialResponse\".\n\x19GetObjectMaterialsRequest\x12\x11\n\tobject_id\x18\x01 \x01(\r\"\xb2\x01\n\x1aGetObjectMaterialsResponse\x12J\n\tmaterials\x18\x01 \x03(\x0b\x32\x37.mruv.objects.GetObjectMaterialsResponse.MaterialsEntry\x1aH\n\x0eMaterialsEntry\x12\x0b\n\x03key\x18\x01 \x01(\r\x12%\n\x05value\x18\x02 \x01(\x0b\x32\x16.mruv.objects.Material:\x02\x38\x01\"?\n\x1b\x44\x65leteObjectMaterialRequest\x12\x11\n\tobject_id\x18\x01 \x01(\r\x12\r\n\x05index\x18\x02 \x01(\r\"\x1e\n\x1c\x44\x65leteObjectMaterialResponse\"s\n\x1c\x41\x64\x64ObjectMaterialTextRequest\x12\x11\n\tobject_id\x18\x01 \x01(\r\x12\r\n\x05index\x18\x02 \x01(\r\x12\x31\n\rmaterial_text\x18\x03 \x01(\x0b\x32\x1a.mruv.objects.MaterialText\"\x1f\n\x1d\x41\x64\x64ObjectMaterialTextResponse\"2\n\x1dGetObjectMaterialTextsRequest\x12\x11\n\tobject_id\x18\x01 \x01(\r\"\xcb\x01\n\x1eGetObjectMaterialTextsResponse\x12W\n\x0ematerial_texts\x18\x01 \x03(\x0b\x32?.mruv.objects.GetObjectMaterialTextsResponse.MaterialTextsEntry\x1aP\n\x12MaterialTextsEntry\x12\x0b\n\x03key\x18\x01 \x01(\r\x12)\n\x05value\x18\x02 \x01(\x0b\x32\x1a.mruv.objects.MaterialText:\x02\x38\x01\"C\n\x1f\x44\x65leteObjectMaterialTextRequest\x12\x11\n\tobject_id\x18\x01 \x01(\r\x12\r\n\x05index\x18\x02 \x01(\r\"\"\n DeleteObjectMaterialTextResponse\"S\n\x18\x41\x64\x64RemoveBuildingRequest\x12\x37\n\x10removed_building\x18\x01 \x01(\x0b\x32\x1d.mruv.objects.RemovedBuilding\"\'\n\x19\x41\x64\x64RemoveBuildingResponse\x12\n\n\x02id\x18\x01 \x01(\r\"/\n\x1aGetRemovedBuildingsRequest\x12\x11\n\testate_id\x18\x01 \x01(\r\"V\n\x1bGetRemovedBuildingsResponse\x12\x37\n\x10removed_building\x18\x01 \x03(\x0b\x32\x1d.mruv.objects.RemovedBuilding\")\n\x1b\x44\x65leteRemoveBuildingRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x1e\n\x1c\x44\x65leteRemoveBuildingResponse\"%\n\x0f\x46\x65tchAllRequest\x12\x12\n\nchunk_size\x18\x01 \x01(\r\"\x96\x01\n\x10\x46\x65tchAllResponse\x12<\n\x07objects\x18\x01 \x03(\x0b\x32+.mruv.objects.FetchAllResponse.ObjectsEntry\x1a\x44\n\x0cObjectsEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12#\n\x05value\x18\x02 \x01(\x0b\x32\x14.mruv.objects.Object:\x02\x38\x01*\xfd\x03\n\x0cMaterialSize\x12\x1a\n\x16OBJECT_MATERIAL_SIZE_0\x10\x00\x12\x1e\n\x1aOBJECT_MATERIAL_SIZE_32X32\x10\n\x12\x1e\n\x1aOBJECT_MATERIAL_SIZE_64X32\x10\x14\x12\x1e\n\x1aOBJECT_MATERIAL_SIZE_64X64\x10\x1e\x12\x1f\n\x1bOBJECT_MATERIAL_SIZE_128X32\x10(\x12\x1f\n\x1bOBJECT_MATERIAL_SIZE_128X64\x10\x32\x12 \n\x1cOBJECT_MATERIAL_SIZE_128X128\x10<\x12\x1f\n\x1bOBJECT_MATERIAL_SIZE_256X32\x10\x46\x12\x1f\n\x1bOBJECT_MATERIAL_SIZE_256X64\x10P\x12 \n\x1cOBJECT_MATERIAL_SIZE_256X128\x10Z\x12 \n\x1cOBJECT_MATERIAL_SIZE_256X256\x10\x64\x12\x1f\n\x1bOBJECT_MATERIAL_SIZE_512X64\x10n\x12 \n\x1cOBJECT_MATERIAL_SIZE_512X128\x10x\x12!\n\x1cOBJECT_MATERIAL_SIZE_512X256\x10\x82\x01\x12!\n\x1cOBJECT_MATERIAL_SIZE_512X512\x10\x8c\x01\x32\x88\x0f\n\x12MruVObjectsService\x12j\n\x0c\x43reateObject\x12!.mruv.objects.CreateObjectRequest\x1a\".mruv.objects.CreateObjectResponse\"\x13\x82\xd3\xe4\x93\x02\r\"\x0b/v1/objects\x12\x66\n\tGetObject\x12\x1e.mruv.objects.GetObjectRequest\x1a\x1f.mruv.objects.GetObjectResponse\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/objects/{id}\x12o\n\x0cUpdateObject\x12!.mruv.objects.UpdateObjectRequest\x1a\".mruv.objects.UpdateObjectResponse\"\x18\x82\xd3\xe4\x93\x02\x12\x32\x10/v1/objects/{id}\x12o\n\x0c\x44\x65leteObject\x12!.mruv.objects.DeleteObjectRequest\x1a\".mruv.objects.DeleteObjectResponse\"\x18\x82\xd3\xe4\x93\x02\x12*\x10/v1/objects/{id}\x12\x8f\x01\n\x11\x41\x64\x64ObjectMaterial\x12&.mruv.objects.AddObjectMaterialRequest\x1a\'.mruv.objects.AddObjectMaterialResponse\")\x82\xd3\xe4\x93\x02#\x1a!/v1/objects/{object_id}/materials\x12\x92\x01\n\x12GetObjectMaterials\x12\'.mruv.objects.GetObjectMaterialsRequest\x1a(.mruv.objects.GetObjectMaterialsResponse\")\x82\xd3\xe4\x93\x02#\x12!/v1/objects/{object_id}/materials\x12\xa0\x01\n\x14\x44\x65leteObjectMaterial\x12).mruv.objects.DeleteObjectMaterialRequest\x1a*.mruv.objects.DeleteObjectMaterialResponse\"1\x82\xd3\xe4\x93\x02+*)/v1/objects/{object_id}/materials/{index}\x12\x9f\x01\n\x15\x41\x64\x64ObjectMaterialText\x12*.mruv.objects.AddObjectMaterialTextRequest\x1a+.mruv.objects.AddObjectMaterialTextResponse\"-\x82\xd3\xe4\x93\x02\'\x1a%/v1/objects/{object_id}/materialTexts\x12\xa2\x01\n\x16GetObjectMaterialTexts\x12+.mruv.objects.GetObjectMaterialTextsRequest\x1a,.mruv.objects.GetObjectMaterialTextsResponse\"-\x82\xd3\xe4\x93\x02\'\x12%/v1/objects/{object_id}/materialTexts\x12\xa8\x01\n\x18\x44\x65leteObjectMaterialText\x12-.mruv.objects.DeleteObjectMaterialTextRequest\x1a..mruv.objects.DeleteObjectMaterialTextResponse\"-\x82\xd3\xe4\x93\x02\'*%/v1/objects/{object_id}/materialTexts\x12\x81\x01\n\x11\x41\x64\x64RemoveBuilding\x12&.mruv.objects.AddRemoveBuildingRequest\x1a\'.mruv.objects.AddRemoveBuildingResponse\"\x1b\x82\xd3\xe4\x93\x02\x15\"\x13/v1/objects/removed\x12\x87\x01\n\x13GetRemovedBuildings\x12(.mruv.objects.GetRemovedBuildingsRequest\x1a).mruv.objects.GetRemovedBuildingsResponse\"\x1b\x82\xd3\xe4\x93\x02\x15\x12\x13/v1/objects/removed\x12\x8f\x01\n\x14\x44\x65leteRemoveBuilding\x12).mruv.objects.DeleteRemoveBuildingRequest\x1a*.mruv.objects.DeleteRemoveBuildingResponse\" \x82\xd3\xe4\x93\x02\x1a*\x18/v1/objects/removed/{id}\x12`\n\x08\x46\x65tchAll\x12\x1d.mruv.objects.FetchAllRequest\x1a\x1e.mruv.objects.FetchAllResponse\"\x13\x82\xd3\xe4\x93\x02\r\x12\x0b/v1/objects0\x01\x42\'Z%github.com/MruV-RP/mruv-pb-go/objectsb\x06proto3')
+  serialized_pb=_b('\n\x15objects/objects.proto\x12\x0cmruv.objects\x1a\x1cgoogle/api/annotations.proto\"\x91\x04\n\x06Object\x12\r\n\x05model\x18\x01 \x01(\x05\x12\t\n\x01x\x18\x02 \x01(\x02\x12\t\n\x01y\x18\x03 \x01(\x02\x12\t\n\x01z\x18\x04 \x01(\x02\x12\n\n\x02rx\x18\x05 \x01(\x02\x12\n\n\x02ry\x18\x06 \x01(\x02\x12\n\n\x02rz\x18\x07 \x01(\x02\x12\x10\n\x08world_id\x18\x08 \x01(\x05\x12\x13\n\x0binterior_id\x18\t \x01(\x05\x12\x11\n\tplayer_id\x18\n \x01(\x05\x12\x0f\n\x07\x61rea_id\x18\x0b \x01(\x05\x12\x17\n\x0fstream_distance\x18\x0c \x01(\x02\x12\x15\n\rdraw_distance\x18\r \x01(\x02\x12\x10\n\x08priority\x18\x0f \x01(\x05\x12\x11\n\testate_id\x18\x10 \x01(\r\x12\x36\n\tmaterials\x18\x11 \x03(\x0b\x32#.mruv.objects.Object.MaterialsEntry\x12?\n\x0ematerial_texts\x18\x12 \x03(\x0b\x32\'.mruv.objects.Object.MaterialTextsEntry\x1aH\n\x0eMaterialsEntry\x12\x0b\n\x03key\x18\x01 \x01(\r\x12%\n\x05value\x18\x02 \x01(\x0b\x32\x16.mruv.objects.Material:\x02\x38\x01\x1aP\n\x12MaterialTextsEntry\x12\x0b\n\x03key\x18\x01 \x01(\r\x12)\n\x05value\x18\x02 \x01(\x0b\x32\x1a.mruv.objects.MaterialText:\x02\x38\x01\"\\\n\x08Material\x12\x10\n\x08model_id\x18\x01 \x01(\x05\x12\x10\n\x08txd_name\x18\x02 \x01(\t\x12\x14\n\x0ctexture_name\x18\x03 \x01(\t\x12\x16\n\x0ematerial_color\x18\x04 \x01(\x05\"\xc3\x01\n\x0cMaterialText\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x31\n\rmaterial_size\x18\x02 \x01(\x0e\x32\x1a.mruv.objects.MaterialSize\x12\x11\n\tfont_face\x18\x03 \x01(\t\x12\x11\n\tfont_size\x18\x04 \x01(\r\x12\x0c\n\x04\x62old\x18\x05 \x01(\x08\x12\x12\n\nfont_color\x18\x06 \x01(\x05\x12\x12\n\nback_color\x18\x07 \x01(\x05\x12\x16\n\x0etext_alignment\x18\x08 \x01(\x05\"d\n\x0fRemovedBuilding\x12\r\n\x05model\x18\x01 \x01(\r\x12\t\n\x01x\x18\x02 \x01(\x02\x12\t\n\x01y\x18\x03 \x01(\x02\x12\t\n\x01z\x18\x04 \x01(\x02\x12\x0e\n\x06radius\x18\x05 \x01(\x02\x12\x11\n\testate_id\x18\x06 \x01(\r\";\n\x13\x43reateObjectRequest\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\"\"\n\x14\x43reateObjectResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1e\n\x10GetObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\"9\n\x11GetObjectResponse\x12$\n\x06object\x18\x01 \x01(\x0b\x32\x14.mruv.objects.Object\"G\n\x13UpdateObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12$\n\x06object\x18\x02 \x01(\x0b\x32\x14.mruv.objects.Object\"\x16\n\x14UpdateObjectResponse\"!\n\x13\x44\x65leteObjectRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x16\n\x14\x44\x65leteObjectResponse\"f\n\x18\x41\x64\x64ObjectMaterialRequest\x12\x11\n\tobject_id\x18\x01 \x01(\r\x12\r\n\x05index\x18\x02 \x01(\r\x12(\n\x08material\x18\x03 \x01(\x0b\x32\x16.mruv.objects.Material\"\x1b\n\x19\x41\x64\x64ObjectMaterialResponse\".\n\x19GetObjectMaterialsRequest\x12\x11\n\tobject_id\x18\x01 \x01(\r\"\xb2\x01\n\x1aGetObjectMaterialsResponse\x12J\n\tmaterials\x18\x01 \x03(\x0b\x32\x37.mruv.objects.GetObjectMaterialsResponse.MaterialsEntry\x1aH\n\x0eMaterialsEntry\x12\x0b\n\x03key\x18\x01 \x01(\r\x12%\n\x05value\x18\x02 \x01(\x0b\x32\x16.mruv.objects.Material:\x02\x38\x01\"?\n\x1b\x44\x65leteObjectMaterialRequest\x12\x11\n\tobject_id\x18\x01 \x01(\r\x12\r\n\x05index\x18\x02 \x01(\r\"\x1e\n\x1c\x44\x65leteObjectMaterialResponse\"s\n\x1c\x41\x64\x64ObjectMaterialTextRequest\x12\x11\n\tobject_id\x18\x01 \x01(\r\x12\r\n\x05index\x18\x02 \x01(\r\x12\x31\n\rmaterial_text\x18\x03 \x01(\x0b\x32\x1a.mruv.objects.MaterialText\"\x1f\n\x1d\x41\x64\x64ObjectMaterialTextResponse\"2\n\x1dGetObjectMaterialTextsRequest\x12\x11\n\tobject_id\x18\x01 \x01(\r\"\xcb\x01\n\x1eGetObjectMaterialTextsResponse\x12W\n\x0ematerial_texts\x18\x01 \x03(\x0b\x32?.mruv.objects.GetObjectMaterialTextsResponse.MaterialTextsEntry\x1aP\n\x12MaterialTextsEntry\x12\x0b\n\x03key\x18\x01 \x01(\r\x12)\n\x05value\x18\x02 \x01(\x0b\x32\x1a.mruv.objects.MaterialText:\x02\x38\x01\"C\n\x1f\x44\x65leteObjectMaterialTextRequest\x12\x11\n\tobject_id\x18\x01 \x01(\r\x12\r\n\x05index\x18\x02 \x01(\r\"\"\n DeleteObjectMaterialTextResponse\"S\n\x18\x41\x64\x64RemoveBuildingRequest\x12\x37\n\x10removed_building\x18\x01 \x01(\x0b\x32\x1d.mruv.objects.RemovedBuilding\"\'\n\x19\x41\x64\x64RemoveBuildingResponse\x12\n\n\x02id\x18\x01 \x01(\r\"/\n\x1aGetRemovedBuildingsRequest\x12\x11\n\testate_id\x18\x01 \x01(\r\"W\n\x1bGetRemovedBuildingsResponse\x12\x38\n\x11removed_buildings\x18\x01 \x03(\x0b\x32\x1d.mruv.objects.RemovedBuilding\")\n\x1b\x44\x65leteRemoveBuildingRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x1e\n\x1c\x44\x65leteRemoveBuildingResponse\"?\n\x16\x46\x65tchAllObjectsRequest\x12\x12\n\nchunk_size\x18\x01 \x01(\r\x12\x11\n\testate_id\x18\x02 \x01(\r\"\xa4\x01\n\x17\x46\x65tchAllObjectsResponse\x12\x43\n\x07objects\x18\x01 \x03(\x0b\x32\x32.mruv.objects.FetchAllObjectsResponse.ObjectsEntry\x1a\x44\n\x0cObjectsEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12#\n\x05value\x18\x02 \x01(\x0b\x32\x14.mruv.objects.Object:\x02\x38\x01*\xfd\x03\n\x0cMaterialSize\x12\x1a\n\x16OBJECT_MATERIAL_SIZE_0\x10\x00\x12\x1e\n\x1aOBJECT_MATERIAL_SIZE_32X32\x10\n\x12\x1e\n\x1aOBJECT_MATERIAL_SIZE_64X32\x10\x14\x12\x1e\n\x1aOBJECT_MATERIAL_SIZE_64X64\x10\x1e\x12\x1f\n\x1bOBJECT_MATERIAL_SIZE_128X32\x10(\x12\x1f\n\x1bOBJECT_MATERIAL_SIZE_128X64\x10\x32\x12 \n\x1cOBJECT_MATERIAL_SIZE_128X128\x10<\x12\x1f\n\x1bOBJECT_MATERIAL_SIZE_256X32\x10\x46\x12\x1f\n\x1bOBJECT_MATERIAL_SIZE_256X64\x10P\x12 \n\x1cOBJECT_MATERIAL_SIZE_256X128\x10Z\x12 \n\x1cOBJECT_MATERIAL_SIZE_256X256\x10\x64\x12\x1f\n\x1bOBJECT_MATERIAL_SIZE_512X64\x10n\x12 \n\x1cOBJECT_MATERIAL_SIZE_512X128\x10x\x12!\n\x1cOBJECT_MATERIAL_SIZE_512X256\x10\x82\x01\x12!\n\x1cOBJECT_MATERIAL_SIZE_512X512\x10\x8c\x01\x32\x96\x0f\n\x12MruVObjectsService\x12j\n\x0c\x43reateObject\x12!.mruv.objects.CreateObjectRequest\x1a\".mruv.objects.CreateObjectResponse\"\x13\x82\xd3\xe4\x93\x02\r\"\x0b/v1/objects\x12\x66\n\tGetObject\x12\x1e.mruv.objects.GetObjectRequest\x1a\x1f.mruv.objects.GetObjectResponse\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/objects/{id}\x12o\n\x0cUpdateObject\x12!.mruv.objects.UpdateObjectRequest\x1a\".mruv.objects.UpdateObjectResponse\"\x18\x82\xd3\xe4\x93\x02\x12\x32\x10/v1/objects/{id}\x12o\n\x0c\x44\x65leteObject\x12!.mruv.objects.DeleteObjectRequest\x1a\".mruv.objects.DeleteObjectResponse\"\x18\x82\xd3\xe4\x93\x02\x12*\x10/v1/objects/{id}\x12\x8f\x01\n\x11\x41\x64\x64ObjectMaterial\x12&.mruv.objects.AddObjectMaterialRequest\x1a\'.mruv.objects.AddObjectMaterialResponse\")\x82\xd3\xe4\x93\x02#\x1a!/v1/objects/{object_id}/materials\x12\x92\x01\n\x12GetObjectMaterials\x12\'.mruv.objects.GetObjectMaterialsRequest\x1a(.mruv.objects.GetObjectMaterialsResponse\")\x82\xd3\xe4\x93\x02#\x12!/v1/objects/{object_id}/materials\x12\xa0\x01\n\x14\x44\x65leteObjectMaterial\x12).mruv.objects.DeleteObjectMaterialRequest\x1a*.mruv.objects.DeleteObjectMaterialResponse\"1\x82\xd3\xe4\x93\x02+*)/v1/objects/{object_id}/materials/{index}\x12\x9f\x01\n\x15\x41\x64\x64ObjectMaterialText\x12*.mruv.objects.AddObjectMaterialTextRequest\x1a+.mruv.objects.AddObjectMaterialTextResponse\"-\x82\xd3\xe4\x93\x02\'\x1a%/v1/objects/{object_id}/materialTexts\x12\xa2\x01\n\x16GetObjectMaterialTexts\x12+.mruv.objects.GetObjectMaterialTextsRequest\x1a,.mruv.objects.GetObjectMaterialTextsResponse\"-\x82\xd3\xe4\x93\x02\'\x12%/v1/objects/{object_id}/materialTexts\x12\xa8\x01\n\x18\x44\x65leteObjectMaterialText\x12-.mruv.objects.DeleteObjectMaterialTextRequest\x1a..mruv.objects.DeleteObjectMaterialTextResponse\"-\x82\xd3\xe4\x93\x02\'*%/v1/objects/{object_id}/materialTexts\x12\x81\x01\n\x11\x41\x64\x64RemoveBuilding\x12&.mruv.objects.AddRemoveBuildingRequest\x1a\'.mruv.objects.AddRemoveBuildingResponse\"\x1b\x82\xd3\xe4\x93\x02\x15\"\x13/v1/objects/removed\x12\x87\x01\n\x13GetRemovedBuildings\x12(.mruv.objects.GetRemovedBuildingsRequest\x1a).mruv.objects.GetRemovedBuildingsResponse\"\x1b\x82\xd3\xe4\x93\x02\x15\x12\x13/v1/objects/removed\x12\x8f\x01\n\x14\x44\x65leteRemoveBuilding\x12).mruv.objects.DeleteRemoveBuildingRequest\x1a*.mruv.objects.DeleteRemoveBuildingResponse\" \x82\xd3\xe4\x93\x02\x1a*\x18/v1/objects/removed/{id}\x12n\n\x08\x46\x65tchAll\x12$.mruv.objects.FetchAllObjectsRequest\x1a%.mruv.objects.FetchAllObjectsResponse\"\x13\x82\xd3\xe4\x93\x02\r\x12\x0b/v1/objects0\x01\x42\'Z%github.com/MruV-RP/mruv-pb-go/objectsb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -95,8 +95,8 @@ _MATERIALSIZE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2842,
-  serialized_end=3351,
+  serialized_start=2883,
+  serialized_end=3392,
 )
 _sym_db.RegisterEnumDescriptor(_MATERIALSIZE)
 
@@ -202,7 +202,7 @@ _OBJECT = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='model', full_name='mruv.objects.Object.model', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1336,7 +1336,7 @@ _GETREMOVEDBUILDINGSRESPONSE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='removed_building', full_name='mruv.objects.GetRemovedBuildingsResponse.removed_building', index=0,
+      name='removed_buildings', full_name='mruv.objects.GetRemovedBuildingsResponse.removed_buildings', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1355,7 +1355,7 @@ _GETREMOVEDBUILDINGSRESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=2486,
-  serialized_end=2572,
+  serialized_end=2573,
 )
 
 
@@ -1385,8 +1385,8 @@ _DELETEREMOVEBUILDINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2574,
-  serialized_end=2615,
+  serialized_start=2575,
+  serialized_end=2616,
 )
 
 
@@ -1409,21 +1409,28 @@ _DELETEREMOVEBUILDINGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2617,
-  serialized_end=2647,
+  serialized_start=2618,
+  serialized_end=2648,
 )
 
 
-_FETCHALLREQUEST = _descriptor.Descriptor(
-  name='FetchAllRequest',
-  full_name='mruv.objects.FetchAllRequest',
+_FETCHALLOBJECTSREQUEST = _descriptor.Descriptor(
+  name='FetchAllObjectsRequest',
+  full_name='mruv.objects.FetchAllObjectsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='chunk_size', full_name='mruv.objects.FetchAllRequest.chunk_size', index=0,
+      name='chunk_size', full_name='mruv.objects.FetchAllObjectsRequest.chunk_size', index=0,
       number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='estate_id', full_name='mruv.objects.FetchAllObjectsRequest.estate_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1440,27 +1447,27 @@ _FETCHALLREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2649,
-  serialized_end=2686,
+  serialized_start=2650,
+  serialized_end=2713,
 )
 
 
-_FETCHALLRESPONSE_OBJECTSENTRY = _descriptor.Descriptor(
+_FETCHALLOBJECTSRESPONSE_OBJECTSENTRY = _descriptor.Descriptor(
   name='ObjectsEntry',
-  full_name='mruv.objects.FetchAllResponse.ObjectsEntry',
+  full_name='mruv.objects.FetchAllObjectsResponse.ObjectsEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='mruv.objects.FetchAllResponse.ObjectsEntry.key', index=0,
+      name='key', full_name='mruv.objects.FetchAllObjectsResponse.ObjectsEntry.key', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='mruv.objects.FetchAllResponse.ObjectsEntry.value', index=1,
+      name='value', full_name='mruv.objects.FetchAllObjectsResponse.ObjectsEntry.value', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -1478,19 +1485,19 @@ _FETCHALLRESPONSE_OBJECTSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2771,
-  serialized_end=2839,
+  serialized_start=2812,
+  serialized_end=2880,
 )
 
-_FETCHALLRESPONSE = _descriptor.Descriptor(
-  name='FetchAllResponse',
-  full_name='mruv.objects.FetchAllResponse',
+_FETCHALLOBJECTSRESPONSE = _descriptor.Descriptor(
+  name='FetchAllObjectsResponse',
+  full_name='mruv.objects.FetchAllObjectsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='objects', full_name='mruv.objects.FetchAllResponse.objects', index=0,
+      name='objects', full_name='mruv.objects.FetchAllObjectsResponse.objects', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1499,7 +1506,7 @@ _FETCHALLRESPONSE = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_FETCHALLRESPONSE_OBJECTSENTRY, ],
+  nested_types=[_FETCHALLOBJECTSRESPONSE_OBJECTSENTRY, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -1508,8 +1515,8 @@ _FETCHALLRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2689,
-  serialized_end=2839,
+  serialized_start=2716,
+  serialized_end=2880,
 )
 
 _OBJECT_MATERIALSENTRY.fields_by_name['value'].message_type = _MATERIAL
@@ -1531,10 +1538,10 @@ _GETOBJECTMATERIALTEXTSRESPONSE_MATERIALTEXTSENTRY.fields_by_name['value'].messa
 _GETOBJECTMATERIALTEXTSRESPONSE_MATERIALTEXTSENTRY.containing_type = _GETOBJECTMATERIALTEXTSRESPONSE
 _GETOBJECTMATERIALTEXTSRESPONSE.fields_by_name['material_texts'].message_type = _GETOBJECTMATERIALTEXTSRESPONSE_MATERIALTEXTSENTRY
 _ADDREMOVEBUILDINGREQUEST.fields_by_name['removed_building'].message_type = _REMOVEDBUILDING
-_GETREMOVEDBUILDINGSRESPONSE.fields_by_name['removed_building'].message_type = _REMOVEDBUILDING
-_FETCHALLRESPONSE_OBJECTSENTRY.fields_by_name['value'].message_type = _OBJECT
-_FETCHALLRESPONSE_OBJECTSENTRY.containing_type = _FETCHALLRESPONSE
-_FETCHALLRESPONSE.fields_by_name['objects'].message_type = _FETCHALLRESPONSE_OBJECTSENTRY
+_GETREMOVEDBUILDINGSRESPONSE.fields_by_name['removed_buildings'].message_type = _REMOVEDBUILDING
+_FETCHALLOBJECTSRESPONSE_OBJECTSENTRY.fields_by_name['value'].message_type = _OBJECT
+_FETCHALLOBJECTSRESPONSE_OBJECTSENTRY.containing_type = _FETCHALLOBJECTSRESPONSE
+_FETCHALLOBJECTSRESPONSE.fields_by_name['objects'].message_type = _FETCHALLOBJECTSRESPONSE_OBJECTSENTRY
 DESCRIPTOR.message_types_by_name['Object'] = _OBJECT
 DESCRIPTOR.message_types_by_name['Material'] = _MATERIAL
 DESCRIPTOR.message_types_by_name['MaterialText'] = _MATERIALTEXT
@@ -1565,8 +1572,8 @@ DESCRIPTOR.message_types_by_name['GetRemovedBuildingsRequest'] = _GETREMOVEDBUIL
 DESCRIPTOR.message_types_by_name['GetRemovedBuildingsResponse'] = _GETREMOVEDBUILDINGSRESPONSE
 DESCRIPTOR.message_types_by_name['DeleteRemoveBuildingRequest'] = _DELETEREMOVEBUILDINGREQUEST
 DESCRIPTOR.message_types_by_name['DeleteRemoveBuildingResponse'] = _DELETEREMOVEBUILDINGRESPONSE
-DESCRIPTOR.message_types_by_name['FetchAllRequest'] = _FETCHALLREQUEST
-DESCRIPTOR.message_types_by_name['FetchAllResponse'] = _FETCHALLRESPONSE
+DESCRIPTOR.message_types_by_name['FetchAllObjectsRequest'] = _FETCHALLOBJECTSREQUEST
+DESCRIPTOR.message_types_by_name['FetchAllObjectsResponse'] = _FETCHALLOBJECTSRESPONSE
 DESCRIPTOR.enum_types_by_name['MaterialSize'] = _MATERIALSIZE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -1812,27 +1819,27 @@ DeleteRemoveBuildingResponse = _reflection.GeneratedProtocolMessageType('DeleteR
   })
 _sym_db.RegisterMessage(DeleteRemoveBuildingResponse)
 
-FetchAllRequest = _reflection.GeneratedProtocolMessageType('FetchAllRequest', (_message.Message,), {
-  'DESCRIPTOR' : _FETCHALLREQUEST,
+FetchAllObjectsRequest = _reflection.GeneratedProtocolMessageType('FetchAllObjectsRequest', (_message.Message,), {
+  'DESCRIPTOR' : _FETCHALLOBJECTSREQUEST,
   '__module__' : 'objects.objects_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.objects.FetchAllRequest)
+  # @@protoc_insertion_point(class_scope:mruv.objects.FetchAllObjectsRequest)
   })
-_sym_db.RegisterMessage(FetchAllRequest)
+_sym_db.RegisterMessage(FetchAllObjectsRequest)
 
-FetchAllResponse = _reflection.GeneratedProtocolMessageType('FetchAllResponse', (_message.Message,), {
+FetchAllObjectsResponse = _reflection.GeneratedProtocolMessageType('FetchAllObjectsResponse', (_message.Message,), {
 
   'ObjectsEntry' : _reflection.GeneratedProtocolMessageType('ObjectsEntry', (_message.Message,), {
-    'DESCRIPTOR' : _FETCHALLRESPONSE_OBJECTSENTRY,
+    'DESCRIPTOR' : _FETCHALLOBJECTSRESPONSE_OBJECTSENTRY,
     '__module__' : 'objects.objects_pb2'
-    # @@protoc_insertion_point(class_scope:mruv.objects.FetchAllResponse.ObjectsEntry)
+    # @@protoc_insertion_point(class_scope:mruv.objects.FetchAllObjectsResponse.ObjectsEntry)
     })
   ,
-  'DESCRIPTOR' : _FETCHALLRESPONSE,
+  'DESCRIPTOR' : _FETCHALLOBJECTSRESPONSE,
   '__module__' : 'objects.objects_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.objects.FetchAllResponse)
+  # @@protoc_insertion_point(class_scope:mruv.objects.FetchAllObjectsResponse)
   })
-_sym_db.RegisterMessage(FetchAllResponse)
-_sym_db.RegisterMessage(FetchAllResponse.ObjectsEntry)
+_sym_db.RegisterMessage(FetchAllObjectsResponse)
+_sym_db.RegisterMessage(FetchAllObjectsResponse.ObjectsEntry)
 
 
 DESCRIPTOR._options = None
@@ -1840,7 +1847,7 @@ _OBJECT_MATERIALSENTRY._options = None
 _OBJECT_MATERIALTEXTSENTRY._options = None
 _GETOBJECTMATERIALSRESPONSE_MATERIALSENTRY._options = None
 _GETOBJECTMATERIALTEXTSRESPONSE_MATERIALTEXTSENTRY._options = None
-_FETCHALLRESPONSE_OBJECTSENTRY._options = None
+_FETCHALLOBJECTSRESPONSE_OBJECTSENTRY._options = None
 
 _MRUVOBJECTSSERVICE = _descriptor.ServiceDescriptor(
   name='MruVObjectsService',
@@ -1848,8 +1855,8 @@ _MRUVOBJECTSSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=3354,
-  serialized_end=5282,
+  serialized_start=3395,
+  serialized_end=5337,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateObject',
@@ -1973,8 +1980,8 @@ _MRUVOBJECTSSERVICE = _descriptor.ServiceDescriptor(
     full_name='mruv.objects.MruVObjectsService.FetchAll',
     index=13,
     containing_service=None,
-    input_type=_FETCHALLREQUEST,
-    output_type=_FETCHALLRESPONSE,
+    input_type=_FETCHALLOBJECTSREQUEST,
+    output_type=_FETCHALLOBJECTSRESPONSE,
     serialized_options=_b('\202\323\344\223\002\r\022\013/v1/objects'),
   ),
 ])

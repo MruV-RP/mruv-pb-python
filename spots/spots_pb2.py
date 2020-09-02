@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='mruv.spots',
   syntax='proto3',
   serialized_options=_b('Z#github.com/MruV-RP/mruv-pb-go/spots'),
-  serialized_pb=_b('\n\x11spots/spots.proto\x12\nmruv.spots\x1a\x1cgoogle/api/annotations.proto\"}\n\x04Spot\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x0c\n\x04icon\x18\x03 \x01(\x05\x12\x0e\n\x06marker\x18\x04 \x01(\x05\x12\t\n\x01x\x18\x05 \x01(\x02\x12\t\n\x01y\x18\x06 \x01(\x02\x12\t\n\x01z\x18\x07 \x01(\x02\x12\n\n\x02vw\x18\x08 \x01(\x05\x12\x0b\n\x03int\x18\t \x01(\x05\"3\n\x11\x43reateSpotRequest\x12\x1e\n\x04spot\x18\x01 \x01(\x0b\x32\x10.mruv.spots.Spot\" \n\x12\x43reateSpotResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1c\n\x0eGetSpotRequest\x12\n\n\x02id\x18\x01 \x01(\r\"1\n\x0fGetSpotResponse\x12\x1e\n\x04spot\x18\x01 \x01(\x0b\x32\x10.mruv.spots.Spot\"?\n\x11UpdateSpotRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x1e\n\x04spot\x18\x02 \x01(\x0b\x32\x10.mruv.spots.Spot\"\x14\n\x12UpdateSpotResponse\"\x1f\n\x11\x44\x65leteSpotRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x14\n\x12\x44\x65leteSpotResponse2\x98\x03\n\x10MruVSpotsService\x12^\n\nCreateSpot\x12\x1d.mruv.spots.CreateSpotRequest\x1a\x1e.mruv.spots.CreateSpotResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\"\t/v1/spots\x12Z\n\x07GetSpot\x12\x1a.mruv.spots.GetSpotRequest\x1a\x1b.mruv.spots.GetSpotResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/spots/{id}\x12\x63\n\nUpdateSpot\x12\x1d.mruv.spots.UpdateSpotRequest\x1a\x1e.mruv.spots.UpdateSpotResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x32\x0e/v1/spots/{id}\x12\x63\n\nDeleteSpot\x12\x1d.mruv.spots.DeleteSpotRequest\x1a\x1e.mruv.spots.DeleteSpotResponse\"\x16\x82\xd3\xe4\x93\x02\x10*\x0e/v1/spots/{id}B%Z#github.com/MruV-RP/mruv-pb-go/spotsb\x06proto3')
+  serialized_pb=_b('\n\x11spots/spots.proto\x12\nmruv.spots\x1a\x1cgoogle/api/annotations.proto\"}\n\x04Spot\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x0c\n\x04icon\x18\x03 \x01(\x05\x12\x0e\n\x06marker\x18\x04 \x01(\x05\x12\t\n\x01x\x18\x05 \x01(\x02\x12\t\n\x01y\x18\x06 \x01(\x02\x12\t\n\x01z\x18\x07 \x01(\x02\x12\n\n\x02vw\x18\x08 \x01(\x05\x12\x0b\n\x03int\x18\t \x01(\x05\"3\n\x11\x43reateSpotRequest\x12\x1e\n\x04spot\x18\x01 \x01(\x0b\x32\x10.mruv.spots.Spot\" \n\x12\x43reateSpotResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1c\n\x0eGetSpotRequest\x12\n\n\x02id\x18\x01 \x01(\r\"1\n\x0fGetSpotResponse\x12\x1e\n\x04spot\x18\x01 \x01(\x0b\x32\x10.mruv.spots.Spot\"?\n\x11UpdateSpotRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x1e\n\x04spot\x18\x02 \x01(\x0b\x32\x10.mruv.spots.Spot\"\x14\n\x12UpdateSpotResponse\"\x1f\n\x11\x44\x65leteSpotRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x14\n\x12\x44\x65leteSpotResponse\"*\n\x14\x46\x65tchAllSpotsRequest\x12\x12\n\nchunk_size\x18\x01 \x01(\r\"\x94\x01\n\x15\x46\x65tchAllSpotsResponse\x12;\n\x05spots\x18\x01 \x03(\x0b\x32,.mruv.spots.FetchAllSpotsResponse.SpotsEntry\x1a>\n\nSpotsEntry\x12\x0b\n\x03key\x18\x01 \x01(\r\x12\x1f\n\x05value\x18\x02 \x01(\x0b\x32\x10.mruv.spots.Spot:\x02\x38\x01\x32\xed\x03\n\x10MruVSpotsService\x12^\n\nCreateSpot\x12\x1d.mruv.spots.CreateSpotRequest\x1a\x1e.mruv.spots.CreateSpotResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\"\t/v1/spots\x12Z\n\x07GetSpot\x12\x1a.mruv.spots.GetSpotRequest\x1a\x1b.mruv.spots.GetSpotResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/spots/{id}\x12\x63\n\nUpdateSpot\x12\x1d.mruv.spots.UpdateSpotRequest\x1a\x1e.mruv.spots.UpdateSpotResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x32\x0e/v1/spots/{id}\x12\x63\n\nDeleteSpot\x12\x1d.mruv.spots.DeleteSpotRequest\x1a\x1e.mruv.spots.DeleteSpotResponse\"\x16\x82\xd3\xe4\x93\x02\x10*\x0e/v1/spots/{id}\x12S\n\x08\x46\x65tchAll\x12 .mruv.spots.FetchAllSpotsRequest\x1a!.mruv.spots.FetchAllSpotsResponse\"\x00\x30\x01\x42%Z#github.com/MruV-RP/mruv-pb-go/spotsb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -355,9 +355,111 @@ _DELETESPOTRESPONSE = _descriptor.Descriptor(
   serialized_end=498,
 )
 
+
+_FETCHALLSPOTSREQUEST = _descriptor.Descriptor(
+  name='FetchAllSpotsRequest',
+  full_name='mruv.spots.FetchAllSpotsRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='chunk_size', full_name='mruv.spots.FetchAllSpotsRequest.chunk_size', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=500,
+  serialized_end=542,
+)
+
+
+_FETCHALLSPOTSRESPONSE_SPOTSENTRY = _descriptor.Descriptor(
+  name='SpotsEntry',
+  full_name='mruv.spots.FetchAllSpotsResponse.SpotsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='mruv.spots.FetchAllSpotsResponse.SpotsEntry.key', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='mruv.spots.FetchAllSpotsResponse.SpotsEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=_b('8\001'),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=631,
+  serialized_end=693,
+)
+
+_FETCHALLSPOTSRESPONSE = _descriptor.Descriptor(
+  name='FetchAllSpotsResponse',
+  full_name='mruv.spots.FetchAllSpotsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='spots', full_name='mruv.spots.FetchAllSpotsResponse.spots', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_FETCHALLSPOTSRESPONSE_SPOTSENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=545,
+  serialized_end=693,
+)
+
 _CREATESPOTREQUEST.fields_by_name['spot'].message_type = _SPOT
 _GETSPOTRESPONSE.fields_by_name['spot'].message_type = _SPOT
 _UPDATESPOTREQUEST.fields_by_name['spot'].message_type = _SPOT
+_FETCHALLSPOTSRESPONSE_SPOTSENTRY.fields_by_name['value'].message_type = _SPOT
+_FETCHALLSPOTSRESPONSE_SPOTSENTRY.containing_type = _FETCHALLSPOTSRESPONSE
+_FETCHALLSPOTSRESPONSE.fields_by_name['spots'].message_type = _FETCHALLSPOTSRESPONSE_SPOTSENTRY
 DESCRIPTOR.message_types_by_name['Spot'] = _SPOT
 DESCRIPTOR.message_types_by_name['CreateSpotRequest'] = _CREATESPOTREQUEST
 DESCRIPTOR.message_types_by_name['CreateSpotResponse'] = _CREATESPOTRESPONSE
@@ -367,6 +469,8 @@ DESCRIPTOR.message_types_by_name['UpdateSpotRequest'] = _UPDATESPOTREQUEST
 DESCRIPTOR.message_types_by_name['UpdateSpotResponse'] = _UPDATESPOTRESPONSE
 DESCRIPTOR.message_types_by_name['DeleteSpotRequest'] = _DELETESPOTREQUEST
 DESCRIPTOR.message_types_by_name['DeleteSpotResponse'] = _DELETESPOTRESPONSE
+DESCRIPTOR.message_types_by_name['FetchAllSpotsRequest'] = _FETCHALLSPOTSREQUEST
+DESCRIPTOR.message_types_by_name['FetchAllSpotsResponse'] = _FETCHALLSPOTSRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Spot = _reflection.GeneratedProtocolMessageType('Spot', (_message.Message,), {
@@ -432,8 +536,31 @@ DeleteSpotResponse = _reflection.GeneratedProtocolMessageType('DeleteSpotRespons
   })
 _sym_db.RegisterMessage(DeleteSpotResponse)
 
+FetchAllSpotsRequest = _reflection.GeneratedProtocolMessageType('FetchAllSpotsRequest', (_message.Message,), {
+  'DESCRIPTOR' : _FETCHALLSPOTSREQUEST,
+  '__module__' : 'spots.spots_pb2'
+  # @@protoc_insertion_point(class_scope:mruv.spots.FetchAllSpotsRequest)
+  })
+_sym_db.RegisterMessage(FetchAllSpotsRequest)
+
+FetchAllSpotsResponse = _reflection.GeneratedProtocolMessageType('FetchAllSpotsResponse', (_message.Message,), {
+
+  'SpotsEntry' : _reflection.GeneratedProtocolMessageType('SpotsEntry', (_message.Message,), {
+    'DESCRIPTOR' : _FETCHALLSPOTSRESPONSE_SPOTSENTRY,
+    '__module__' : 'spots.spots_pb2'
+    # @@protoc_insertion_point(class_scope:mruv.spots.FetchAllSpotsResponse.SpotsEntry)
+    })
+  ,
+  'DESCRIPTOR' : _FETCHALLSPOTSRESPONSE,
+  '__module__' : 'spots.spots_pb2'
+  # @@protoc_insertion_point(class_scope:mruv.spots.FetchAllSpotsResponse)
+  })
+_sym_db.RegisterMessage(FetchAllSpotsResponse)
+_sym_db.RegisterMessage(FetchAllSpotsResponse.SpotsEntry)
+
 
 DESCRIPTOR._options = None
+_FETCHALLSPOTSRESPONSE_SPOTSENTRY._options = None
 
 _MRUVSPOTSSERVICE = _descriptor.ServiceDescriptor(
   name='MruVSpotsService',
@@ -441,8 +568,8 @@ _MRUVSPOTSSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=501,
-  serialized_end=909,
+  serialized_start=696,
+  serialized_end=1189,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateSpot',
@@ -479,6 +606,15 @@ _MRUVSPOTSSERVICE = _descriptor.ServiceDescriptor(
     input_type=_DELETESPOTREQUEST,
     output_type=_DELETESPOTRESPONSE,
     serialized_options=_b('\202\323\344\223\002\020*\016/v1/spots/{id}'),
+  ),
+  _descriptor.MethodDescriptor(
+    name='FetchAll',
+    full_name='mruv.spots.MruVSpotsService.FetchAll',
+    index=4,
+    containing_service=None,
+    input_type=_FETCHALLSPOTSREQUEST,
+    output_type=_FETCHALLSPOTSRESPONSE,
+    serialized_options=None,
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_MRUVSPOTSSERVICE)

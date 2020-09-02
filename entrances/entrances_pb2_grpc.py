@@ -59,6 +59,11 @@ class MruVEntrancesServiceStub(object):
         request_serializer=entrances_dot_entrances__pb2.ExitRequest.SerializeToString,
         response_deserializer=entrances_dot_entrances__pb2.ExitResponse.FromString,
         )
+    self.FetchAll = channel.unary_stream(
+        '/mruv.entrances.MruVEntrancesService/FetchAll',
+        request_serializer=entrances_dot_entrances__pb2.FetchAllEntrancesRequest.SerializeToString,
+        response_deserializer=entrances_dot_entrances__pb2.FetchAllEntrancesResponse.FromString,
+        )
 
 
 class MruVEntrancesServiceServicer(object):
@@ -128,6 +133,13 @@ class MruVEntrancesServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def FetchAll(self, request, context):
+    """
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_MruVEntrancesServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -175,6 +187,11 @@ def add_MruVEntrancesServiceServicer_to_server(servicer, server):
           servicer.Exit,
           request_deserializer=entrances_dot_entrances__pb2.ExitRequest.FromString,
           response_serializer=entrances_dot_entrances__pb2.ExitResponse.SerializeToString,
+      ),
+      'FetchAll': grpc.unary_stream_rpc_method_handler(
+          servicer.FetchAll,
+          request_deserializer=entrances_dot_entrances__pb2.FetchAllEntrancesRequest.FromString,
+          response_serializer=entrances_dot_entrances__pb2.FetchAllEntrancesResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

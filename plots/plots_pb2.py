@@ -22,11 +22,56 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='mruv.plots',
   syntax='proto3',
   serialized_options=_b('Z#github.com/MruV-RP/mruv-pb-go/plots'),
-  serialized_pb=_b('\n\x11plots/plots.proto\x12\nmruv.plots\x1a\x1cgoogle/api/annotations.proto\x1a\x14\x63ommon/spatial.proto\"V\n\x11\x43reatePlotRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x1e\n\x06points\x18\x03 \x03(\x0b\x32\x0e.mruv.Position\" \n\x12\x43reatePlotResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1c\n\x0eGetPlotRequest\x12\n\n\x02id\x18\x01 \x01(\r\"b\n\x0fGetPlotResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x1e\n\x06points\x18\x03 \x03(\x0b\x32\x0e.mruv.Position\x12\x0c\n\x04\x61rea\x18\x04 \x01(\x01\"B\n\x11UpdatePlotRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\"\x14\n\x12UpdatePlotResponse\"\x1f\n\x11\x44\x65letePlotRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x14\n\x12\x44\x65letePlotResponse2\x98\x03\n\x10MruVPlotsService\x12^\n\nCreatePlot\x12\x1d.mruv.plots.CreatePlotRequest\x1a\x1e.mruv.plots.CreatePlotResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\"\t/v1/plots\x12Z\n\x07GetPlot\x12\x1a.mruv.plots.GetPlotRequest\x1a\x1b.mruv.plots.GetPlotResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/plots/{id}\x12\x63\n\nUpdatePlot\x12\x1d.mruv.plots.UpdatePlotRequest\x1a\x1e.mruv.plots.UpdatePlotResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x32\x0e/v1/plots/{id}\x12\x63\n\nDeletePlot\x12\x1d.mruv.plots.DeletePlotRequest\x1a\x1e.mruv.plots.DeletePlotResponse\"\x16\x82\xd3\xe4\x93\x02\x10*\x0e/v1/plots/{id}B%Z#github.com/MruV-RP/mruv-pb-go/plotsb\x06proto3')
+  serialized_pb=_b('\n\x11plots/plots.proto\x12\nmruv.plots\x1a\x1cgoogle/api/annotations.proto\x1a\x14\x63ommon/spatial.proto\"I\n\x04Plot\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x1e\n\x06points\x18\x03 \x03(\x0b\x32\x0e.mruv.Position\"V\n\x11\x43reatePlotRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x1e\n\x06points\x18\x03 \x03(\x0b\x32\x0e.mruv.Position\" \n\x12\x43reatePlotResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1c\n\x0eGetPlotRequest\x12\n\n\x02id\x18\x01 \x01(\r\"b\n\x0fGetPlotResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x1e\n\x06points\x18\x03 \x03(\x0b\x32\x0e.mruv.Position\x12\x0c\n\x04\x61rea\x18\x04 \x01(\x01\"B\n\x11UpdatePlotRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\"\x14\n\x12UpdatePlotResponse\"\x1f\n\x11\x44\x65letePlotRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x14\n\x12\x44\x65letePlotResponse2\x98\x03\n\x10MruVPlotsService\x12^\n\nCreatePlot\x12\x1d.mruv.plots.CreatePlotRequest\x1a\x1e.mruv.plots.CreatePlotResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\"\t/v1/plots\x12Z\n\x07GetPlot\x12\x1a.mruv.plots.GetPlotRequest\x1a\x1b.mruv.plots.GetPlotResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/plots/{id}\x12\x63\n\nUpdatePlot\x12\x1d.mruv.plots.UpdatePlotRequest\x1a\x1e.mruv.plots.UpdatePlotResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x32\x0e/v1/plots/{id}\x12\x63\n\nDeletePlot\x12\x1d.mruv.plots.DeletePlotRequest\x1a\x1e.mruv.plots.DeletePlotResponse\"\x16\x82\xd3\xe4\x93\x02\x10*\x0e/v1/plots/{id}B%Z#github.com/MruV-RP/mruv-pb-go/plotsb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,common_dot_spatial__pb2.DESCRIPTOR,])
 
 
+
+
+_PLOT = _descriptor.Descriptor(
+  name='Plot',
+  full_name='mruv.plots.Plot',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='mruv.plots.Plot.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='description', full_name='mruv.plots.Plot.description', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='points', full_name='mruv.plots.Plot.points', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=85,
+  serialized_end=158,
+)
 
 
 _CREATEPLOTREQUEST = _descriptor.Descriptor(
@@ -69,8 +114,8 @@ _CREATEPLOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=85,
-  serialized_end=171,
+  serialized_start=160,
+  serialized_end=246,
 )
 
 
@@ -100,8 +145,8 @@ _CREATEPLOTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=173,
-  serialized_end=205,
+  serialized_start=248,
+  serialized_end=280,
 )
 
 
@@ -131,8 +176,8 @@ _GETPLOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=207,
-  serialized_end=235,
+  serialized_start=282,
+  serialized_end=310,
 )
 
 
@@ -183,8 +228,8 @@ _GETPLOTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=237,
-  serialized_end=335,
+  serialized_start=312,
+  serialized_end=410,
 )
 
 
@@ -228,8 +273,8 @@ _UPDATEPLOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=337,
-  serialized_end=403,
+  serialized_start=412,
+  serialized_end=478,
 )
 
 
@@ -252,8 +297,8 @@ _UPDATEPLOTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=405,
-  serialized_end=425,
+  serialized_start=480,
+  serialized_end=500,
 )
 
 
@@ -283,8 +328,8 @@ _DELETEPLOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=427,
-  serialized_end=458,
+  serialized_start=502,
+  serialized_end=533,
 )
 
 
@@ -307,12 +352,14 @@ _DELETEPLOTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=460,
-  serialized_end=480,
+  serialized_start=535,
+  serialized_end=555,
 )
 
+_PLOT.fields_by_name['points'].message_type = common_dot_spatial__pb2._POSITION
 _CREATEPLOTREQUEST.fields_by_name['points'].message_type = common_dot_spatial__pb2._POSITION
 _GETPLOTRESPONSE.fields_by_name['points'].message_type = common_dot_spatial__pb2._POSITION
+DESCRIPTOR.message_types_by_name['Plot'] = _PLOT
 DESCRIPTOR.message_types_by_name['CreatePlotRequest'] = _CREATEPLOTREQUEST
 DESCRIPTOR.message_types_by_name['CreatePlotResponse'] = _CREATEPLOTRESPONSE
 DESCRIPTOR.message_types_by_name['GetPlotRequest'] = _GETPLOTREQUEST
@@ -322,6 +369,13 @@ DESCRIPTOR.message_types_by_name['UpdatePlotResponse'] = _UPDATEPLOTRESPONSE
 DESCRIPTOR.message_types_by_name['DeletePlotRequest'] = _DELETEPLOTREQUEST
 DESCRIPTOR.message_types_by_name['DeletePlotResponse'] = _DELETEPLOTRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+Plot = _reflection.GeneratedProtocolMessageType('Plot', (_message.Message,), {
+  'DESCRIPTOR' : _PLOT,
+  '__module__' : 'plots.plots_pb2'
+  # @@protoc_insertion_point(class_scope:mruv.plots.Plot)
+  })
+_sym_db.RegisterMessage(Plot)
 
 CreatePlotRequest = _reflection.GeneratedProtocolMessageType('CreatePlotRequest', (_message.Message,), {
   'DESCRIPTOR' : _CREATEPLOTREQUEST,
@@ -388,8 +442,8 @@ _MRUVPLOTSSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=483,
-  serialized_end=891,
+  serialized_start=558,
+  serialized_end=966,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreatePlot',
