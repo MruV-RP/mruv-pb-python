@@ -4,7 +4,6 @@
 
 import sys
 _b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
-from google.protobuf.internal import enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
@@ -19,168 +18,161 @@ from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='punishments/punishments.proto',
-  package='mruv.economy',
+  package='mruv.punishments',
   syntax='proto3',
   serialized_options=_b('Z)github.com/MruV-RP/mruv-pb-go/punishments'),
-  serialized_pb=_b('\n\x1dpunishments/punishments.proto\x12\x0cmruv.economy\x1a\x1cgoogle/api/annotations.proto\"\xbe\x01\n\nBanMessage\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x11\n\tcharacter\x18\x02 \x01(\r\x12\n\n\x02ip\x18\x03 \x01(\t\x12\x17\n\x0f\x65xpiration_date\x18\x04 \x01(\x03\x12\x0e\n\x06reason\x18\x05 \x01(\t\x12\r\n\x05\x61\x64min\x18\x06 \x01(\r\x12\x10\n\x08\x62\x61n_date\x18\x07 \x01(\x03\x12\x0e\n\x06\x61\x63tive\x18\x08 \x01(\x08\x12\x12\n\nunban_date\x18\t \x01(\x03\x12\x13\n\x0bunban_admin\x18\n \x01(\r\"\xb6\x01\n\x0bWarnMessage\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x11\n\tcharacter\x18\x02 \x01(\r\x12\x17\n\x0f\x65xpiration_date\x18\x03 \x01(\x03\x12\x0e\n\x06reason\x18\x04 \x01(\t\x12\r\n\x05\x61\x64min\x18\x05 \x01(\r\x12\x11\n\twarn_date\x18\x06 \x01(\x03\x12\x0e\n\x06\x61\x63tive\x18\x07 \x01(\x08\x12\x13\n\x0bunwarn_date\x18\x08 \x01(\x03\x12\x14\n\x0cunwarn_admin\x18\t \x01(\r\"\xa1\x01\n\x0c\x42lockMessage\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x11\n\tcharacter\x18\x02 \x01(\r\x12\x0e\n\x06reason\x18\x03 \x01(\t\x12\r\n\x05\x61\x64min\x18\x04 \x01(\r\x12\x12\n\nblock_date\x18\x05 \x01(\x03\x12\x0e\n\x06\x61\x63tive\x18\x06 \x01(\x08\x12\x14\n\x0cunblock_date\x18\x07 \x01(\x03\x12\x15\n\runblock_admin\x18\x08 \x01(\r\"x\n\x10\x41\x64minJailMessage\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x11\n\tcharacter\x18\x02 \x01(\r\x12\x0e\n\x06reason\x18\x03 \x01(\t\x12\r\n\x05\x61\x64min\x18\x04 \x01(\r\x12\x0f\n\x07\x61j_date\x18\x05 \x01(\x03\x12\x11\n\tjail_time\x18\x06 \x01(\r\".\n\x0cUnBanMessage\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x0e\n\x06\x62\x61n_id\x18\x02 \x01(\r\"2\n\x0eUnBlockMessage\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x10\n\x08\x62lock_id\x18\x02 \x01(\r\"0\n\rUnWarnMessage\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x0f\n\x07warn_id\x18\x02 \x01(\r\"7\n\x12UnAdminJailMessage\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x11\n\tcharacter\x18\x02 \x01(\r\"h\n\nBanRequest\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x11\n\tcharacter\x18\x02 \x01(\r\x12\n\n\x02ip\x18\x03 \x01(\t\x12\x0c\n\x04time\x18\x04 \x01(\r\x12\x0e\n\x06reason\x18\x05 \x01(\t\x12\r\n\x05\x61\x64min\x18\x06 \x01(\r\"\x1d\n\x0b\x42\x61nResponse\x12\x0e\n\x06\x62\x61n_id\x18\x01 \x01(\r\"@\n\x0c\x42lockRequest\x12\x11\n\tcharacter\x18\x01 \x01(\r\x12\x0e\n\x06reason\x18\x02 \x01(\t\x12\r\n\x05\x61\x64min\x18\x03 \x01(\r\"!\n\rBlockResponse\x12\x10\n\x08\x62lock_id\x18\x01 \x01(\r\"]\n\x0bWarnRequest\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x11\n\tcharacter\x18\x02 \x01(\r\x12\x0c\n\x04time\x18\x03 \x01(\r\x12\x0e\n\x06reason\x18\x04 \x01(\t\x12\r\n\x05\x61\x64min\x18\x05 \x01(\r\"\x1f\n\x0cWarnResponse\x12\x0f\n\x07warn_id\x18\x01 \x01(\r\"R\n\x10\x41\x64minJailRequest\x12\x11\n\tcharacter\x18\x01 \x01(\r\x12\x0c\n\x04time\x18\x02 \x01(\r\x12\x0e\n\x06reason\x18\x03 \x01(\t\x12\r\n\x05\x61\x64min\x18\x04 \x01(\r\"\x13\n\x11\x41\x64minJailResponse\")\n\x16MuteGlobalChatsRequest\x12\x0f\n\x07\x61\x63\x63ount\x18\x01 \x01(\r\"\x19\n\x17MuteGlobalChatsResponse\".\n\x0cUnBanRequest\x12\x0e\n\x06\x62\x61n_id\x18\x01 \x01(\r\x12\x0e\n\x06reason\x18\x02 \x01(\t\"\x0f\n\rUnBanResponse\"2\n\x0eUnBlockRequest\x12\x10\n\x08\x62lock_id\x18\x01 \x01(\r\x12\x0e\n\x06reason\x18\x02 \x01(\t\"\x11\n\x0fUnBlockResponse\"0\n\rUnWarnRequest\x12\x0f\n\x07warn_id\x18\x01 \x01(\r\x12\x0e\n\x06reason\x18\x02 \x01(\t\"\x10\n\x0eUnWarnResponse\"\'\n\x12UnAdminJailRequest\x12\x11\n\tcharacter\x18\x01 \x01(\r\"\x15\n\x13UnAdminJailResponse\"+\n\x18UnMuteGlobalChatsRequest\x12\x0f\n\x07\x61\x63\x63ount\x18\x01 \x01(\r\"\x1b\n\x19UnMuteGlobalChatsResponse\"2\n\x14GetPlayerBansRequest\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\n\n\x02ip\x18\x02 \x01(\t\"?\n\x15GetPlayerBansResponse\x12&\n\x04\x62\x61ns\x18\x01 \x03(\x0b\x32\x18.mruv.economy.BanMessage\"\'\n\x15GetPlayerWarnsRequest\x12\x0e\n\x06player\x18\x01 \x01(\r\"B\n\x16GetPlayerWarnsResponse\x12(\n\x05warns\x18\x01 \x03(\x0b\x32\x19.mruv.economy.WarnMessage\".\n\x19GetPlayerAdminJailRequest\x12\x11\n\tcharacter\x18\x01 \x01(\r\"\\\n\x1aGetPlayerAdminJailResponse\x12\x11\n\tjail_time\x18\x01 \x01(\r\x12\x0e\n\x06reason\x18\x02 \x01(\t\x12\r\n\x05\x61\x64min\x18\x03 \x01(\r\x12\x0c\n\x04\x64\x61te\x18\x04 \x01(\x03\"\x1b\n\rGetBanRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x1c\n\x0eGetWarnRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x1d\n\x0fGetBlockRequest\x12\n\n\x02id\x18\x01 \x01(\r\"3\n\x15IsPlayerBannedRequest\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\n\n\x02ip\x18\x02 \x01(\t\"8\n\x16IsPlayerBannedResponse\x12\x0e\n\x06\x62\x61nned\x18\x01 \x01(\x08\x12\x0e\n\x06\x62\x61n_id\x18\x02 \x01(\r\".\n\x19IsCharacterBlockedRequest\x12\x11\n\tcharacter\x18\x01 \x01(\r\"?\n\x1aIsCharacterBlockedResponse\x12\x0f\n\x07\x62locked\x18\x01 \x01(\x08\x12\x10\n\x08\x62lock_id\x18\x02 \x01(\r\"-\n\x18IsCharacterJailedRequest\x12\x11\n\tcharacter\x18\x01 \x01(\r\">\n\x19IsCharacterJailedResponse\x12\x0e\n\x06jailed\x18\x01 \x01(\x08\x12\x11\n\tjail_time\x18\x02 \x01(\r\"\x12\n\x10WatchBansRequest\"\x14\n\x12WatchBlocksRequest\"\x13\n\x11WatchWarnsRequest\"\x18\n\x16WatchAdminJailsRequest\"\x14\n\x12WatchUnBansRequest\"\x16\n\x14WatchUnBlocksRequest\"\x15\n\x13WatchUnWarnsRequest\"\x1a\n\x18WatchUnAdminJailsRequest\"\x1e\n\x1cWatchPlayerAcquittalsRequest\"\x1f\n\x1dWatchPlayerAcquittalsResponse\"\x1f\n\x1dWatchPlayerPunishmentsRequest\"c\n\x1eWatchPlayerPunishmentsResponse\x12*\n\x04type\x18\x01 \x01(\x0e\x32\x1c.mruv.economy.PunishmentType\x12\x15\n\rpunishment_id\x18\x02 \x01(\r\"\x19\n\x17WatchPunishmentsRequest\"\x80\x01\n\x18WatchPunishmentsResponse\x12*\n\x04type\x18\x01 \x01(\x0e\x32\x1c.mruv.economy.PunishmentType\x12\x15\n\rpunishment_id\x18\x02 \x01(\r\x12\x0e\n\x06player\x18\x03 \x01(\r\x12\x11\n\tcharacter\x18\x04 \x01(\r*V\n\x0ePunishmentType\x12\x16\n\x12UNKNOWN_PUNISHMENT\x10\x00\x12\x07\n\x03\x42\x41N\x10\x01\x12\t\n\x05\x42LOCK\x10\x02\x12\x08\n\x04WARN\x10\x03\x12\x0e\n\nADMIN_JAIL\x10\x04*]\n\x0e\x41\x63quittalsType\x12\x14\n\x10UNKNOWN_ACQUITAL\x10\x00\x12\t\n\x05UNBAN\x10\x01\x12\x0b\n\x07UNBLOCK\x10\x02\x12\n\n\x06UNWARN\x10\x03\x12\x11\n\rUN_ADMIN_JAIL\x10\x04\x32\xc9\x19\n\x16MruVPunishmentsService\x12`\n\x03\x42\x61n\x12\x18.mruv.economy.BanRequest\x1a\x19.mruv.economy.BanResponse\"$\x82\xd3\xe4\x93\x02\x1e\"\x1c/v1/punishments/ban/{player}\x12k\n\x05\x42lock\x12\x1a.mruv.economy.BlockRequest\x1a\x1b.mruv.economy.BlockResponse\")\x82\xd3\xe4\x93\x02#\"!/v1/punishments/block/{character}\x12\x64\n\x04Warn\x12\x19.mruv.economy.WarnRequest\x1a\x1a.mruv.economy.WarnResponse\"%\x82\xd3\xe4\x93\x02\x1f\"\x1d/v1/punishments/warn/{player}\x12t\n\tAdminJail\x12\x1e.mruv.economy.AdminJailRequest\x1a\x1f.mruv.economy.AdminJailResponse\"&\x82\xd3\xe4\x93\x02 \"\x1e/v1/punishments/aj/{character}\x12\x86\x01\n\x0fMuteGlobalChats\x12$.mruv.economy.MuteGlobalChatsRequest\x1a%.mruv.economy.MuteGlobalChatsResponse\"&\x82\xd3\xe4\x93\x02 \"\x1e/v1/punishments/mute/{account}\x12\x66\n\x05UnBan\x12\x1a.mruv.economy.UnBanRequest\x1a\x1b.mruv.economy.UnBanResponse\"$\x82\xd3\xe4\x93\x02\x1e*\x1c/v1/punishments/ban/{ban_id}\x12q\n\x07UnBlock\x12\x1c.mruv.economy.UnBlockRequest\x1a\x1d.mruv.economy.UnBlockResponse\")\x82\xd3\xe4\x93\x02#*!/v1/punishments/blocks/{block_id}\x12k\n\x06UnWarn\x12\x1b.mruv.economy.UnWarnRequest\x1a\x1c.mruv.economy.UnWarnResponse\"&\x82\xd3\xe4\x93\x02 *\x1e/v1/punishments/warn/{warn_id}\x12z\n\x0bUnAdminJail\x12 .mruv.economy.UnAdminJailRequest\x1a!.mruv.economy.UnAdminJailResponse\"&\x82\xd3\xe4\x93\x02 *\x1e/v1/punishments/aj/{character}\x12\x8c\x01\n\x11UnMuteGlobalChats\x12&.mruv.economy.UnMuteGlobalChatsRequest\x1a\'.mruv.economy.UnMuteGlobalChatsResponse\"&\x82\xd3\xe4\x93\x02 *\x1e/v1/punishments/mute/{account}\x12\x7f\n\rGetPlayerBans\x12\".mruv.economy.GetPlayerBansRequest\x1a#.mruv.economy.GetPlayerBansResponse\"%\x82\xd3\xe4\x93\x02\x1f\x12\x1d/v1/punishments/bans/{player}\x12\x83\x01\n\x0eGetPlayerWarns\x12#.mruv.economy.GetPlayerWarnsRequest\x1a$.mruv.economy.GetPlayerWarnsResponse\"&\x82\xd3\xe4\x93\x02 \x12\x1e/v1/punishments/warns/{player}\x12\x8f\x01\n\x12GetPlayerAdminJail\x12\'.mruv.economy.GetPlayerAdminJailRequest\x1a(.mruv.economy.GetPlayerAdminJailResponse\"&\x82\xd3\xe4\x93\x02 \x12\x1e/v1/punishments/aj/{character}\x12\x62\n\x06GetBan\x12\x1b.mruv.economy.GetBanRequest\x1a\x18.mruv.economy.BanMessage\"!\x82\xd3\xe4\x93\x02\x1b\x12\x19/v1/punishments/bans/{id}\x12\x66\n\x07GetWarn\x12\x1c.mruv.economy.GetWarnRequest\x1a\x19.mruv.economy.WarnMessage\"\"\x82\xd3\xe4\x93\x02\x1c\x12\x1a/v1/punishments/warns/{id}\x12j\n\x08GetBlock\x12\x1d.mruv.economy.GetBlockRequest\x1a\x1a.mruv.economy.BlockMessage\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/v1/punishments/blocks/{id}\x12\x87\x01\n\x0eIsPlayerBanned\x12#.mruv.economy.IsPlayerBannedRequest\x1a$.mruv.economy.IsPlayerBannedResponse\"*\x82\xd3\xe4\x93\x02$\x12\"/v1/punishments/bans/{player}/{ip}\x12i\n\x12IsCharacterBlocked\x12\'.mruv.economy.IsCharacterBlockedRequest\x1a(.mruv.economy.IsCharacterBlockedResponse\"\x00\x12\x66\n\x11IsCharacterJailed\x12&.mruv.economy.IsCharacterJailedRequest\x1a\'.mruv.economy.IsCharacterJailedResponse\"\x00\x12I\n\tWatchBans\x12\x1e.mruv.economy.WatchBansRequest\x1a\x18.mruv.economy.BanMessage\"\x00\x30\x01\x12O\n\x0bWatchBlocks\x12 .mruv.economy.WatchBlocksRequest\x1a\x1a.mruv.economy.BlockMessage\"\x00\x30\x01\x12L\n\nWatchWarns\x12\x1f.mruv.economy.WatchWarnsRequest\x1a\x19.mruv.economy.WarnMessage\"\x00\x30\x01\x12[\n\x0fWatchAdminJails\x12$.mruv.economy.WatchAdminJailsRequest\x1a\x1e.mruv.economy.AdminJailMessage\"\x00\x30\x01\x12O\n\x0bWatchUnBans\x12 .mruv.economy.WatchUnBansRequest\x1a\x1a.mruv.economy.UnBanMessage\"\x00\x30\x01\x12U\n\rWatchUnBlocks\x12\".mruv.economy.WatchUnBlocksRequest\x1a\x1c.mruv.economy.UnBlockMessage\"\x00\x30\x01\x12R\n\x0cWatchUnWarns\x12!.mruv.economy.WatchUnWarnsRequest\x1a\x1b.mruv.economy.UnWarnMessage\"\x00\x30\x01\x12\x61\n\x11WatchUnAdminJails\x12&.mruv.economy.WatchUnAdminJailsRequest\x1a .mruv.economy.UnAdminJailMessage\"\x00\x30\x01\x12w\n\x16WatchPlayerPunishments\x12+.mruv.economy.WatchPlayerPunishmentsRequest\x1a,.mruv.economy.WatchPlayerPunishmentsResponse\"\x00\x30\x01\x12t\n\x15WatchPlayerAcquittals\x12*.mruv.economy.WatchPlayerAcquittalsRequest\x1a+.mruv.economy.WatchPlayerAcquittalsResponse\"\x00\x30\x01\x12\x65\n\x10WatchPunishments\x12%.mruv.economy.WatchPunishmentsRequest\x1a&.mruv.economy.WatchPunishmentsResponse\"\x00\x30\x01\x42+Z)github.com/MruV-RP/mruv-pb-go/punishmentsb\x06proto3')
+  serialized_pb=_b('\n\x1dpunishments/punishments.proto\x12\x10mruv.punishments\x1a\x1cgoogle/api/annotations.proto\"\x8c\x01\n\x11PunishmentMessage\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x11\n\tcharacter\x18\x02 \x01(\r\x12\x17\n\x0f\x65xpiration_date\x18\x03 \x01(\x03\x12\x0e\n\x06reason\x18\x04 \x01(\t\x12\r\n\x05\x61\x64min\x18\x05 \x01(\r\x12\x0c\n\x04\x64\x61te\x18\x06 \x01(\x03\x12\x0e\n\x06\x61\x63tive\x18\x07 \x01(\x08\"\xbe\x01\n\nBanMessage\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x11\n\tcharacter\x18\x02 \x01(\r\x12\n\n\x02ip\x18\x03 \x01(\t\x12\x17\n\x0f\x65xpiration_date\x18\x04 \x01(\x03\x12\x0e\n\x06reason\x18\x05 \x01(\t\x12\r\n\x05\x61\x64min\x18\x06 \x01(\r\x12\x10\n\x08\x62\x61n_date\x18\x07 \x01(\x03\x12\x0e\n\x06\x61\x63tive\x18\x08 \x01(\x08\x12\x12\n\nunban_date\x18\t \x01(\x03\x12\x13\n\x0bunban_admin\x18\n \x01(\r\"\xb6\x01\n\x0bWarnMessage\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x11\n\tcharacter\x18\x02 \x01(\r\x12\x17\n\x0f\x65xpiration_date\x18\x03 \x01(\x03\x12\x0e\n\x06reason\x18\x04 \x01(\t\x12\r\n\x05\x61\x64min\x18\x05 \x01(\r\x12\x11\n\twarn_date\x18\x06 \x01(\x03\x12\x0e\n\x06\x61\x63tive\x18\x07 \x01(\x08\x12\x13\n\x0bunwarn_date\x18\x08 \x01(\x03\x12\x14\n\x0cunwarn_admin\x18\t \x01(\r\"\xa1\x01\n\x0c\x42lockMessage\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x11\n\tcharacter\x18\x02 \x01(\r\x12\x0e\n\x06reason\x18\x03 \x01(\t\x12\r\n\x05\x61\x64min\x18\x04 \x01(\r\x12\x12\n\nblock_date\x18\x05 \x01(\x03\x12\x0e\n\x06\x61\x63tive\x18\x06 \x01(\x08\x12\x14\n\x0cunblock_date\x18\x07 \x01(\x03\x12\x15\n\runblock_admin\x18\x08 \x01(\r\"x\n\x10\x41\x64minJailMessage\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x11\n\tcharacter\x18\x02 \x01(\r\x12\x0e\n\x06reason\x18\x03 \x01(\t\x12\r\n\x05\x61\x64min\x18\x04 \x01(\r\x12\x0f\n\x07\x61j_date\x18\x05 \x01(\x03\x12\x11\n\tjail_time\x18\x06 \x01(\r\".\n\x0cUnBanMessage\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x0e\n\x06\x62\x61n_id\x18\x02 \x01(\r\"2\n\x0eUnBlockMessage\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x10\n\x08\x62lock_id\x18\x02 \x01(\r\"0\n\rUnWarnMessage\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x0f\n\x07warn_id\x18\x02 \x01(\r\"7\n\x12UnAdminJailMessage\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x11\n\tcharacter\x18\x02 \x01(\r\"Q\n\rPunishRequest\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x11\n\tcharacter\x18\x02 \x01(\r\x12\x0e\n\x06reason\x18\x03 \x01(\t\x12\r\n\x05\x61\x64min\x18\x04 \x01(\r\"\x10\n\x0ePunishResponse\"h\n\nBanRequest\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x11\n\tcharacter\x18\x02 \x01(\r\x12\n\n\x02ip\x18\x03 \x01(\t\x12\x0c\n\x04time\x18\x04 \x01(\r\x12\x0e\n\x06reason\x18\x05 \x01(\t\x12\r\n\x05\x61\x64min\x18\x06 \x01(\r\"\x1d\n\x0b\x42\x61nResponse\x12\x0e\n\x06\x62\x61n_id\x18\x01 \x01(\r\"@\n\x0c\x42lockRequest\x12\x11\n\tcharacter\x18\x01 \x01(\r\x12\x0e\n\x06reason\x18\x02 \x01(\t\x12\r\n\x05\x61\x64min\x18\x03 \x01(\r\"!\n\rBlockResponse\x12\x10\n\x08\x62lock_id\x18\x01 \x01(\r\"]\n\x0bWarnRequest\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\x11\n\tcharacter\x18\x02 \x01(\r\x12\x0c\n\x04time\x18\x03 \x01(\r\x12\x0e\n\x06reason\x18\x04 \x01(\t\x12\r\n\x05\x61\x64min\x18\x05 \x01(\r\"\x1f\n\x0cWarnResponse\x12\x0f\n\x07warn_id\x18\x01 \x01(\r\"R\n\x10\x41\x64minJailRequest\x12\x11\n\tcharacter\x18\x01 \x01(\r\x12\x0c\n\x04time\x18\x02 \x01(\r\x12\x0e\n\x06reason\x18\x03 \x01(\t\x12\r\n\x05\x61\x64min\x18\x04 \x01(\r\"\x13\n\x11\x41\x64minJailResponse\")\n\x16MuteGlobalChatsRequest\x12\x0f\n\x07\x61\x63\x63ount\x18\x01 \x01(\r\"\x19\n\x17MuteGlobalChatsResponse\"@\n\x0cUnBanRequest\x12\x0e\n\x06\x62\x61n_id\x18\x01 \x01(\r\x12\x0e\n\x06reason\x18\x02 \x01(\t\x12\x10\n\x08\x61\x64min_id\x18\x03 \x01(\r\"\x0f\n\rUnBanResponse\"D\n\x0eUnBlockRequest\x12\x10\n\x08\x62lock_id\x18\x01 \x01(\r\x12\x0e\n\x06reason\x18\x02 \x01(\t\x12\x10\n\x08\x61\x64min_id\x18\x03 \x01(\r\"\x11\n\x0fUnBlockResponse\"B\n\rUnWarnRequest\x12\x0f\n\x07warn_id\x18\x01 \x01(\r\x12\x0e\n\x06reason\x18\x02 \x01(\t\x12\x10\n\x08\x61\x64min_id\x18\x03 \x01(\r\"\x10\n\x0eUnWarnResponse\"I\n\x12UnAdminJailRequest\x12\x11\n\tcharacter\x18\x01 \x01(\r\x12\x0e\n\x06reason\x18\x02 \x01(\t\x12\x10\n\x08\x61\x64min_id\x18\x03 \x01(\r\"\x15\n\x13UnAdminJailResponse\"+\n\x18UnMuteGlobalChatsRequest\x12\x0f\n\x07\x61\x63\x63ount\x18\x01 \x01(\r\"\x1b\n\x19UnMuteGlobalChatsResponse\"2\n\x14GetPlayerBansRequest\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\n\n\x02ip\x18\x02 \x01(\t\"C\n\x15GetPlayerBansResponse\x12*\n\x04\x62\x61ns\x18\x01 \x03(\x0b\x32\x1c.mruv.punishments.BanMessage\"\'\n\x15GetPlayerWarnsRequest\x12\x0e\n\x06player\x18\x01 \x01(\r\"F\n\x16GetPlayerWarnsResponse\x12,\n\x05warns\x18\x01 \x03(\x0b\x32\x1d.mruv.punishments.WarnMessage\".\n\x19GetPlayerAdminJailRequest\x12\x11\n\tcharacter\x18\x01 \x01(\r\"\\\n\x1aGetPlayerAdminJailResponse\x12\x11\n\tjail_time\x18\x01 \x01(\r\x12\x0e\n\x06reason\x18\x02 \x01(\t\x12\r\n\x05\x61\x64min\x18\x03 \x01(\r\x12\x0c\n\x04\x64\x61te\x18\x04 \x01(\x03\"\x1b\n\rGetBanRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x1c\n\x0eGetWarnRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x1d\n\x0fGetBlockRequest\x12\n\n\x02id\x18\x01 \x01(\r\"3\n\x15IsPlayerBannedRequest\x12\x0e\n\x06player\x18\x01 \x01(\r\x12\n\n\x02ip\x18\x02 \x01(\t\"8\n\x16IsPlayerBannedResponse\x12\x0e\n\x06\x62\x61nned\x18\x01 \x01(\x08\x12\x0e\n\x06\x62\x61n_id\x18\x02 \x01(\r\".\n\x19IsCharacterBlockedRequest\x12\x11\n\tcharacter\x18\x01 \x01(\r\"?\n\x1aIsCharacterBlockedResponse\x12\x0f\n\x07\x62locked\x18\x01 \x01(\x08\x12\x10\n\x08\x62lock_id\x18\x02 \x01(\r\"-\n\x18IsCharacterJailedRequest\x12\x11\n\tcharacter\x18\x01 \x01(\r\">\n\x19IsCharacterJailedResponse\x12\x0e\n\x06jailed\x18\x01 \x01(\x08\x12\x11\n\tjail_time\x18\x02 \x01(\r\"\x12\n\x10WatchBansRequest\"\x14\n\x12WatchBlocksRequest\"\x13\n\x11WatchWarnsRequest\"\x18\n\x16WatchAdminJailsRequest\"\x14\n\x12WatchUnBansRequest\"\x16\n\x14WatchUnBlocksRequest\"\x15\n\x13WatchUnWarnsRequest\"\x1a\n\x18WatchUnAdminJailsRequest\"I\n\x1dWatchPlayerPunishmentsRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63haracter_id\x18\x02 \x01(\r\"\xed\x01\n\x1eWatchPlayerPunishmentsResponse\x12+\n\x03\x62\x61n\x18\x01 \x01(\x0b\x32\x1c.mruv.punishments.BanMessageH\x00\x12/\n\x05\x62lock\x18\x02 \x01(\x0b\x32\x1e.mruv.punishments.BlockMessageH\x00\x12-\n\x04warn\x18\x03 \x01(\x0b\x32\x1d.mruv.punishments.WarnMessageH\x00\x12\x30\n\x02\x61j\x18\x04 \x01(\x0b\x32\".mruv.punishments.AdminJailMessageH\x00\x42\x0c\n\npunishment\"H\n\x1cWatchPlayerAcquittalsRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63haracter_id\x18\x02 \x01(\r\"\xfb\x01\n\x1dWatchPlayerAcquittalsResponse\x12/\n\x05unban\x18\x01 \x01(\x0b\x32\x1e.mruv.punishments.UnBanMessageH\x00\x12\x33\n\x07unblock\x18\x02 \x01(\x0b\x32 .mruv.punishments.UnBlockMessageH\x00\x12\x31\n\x06unwarn\x18\x03 \x01(\x0b\x32\x1f.mruv.punishments.UnWarnMessageH\x00\x12\x34\n\x04unaj\x18\x04 \x01(\x0b\x32$.mruv.punishments.UnAdminJailMessageH\x00\x42\x0b\n\tacquittal\"\x19\n\x17WatchPunishmentsRequest\"\xe7\x01\n\x18WatchPunishmentsResponse\x12+\n\x03\x62\x61n\x18\x01 \x01(\x0b\x32\x1c.mruv.punishments.BanMessageH\x00\x12/\n\x05\x62lock\x18\x02 \x01(\x0b\x32\x1e.mruv.punishments.BlockMessageH\x00\x12-\n\x04warn\x18\x03 \x01(\x0b\x32\x1d.mruv.punishments.WarnMessageH\x00\x12\x30\n\x02\x61j\x18\x04 \x01(\x0b\x32\".mruv.punishments.AdminJailMessageH\x00\x42\x0c\n\npunishment\"\x18\n\x16WatchAcquittalsRequest\"\xf5\x01\n\x17WatchAcquittalsResponse\x12/\n\x05unban\x18\x01 \x01(\x0b\x32\x1e.mruv.punishments.UnBanMessageH\x00\x12\x33\n\x07unblock\x18\x02 \x01(\x0b\x32 .mruv.punishments.UnBlockMessageH\x00\x12\x31\n\x06unwarn\x18\x03 \x01(\x0b\x32\x1f.mruv.punishments.UnWarnMessageH\x00\x12\x34\n\x04unaj\x18\x04 \x01(\x0b\x32$.mruv.punishments.UnAdminJailMessageH\x00\x42\x0b\n\tacquittal2\x94\x1d\n\x16MruVPunishmentsService\x12m\n\x06Punish\x12\x1f.mruv.punishments.PunishRequest\x1a .mruv.punishments.PunishResponse\" \x82\xd3\xe4\x93\x02\x1a\"\x18/v1/punishments/{player}\x12h\n\x03\x42\x61n\x12\x1c.mruv.punishments.BanRequest\x1a\x1d.mruv.punishments.BanResponse\"$\x82\xd3\xe4\x93\x02\x1e\"\x1c/v1/punishments/ban/{player}\x12s\n\x05\x42lock\x12\x1e.mruv.punishments.BlockRequest\x1a\x1f.mruv.punishments.BlockResponse\")\x82\xd3\xe4\x93\x02#\"!/v1/punishments/block/{character}\x12l\n\x04Warn\x12\x1d.mruv.punishments.WarnRequest\x1a\x1e.mruv.punishments.WarnResponse\"%\x82\xd3\xe4\x93\x02\x1f\"\x1d/v1/punishments/warn/{player}\x12|\n\tAdminJail\x12\".mruv.punishments.AdminJailRequest\x1a#.mruv.punishments.AdminJailResponse\"&\x82\xd3\xe4\x93\x02 \"\x1e/v1/punishments/aj/{character}\x12\x8e\x01\n\x0fMuteGlobalChats\x12(.mruv.punishments.MuteGlobalChatsRequest\x1a).mruv.punishments.MuteGlobalChatsResponse\"&\x82\xd3\xe4\x93\x02 \"\x1e/v1/punishments/mute/{account}\x12n\n\x05UnBan\x12\x1e.mruv.punishments.UnBanRequest\x1a\x1f.mruv.punishments.UnBanResponse\"$\x82\xd3\xe4\x93\x02\x1e*\x1c/v1/punishments/ban/{ban_id}\x12y\n\x07UnBlock\x12 .mruv.punishments.UnBlockRequest\x1a!.mruv.punishments.UnBlockResponse\")\x82\xd3\xe4\x93\x02#*!/v1/punishments/blocks/{block_id}\x12s\n\x06UnWarn\x12\x1f.mruv.punishments.UnWarnRequest\x1a .mruv.punishments.UnWarnResponse\"&\x82\xd3\xe4\x93\x02 *\x1e/v1/punishments/warn/{warn_id}\x12\x82\x01\n\x0bUnAdminJail\x12$.mruv.punishments.UnAdminJailRequest\x1a%.mruv.punishments.UnAdminJailResponse\"&\x82\xd3\xe4\x93\x02 *\x1e/v1/punishments/aj/{character}\x12\x94\x01\n\x11UnMuteGlobalChats\x12*.mruv.punishments.UnMuteGlobalChatsRequest\x1a+.mruv.punishments.UnMuteGlobalChatsResponse\"&\x82\xd3\xe4\x93\x02 *\x1e/v1/punishments/mute/{account}\x12\x87\x01\n\rGetPlayerBans\x12&.mruv.punishments.GetPlayerBansRequest\x1a\'.mruv.punishments.GetPlayerBansResponse\"%\x82\xd3\xe4\x93\x02\x1f\x12\x1d/v1/punishments/bans/{player}\x12\x8b\x01\n\x0eGetPlayerWarns\x12\'.mruv.punishments.GetPlayerWarnsRequest\x1a(.mruv.punishments.GetPlayerWarnsResponse\"&\x82\xd3\xe4\x93\x02 \x12\x1e/v1/punishments/warns/{player}\x12\x97\x01\n\x12GetPlayerAdminJail\x12+.mruv.punishments.GetPlayerAdminJailRequest\x1a,.mruv.punishments.GetPlayerAdminJailResponse\"&\x82\xd3\xe4\x93\x02 \x12\x1e/v1/punishments/aj/{character}\x12j\n\x06GetBan\x12\x1f.mruv.punishments.GetBanRequest\x1a\x1c.mruv.punishments.BanMessage\"!\x82\xd3\xe4\x93\x02\x1b\x12\x19/v1/punishments/bans/{id}\x12n\n\x07GetWarn\x12 .mruv.punishments.GetWarnRequest\x1a\x1d.mruv.punishments.WarnMessage\"\"\x82\xd3\xe4\x93\x02\x1c\x12\x1a/v1/punishments/warns/{id}\x12r\n\x08GetBlock\x12!.mruv.punishments.GetBlockRequest\x1a\x1e.mruv.punishments.BlockMessage\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/v1/punishments/blocks/{id}\x12\x8f\x01\n\x0eIsPlayerBanned\x12\'.mruv.punishments.IsPlayerBannedRequest\x1a(.mruv.punishments.IsPlayerBannedResponse\"*\x82\xd3\xe4\x93\x02$\x12\"/v1/punishments/bans/{player}/{ip}\x12q\n\x12IsCharacterBlocked\x12+.mruv.punishments.IsCharacterBlockedRequest\x1a,.mruv.punishments.IsCharacterBlockedResponse\"\x00\x12n\n\x11IsCharacterJailed\x12*.mruv.punishments.IsCharacterJailedRequest\x1a+.mruv.punishments.IsCharacterJailedResponse\"\x00\x12Q\n\tWatchBans\x12\".mruv.punishments.WatchBansRequest\x1a\x1c.mruv.punishments.BanMessage\"\x00\x30\x01\x12W\n\x0bWatchBlocks\x12$.mruv.punishments.WatchBlocksRequest\x1a\x1e.mruv.punishments.BlockMessage\"\x00\x30\x01\x12T\n\nWatchWarns\x12#.mruv.punishments.WatchWarnsRequest\x1a\x1d.mruv.punishments.WarnMessage\"\x00\x30\x01\x12\x63\n\x0fWatchAdminJails\x12(.mruv.punishments.WatchAdminJailsRequest\x1a\".mruv.punishments.AdminJailMessage\"\x00\x30\x01\x12W\n\x0bWatchUnBans\x12$.mruv.punishments.WatchUnBansRequest\x1a\x1e.mruv.punishments.UnBanMessage\"\x00\x30\x01\x12]\n\rWatchUnBlocks\x12&.mruv.punishments.WatchUnBlocksRequest\x1a .mruv.punishments.UnBlockMessage\"\x00\x30\x01\x12Z\n\x0cWatchUnWarns\x12%.mruv.punishments.WatchUnWarnsRequest\x1a\x1f.mruv.punishments.UnWarnMessage\"\x00\x30\x01\x12i\n\x11WatchUnAdminJails\x12*.mruv.punishments.WatchUnAdminJailsRequest\x1a$.mruv.punishments.UnAdminJailMessage\"\x00\x30\x01\x12\x7f\n\x16WatchPlayerPunishments\x12/.mruv.punishments.WatchPlayerPunishmentsRequest\x1a\x30.mruv.punishments.WatchPlayerPunishmentsResponse\"\x00\x30\x01\x12|\n\x15WatchPlayerAcquittals\x12..mruv.punishments.WatchPlayerAcquittalsRequest\x1a/.mruv.punishments.WatchPlayerAcquittalsResponse\"\x00\x30\x01\x12m\n\x10WatchPunishments\x12).mruv.punishments.WatchPunishmentsRequest\x1a*.mruv.punishments.WatchPunishmentsResponse\"\x00\x30\x01\x12h\n\x0fWatchAcquittals\x12(.mruv.punishments.WatchAcquittalsRequest\x1a).mruv.punishments.WatchAcquittalsResponse\"\x00\x42+Z)github.com/MruV-RP/mruv-pb-go/punishmentsb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
-_PUNISHMENTTYPE = _descriptor.EnumDescriptor(
-  name='PunishmentType',
-  full_name='mruv.economy.PunishmentType',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNKNOWN_PUNISHMENT', index=0, number=0,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='BAN', index=1, number=1,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='BLOCK', index=2, number=2,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='WARN', index=3, number=3,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ADMIN_JAIL', index=4, number=4,
-      serialized_options=None,
-      type=None),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=3167,
-  serialized_end=3253,
-)
-_sym_db.RegisterEnumDescriptor(_PUNISHMENTTYPE)
-
-PunishmentType = enum_type_wrapper.EnumTypeWrapper(_PUNISHMENTTYPE)
-_ACQUITTALSTYPE = _descriptor.EnumDescriptor(
-  name='AcquittalsType',
-  full_name='mruv.economy.AcquittalsType',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNKNOWN_ACQUITAL', index=0, number=0,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='UNBAN', index=1, number=1,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='UNBLOCK', index=2, number=2,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='UNWARN', index=3, number=3,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='UN_ADMIN_JAIL', index=4, number=4,
-      serialized_options=None,
-      type=None),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=3255,
-  serialized_end=3348,
-)
-_sym_db.RegisterEnumDescriptor(_ACQUITTALSTYPE)
-
-AcquittalsType = enum_type_wrapper.EnumTypeWrapper(_ACQUITTALSTYPE)
-UNKNOWN_PUNISHMENT = 0
-BAN = 1
-BLOCK = 2
-WARN = 3
-ADMIN_JAIL = 4
-UNKNOWN_ACQUITAL = 0
-UNBAN = 1
-UNBLOCK = 2
-UNWARN = 3
-UN_ADMIN_JAIL = 4
 
 
 
-_BANMESSAGE = _descriptor.Descriptor(
-  name='BanMessage',
-  full_name='mruv.economy.BanMessage',
+_PUNISHMENTMESSAGE = _descriptor.Descriptor(
+  name='PunishmentMessage',
+  full_name='mruv.punishments.PunishmentMessage',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='player', full_name='mruv.economy.BanMessage.player', index=0,
+      name='player', full_name='mruv.punishments.PunishmentMessage.player', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='character', full_name='mruv.economy.BanMessage.character', index=1,
+      name='character', full_name='mruv.punishments.PunishmentMessage.character', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ip', full_name='mruv.economy.BanMessage.ip', index=2,
+      name='expiration_date', full_name='mruv.punishments.PunishmentMessage.expiration_date', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='reason', full_name='mruv.punishments.PunishmentMessage.reason', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='admin', full_name='mruv.punishments.PunishmentMessage.admin', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='date', full_name='mruv.punishments.PunishmentMessage.date', index=5,
+      number=6, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='active', full_name='mruv.punishments.PunishmentMessage.active', index=6,
+      number=7, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=82,
+  serialized_end=222,
+)
+
+
+_BANMESSAGE = _descriptor.Descriptor(
+  name='BanMessage',
+  full_name='mruv.punishments.BanMessage',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='player', full_name='mruv.punishments.BanMessage.player', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='character', full_name='mruv.punishments.BanMessage.character', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ip', full_name='mruv.punishments.BanMessage.ip', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='expiration_date', full_name='mruv.economy.BanMessage.expiration_date', index=3,
+      name='expiration_date', full_name='mruv.punishments.BanMessage.expiration_date', index=3,
       number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='reason', full_name='mruv.economy.BanMessage.reason', index=4,
+      name='reason', full_name='mruv.punishments.BanMessage.reason', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='admin', full_name='mruv.economy.BanMessage.admin', index=5,
+      name='admin', full_name='mruv.punishments.BanMessage.admin', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ban_date', full_name='mruv.economy.BanMessage.ban_date', index=6,
+      name='ban_date', full_name='mruv.punishments.BanMessage.ban_date', index=6,
       number=7, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='active', full_name='mruv.economy.BanMessage.active', index=7,
+      name='active', full_name='mruv.punishments.BanMessage.active', index=7,
       number=8, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='unban_date', full_name='mruv.economy.BanMessage.unban_date', index=8,
+      name='unban_date', full_name='mruv.punishments.BanMessage.unban_date', index=8,
       number=9, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='unban_admin', full_name='mruv.economy.BanMessage.unban_admin', index=9,
+      name='unban_admin', full_name='mruv.punishments.BanMessage.unban_admin', index=9,
       number=10, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -198,76 +190,76 @@ _BANMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=78,
-  serialized_end=268,
+  serialized_start=225,
+  serialized_end=415,
 )
 
 
 _WARNMESSAGE = _descriptor.Descriptor(
   name='WarnMessage',
-  full_name='mruv.economy.WarnMessage',
+  full_name='mruv.punishments.WarnMessage',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='player', full_name='mruv.economy.WarnMessage.player', index=0,
+      name='player', full_name='mruv.punishments.WarnMessage.player', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='character', full_name='mruv.economy.WarnMessage.character', index=1,
+      name='character', full_name='mruv.punishments.WarnMessage.character', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='expiration_date', full_name='mruv.economy.WarnMessage.expiration_date', index=2,
+      name='expiration_date', full_name='mruv.punishments.WarnMessage.expiration_date', index=2,
       number=3, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='reason', full_name='mruv.economy.WarnMessage.reason', index=3,
+      name='reason', full_name='mruv.punishments.WarnMessage.reason', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='admin', full_name='mruv.economy.WarnMessage.admin', index=4,
+      name='admin', full_name='mruv.punishments.WarnMessage.admin', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='warn_date', full_name='mruv.economy.WarnMessage.warn_date', index=5,
+      name='warn_date', full_name='mruv.punishments.WarnMessage.warn_date', index=5,
       number=6, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='active', full_name='mruv.economy.WarnMessage.active', index=6,
+      name='active', full_name='mruv.punishments.WarnMessage.active', index=6,
       number=7, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='unwarn_date', full_name='mruv.economy.WarnMessage.unwarn_date', index=7,
+      name='unwarn_date', full_name='mruv.punishments.WarnMessage.unwarn_date', index=7,
       number=8, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='unwarn_admin', full_name='mruv.economy.WarnMessage.unwarn_admin', index=8,
+      name='unwarn_admin', full_name='mruv.punishments.WarnMessage.unwarn_admin', index=8,
       number=9, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -285,69 +277,69 @@ _WARNMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=271,
-  serialized_end=453,
+  serialized_start=418,
+  serialized_end=600,
 )
 
 
 _BLOCKMESSAGE = _descriptor.Descriptor(
   name='BlockMessage',
-  full_name='mruv.economy.BlockMessage',
+  full_name='mruv.punishments.BlockMessage',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='player', full_name='mruv.economy.BlockMessage.player', index=0,
+      name='player', full_name='mruv.punishments.BlockMessage.player', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='character', full_name='mruv.economy.BlockMessage.character', index=1,
+      name='character', full_name='mruv.punishments.BlockMessage.character', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='reason', full_name='mruv.economy.BlockMessage.reason', index=2,
+      name='reason', full_name='mruv.punishments.BlockMessage.reason', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='admin', full_name='mruv.economy.BlockMessage.admin', index=3,
+      name='admin', full_name='mruv.punishments.BlockMessage.admin', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='block_date', full_name='mruv.economy.BlockMessage.block_date', index=4,
+      name='block_date', full_name='mruv.punishments.BlockMessage.block_date', index=4,
       number=5, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='active', full_name='mruv.economy.BlockMessage.active', index=5,
+      name='active', full_name='mruv.punishments.BlockMessage.active', index=5,
       number=6, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='unblock_date', full_name='mruv.economy.BlockMessage.unblock_date', index=6,
+      name='unblock_date', full_name='mruv.punishments.BlockMessage.unblock_date', index=6,
       number=7, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='unblock_admin', full_name='mruv.economy.BlockMessage.unblock_admin', index=7,
+      name='unblock_admin', full_name='mruv.punishments.BlockMessage.unblock_admin', index=7,
       number=8, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -365,55 +357,55 @@ _BLOCKMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=456,
-  serialized_end=617,
+  serialized_start=603,
+  serialized_end=764,
 )
 
 
 _ADMINJAILMESSAGE = _descriptor.Descriptor(
   name='AdminJailMessage',
-  full_name='mruv.economy.AdminJailMessage',
+  full_name='mruv.punishments.AdminJailMessage',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='player', full_name='mruv.economy.AdminJailMessage.player', index=0,
+      name='player', full_name='mruv.punishments.AdminJailMessage.player', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='character', full_name='mruv.economy.AdminJailMessage.character', index=1,
+      name='character', full_name='mruv.punishments.AdminJailMessage.character', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='reason', full_name='mruv.economy.AdminJailMessage.reason', index=2,
+      name='reason', full_name='mruv.punishments.AdminJailMessage.reason', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='admin', full_name='mruv.economy.AdminJailMessage.admin', index=3,
+      name='admin', full_name='mruv.punishments.AdminJailMessage.admin', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='aj_date', full_name='mruv.economy.AdminJailMessage.aj_date', index=4,
+      name='aj_date', full_name='mruv.punishments.AdminJailMessage.aj_date', index=4,
       number=5, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='jail_time', full_name='mruv.economy.AdminJailMessage.jail_time', index=5,
+      name='jail_time', full_name='mruv.punishments.AdminJailMessage.jail_time', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -431,27 +423,27 @@ _ADMINJAILMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=619,
-  serialized_end=739,
+  serialized_start=766,
+  serialized_end=886,
 )
 
 
 _UNBANMESSAGE = _descriptor.Descriptor(
   name='UnBanMessage',
-  full_name='mruv.economy.UnBanMessage',
+  full_name='mruv.punishments.UnBanMessage',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='player', full_name='mruv.economy.UnBanMessage.player', index=0,
+      name='player', full_name='mruv.punishments.UnBanMessage.player', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ban_id', full_name='mruv.economy.UnBanMessage.ban_id', index=1,
+      name='ban_id', full_name='mruv.punishments.UnBanMessage.ban_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -469,27 +461,27 @@ _UNBANMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=741,
-  serialized_end=787,
+  serialized_start=888,
+  serialized_end=934,
 )
 
 
 _UNBLOCKMESSAGE = _descriptor.Descriptor(
   name='UnBlockMessage',
-  full_name='mruv.economy.UnBlockMessage',
+  full_name='mruv.punishments.UnBlockMessage',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='player', full_name='mruv.economy.UnBlockMessage.player', index=0,
+      name='player', full_name='mruv.punishments.UnBlockMessage.player', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='block_id', full_name='mruv.economy.UnBlockMessage.block_id', index=1,
+      name='block_id', full_name='mruv.punishments.UnBlockMessage.block_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -507,27 +499,27 @@ _UNBLOCKMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=789,
-  serialized_end=839,
+  serialized_start=936,
+  serialized_end=986,
 )
 
 
 _UNWARNMESSAGE = _descriptor.Descriptor(
   name='UnWarnMessage',
-  full_name='mruv.economy.UnWarnMessage',
+  full_name='mruv.punishments.UnWarnMessage',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='player', full_name='mruv.economy.UnWarnMessage.player', index=0,
+      name='player', full_name='mruv.punishments.UnWarnMessage.player', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='warn_id', full_name='mruv.economy.UnWarnMessage.warn_id', index=1,
+      name='warn_id', full_name='mruv.punishments.UnWarnMessage.warn_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -545,27 +537,27 @@ _UNWARNMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=841,
-  serialized_end=889,
+  serialized_start=988,
+  serialized_end=1036,
 )
 
 
 _UNADMINJAILMESSAGE = _descriptor.Descriptor(
   name='UnAdminJailMessage',
-  full_name='mruv.economy.UnAdminJailMessage',
+  full_name='mruv.punishments.UnAdminJailMessage',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='player', full_name='mruv.economy.UnAdminJailMessage.player', index=0,
+      name='player', full_name='mruv.punishments.UnAdminJailMessage.player', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='character', full_name='mruv.economy.UnAdminJailMessage.character', index=1,
+      name='character', full_name='mruv.punishments.UnAdminJailMessage.character', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -583,55 +575,131 @@ _UNADMINJAILMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=891,
-  serialized_end=946,
+  serialized_start=1038,
+  serialized_end=1093,
 )
 
 
-_BANREQUEST = _descriptor.Descriptor(
-  name='BanRequest',
-  full_name='mruv.economy.BanRequest',
+_PUNISHREQUEST = _descriptor.Descriptor(
+  name='PunishRequest',
+  full_name='mruv.punishments.PunishRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='player', full_name='mruv.economy.BanRequest.player', index=0,
+      name='player', full_name='mruv.punishments.PunishRequest.player', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='character', full_name='mruv.economy.BanRequest.character', index=1,
+      name='character', full_name='mruv.punishments.PunishRequest.character', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ip', full_name='mruv.economy.BanRequest.ip', index=2,
+      name='reason', full_name='mruv.punishments.PunishRequest.reason', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='time', full_name='mruv.economy.BanRequest.time', index=3,
+      name='admin', full_name='mruv.punishments.PunishRequest.admin', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1095,
+  serialized_end=1176,
+)
+
+
+_PUNISHRESPONSE = _descriptor.Descriptor(
+  name='PunishResponse',
+  full_name='mruv.punishments.PunishResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1178,
+  serialized_end=1194,
+)
+
+
+_BANREQUEST = _descriptor.Descriptor(
+  name='BanRequest',
+  full_name='mruv.punishments.BanRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='player', full_name='mruv.punishments.BanRequest.player', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='character', full_name='mruv.punishments.BanRequest.character', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ip', full_name='mruv.punishments.BanRequest.ip', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='time', full_name='mruv.punishments.BanRequest.time', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='reason', full_name='mruv.economy.BanRequest.reason', index=4,
+      name='reason', full_name='mruv.punishments.BanRequest.reason', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='admin', full_name='mruv.economy.BanRequest.admin', index=5,
+      name='admin', full_name='mruv.punishments.BanRequest.admin', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -649,20 +717,20 @@ _BANREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=948,
-  serialized_end=1052,
+  serialized_start=1196,
+  serialized_end=1300,
 )
 
 
 _BANRESPONSE = _descriptor.Descriptor(
   name='BanResponse',
-  full_name='mruv.economy.BanResponse',
+  full_name='mruv.punishments.BanResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='ban_id', full_name='mruv.economy.BanResponse.ban_id', index=0,
+      name='ban_id', full_name='mruv.punishments.BanResponse.ban_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -680,34 +748,34 @@ _BANRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1054,
-  serialized_end=1083,
+  serialized_start=1302,
+  serialized_end=1331,
 )
 
 
 _BLOCKREQUEST = _descriptor.Descriptor(
   name='BlockRequest',
-  full_name='mruv.economy.BlockRequest',
+  full_name='mruv.punishments.BlockRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='character', full_name='mruv.economy.BlockRequest.character', index=0,
+      name='character', full_name='mruv.punishments.BlockRequest.character', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='reason', full_name='mruv.economy.BlockRequest.reason', index=1,
+      name='reason', full_name='mruv.punishments.BlockRequest.reason', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='admin', full_name='mruv.economy.BlockRequest.admin', index=2,
+      name='admin', full_name='mruv.punishments.BlockRequest.admin', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -725,20 +793,20 @@ _BLOCKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1085,
-  serialized_end=1149,
+  serialized_start=1333,
+  serialized_end=1397,
 )
 
 
 _BLOCKRESPONSE = _descriptor.Descriptor(
   name='BlockResponse',
-  full_name='mruv.economy.BlockResponse',
+  full_name='mruv.punishments.BlockResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='block_id', full_name='mruv.economy.BlockResponse.block_id', index=0,
+      name='block_id', full_name='mruv.punishments.BlockResponse.block_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -756,48 +824,48 @@ _BLOCKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1151,
-  serialized_end=1184,
+  serialized_start=1399,
+  serialized_end=1432,
 )
 
 
 _WARNREQUEST = _descriptor.Descriptor(
   name='WarnRequest',
-  full_name='mruv.economy.WarnRequest',
+  full_name='mruv.punishments.WarnRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='player', full_name='mruv.economy.WarnRequest.player', index=0,
+      name='player', full_name='mruv.punishments.WarnRequest.player', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='character', full_name='mruv.economy.WarnRequest.character', index=1,
+      name='character', full_name='mruv.punishments.WarnRequest.character', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='time', full_name='mruv.economy.WarnRequest.time', index=2,
+      name='time', full_name='mruv.punishments.WarnRequest.time', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='reason', full_name='mruv.economy.WarnRequest.reason', index=3,
+      name='reason', full_name='mruv.punishments.WarnRequest.reason', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='admin', full_name='mruv.economy.WarnRequest.admin', index=4,
+      name='admin', full_name='mruv.punishments.WarnRequest.admin', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -815,20 +883,20 @@ _WARNREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1186,
-  serialized_end=1279,
+  serialized_start=1434,
+  serialized_end=1527,
 )
 
 
 _WARNRESPONSE = _descriptor.Descriptor(
   name='WarnResponse',
-  full_name='mruv.economy.WarnResponse',
+  full_name='mruv.punishments.WarnResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='warn_id', full_name='mruv.economy.WarnResponse.warn_id', index=0,
+      name='warn_id', full_name='mruv.punishments.WarnResponse.warn_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -846,41 +914,41 @@ _WARNRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1281,
-  serialized_end=1312,
+  serialized_start=1529,
+  serialized_end=1560,
 )
 
 
 _ADMINJAILREQUEST = _descriptor.Descriptor(
   name='AdminJailRequest',
-  full_name='mruv.economy.AdminJailRequest',
+  full_name='mruv.punishments.AdminJailRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='character', full_name='mruv.economy.AdminJailRequest.character', index=0,
+      name='character', full_name='mruv.punishments.AdminJailRequest.character', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='time', full_name='mruv.economy.AdminJailRequest.time', index=1,
+      name='time', full_name='mruv.punishments.AdminJailRequest.time', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='reason', full_name='mruv.economy.AdminJailRequest.reason', index=2,
+      name='reason', full_name='mruv.punishments.AdminJailRequest.reason', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='admin', full_name='mruv.economy.AdminJailRequest.admin', index=3,
+      name='admin', full_name='mruv.punishments.AdminJailRequest.admin', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -898,14 +966,14 @@ _ADMINJAILREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1314,
-  serialized_end=1396,
+  serialized_start=1562,
+  serialized_end=1644,
 )
 
 
 _ADMINJAILRESPONSE = _descriptor.Descriptor(
   name='AdminJailResponse',
-  full_name='mruv.economy.AdminJailResponse',
+  full_name='mruv.punishments.AdminJailResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -922,20 +990,20 @@ _ADMINJAILRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1398,
-  serialized_end=1417,
+  serialized_start=1646,
+  serialized_end=1665,
 )
 
 
 _MUTEGLOBALCHATSREQUEST = _descriptor.Descriptor(
   name='MuteGlobalChatsRequest',
-  full_name='mruv.economy.MuteGlobalChatsRequest',
+  full_name='mruv.punishments.MuteGlobalChatsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account', full_name='mruv.economy.MuteGlobalChatsRequest.account', index=0,
+      name='account', full_name='mruv.punishments.MuteGlobalChatsRequest.account', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -953,14 +1021,14 @@ _MUTEGLOBALCHATSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1419,
-  serialized_end=1460,
+  serialized_start=1667,
+  serialized_end=1708,
 )
 
 
 _MUTEGLOBALCHATSRESPONSE = _descriptor.Descriptor(
   name='MuteGlobalChatsResponse',
-  full_name='mruv.economy.MuteGlobalChatsResponse',
+  full_name='mruv.punishments.MuteGlobalChatsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -977,29 +1045,36 @@ _MUTEGLOBALCHATSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1462,
-  serialized_end=1487,
+  serialized_start=1710,
+  serialized_end=1735,
 )
 
 
 _UNBANREQUEST = _descriptor.Descriptor(
   name='UnBanRequest',
-  full_name='mruv.economy.UnBanRequest',
+  full_name='mruv.punishments.UnBanRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='ban_id', full_name='mruv.economy.UnBanRequest.ban_id', index=0,
+      name='ban_id', full_name='mruv.punishments.UnBanRequest.ban_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='reason', full_name='mruv.economy.UnBanRequest.reason', index=1,
+      name='reason', full_name='mruv.punishments.UnBanRequest.reason', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='admin_id', full_name='mruv.punishments.UnBanRequest.admin_id', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -1015,14 +1090,14 @@ _UNBANREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1489,
-  serialized_end=1535,
+  serialized_start=1737,
+  serialized_end=1801,
 )
 
 
 _UNBANRESPONSE = _descriptor.Descriptor(
   name='UnBanResponse',
-  full_name='mruv.economy.UnBanResponse',
+  full_name='mruv.punishments.UnBanResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -1039,29 +1114,36 @@ _UNBANRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1537,
-  serialized_end=1552,
+  serialized_start=1803,
+  serialized_end=1818,
 )
 
 
 _UNBLOCKREQUEST = _descriptor.Descriptor(
   name='UnBlockRequest',
-  full_name='mruv.economy.UnBlockRequest',
+  full_name='mruv.punishments.UnBlockRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='block_id', full_name='mruv.economy.UnBlockRequest.block_id', index=0,
+      name='block_id', full_name='mruv.punishments.UnBlockRequest.block_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='reason', full_name='mruv.economy.UnBlockRequest.reason', index=1,
+      name='reason', full_name='mruv.punishments.UnBlockRequest.reason', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='admin_id', full_name='mruv.punishments.UnBlockRequest.admin_id', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -1077,14 +1159,14 @@ _UNBLOCKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1554,
-  serialized_end=1604,
+  serialized_start=1820,
+  serialized_end=1888,
 )
 
 
 _UNBLOCKRESPONSE = _descriptor.Descriptor(
   name='UnBlockResponse',
-  full_name='mruv.economy.UnBlockResponse',
+  full_name='mruv.punishments.UnBlockResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -1101,29 +1183,36 @@ _UNBLOCKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1606,
-  serialized_end=1623,
+  serialized_start=1890,
+  serialized_end=1907,
 )
 
 
 _UNWARNREQUEST = _descriptor.Descriptor(
   name='UnWarnRequest',
-  full_name='mruv.economy.UnWarnRequest',
+  full_name='mruv.punishments.UnWarnRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='warn_id', full_name='mruv.economy.UnWarnRequest.warn_id', index=0,
+      name='warn_id', full_name='mruv.punishments.UnWarnRequest.warn_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='reason', full_name='mruv.economy.UnWarnRequest.reason', index=1,
+      name='reason', full_name='mruv.punishments.UnWarnRequest.reason', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='admin_id', full_name='mruv.punishments.UnWarnRequest.admin_id', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -1139,14 +1228,14 @@ _UNWARNREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1625,
-  serialized_end=1673,
+  serialized_start=1909,
+  serialized_end=1975,
 )
 
 
 _UNWARNRESPONSE = _descriptor.Descriptor(
   name='UnWarnResponse',
-  full_name='mruv.economy.UnWarnResponse',
+  full_name='mruv.punishments.UnWarnResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -1163,21 +1252,35 @@ _UNWARNRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1675,
-  serialized_end=1691,
+  serialized_start=1977,
+  serialized_end=1993,
 )
 
 
 _UNADMINJAILREQUEST = _descriptor.Descriptor(
   name='UnAdminJailRequest',
-  full_name='mruv.economy.UnAdminJailRequest',
+  full_name='mruv.punishments.UnAdminJailRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='character', full_name='mruv.economy.UnAdminJailRequest.character', index=0,
+      name='character', full_name='mruv.punishments.UnAdminJailRequest.character', index=0,
       number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='reason', full_name='mruv.punishments.UnAdminJailRequest.reason', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='admin_id', full_name='mruv.punishments.UnAdminJailRequest.admin_id', index=2,
+      number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1194,14 +1297,14 @@ _UNADMINJAILREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1693,
-  serialized_end=1732,
+  serialized_start=1995,
+  serialized_end=2068,
 )
 
 
 _UNADMINJAILRESPONSE = _descriptor.Descriptor(
   name='UnAdminJailResponse',
-  full_name='mruv.economy.UnAdminJailResponse',
+  full_name='mruv.punishments.UnAdminJailResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -1218,20 +1321,20 @@ _UNADMINJAILRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1734,
-  serialized_end=1755,
+  serialized_start=2070,
+  serialized_end=2091,
 )
 
 
 _UNMUTEGLOBALCHATSREQUEST = _descriptor.Descriptor(
   name='UnMuteGlobalChatsRequest',
-  full_name='mruv.economy.UnMuteGlobalChatsRequest',
+  full_name='mruv.punishments.UnMuteGlobalChatsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account', full_name='mruv.economy.UnMuteGlobalChatsRequest.account', index=0,
+      name='account', full_name='mruv.punishments.UnMuteGlobalChatsRequest.account', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1249,14 +1352,14 @@ _UNMUTEGLOBALCHATSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1757,
-  serialized_end=1800,
+  serialized_start=2093,
+  serialized_end=2136,
 )
 
 
 _UNMUTEGLOBALCHATSRESPONSE = _descriptor.Descriptor(
   name='UnMuteGlobalChatsResponse',
-  full_name='mruv.economy.UnMuteGlobalChatsResponse',
+  full_name='mruv.punishments.UnMuteGlobalChatsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -1273,27 +1376,27 @@ _UNMUTEGLOBALCHATSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1802,
-  serialized_end=1829,
+  serialized_start=2138,
+  serialized_end=2165,
 )
 
 
 _GETPLAYERBANSREQUEST = _descriptor.Descriptor(
   name='GetPlayerBansRequest',
-  full_name='mruv.economy.GetPlayerBansRequest',
+  full_name='mruv.punishments.GetPlayerBansRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='player', full_name='mruv.economy.GetPlayerBansRequest.player', index=0,
+      name='player', full_name='mruv.punishments.GetPlayerBansRequest.player', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ip', full_name='mruv.economy.GetPlayerBansRequest.ip', index=1,
+      name='ip', full_name='mruv.punishments.GetPlayerBansRequest.ip', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -1311,20 +1414,20 @@ _GETPLAYERBANSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1831,
-  serialized_end=1881,
+  serialized_start=2167,
+  serialized_end=2217,
 )
 
 
 _GETPLAYERBANSRESPONSE = _descriptor.Descriptor(
   name='GetPlayerBansResponse',
-  full_name='mruv.economy.GetPlayerBansResponse',
+  full_name='mruv.punishments.GetPlayerBansResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='bans', full_name='mruv.economy.GetPlayerBansResponse.bans', index=0,
+      name='bans', full_name='mruv.punishments.GetPlayerBansResponse.bans', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1342,20 +1445,20 @@ _GETPLAYERBANSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1883,
-  serialized_end=1946,
+  serialized_start=2219,
+  serialized_end=2286,
 )
 
 
 _GETPLAYERWARNSREQUEST = _descriptor.Descriptor(
   name='GetPlayerWarnsRequest',
-  full_name='mruv.economy.GetPlayerWarnsRequest',
+  full_name='mruv.punishments.GetPlayerWarnsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='player', full_name='mruv.economy.GetPlayerWarnsRequest.player', index=0,
+      name='player', full_name='mruv.punishments.GetPlayerWarnsRequest.player', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1373,20 +1476,20 @@ _GETPLAYERWARNSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1948,
-  serialized_end=1987,
+  serialized_start=2288,
+  serialized_end=2327,
 )
 
 
 _GETPLAYERWARNSRESPONSE = _descriptor.Descriptor(
   name='GetPlayerWarnsResponse',
-  full_name='mruv.economy.GetPlayerWarnsResponse',
+  full_name='mruv.punishments.GetPlayerWarnsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='warns', full_name='mruv.economy.GetPlayerWarnsResponse.warns', index=0,
+      name='warns', full_name='mruv.punishments.GetPlayerWarnsResponse.warns', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1404,20 +1507,20 @@ _GETPLAYERWARNSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1989,
-  serialized_end=2055,
+  serialized_start=2329,
+  serialized_end=2399,
 )
 
 
 _GETPLAYERADMINJAILREQUEST = _descriptor.Descriptor(
   name='GetPlayerAdminJailRequest',
-  full_name='mruv.economy.GetPlayerAdminJailRequest',
+  full_name='mruv.punishments.GetPlayerAdminJailRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='character', full_name='mruv.economy.GetPlayerAdminJailRequest.character', index=0,
+      name='character', full_name='mruv.punishments.GetPlayerAdminJailRequest.character', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1435,41 +1538,41 @@ _GETPLAYERADMINJAILREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2057,
-  serialized_end=2103,
+  serialized_start=2401,
+  serialized_end=2447,
 )
 
 
 _GETPLAYERADMINJAILRESPONSE = _descriptor.Descriptor(
   name='GetPlayerAdminJailResponse',
-  full_name='mruv.economy.GetPlayerAdminJailResponse',
+  full_name='mruv.punishments.GetPlayerAdminJailResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='jail_time', full_name='mruv.economy.GetPlayerAdminJailResponse.jail_time', index=0,
+      name='jail_time', full_name='mruv.punishments.GetPlayerAdminJailResponse.jail_time', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='reason', full_name='mruv.economy.GetPlayerAdminJailResponse.reason', index=1,
+      name='reason', full_name='mruv.punishments.GetPlayerAdminJailResponse.reason', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='admin', full_name='mruv.economy.GetPlayerAdminJailResponse.admin', index=2,
+      name='admin', full_name='mruv.punishments.GetPlayerAdminJailResponse.admin', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='date', full_name='mruv.economy.GetPlayerAdminJailResponse.date', index=3,
+      name='date', full_name='mruv.punishments.GetPlayerAdminJailResponse.date', index=3,
       number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1487,20 +1590,20 @@ _GETPLAYERADMINJAILRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2105,
-  serialized_end=2197,
+  serialized_start=2449,
+  serialized_end=2541,
 )
 
 
 _GETBANREQUEST = _descriptor.Descriptor(
   name='GetBanRequest',
-  full_name='mruv.economy.GetBanRequest',
+  full_name='mruv.punishments.GetBanRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.economy.GetBanRequest.id', index=0,
+      name='id', full_name='mruv.punishments.GetBanRequest.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1518,20 +1621,20 @@ _GETBANREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2199,
-  serialized_end=2226,
+  serialized_start=2543,
+  serialized_end=2570,
 )
 
 
 _GETWARNREQUEST = _descriptor.Descriptor(
   name='GetWarnRequest',
-  full_name='mruv.economy.GetWarnRequest',
+  full_name='mruv.punishments.GetWarnRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.economy.GetWarnRequest.id', index=0,
+      name='id', full_name='mruv.punishments.GetWarnRequest.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1549,20 +1652,20 @@ _GETWARNREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2228,
-  serialized_end=2256,
+  serialized_start=2572,
+  serialized_end=2600,
 )
 
 
 _GETBLOCKREQUEST = _descriptor.Descriptor(
   name='GetBlockRequest',
-  full_name='mruv.economy.GetBlockRequest',
+  full_name='mruv.punishments.GetBlockRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.economy.GetBlockRequest.id', index=0,
+      name='id', full_name='mruv.punishments.GetBlockRequest.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1580,27 +1683,27 @@ _GETBLOCKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2258,
-  serialized_end=2287,
+  serialized_start=2602,
+  serialized_end=2631,
 )
 
 
 _ISPLAYERBANNEDREQUEST = _descriptor.Descriptor(
   name='IsPlayerBannedRequest',
-  full_name='mruv.economy.IsPlayerBannedRequest',
+  full_name='mruv.punishments.IsPlayerBannedRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='player', full_name='mruv.economy.IsPlayerBannedRequest.player', index=0,
+      name='player', full_name='mruv.punishments.IsPlayerBannedRequest.player', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ip', full_name='mruv.economy.IsPlayerBannedRequest.ip', index=1,
+      name='ip', full_name='mruv.punishments.IsPlayerBannedRequest.ip', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -1618,27 +1721,27 @@ _ISPLAYERBANNEDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2289,
-  serialized_end=2340,
+  serialized_start=2633,
+  serialized_end=2684,
 )
 
 
 _ISPLAYERBANNEDRESPONSE = _descriptor.Descriptor(
   name='IsPlayerBannedResponse',
-  full_name='mruv.economy.IsPlayerBannedResponse',
+  full_name='mruv.punishments.IsPlayerBannedResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='banned', full_name='mruv.economy.IsPlayerBannedResponse.banned', index=0,
+      name='banned', full_name='mruv.punishments.IsPlayerBannedResponse.banned', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ban_id', full_name='mruv.economy.IsPlayerBannedResponse.ban_id', index=1,
+      name='ban_id', full_name='mruv.punishments.IsPlayerBannedResponse.ban_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1656,20 +1759,20 @@ _ISPLAYERBANNEDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2342,
-  serialized_end=2398,
+  serialized_start=2686,
+  serialized_end=2742,
 )
 
 
 _ISCHARACTERBLOCKEDREQUEST = _descriptor.Descriptor(
   name='IsCharacterBlockedRequest',
-  full_name='mruv.economy.IsCharacterBlockedRequest',
+  full_name='mruv.punishments.IsCharacterBlockedRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='character', full_name='mruv.economy.IsCharacterBlockedRequest.character', index=0,
+      name='character', full_name='mruv.punishments.IsCharacterBlockedRequest.character', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1687,27 +1790,27 @@ _ISCHARACTERBLOCKEDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2400,
-  serialized_end=2446,
+  serialized_start=2744,
+  serialized_end=2790,
 )
 
 
 _ISCHARACTERBLOCKEDRESPONSE = _descriptor.Descriptor(
   name='IsCharacterBlockedResponse',
-  full_name='mruv.economy.IsCharacterBlockedResponse',
+  full_name='mruv.punishments.IsCharacterBlockedResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='blocked', full_name='mruv.economy.IsCharacterBlockedResponse.blocked', index=0,
+      name='blocked', full_name='mruv.punishments.IsCharacterBlockedResponse.blocked', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='block_id', full_name='mruv.economy.IsCharacterBlockedResponse.block_id', index=1,
+      name='block_id', full_name='mruv.punishments.IsCharacterBlockedResponse.block_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1725,20 +1828,20 @@ _ISCHARACTERBLOCKEDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2448,
-  serialized_end=2511,
+  serialized_start=2792,
+  serialized_end=2855,
 )
 
 
 _ISCHARACTERJAILEDREQUEST = _descriptor.Descriptor(
   name='IsCharacterJailedRequest',
-  full_name='mruv.economy.IsCharacterJailedRequest',
+  full_name='mruv.punishments.IsCharacterJailedRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='character', full_name='mruv.economy.IsCharacterJailedRequest.character', index=0,
+      name='character', full_name='mruv.punishments.IsCharacterJailedRequest.character', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1756,27 +1859,27 @@ _ISCHARACTERJAILEDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2513,
-  serialized_end=2558,
+  serialized_start=2857,
+  serialized_end=2902,
 )
 
 
 _ISCHARACTERJAILEDRESPONSE = _descriptor.Descriptor(
   name='IsCharacterJailedResponse',
-  full_name='mruv.economy.IsCharacterJailedResponse',
+  full_name='mruv.punishments.IsCharacterJailedResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='jailed', full_name='mruv.economy.IsCharacterJailedResponse.jailed', index=0,
+      name='jailed', full_name='mruv.punishments.IsCharacterJailedResponse.jailed', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='jail_time', full_name='mruv.economy.IsCharacterJailedResponse.jail_time', index=1,
+      name='jail_time', full_name='mruv.punishments.IsCharacterJailedResponse.jail_time', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1794,14 +1897,14 @@ _ISCHARACTERJAILEDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2560,
-  serialized_end=2622,
+  serialized_start=2904,
+  serialized_end=2966,
 )
 
 
 _WATCHBANSREQUEST = _descriptor.Descriptor(
   name='WatchBansRequest',
-  full_name='mruv.economy.WatchBansRequest',
+  full_name='mruv.punishments.WatchBansRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -1818,14 +1921,14 @@ _WATCHBANSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2624,
-  serialized_end=2642,
+  serialized_start=2968,
+  serialized_end=2986,
 )
 
 
 _WATCHBLOCKSREQUEST = _descriptor.Descriptor(
   name='WatchBlocksRequest',
-  full_name='mruv.economy.WatchBlocksRequest',
+  full_name='mruv.punishments.WatchBlocksRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -1842,14 +1945,14 @@ _WATCHBLOCKSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2644,
-  serialized_end=2664,
+  serialized_start=2988,
+  serialized_end=3008,
 )
 
 
 _WATCHWARNSREQUEST = _descriptor.Descriptor(
   name='WatchWarnsRequest',
-  full_name='mruv.economy.WatchWarnsRequest',
+  full_name='mruv.punishments.WatchWarnsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -1866,14 +1969,14 @@ _WATCHWARNSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2666,
-  serialized_end=2685,
+  serialized_start=3010,
+  serialized_end=3029,
 )
 
 
 _WATCHADMINJAILSREQUEST = _descriptor.Descriptor(
   name='WatchAdminJailsRequest',
-  full_name='mruv.economy.WatchAdminJailsRequest',
+  full_name='mruv.punishments.WatchAdminJailsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -1890,14 +1993,14 @@ _WATCHADMINJAILSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2687,
-  serialized_end=2711,
+  serialized_start=3031,
+  serialized_end=3055,
 )
 
 
 _WATCHUNBANSREQUEST = _descriptor.Descriptor(
   name='WatchUnBansRequest',
-  full_name='mruv.economy.WatchUnBansRequest',
+  full_name='mruv.punishments.WatchUnBansRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -1914,14 +2017,14 @@ _WATCHUNBANSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2713,
-  serialized_end=2733,
+  serialized_start=3057,
+  serialized_end=3077,
 )
 
 
 _WATCHUNBLOCKSREQUEST = _descriptor.Descriptor(
   name='WatchUnBlocksRequest',
-  full_name='mruv.economy.WatchUnBlocksRequest',
+  full_name='mruv.punishments.WatchUnBlocksRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -1938,14 +2041,14 @@ _WATCHUNBLOCKSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2735,
-  serialized_end=2757,
+  serialized_start=3079,
+  serialized_end=3101,
 )
 
 
 _WATCHUNWARNSREQUEST = _descriptor.Descriptor(
   name='WatchUnWarnsRequest',
-  full_name='mruv.economy.WatchUnWarnsRequest',
+  full_name='mruv.punishments.WatchUnWarnsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -1962,14 +2065,14 @@ _WATCHUNWARNSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2759,
-  serialized_end=2780,
+  serialized_start=3103,
+  serialized_end=3124,
 )
 
 
 _WATCHUNADMINJAILSREQUEST = _descriptor.Descriptor(
   name='WatchUnAdminJailsRequest',
-  full_name='mruv.economy.WatchUnAdminJailsRequest',
+  full_name='mruv.punishments.WatchUnAdminJailsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -1986,66 +2089,32 @@ _WATCHUNADMINJAILSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2782,
-  serialized_end=2808,
-)
-
-
-_WATCHPLAYERACQUITTALSREQUEST = _descriptor.Descriptor(
-  name='WatchPlayerAcquittalsRequest',
-  full_name='mruv.economy.WatchPlayerAcquittalsRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2810,
-  serialized_end=2840,
-)
-
-
-_WATCHPLAYERACQUITTALSRESPONSE = _descriptor.Descriptor(
-  name='WatchPlayerAcquittalsResponse',
-  full_name='mruv.economy.WatchPlayerAcquittalsResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2842,
-  serialized_end=2873,
+  serialized_start=3126,
+  serialized_end=3152,
 )
 
 
 _WATCHPLAYERPUNISHMENTSREQUEST = _descriptor.Descriptor(
   name='WatchPlayerPunishmentsRequest',
-  full_name='mruv.economy.WatchPlayerPunishmentsRequest',
+  full_name='mruv.punishments.WatchPlayerPunishmentsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='account_id', full_name='mruv.punishments.WatchPlayerPunishmentsRequest.account_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='character_id', full_name='mruv.punishments.WatchPlayerPunishmentsRequest.character_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -2058,27 +2127,82 @@ _WATCHPLAYERPUNISHMENTSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2875,
-  serialized_end=2906,
+  serialized_start=3154,
+  serialized_end=3227,
 )
 
 
 _WATCHPLAYERPUNISHMENTSRESPONSE = _descriptor.Descriptor(
   name='WatchPlayerPunishmentsResponse',
-  full_name='mruv.economy.WatchPlayerPunishmentsResponse',
+  full_name='mruv.punishments.WatchPlayerPunishmentsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='type', full_name='mruv.economy.WatchPlayerPunishmentsResponse.type', index=0,
-      number=1, type=14, cpp_type=8, label=1,
+      name='ban', full_name='mruv.punishments.WatchPlayerPunishmentsResponse.ban', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='block', full_name='mruv.punishments.WatchPlayerPunishmentsResponse.block', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='warn', full_name='mruv.punishments.WatchPlayerPunishmentsResponse.warn', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='aj', full_name='mruv.punishments.WatchPlayerPunishmentsResponse.aj', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='punishment', full_name='mruv.punishments.WatchPlayerPunishmentsResponse.punishment',
+      index=0, containing_type=None, fields=[]),
+  ],
+  serialized_start=3230,
+  serialized_end=3467,
+)
+
+
+_WATCHPLAYERACQUITTALSREQUEST = _descriptor.Descriptor(
+  name='WatchPlayerAcquittalsRequest',
+  full_name='mruv.punishments.WatchPlayerAcquittalsRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='account_id', full_name='mruv.punishments.WatchPlayerAcquittalsRequest.account_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='punishment_id', full_name='mruv.economy.WatchPlayerPunishmentsResponse.punishment_id', index=1,
+      name='character_id', full_name='mruv.punishments.WatchPlayerAcquittalsRequest.character_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2096,14 +2220,69 @@ _WATCHPLAYERPUNISHMENTSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2908,
-  serialized_end=3007,
+  serialized_start=3469,
+  serialized_end=3541,
+)
+
+
+_WATCHPLAYERACQUITTALSRESPONSE = _descriptor.Descriptor(
+  name='WatchPlayerAcquittalsResponse',
+  full_name='mruv.punishments.WatchPlayerAcquittalsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='unban', full_name='mruv.punishments.WatchPlayerAcquittalsResponse.unban', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='unblock', full_name='mruv.punishments.WatchPlayerAcquittalsResponse.unblock', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='unwarn', full_name='mruv.punishments.WatchPlayerAcquittalsResponse.unwarn', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='unaj', full_name='mruv.punishments.WatchPlayerAcquittalsResponse.unaj', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='acquittal', full_name='mruv.punishments.WatchPlayerAcquittalsResponse.acquittal',
+      index=0, containing_type=None, fields=[]),
+  ],
+  serialized_start=3544,
+  serialized_end=3795,
 )
 
 
 _WATCHPUNISHMENTSREQUEST = _descriptor.Descriptor(
   name='WatchPunishmentsRequest',
-  full_name='mruv.economy.WatchPunishmentsRequest',
+  full_name='mruv.punishments.WatchPunishmentsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -2120,43 +2299,43 @@ _WATCHPUNISHMENTSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3009,
-  serialized_end=3034,
+  serialized_start=3797,
+  serialized_end=3822,
 )
 
 
 _WATCHPUNISHMENTSRESPONSE = _descriptor.Descriptor(
   name='WatchPunishmentsResponse',
-  full_name='mruv.economy.WatchPunishmentsResponse',
+  full_name='mruv.punishments.WatchPunishmentsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='type', full_name='mruv.economy.WatchPunishmentsResponse.type', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
+      name='ban', full_name='mruv.punishments.WatchPunishmentsResponse.ban', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='punishment_id', full_name='mruv.economy.WatchPunishmentsResponse.punishment_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      name='block', full_name='mruv.punishments.WatchPunishmentsResponse.block', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='player', full_name='mruv.economy.WatchPunishmentsResponse.player', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      name='warn', full_name='mruv.punishments.WatchPunishmentsResponse.warn', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='character', full_name='mruv.economy.WatchPunishmentsResponse.character', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      name='aj', full_name='mruv.punishments.WatchPunishmentsResponse.aj', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -2171,15 +2350,160 @@ _WATCHPUNISHMENTSRESPONSE = _descriptor.Descriptor(
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
+    _descriptor.OneofDescriptor(
+      name='punishment', full_name='mruv.punishments.WatchPunishmentsResponse.punishment',
+      index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=3037,
-  serialized_end=3165,
+  serialized_start=3825,
+  serialized_end=4056,
+)
+
+
+_WATCHACQUITTALSREQUEST = _descriptor.Descriptor(
+  name='WatchAcquittalsRequest',
+  full_name='mruv.punishments.WatchAcquittalsRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4058,
+  serialized_end=4082,
+)
+
+
+_WATCHACQUITTALSRESPONSE = _descriptor.Descriptor(
+  name='WatchAcquittalsResponse',
+  full_name='mruv.punishments.WatchAcquittalsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='unban', full_name='mruv.punishments.WatchAcquittalsResponse.unban', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='unblock', full_name='mruv.punishments.WatchAcquittalsResponse.unblock', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='unwarn', full_name='mruv.punishments.WatchAcquittalsResponse.unwarn', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='unaj', full_name='mruv.punishments.WatchAcquittalsResponse.unaj', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='acquittal', full_name='mruv.punishments.WatchAcquittalsResponse.acquittal',
+      index=0, containing_type=None, fields=[]),
+  ],
+  serialized_start=4085,
+  serialized_end=4330,
 )
 
 _GETPLAYERBANSRESPONSE.fields_by_name['bans'].message_type = _BANMESSAGE
 _GETPLAYERWARNSRESPONSE.fields_by_name['warns'].message_type = _WARNMESSAGE
-_WATCHPLAYERPUNISHMENTSRESPONSE.fields_by_name['type'].enum_type = _PUNISHMENTTYPE
-_WATCHPUNISHMENTSRESPONSE.fields_by_name['type'].enum_type = _PUNISHMENTTYPE
+_WATCHPLAYERPUNISHMENTSRESPONSE.fields_by_name['ban'].message_type = _BANMESSAGE
+_WATCHPLAYERPUNISHMENTSRESPONSE.fields_by_name['block'].message_type = _BLOCKMESSAGE
+_WATCHPLAYERPUNISHMENTSRESPONSE.fields_by_name['warn'].message_type = _WARNMESSAGE
+_WATCHPLAYERPUNISHMENTSRESPONSE.fields_by_name['aj'].message_type = _ADMINJAILMESSAGE
+_WATCHPLAYERPUNISHMENTSRESPONSE.oneofs_by_name['punishment'].fields.append(
+  _WATCHPLAYERPUNISHMENTSRESPONSE.fields_by_name['ban'])
+_WATCHPLAYERPUNISHMENTSRESPONSE.fields_by_name['ban'].containing_oneof = _WATCHPLAYERPUNISHMENTSRESPONSE.oneofs_by_name['punishment']
+_WATCHPLAYERPUNISHMENTSRESPONSE.oneofs_by_name['punishment'].fields.append(
+  _WATCHPLAYERPUNISHMENTSRESPONSE.fields_by_name['block'])
+_WATCHPLAYERPUNISHMENTSRESPONSE.fields_by_name['block'].containing_oneof = _WATCHPLAYERPUNISHMENTSRESPONSE.oneofs_by_name['punishment']
+_WATCHPLAYERPUNISHMENTSRESPONSE.oneofs_by_name['punishment'].fields.append(
+  _WATCHPLAYERPUNISHMENTSRESPONSE.fields_by_name['warn'])
+_WATCHPLAYERPUNISHMENTSRESPONSE.fields_by_name['warn'].containing_oneof = _WATCHPLAYERPUNISHMENTSRESPONSE.oneofs_by_name['punishment']
+_WATCHPLAYERPUNISHMENTSRESPONSE.oneofs_by_name['punishment'].fields.append(
+  _WATCHPLAYERPUNISHMENTSRESPONSE.fields_by_name['aj'])
+_WATCHPLAYERPUNISHMENTSRESPONSE.fields_by_name['aj'].containing_oneof = _WATCHPLAYERPUNISHMENTSRESPONSE.oneofs_by_name['punishment']
+_WATCHPLAYERACQUITTALSRESPONSE.fields_by_name['unban'].message_type = _UNBANMESSAGE
+_WATCHPLAYERACQUITTALSRESPONSE.fields_by_name['unblock'].message_type = _UNBLOCKMESSAGE
+_WATCHPLAYERACQUITTALSRESPONSE.fields_by_name['unwarn'].message_type = _UNWARNMESSAGE
+_WATCHPLAYERACQUITTALSRESPONSE.fields_by_name['unaj'].message_type = _UNADMINJAILMESSAGE
+_WATCHPLAYERACQUITTALSRESPONSE.oneofs_by_name['acquittal'].fields.append(
+  _WATCHPLAYERACQUITTALSRESPONSE.fields_by_name['unban'])
+_WATCHPLAYERACQUITTALSRESPONSE.fields_by_name['unban'].containing_oneof = _WATCHPLAYERACQUITTALSRESPONSE.oneofs_by_name['acquittal']
+_WATCHPLAYERACQUITTALSRESPONSE.oneofs_by_name['acquittal'].fields.append(
+  _WATCHPLAYERACQUITTALSRESPONSE.fields_by_name['unblock'])
+_WATCHPLAYERACQUITTALSRESPONSE.fields_by_name['unblock'].containing_oneof = _WATCHPLAYERACQUITTALSRESPONSE.oneofs_by_name['acquittal']
+_WATCHPLAYERACQUITTALSRESPONSE.oneofs_by_name['acquittal'].fields.append(
+  _WATCHPLAYERACQUITTALSRESPONSE.fields_by_name['unwarn'])
+_WATCHPLAYERACQUITTALSRESPONSE.fields_by_name['unwarn'].containing_oneof = _WATCHPLAYERACQUITTALSRESPONSE.oneofs_by_name['acquittal']
+_WATCHPLAYERACQUITTALSRESPONSE.oneofs_by_name['acquittal'].fields.append(
+  _WATCHPLAYERACQUITTALSRESPONSE.fields_by_name['unaj'])
+_WATCHPLAYERACQUITTALSRESPONSE.fields_by_name['unaj'].containing_oneof = _WATCHPLAYERACQUITTALSRESPONSE.oneofs_by_name['acquittal']
+_WATCHPUNISHMENTSRESPONSE.fields_by_name['ban'].message_type = _BANMESSAGE
+_WATCHPUNISHMENTSRESPONSE.fields_by_name['block'].message_type = _BLOCKMESSAGE
+_WATCHPUNISHMENTSRESPONSE.fields_by_name['warn'].message_type = _WARNMESSAGE
+_WATCHPUNISHMENTSRESPONSE.fields_by_name['aj'].message_type = _ADMINJAILMESSAGE
+_WATCHPUNISHMENTSRESPONSE.oneofs_by_name['punishment'].fields.append(
+  _WATCHPUNISHMENTSRESPONSE.fields_by_name['ban'])
+_WATCHPUNISHMENTSRESPONSE.fields_by_name['ban'].containing_oneof = _WATCHPUNISHMENTSRESPONSE.oneofs_by_name['punishment']
+_WATCHPUNISHMENTSRESPONSE.oneofs_by_name['punishment'].fields.append(
+  _WATCHPUNISHMENTSRESPONSE.fields_by_name['block'])
+_WATCHPUNISHMENTSRESPONSE.fields_by_name['block'].containing_oneof = _WATCHPUNISHMENTSRESPONSE.oneofs_by_name['punishment']
+_WATCHPUNISHMENTSRESPONSE.oneofs_by_name['punishment'].fields.append(
+  _WATCHPUNISHMENTSRESPONSE.fields_by_name['warn'])
+_WATCHPUNISHMENTSRESPONSE.fields_by_name['warn'].containing_oneof = _WATCHPUNISHMENTSRESPONSE.oneofs_by_name['punishment']
+_WATCHPUNISHMENTSRESPONSE.oneofs_by_name['punishment'].fields.append(
+  _WATCHPUNISHMENTSRESPONSE.fields_by_name['aj'])
+_WATCHPUNISHMENTSRESPONSE.fields_by_name['aj'].containing_oneof = _WATCHPUNISHMENTSRESPONSE.oneofs_by_name['punishment']
+_WATCHACQUITTALSRESPONSE.fields_by_name['unban'].message_type = _UNBANMESSAGE
+_WATCHACQUITTALSRESPONSE.fields_by_name['unblock'].message_type = _UNBLOCKMESSAGE
+_WATCHACQUITTALSRESPONSE.fields_by_name['unwarn'].message_type = _UNWARNMESSAGE
+_WATCHACQUITTALSRESPONSE.fields_by_name['unaj'].message_type = _UNADMINJAILMESSAGE
+_WATCHACQUITTALSRESPONSE.oneofs_by_name['acquittal'].fields.append(
+  _WATCHACQUITTALSRESPONSE.fields_by_name['unban'])
+_WATCHACQUITTALSRESPONSE.fields_by_name['unban'].containing_oneof = _WATCHACQUITTALSRESPONSE.oneofs_by_name['acquittal']
+_WATCHACQUITTALSRESPONSE.oneofs_by_name['acquittal'].fields.append(
+  _WATCHACQUITTALSRESPONSE.fields_by_name['unblock'])
+_WATCHACQUITTALSRESPONSE.fields_by_name['unblock'].containing_oneof = _WATCHACQUITTALSRESPONSE.oneofs_by_name['acquittal']
+_WATCHACQUITTALSRESPONSE.oneofs_by_name['acquittal'].fields.append(
+  _WATCHACQUITTALSRESPONSE.fields_by_name['unwarn'])
+_WATCHACQUITTALSRESPONSE.fields_by_name['unwarn'].containing_oneof = _WATCHACQUITTALSRESPONSE.oneofs_by_name['acquittal']
+_WATCHACQUITTALSRESPONSE.oneofs_by_name['acquittal'].fields.append(
+  _WATCHACQUITTALSRESPONSE.fields_by_name['unaj'])
+_WATCHACQUITTALSRESPONSE.fields_by_name['unaj'].containing_oneof = _WATCHACQUITTALSRESPONSE.oneofs_by_name['acquittal']
+DESCRIPTOR.message_types_by_name['PunishmentMessage'] = _PUNISHMENTMESSAGE
 DESCRIPTOR.message_types_by_name['BanMessage'] = _BANMESSAGE
 DESCRIPTOR.message_types_by_name['WarnMessage'] = _WARNMESSAGE
 DESCRIPTOR.message_types_by_name['BlockMessage'] = _BLOCKMESSAGE
@@ -2188,6 +2512,8 @@ DESCRIPTOR.message_types_by_name['UnBanMessage'] = _UNBANMESSAGE
 DESCRIPTOR.message_types_by_name['UnBlockMessage'] = _UNBLOCKMESSAGE
 DESCRIPTOR.message_types_by_name['UnWarnMessage'] = _UNWARNMESSAGE
 DESCRIPTOR.message_types_by_name['UnAdminJailMessage'] = _UNADMINJAILMESSAGE
+DESCRIPTOR.message_types_by_name['PunishRequest'] = _PUNISHREQUEST
+DESCRIPTOR.message_types_by_name['PunishResponse'] = _PUNISHRESPONSE
 DESCRIPTOR.message_types_by_name['BanRequest'] = _BANREQUEST
 DESCRIPTOR.message_types_by_name['BanResponse'] = _BANRESPONSE
 DESCRIPTOR.message_types_by_name['BlockRequest'] = _BLOCKREQUEST
@@ -2231,431 +2557,475 @@ DESCRIPTOR.message_types_by_name['WatchUnBansRequest'] = _WATCHUNBANSREQUEST
 DESCRIPTOR.message_types_by_name['WatchUnBlocksRequest'] = _WATCHUNBLOCKSREQUEST
 DESCRIPTOR.message_types_by_name['WatchUnWarnsRequest'] = _WATCHUNWARNSREQUEST
 DESCRIPTOR.message_types_by_name['WatchUnAdminJailsRequest'] = _WATCHUNADMINJAILSREQUEST
-DESCRIPTOR.message_types_by_name['WatchPlayerAcquittalsRequest'] = _WATCHPLAYERACQUITTALSREQUEST
-DESCRIPTOR.message_types_by_name['WatchPlayerAcquittalsResponse'] = _WATCHPLAYERACQUITTALSRESPONSE
 DESCRIPTOR.message_types_by_name['WatchPlayerPunishmentsRequest'] = _WATCHPLAYERPUNISHMENTSREQUEST
 DESCRIPTOR.message_types_by_name['WatchPlayerPunishmentsResponse'] = _WATCHPLAYERPUNISHMENTSRESPONSE
+DESCRIPTOR.message_types_by_name['WatchPlayerAcquittalsRequest'] = _WATCHPLAYERACQUITTALSREQUEST
+DESCRIPTOR.message_types_by_name['WatchPlayerAcquittalsResponse'] = _WATCHPLAYERACQUITTALSRESPONSE
 DESCRIPTOR.message_types_by_name['WatchPunishmentsRequest'] = _WATCHPUNISHMENTSREQUEST
 DESCRIPTOR.message_types_by_name['WatchPunishmentsResponse'] = _WATCHPUNISHMENTSRESPONSE
-DESCRIPTOR.enum_types_by_name['PunishmentType'] = _PUNISHMENTTYPE
-DESCRIPTOR.enum_types_by_name['AcquittalsType'] = _ACQUITTALSTYPE
+DESCRIPTOR.message_types_by_name['WatchAcquittalsRequest'] = _WATCHACQUITTALSREQUEST
+DESCRIPTOR.message_types_by_name['WatchAcquittalsResponse'] = _WATCHACQUITTALSRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+PunishmentMessage = _reflection.GeneratedProtocolMessageType('PunishmentMessage', (_message.Message,), {
+  'DESCRIPTOR' : _PUNISHMENTMESSAGE,
+  '__module__' : 'punishments.punishments_pb2'
+  # @@protoc_insertion_point(class_scope:mruv.punishments.PunishmentMessage)
+  })
+_sym_db.RegisterMessage(PunishmentMessage)
 
 BanMessage = _reflection.GeneratedProtocolMessageType('BanMessage', (_message.Message,), {
   'DESCRIPTOR' : _BANMESSAGE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.BanMessage)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.BanMessage)
   })
 _sym_db.RegisterMessage(BanMessage)
 
 WarnMessage = _reflection.GeneratedProtocolMessageType('WarnMessage', (_message.Message,), {
   'DESCRIPTOR' : _WARNMESSAGE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.WarnMessage)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.WarnMessage)
   })
 _sym_db.RegisterMessage(WarnMessage)
 
 BlockMessage = _reflection.GeneratedProtocolMessageType('BlockMessage', (_message.Message,), {
   'DESCRIPTOR' : _BLOCKMESSAGE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.BlockMessage)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.BlockMessage)
   })
 _sym_db.RegisterMessage(BlockMessage)
 
 AdminJailMessage = _reflection.GeneratedProtocolMessageType('AdminJailMessage', (_message.Message,), {
   'DESCRIPTOR' : _ADMINJAILMESSAGE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.AdminJailMessage)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.AdminJailMessage)
   })
 _sym_db.RegisterMessage(AdminJailMessage)
 
 UnBanMessage = _reflection.GeneratedProtocolMessageType('UnBanMessage', (_message.Message,), {
   'DESCRIPTOR' : _UNBANMESSAGE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.UnBanMessage)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.UnBanMessage)
   })
 _sym_db.RegisterMessage(UnBanMessage)
 
 UnBlockMessage = _reflection.GeneratedProtocolMessageType('UnBlockMessage', (_message.Message,), {
   'DESCRIPTOR' : _UNBLOCKMESSAGE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.UnBlockMessage)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.UnBlockMessage)
   })
 _sym_db.RegisterMessage(UnBlockMessage)
 
 UnWarnMessage = _reflection.GeneratedProtocolMessageType('UnWarnMessage', (_message.Message,), {
   'DESCRIPTOR' : _UNWARNMESSAGE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.UnWarnMessage)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.UnWarnMessage)
   })
 _sym_db.RegisterMessage(UnWarnMessage)
 
 UnAdminJailMessage = _reflection.GeneratedProtocolMessageType('UnAdminJailMessage', (_message.Message,), {
   'DESCRIPTOR' : _UNADMINJAILMESSAGE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.UnAdminJailMessage)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.UnAdminJailMessage)
   })
 _sym_db.RegisterMessage(UnAdminJailMessage)
+
+PunishRequest = _reflection.GeneratedProtocolMessageType('PunishRequest', (_message.Message,), {
+  'DESCRIPTOR' : _PUNISHREQUEST,
+  '__module__' : 'punishments.punishments_pb2'
+  # @@protoc_insertion_point(class_scope:mruv.punishments.PunishRequest)
+  })
+_sym_db.RegisterMessage(PunishRequest)
+
+PunishResponse = _reflection.GeneratedProtocolMessageType('PunishResponse', (_message.Message,), {
+  'DESCRIPTOR' : _PUNISHRESPONSE,
+  '__module__' : 'punishments.punishments_pb2'
+  # @@protoc_insertion_point(class_scope:mruv.punishments.PunishResponse)
+  })
+_sym_db.RegisterMessage(PunishResponse)
 
 BanRequest = _reflection.GeneratedProtocolMessageType('BanRequest', (_message.Message,), {
   'DESCRIPTOR' : _BANREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.BanRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.BanRequest)
   })
 _sym_db.RegisterMessage(BanRequest)
 
 BanResponse = _reflection.GeneratedProtocolMessageType('BanResponse', (_message.Message,), {
   'DESCRIPTOR' : _BANRESPONSE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.BanResponse)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.BanResponse)
   })
 _sym_db.RegisterMessage(BanResponse)
 
 BlockRequest = _reflection.GeneratedProtocolMessageType('BlockRequest', (_message.Message,), {
   'DESCRIPTOR' : _BLOCKREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.BlockRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.BlockRequest)
   })
 _sym_db.RegisterMessage(BlockRequest)
 
 BlockResponse = _reflection.GeneratedProtocolMessageType('BlockResponse', (_message.Message,), {
   'DESCRIPTOR' : _BLOCKRESPONSE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.BlockResponse)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.BlockResponse)
   })
 _sym_db.RegisterMessage(BlockResponse)
 
 WarnRequest = _reflection.GeneratedProtocolMessageType('WarnRequest', (_message.Message,), {
   'DESCRIPTOR' : _WARNREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.WarnRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.WarnRequest)
   })
 _sym_db.RegisterMessage(WarnRequest)
 
 WarnResponse = _reflection.GeneratedProtocolMessageType('WarnResponse', (_message.Message,), {
   'DESCRIPTOR' : _WARNRESPONSE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.WarnResponse)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.WarnResponse)
   })
 _sym_db.RegisterMessage(WarnResponse)
 
 AdminJailRequest = _reflection.GeneratedProtocolMessageType('AdminJailRequest', (_message.Message,), {
   'DESCRIPTOR' : _ADMINJAILREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.AdminJailRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.AdminJailRequest)
   })
 _sym_db.RegisterMessage(AdminJailRequest)
 
 AdminJailResponse = _reflection.GeneratedProtocolMessageType('AdminJailResponse', (_message.Message,), {
   'DESCRIPTOR' : _ADMINJAILRESPONSE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.AdminJailResponse)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.AdminJailResponse)
   })
 _sym_db.RegisterMessage(AdminJailResponse)
 
 MuteGlobalChatsRequest = _reflection.GeneratedProtocolMessageType('MuteGlobalChatsRequest', (_message.Message,), {
   'DESCRIPTOR' : _MUTEGLOBALCHATSREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.MuteGlobalChatsRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.MuteGlobalChatsRequest)
   })
 _sym_db.RegisterMessage(MuteGlobalChatsRequest)
 
 MuteGlobalChatsResponse = _reflection.GeneratedProtocolMessageType('MuteGlobalChatsResponse', (_message.Message,), {
   'DESCRIPTOR' : _MUTEGLOBALCHATSRESPONSE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.MuteGlobalChatsResponse)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.MuteGlobalChatsResponse)
   })
 _sym_db.RegisterMessage(MuteGlobalChatsResponse)
 
 UnBanRequest = _reflection.GeneratedProtocolMessageType('UnBanRequest', (_message.Message,), {
   'DESCRIPTOR' : _UNBANREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.UnBanRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.UnBanRequest)
   })
 _sym_db.RegisterMessage(UnBanRequest)
 
 UnBanResponse = _reflection.GeneratedProtocolMessageType('UnBanResponse', (_message.Message,), {
   'DESCRIPTOR' : _UNBANRESPONSE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.UnBanResponse)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.UnBanResponse)
   })
 _sym_db.RegisterMessage(UnBanResponse)
 
 UnBlockRequest = _reflection.GeneratedProtocolMessageType('UnBlockRequest', (_message.Message,), {
   'DESCRIPTOR' : _UNBLOCKREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.UnBlockRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.UnBlockRequest)
   })
 _sym_db.RegisterMessage(UnBlockRequest)
 
 UnBlockResponse = _reflection.GeneratedProtocolMessageType('UnBlockResponse', (_message.Message,), {
   'DESCRIPTOR' : _UNBLOCKRESPONSE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.UnBlockResponse)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.UnBlockResponse)
   })
 _sym_db.RegisterMessage(UnBlockResponse)
 
 UnWarnRequest = _reflection.GeneratedProtocolMessageType('UnWarnRequest', (_message.Message,), {
   'DESCRIPTOR' : _UNWARNREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.UnWarnRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.UnWarnRequest)
   })
 _sym_db.RegisterMessage(UnWarnRequest)
 
 UnWarnResponse = _reflection.GeneratedProtocolMessageType('UnWarnResponse', (_message.Message,), {
   'DESCRIPTOR' : _UNWARNRESPONSE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.UnWarnResponse)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.UnWarnResponse)
   })
 _sym_db.RegisterMessage(UnWarnResponse)
 
 UnAdminJailRequest = _reflection.GeneratedProtocolMessageType('UnAdminJailRequest', (_message.Message,), {
   'DESCRIPTOR' : _UNADMINJAILREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.UnAdminJailRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.UnAdminJailRequest)
   })
 _sym_db.RegisterMessage(UnAdminJailRequest)
 
 UnAdminJailResponse = _reflection.GeneratedProtocolMessageType('UnAdminJailResponse', (_message.Message,), {
   'DESCRIPTOR' : _UNADMINJAILRESPONSE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.UnAdminJailResponse)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.UnAdminJailResponse)
   })
 _sym_db.RegisterMessage(UnAdminJailResponse)
 
 UnMuteGlobalChatsRequest = _reflection.GeneratedProtocolMessageType('UnMuteGlobalChatsRequest', (_message.Message,), {
   'DESCRIPTOR' : _UNMUTEGLOBALCHATSREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.UnMuteGlobalChatsRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.UnMuteGlobalChatsRequest)
   })
 _sym_db.RegisterMessage(UnMuteGlobalChatsRequest)
 
 UnMuteGlobalChatsResponse = _reflection.GeneratedProtocolMessageType('UnMuteGlobalChatsResponse', (_message.Message,), {
   'DESCRIPTOR' : _UNMUTEGLOBALCHATSRESPONSE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.UnMuteGlobalChatsResponse)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.UnMuteGlobalChatsResponse)
   })
 _sym_db.RegisterMessage(UnMuteGlobalChatsResponse)
 
 GetPlayerBansRequest = _reflection.GeneratedProtocolMessageType('GetPlayerBansRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETPLAYERBANSREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.GetPlayerBansRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.GetPlayerBansRequest)
   })
 _sym_db.RegisterMessage(GetPlayerBansRequest)
 
 GetPlayerBansResponse = _reflection.GeneratedProtocolMessageType('GetPlayerBansResponse', (_message.Message,), {
   'DESCRIPTOR' : _GETPLAYERBANSRESPONSE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.GetPlayerBansResponse)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.GetPlayerBansResponse)
   })
 _sym_db.RegisterMessage(GetPlayerBansResponse)
 
 GetPlayerWarnsRequest = _reflection.GeneratedProtocolMessageType('GetPlayerWarnsRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETPLAYERWARNSREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.GetPlayerWarnsRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.GetPlayerWarnsRequest)
   })
 _sym_db.RegisterMessage(GetPlayerWarnsRequest)
 
 GetPlayerWarnsResponse = _reflection.GeneratedProtocolMessageType('GetPlayerWarnsResponse', (_message.Message,), {
   'DESCRIPTOR' : _GETPLAYERWARNSRESPONSE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.GetPlayerWarnsResponse)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.GetPlayerWarnsResponse)
   })
 _sym_db.RegisterMessage(GetPlayerWarnsResponse)
 
 GetPlayerAdminJailRequest = _reflection.GeneratedProtocolMessageType('GetPlayerAdminJailRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETPLAYERADMINJAILREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.GetPlayerAdminJailRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.GetPlayerAdminJailRequest)
   })
 _sym_db.RegisterMessage(GetPlayerAdminJailRequest)
 
 GetPlayerAdminJailResponse = _reflection.GeneratedProtocolMessageType('GetPlayerAdminJailResponse', (_message.Message,), {
   'DESCRIPTOR' : _GETPLAYERADMINJAILRESPONSE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.GetPlayerAdminJailResponse)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.GetPlayerAdminJailResponse)
   })
 _sym_db.RegisterMessage(GetPlayerAdminJailResponse)
 
 GetBanRequest = _reflection.GeneratedProtocolMessageType('GetBanRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETBANREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.GetBanRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.GetBanRequest)
   })
 _sym_db.RegisterMessage(GetBanRequest)
 
 GetWarnRequest = _reflection.GeneratedProtocolMessageType('GetWarnRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETWARNREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.GetWarnRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.GetWarnRequest)
   })
 _sym_db.RegisterMessage(GetWarnRequest)
 
 GetBlockRequest = _reflection.GeneratedProtocolMessageType('GetBlockRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETBLOCKREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.GetBlockRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.GetBlockRequest)
   })
 _sym_db.RegisterMessage(GetBlockRequest)
 
 IsPlayerBannedRequest = _reflection.GeneratedProtocolMessageType('IsPlayerBannedRequest', (_message.Message,), {
   'DESCRIPTOR' : _ISPLAYERBANNEDREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.IsPlayerBannedRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.IsPlayerBannedRequest)
   })
 _sym_db.RegisterMessage(IsPlayerBannedRequest)
 
 IsPlayerBannedResponse = _reflection.GeneratedProtocolMessageType('IsPlayerBannedResponse', (_message.Message,), {
   'DESCRIPTOR' : _ISPLAYERBANNEDRESPONSE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.IsPlayerBannedResponse)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.IsPlayerBannedResponse)
   })
 _sym_db.RegisterMessage(IsPlayerBannedResponse)
 
 IsCharacterBlockedRequest = _reflection.GeneratedProtocolMessageType('IsCharacterBlockedRequest', (_message.Message,), {
   'DESCRIPTOR' : _ISCHARACTERBLOCKEDREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.IsCharacterBlockedRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.IsCharacterBlockedRequest)
   })
 _sym_db.RegisterMessage(IsCharacterBlockedRequest)
 
 IsCharacterBlockedResponse = _reflection.GeneratedProtocolMessageType('IsCharacterBlockedResponse', (_message.Message,), {
   'DESCRIPTOR' : _ISCHARACTERBLOCKEDRESPONSE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.IsCharacterBlockedResponse)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.IsCharacterBlockedResponse)
   })
 _sym_db.RegisterMessage(IsCharacterBlockedResponse)
 
 IsCharacterJailedRequest = _reflection.GeneratedProtocolMessageType('IsCharacterJailedRequest', (_message.Message,), {
   'DESCRIPTOR' : _ISCHARACTERJAILEDREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.IsCharacterJailedRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.IsCharacterJailedRequest)
   })
 _sym_db.RegisterMessage(IsCharacterJailedRequest)
 
 IsCharacterJailedResponse = _reflection.GeneratedProtocolMessageType('IsCharacterJailedResponse', (_message.Message,), {
   'DESCRIPTOR' : _ISCHARACTERJAILEDRESPONSE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.IsCharacterJailedResponse)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.IsCharacterJailedResponse)
   })
 _sym_db.RegisterMessage(IsCharacterJailedResponse)
 
 WatchBansRequest = _reflection.GeneratedProtocolMessageType('WatchBansRequest', (_message.Message,), {
   'DESCRIPTOR' : _WATCHBANSREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.WatchBansRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.WatchBansRequest)
   })
 _sym_db.RegisterMessage(WatchBansRequest)
 
 WatchBlocksRequest = _reflection.GeneratedProtocolMessageType('WatchBlocksRequest', (_message.Message,), {
   'DESCRIPTOR' : _WATCHBLOCKSREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.WatchBlocksRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.WatchBlocksRequest)
   })
 _sym_db.RegisterMessage(WatchBlocksRequest)
 
 WatchWarnsRequest = _reflection.GeneratedProtocolMessageType('WatchWarnsRequest', (_message.Message,), {
   'DESCRIPTOR' : _WATCHWARNSREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.WatchWarnsRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.WatchWarnsRequest)
   })
 _sym_db.RegisterMessage(WatchWarnsRequest)
 
 WatchAdminJailsRequest = _reflection.GeneratedProtocolMessageType('WatchAdminJailsRequest', (_message.Message,), {
   'DESCRIPTOR' : _WATCHADMINJAILSREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.WatchAdminJailsRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.WatchAdminJailsRequest)
   })
 _sym_db.RegisterMessage(WatchAdminJailsRequest)
 
 WatchUnBansRequest = _reflection.GeneratedProtocolMessageType('WatchUnBansRequest', (_message.Message,), {
   'DESCRIPTOR' : _WATCHUNBANSREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.WatchUnBansRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.WatchUnBansRequest)
   })
 _sym_db.RegisterMessage(WatchUnBansRequest)
 
 WatchUnBlocksRequest = _reflection.GeneratedProtocolMessageType('WatchUnBlocksRequest', (_message.Message,), {
   'DESCRIPTOR' : _WATCHUNBLOCKSREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.WatchUnBlocksRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.WatchUnBlocksRequest)
   })
 _sym_db.RegisterMessage(WatchUnBlocksRequest)
 
 WatchUnWarnsRequest = _reflection.GeneratedProtocolMessageType('WatchUnWarnsRequest', (_message.Message,), {
   'DESCRIPTOR' : _WATCHUNWARNSREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.WatchUnWarnsRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.WatchUnWarnsRequest)
   })
 _sym_db.RegisterMessage(WatchUnWarnsRequest)
 
 WatchUnAdminJailsRequest = _reflection.GeneratedProtocolMessageType('WatchUnAdminJailsRequest', (_message.Message,), {
   'DESCRIPTOR' : _WATCHUNADMINJAILSREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.WatchUnAdminJailsRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.WatchUnAdminJailsRequest)
   })
 _sym_db.RegisterMessage(WatchUnAdminJailsRequest)
-
-WatchPlayerAcquittalsRequest = _reflection.GeneratedProtocolMessageType('WatchPlayerAcquittalsRequest', (_message.Message,), {
-  'DESCRIPTOR' : _WATCHPLAYERACQUITTALSREQUEST,
-  '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.WatchPlayerAcquittalsRequest)
-  })
-_sym_db.RegisterMessage(WatchPlayerAcquittalsRequest)
-
-WatchPlayerAcquittalsResponse = _reflection.GeneratedProtocolMessageType('WatchPlayerAcquittalsResponse', (_message.Message,), {
-  'DESCRIPTOR' : _WATCHPLAYERACQUITTALSRESPONSE,
-  '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.WatchPlayerAcquittalsResponse)
-  })
-_sym_db.RegisterMessage(WatchPlayerAcquittalsResponse)
 
 WatchPlayerPunishmentsRequest = _reflection.GeneratedProtocolMessageType('WatchPlayerPunishmentsRequest', (_message.Message,), {
   'DESCRIPTOR' : _WATCHPLAYERPUNISHMENTSREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.WatchPlayerPunishmentsRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.WatchPlayerPunishmentsRequest)
   })
 _sym_db.RegisterMessage(WatchPlayerPunishmentsRequest)
 
 WatchPlayerPunishmentsResponse = _reflection.GeneratedProtocolMessageType('WatchPlayerPunishmentsResponse', (_message.Message,), {
   'DESCRIPTOR' : _WATCHPLAYERPUNISHMENTSRESPONSE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.WatchPlayerPunishmentsResponse)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.WatchPlayerPunishmentsResponse)
   })
 _sym_db.RegisterMessage(WatchPlayerPunishmentsResponse)
+
+WatchPlayerAcquittalsRequest = _reflection.GeneratedProtocolMessageType('WatchPlayerAcquittalsRequest', (_message.Message,), {
+  'DESCRIPTOR' : _WATCHPLAYERACQUITTALSREQUEST,
+  '__module__' : 'punishments.punishments_pb2'
+  # @@protoc_insertion_point(class_scope:mruv.punishments.WatchPlayerAcquittalsRequest)
+  })
+_sym_db.RegisterMessage(WatchPlayerAcquittalsRequest)
+
+WatchPlayerAcquittalsResponse = _reflection.GeneratedProtocolMessageType('WatchPlayerAcquittalsResponse', (_message.Message,), {
+  'DESCRIPTOR' : _WATCHPLAYERACQUITTALSRESPONSE,
+  '__module__' : 'punishments.punishments_pb2'
+  # @@protoc_insertion_point(class_scope:mruv.punishments.WatchPlayerAcquittalsResponse)
+  })
+_sym_db.RegisterMessage(WatchPlayerAcquittalsResponse)
 
 WatchPunishmentsRequest = _reflection.GeneratedProtocolMessageType('WatchPunishmentsRequest', (_message.Message,), {
   'DESCRIPTOR' : _WATCHPUNISHMENTSREQUEST,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.WatchPunishmentsRequest)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.WatchPunishmentsRequest)
   })
 _sym_db.RegisterMessage(WatchPunishmentsRequest)
 
 WatchPunishmentsResponse = _reflection.GeneratedProtocolMessageType('WatchPunishmentsResponse', (_message.Message,), {
   'DESCRIPTOR' : _WATCHPUNISHMENTSRESPONSE,
   '__module__' : 'punishments.punishments_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.economy.WatchPunishmentsResponse)
+  # @@protoc_insertion_point(class_scope:mruv.punishments.WatchPunishmentsResponse)
   })
 _sym_db.RegisterMessage(WatchPunishmentsResponse)
+
+WatchAcquittalsRequest = _reflection.GeneratedProtocolMessageType('WatchAcquittalsRequest', (_message.Message,), {
+  'DESCRIPTOR' : _WATCHACQUITTALSREQUEST,
+  '__module__' : 'punishments.punishments_pb2'
+  # @@protoc_insertion_point(class_scope:mruv.punishments.WatchAcquittalsRequest)
+  })
+_sym_db.RegisterMessage(WatchAcquittalsRequest)
+
+WatchAcquittalsResponse = _reflection.GeneratedProtocolMessageType('WatchAcquittalsResponse', (_message.Message,), {
+  'DESCRIPTOR' : _WATCHACQUITTALSRESPONSE,
+  '__module__' : 'punishments.punishments_pb2'
+  # @@protoc_insertion_point(class_scope:mruv.punishments.WatchAcquittalsResponse)
+  })
+_sym_db.RegisterMessage(WatchAcquittalsResponse)
 
 
 DESCRIPTOR._options = None
 
 _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   name='MruVPunishmentsService',
-  full_name='mruv.economy.MruVPunishmentsService',
+  full_name='mruv.punishments.MruVPunishmentsService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=3351,
-  serialized_end=6624,
+  serialized_start=4333,
+  serialized_end=8065,
   methods=[
   _descriptor.MethodDescriptor(
-    name='Ban',
-    full_name='mruv.economy.MruVPunishmentsService.Ban',
+    name='Punish',
+    full_name='mruv.punishments.MruVPunishmentsService.Punish',
     index=0,
+    containing_service=None,
+    input_type=_PUNISHREQUEST,
+    output_type=_PUNISHRESPONSE,
+    serialized_options=_b('\202\323\344\223\002\032\"\030/v1/punishments/{player}'),
+  ),
+  _descriptor.MethodDescriptor(
+    name='Ban',
+    full_name='mruv.punishments.MruVPunishmentsService.Ban',
+    index=1,
     containing_service=None,
     input_type=_BANREQUEST,
     output_type=_BANRESPONSE,
@@ -2663,8 +3033,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='Block',
-    full_name='mruv.economy.MruVPunishmentsService.Block',
-    index=1,
+    full_name='mruv.punishments.MruVPunishmentsService.Block',
+    index=2,
     containing_service=None,
     input_type=_BLOCKREQUEST,
     output_type=_BLOCKRESPONSE,
@@ -2672,8 +3042,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='Warn',
-    full_name='mruv.economy.MruVPunishmentsService.Warn',
-    index=2,
+    full_name='mruv.punishments.MruVPunishmentsService.Warn',
+    index=3,
     containing_service=None,
     input_type=_WARNREQUEST,
     output_type=_WARNRESPONSE,
@@ -2681,8 +3051,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='AdminJail',
-    full_name='mruv.economy.MruVPunishmentsService.AdminJail',
-    index=3,
+    full_name='mruv.punishments.MruVPunishmentsService.AdminJail',
+    index=4,
     containing_service=None,
     input_type=_ADMINJAILREQUEST,
     output_type=_ADMINJAILRESPONSE,
@@ -2690,8 +3060,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='MuteGlobalChats',
-    full_name='mruv.economy.MruVPunishmentsService.MuteGlobalChats',
-    index=4,
+    full_name='mruv.punishments.MruVPunishmentsService.MuteGlobalChats',
+    index=5,
     containing_service=None,
     input_type=_MUTEGLOBALCHATSREQUEST,
     output_type=_MUTEGLOBALCHATSRESPONSE,
@@ -2699,8 +3069,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='UnBan',
-    full_name='mruv.economy.MruVPunishmentsService.UnBan',
-    index=5,
+    full_name='mruv.punishments.MruVPunishmentsService.UnBan',
+    index=6,
     containing_service=None,
     input_type=_UNBANREQUEST,
     output_type=_UNBANRESPONSE,
@@ -2708,8 +3078,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='UnBlock',
-    full_name='mruv.economy.MruVPunishmentsService.UnBlock',
-    index=6,
+    full_name='mruv.punishments.MruVPunishmentsService.UnBlock',
+    index=7,
     containing_service=None,
     input_type=_UNBLOCKREQUEST,
     output_type=_UNBLOCKRESPONSE,
@@ -2717,8 +3087,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='UnWarn',
-    full_name='mruv.economy.MruVPunishmentsService.UnWarn',
-    index=7,
+    full_name='mruv.punishments.MruVPunishmentsService.UnWarn',
+    index=8,
     containing_service=None,
     input_type=_UNWARNREQUEST,
     output_type=_UNWARNRESPONSE,
@@ -2726,8 +3096,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='UnAdminJail',
-    full_name='mruv.economy.MruVPunishmentsService.UnAdminJail',
-    index=8,
+    full_name='mruv.punishments.MruVPunishmentsService.UnAdminJail',
+    index=9,
     containing_service=None,
     input_type=_UNADMINJAILREQUEST,
     output_type=_UNADMINJAILRESPONSE,
@@ -2735,8 +3105,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='UnMuteGlobalChats',
-    full_name='mruv.economy.MruVPunishmentsService.UnMuteGlobalChats',
-    index=9,
+    full_name='mruv.punishments.MruVPunishmentsService.UnMuteGlobalChats',
+    index=10,
     containing_service=None,
     input_type=_UNMUTEGLOBALCHATSREQUEST,
     output_type=_UNMUTEGLOBALCHATSRESPONSE,
@@ -2744,8 +3114,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetPlayerBans',
-    full_name='mruv.economy.MruVPunishmentsService.GetPlayerBans',
-    index=10,
+    full_name='mruv.punishments.MruVPunishmentsService.GetPlayerBans',
+    index=11,
     containing_service=None,
     input_type=_GETPLAYERBANSREQUEST,
     output_type=_GETPLAYERBANSRESPONSE,
@@ -2753,8 +3123,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetPlayerWarns',
-    full_name='mruv.economy.MruVPunishmentsService.GetPlayerWarns',
-    index=11,
+    full_name='mruv.punishments.MruVPunishmentsService.GetPlayerWarns',
+    index=12,
     containing_service=None,
     input_type=_GETPLAYERWARNSREQUEST,
     output_type=_GETPLAYERWARNSRESPONSE,
@@ -2762,8 +3132,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetPlayerAdminJail',
-    full_name='mruv.economy.MruVPunishmentsService.GetPlayerAdminJail',
-    index=12,
+    full_name='mruv.punishments.MruVPunishmentsService.GetPlayerAdminJail',
+    index=13,
     containing_service=None,
     input_type=_GETPLAYERADMINJAILREQUEST,
     output_type=_GETPLAYERADMINJAILRESPONSE,
@@ -2771,8 +3141,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetBan',
-    full_name='mruv.economy.MruVPunishmentsService.GetBan',
-    index=13,
+    full_name='mruv.punishments.MruVPunishmentsService.GetBan',
+    index=14,
     containing_service=None,
     input_type=_GETBANREQUEST,
     output_type=_BANMESSAGE,
@@ -2780,8 +3150,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetWarn',
-    full_name='mruv.economy.MruVPunishmentsService.GetWarn',
-    index=14,
+    full_name='mruv.punishments.MruVPunishmentsService.GetWarn',
+    index=15,
     containing_service=None,
     input_type=_GETWARNREQUEST,
     output_type=_WARNMESSAGE,
@@ -2789,8 +3159,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetBlock',
-    full_name='mruv.economy.MruVPunishmentsService.GetBlock',
-    index=15,
+    full_name='mruv.punishments.MruVPunishmentsService.GetBlock',
+    index=16,
     containing_service=None,
     input_type=_GETBLOCKREQUEST,
     output_type=_BLOCKMESSAGE,
@@ -2798,8 +3168,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='IsPlayerBanned',
-    full_name='mruv.economy.MruVPunishmentsService.IsPlayerBanned',
-    index=16,
+    full_name='mruv.punishments.MruVPunishmentsService.IsPlayerBanned',
+    index=17,
     containing_service=None,
     input_type=_ISPLAYERBANNEDREQUEST,
     output_type=_ISPLAYERBANNEDRESPONSE,
@@ -2807,8 +3177,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='IsCharacterBlocked',
-    full_name='mruv.economy.MruVPunishmentsService.IsCharacterBlocked',
-    index=17,
+    full_name='mruv.punishments.MruVPunishmentsService.IsCharacterBlocked',
+    index=18,
     containing_service=None,
     input_type=_ISCHARACTERBLOCKEDREQUEST,
     output_type=_ISCHARACTERBLOCKEDRESPONSE,
@@ -2816,8 +3186,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='IsCharacterJailed',
-    full_name='mruv.economy.MruVPunishmentsService.IsCharacterJailed',
-    index=18,
+    full_name='mruv.punishments.MruVPunishmentsService.IsCharacterJailed',
+    index=19,
     containing_service=None,
     input_type=_ISCHARACTERJAILEDREQUEST,
     output_type=_ISCHARACTERJAILEDRESPONSE,
@@ -2825,8 +3195,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='WatchBans',
-    full_name='mruv.economy.MruVPunishmentsService.WatchBans',
-    index=19,
+    full_name='mruv.punishments.MruVPunishmentsService.WatchBans',
+    index=20,
     containing_service=None,
     input_type=_WATCHBANSREQUEST,
     output_type=_BANMESSAGE,
@@ -2834,8 +3204,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='WatchBlocks',
-    full_name='mruv.economy.MruVPunishmentsService.WatchBlocks',
-    index=20,
+    full_name='mruv.punishments.MruVPunishmentsService.WatchBlocks',
+    index=21,
     containing_service=None,
     input_type=_WATCHBLOCKSREQUEST,
     output_type=_BLOCKMESSAGE,
@@ -2843,8 +3213,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='WatchWarns',
-    full_name='mruv.economy.MruVPunishmentsService.WatchWarns',
-    index=21,
+    full_name='mruv.punishments.MruVPunishmentsService.WatchWarns',
+    index=22,
     containing_service=None,
     input_type=_WATCHWARNSREQUEST,
     output_type=_WARNMESSAGE,
@@ -2852,8 +3222,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='WatchAdminJails',
-    full_name='mruv.economy.MruVPunishmentsService.WatchAdminJails',
-    index=22,
+    full_name='mruv.punishments.MruVPunishmentsService.WatchAdminJails',
+    index=23,
     containing_service=None,
     input_type=_WATCHADMINJAILSREQUEST,
     output_type=_ADMINJAILMESSAGE,
@@ -2861,8 +3231,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='WatchUnBans',
-    full_name='mruv.economy.MruVPunishmentsService.WatchUnBans',
-    index=23,
+    full_name='mruv.punishments.MruVPunishmentsService.WatchUnBans',
+    index=24,
     containing_service=None,
     input_type=_WATCHUNBANSREQUEST,
     output_type=_UNBANMESSAGE,
@@ -2870,8 +3240,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='WatchUnBlocks',
-    full_name='mruv.economy.MruVPunishmentsService.WatchUnBlocks',
-    index=24,
+    full_name='mruv.punishments.MruVPunishmentsService.WatchUnBlocks',
+    index=25,
     containing_service=None,
     input_type=_WATCHUNBLOCKSREQUEST,
     output_type=_UNBLOCKMESSAGE,
@@ -2879,8 +3249,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='WatchUnWarns',
-    full_name='mruv.economy.MruVPunishmentsService.WatchUnWarns',
-    index=25,
+    full_name='mruv.punishments.MruVPunishmentsService.WatchUnWarns',
+    index=26,
     containing_service=None,
     input_type=_WATCHUNWARNSREQUEST,
     output_type=_UNWARNMESSAGE,
@@ -2888,8 +3258,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='WatchUnAdminJails',
-    full_name='mruv.economy.MruVPunishmentsService.WatchUnAdminJails',
-    index=26,
+    full_name='mruv.punishments.MruVPunishmentsService.WatchUnAdminJails',
+    index=27,
     containing_service=None,
     input_type=_WATCHUNADMINJAILSREQUEST,
     output_type=_UNADMINJAILMESSAGE,
@@ -2897,8 +3267,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='WatchPlayerPunishments',
-    full_name='mruv.economy.MruVPunishmentsService.WatchPlayerPunishments',
-    index=27,
+    full_name='mruv.punishments.MruVPunishmentsService.WatchPlayerPunishments',
+    index=28,
     containing_service=None,
     input_type=_WATCHPLAYERPUNISHMENTSREQUEST,
     output_type=_WATCHPLAYERPUNISHMENTSRESPONSE,
@@ -2906,8 +3276,8 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='WatchPlayerAcquittals',
-    full_name='mruv.economy.MruVPunishmentsService.WatchPlayerAcquittals',
-    index=28,
+    full_name='mruv.punishments.MruVPunishmentsService.WatchPlayerAcquittals',
+    index=29,
     containing_service=None,
     input_type=_WATCHPLAYERACQUITTALSREQUEST,
     output_type=_WATCHPLAYERACQUITTALSRESPONSE,
@@ -2915,11 +3285,20 @@ _MRUVPUNISHMENTSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='WatchPunishments',
-    full_name='mruv.economy.MruVPunishmentsService.WatchPunishments',
-    index=29,
+    full_name='mruv.punishments.MruVPunishmentsService.WatchPunishments',
+    index=30,
     containing_service=None,
     input_type=_WATCHPUNISHMENTSREQUEST,
     output_type=_WATCHPUNISHMENTSRESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='WatchAcquittals',
+    full_name='mruv.punishments.MruVPunishmentsService.WatchAcquittals',
+    index=31,
+    containing_service=None,
+    input_type=_WATCHACQUITTALSREQUEST,
+    output_type=_WATCHACQUITTALSRESPONSE,
     serialized_options=None,
   ),
 ])

@@ -15,27 +15,27 @@ class TextureStudioManagerServiceStub(object):
       channel: A grpc.Channel.
     """
     self.CreateServer = channel.unary_unary(
-        '/texture_studio.TextureStudioManagerService/CreateServer',
+        '/mruv.texture_studio.TextureStudioManagerService/CreateServer',
         request_serializer=texturestudio_dot_texturestudio__manage__pb2.CreateServerRequest.SerializeToString,
         response_deserializer=texturestudio_dot_texturestudio__manage__pb2.CreateServerResponse.FromString,
         )
     self.GetServers = channel.unary_unary(
-        '/texture_studio.TextureStudioManagerService/GetServers',
+        '/mruv.texture_studio.TextureStudioManagerService/GetServers',
         request_serializer=texturestudio_dot_texturestudio__manage__pb2.GetServersRequest.SerializeToString,
         response_deserializer=texturestudio_dot_texturestudio__manage__pb2.GetServersResponse.FromString,
         )
     self.MyServer = channel.unary_unary(
-        '/texture_studio.TextureStudioManagerService/MyServer',
+        '/mruv.texture_studio.TextureStudioManagerService/MyServer',
         request_serializer=texturestudio_dot_texturestudio__manage__pb2.MyServerRequest.SerializeToString,
         response_deserializer=texturestudio_dot_texturestudio__manage__pb2.MyServerResponse.FromString,
         )
     self.TransferOwnership = channel.unary_unary(
-        '/texture_studio.TextureStudioManagerService/TransferOwnership',
+        '/mruv.texture_studio.TextureStudioManagerService/TransferOwnership',
         request_serializer=texturestudio_dot_texturestudio__manage__pb2.TransferOwnershipRequest.SerializeToString,
         response_deserializer=texturestudio_dot_texturestudio__manage__pb2.TransferOwnershipResponse.FromString,
         )
     self.DeleteServer = channel.unary_unary(
-        '/texture_studio.TextureStudioManagerService/DeleteServer',
+        '/mruv.texture_studio.TextureStudioManagerService/DeleteServer',
         request_serializer=texturestudio_dot_texturestudio__manage__pb2.DeleteServerRequest.SerializeToString,
         response_deserializer=texturestudio_dot_texturestudio__manage__pb2.DeleteServerResponse.FromString,
         )
@@ -110,5 +110,5 @@ def add_TextureStudioManagerServiceServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'texture_studio.TextureStudioManagerService', rpc_method_handlers)
+      'mruv.texture_studio.TextureStudioManagerService', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

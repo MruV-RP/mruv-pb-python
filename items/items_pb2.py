@@ -21,10 +21,10 @@ from common import spatial_pb2 as common_dot_spatial__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='items/items.proto',
-  package='mruv',
+  package='mruv.items',
   syntax='proto3',
   serialized_options=_b('Z#github.com/MruV-RP/mruv-pb-go/items'),
-  serialized_pb=_b('\n\x11items/items.proto\x12\x04mruv\x1a\x1cgoogle/api/annotations.proto\x1a\x13\x63ommon/health.proto\x1a\x17items/items_model.proto\x1a\x14\x63ommon/spatial.proto\" \n\x0fGetItemsRequest\x12\r\n\x05limit\x18\x01 \x01(\r\"-\n\x10GetItemsResponse\x12\x19\n\x05items\x18\x01 \x03(\x0b\x32\n.mruv.Item\"$\n\x13GetItemTypesRequest\x12\r\n\x05limit\x18\x01 \x01(\r\":\n\x14GetItemTypesResponse\x12\"\n\nitem_types\x18\x01 \x03(\x0b\x32\x0e.mruv.ItemType\"%\n\x14GetContainersRequest\x12\r\n\x05limit\x18\x01 \x01(\r\"<\n\x15GetContainersResponse\x12#\n\ncontainers\x18\x01 \x03(\x0b\x32\x0f.mruv.Container\")\n\x18GetContainerTypesRequest\x12\r\n\x05limit\x18\x01 \x01(\r\"I\n\x19GetContainerTypesResponse\x12,\n\x0f\x63ontainer_types\x18\x01 \x03(\x0b\x32\x13.mruv.ContainerType\"P\n\x0ePutItemRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\r\x12\x0e\n\x04slot\x18\x03 \x01(\x05H\x00\x42\x07\n\x05where\"8\n\x0fPutItemResponse\x12%\n\x0binside_item\x18\x01 \x01(\x0b\x32\x10.mruv.InsideItem\"?\n\x18GetContainerItemsRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\r\x12\r\n\x05limit\x18\x02 \x01(\r\"<\n\x19GetContainerItemsResponse\x12\x1f\n\x05items\x18\x01 \x03(\x0b\x32\x10.mruv.InsideItem\"8\n\x0fPullItemRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\r\"L\n\x10SortItemsRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\r\x12\"\n\x07sort_by\x18\x02 \x01(\x0e\x32\x11.mruv.SortingMode\"7\n\x11SortItemsResponse\x12\"\n\tcontainer\x18\x01 \x01(\x0b\x32\x0f.mruv.Container\"h\n\x16GetNearestItemsRequest\x12 \n\x08position\x18\x01 \x01(\x0b\x32\x0e.mruv.Position\x12\x14\n\x0c\x63ontainer_id\x18\x02 \x01(\r\x12\x16\n\x0e\x64istance_limit\x18\x03 \x01(\x01\"9\n\x17GetNearestItemsResponse\x12\x1e\n\x04item\x18\x01 \x03(\x0b\x32\x10.mruv.InsideItem\"!\n\x0eUseItemRequest\x12\x0f\n\x07item_id\x18\x01 \x01(\r\"\"\n\x0fUseItemResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x32\xf4\x11\n\x0fMruVItemService\x12\x39\n\nCreateItem\x12\n.mruv.Item\x1a\x0c.mruv.ItemID\"\x11\x82\xd3\xe4\x93\x02\x0b\"\t/v1/items\x12;\n\x07GetItem\x12\x0c.mruv.ItemID\x1a\n.mruv.Item\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/items/{id}\x12@\n\nDeleteItem\x12\x0c.mruv.ItemID\x1a\x0c.mruv.ItemID\"\x16\x82\xd3\xe4\x93\x02\x10*\x0e/v1/items/{id}\x12L\n\x08GetItems\x12\x15.mruv.GetItemsRequest\x1a\x16.mruv.GetItemsResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\x12\t/v1/items\x12I\n\x0e\x43reateItemType\x12\x0e.mruv.ItemType\x1a\x10.mruv.ItemTypeID\"\x15\x82\xd3\xe4\x93\x02\x0f\"\r/v1/itemTypes\x12K\n\x0bGetItemType\x12\x10.mruv.ItemTypeID\x1a\x0e.mruv.ItemType\"\x1a\x82\xd3\xe4\x93\x02\x14\x12\x12/v1/itemTypes/{id}\x12P\n\x0e\x44\x65leteItemType\x12\x10.mruv.ItemTypeID\x1a\x10.mruv.ItemTypeID\"\x1a\x82\xd3\xe4\x93\x02\x14*\x12/v1/itemTypes/{id}\x12\\\n\x0cGetItemTypes\x12\x19.mruv.GetItemTypesRequest\x1a\x1a.mruv.GetItemTypesResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\x12\r/v1/itemTypes\x12M\n\x0f\x43reateContainer\x12\x0f.mruv.Container\x1a\x11.mruv.ContainerID\"\x16\x82\xd3\xe4\x93\x02\x10\"\x0e/v1/containers\x12O\n\x0cGetContainer\x12\x11.mruv.ContainerID\x1a\x0f.mruv.Container\"\x1b\x82\xd3\xe4\x93\x02\x15\x12\x13/v1/containers/{id}\x12T\n\x0f\x44\x65leteContainer\x12\x11.mruv.ContainerID\x1a\x11.mruv.ContainerID\"\x1b\x82\xd3\xe4\x93\x02\x15*\x13/v1/containers/{id}\x12`\n\rGetContainers\x12\x1a.mruv.GetContainersRequest\x1a\x1b.mruv.GetContainersResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/containers\x12]\n\x13\x43reateContainerType\x12\x13.mruv.ContainerType\x1a\x15.mruv.ContainerTypeID\"\x1a\x82\xd3\xe4\x93\x02\x14\"\x12/v1/containerTypes\x12_\n\x10GetContainerType\x12\x15.mruv.ContainerTypeID\x1a\x13.mruv.ContainerType\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/v1/containerTypes/{id}\x12\x64\n\x13\x44\x65leteContainerType\x12\x15.mruv.ContainerTypeID\x1a\x15.mruv.ContainerTypeID\"\x1f\x82\xd3\xe4\x93\x02\x19*\x17/v1/containerTypes/{id}\x12p\n\x11GetContainerTypes\x12\x1e.mruv.GetContainerTypesRequest\x1a\x1f.mruv.GetContainerTypesResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x12\x12/v1/containerTypes\x12\x81\x01\n\x11GetContainerItems\x12\x1e.mruv.GetContainerItemsRequest\x1a\x1f.mruv.GetContainerItemsResponse\"+\x82\xd3\xe4\x93\x02%\x12#/v1/containers/{container_id}/items\x12\x64\n\x08PullItem\x12\x15.mruv.PullItemRequest\x1a\n.mruv.Item\"5\x82\xd3\xe4\x93\x02/*-/v1/containers/{container_id}/items/{item_id}\x12m\n\x07PutItem\x12\x14.mruv.PutItemRequest\x1a\x15.mruv.PutItemResponse\"5\x82\xd3\xe4\x93\x02/\x1a-/v1/containers/{container_id}/items/{item_id}\x12x\n\tSortItems\x12\x16.mruv.SortItemsRequest\x1a\x17.mruv.SortItemsResponse\":\x82\xd3\xe4\x93\x02\x34\x12\x32/v1/containers/{container_id}/items/sort/{sort_by}\x12\xb0\x01\n\x0fGetNearestItems\x12\x1c.mruv.GetNearestItemsRequest\x1a\x1d.mruv.GetNearestItemsResponse\"`\x82\xd3\xe4\x93\x02Z\x12X/v1/containers/{container_id}/items/nearest/x/{position.x}/y/{position.y}/z/{position.z}\x12W\n\x07UseItem\x12\x14.mruv.UseItemRequest\x1a\x15.mruv.UseItemResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/v1/items/{item_id}/use\x12\x65\n\x10GetServiceStatus\x12\x1a.mruv.ServiceStatusRequest\x1a\x1b.mruv.ServiceStatusResponse\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/items/status\x12[\n\x11GetServiceVersion\x12\x14.mruv.VersionRequest\x1a\x15.mruv.VersionResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/v1/items/versionB%Z#github.com/MruV-RP/mruv-pb-go/itemsb\x06proto3')
+  serialized_pb=_b('\n\x11items/items.proto\x12\nmruv.items\x1a\x1cgoogle/api/annotations.proto\x1a\x13\x63ommon/health.proto\x1a\x17items/items_model.proto\x1a\x14\x63ommon/spatial.proto\" \n\x0fGetItemsRequest\x12\r\n\x05limit\x18\x01 \x01(\r\"-\n\x10GetItemsResponse\x12\x19\n\x05items\x18\x01 \x03(\x0b\x32\n.mruv.Item\"$\n\x13GetItemTypesRequest\x12\r\n\x05limit\x18\x01 \x01(\r\":\n\x14GetItemTypesResponse\x12\"\n\nitem_types\x18\x01 \x03(\x0b\x32\x0e.mruv.ItemType\"%\n\x14GetContainersRequest\x12\r\n\x05limit\x18\x01 \x01(\r\"<\n\x15GetContainersResponse\x12#\n\ncontainers\x18\x01 \x03(\x0b\x32\x0f.mruv.Container\")\n\x18GetContainerTypesRequest\x12\r\n\x05limit\x18\x01 \x01(\r\"I\n\x19GetContainerTypesResponse\x12,\n\x0f\x63ontainer_types\x18\x01 \x03(\x0b\x32\x13.mruv.ContainerType\"P\n\x0ePutItemRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\r\x12\x0e\n\x04slot\x18\x03 \x01(\x05H\x00\x42\x07\n\x05where\"8\n\x0fPutItemResponse\x12%\n\x0binside_item\x18\x01 \x01(\x0b\x32\x10.mruv.InsideItem\"?\n\x18GetContainerItemsRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\r\x12\r\n\x05limit\x18\x02 \x01(\r\"<\n\x19GetContainerItemsResponse\x12\x1f\n\x05items\x18\x01 \x03(\x0b\x32\x10.mruv.InsideItem\"8\n\x0fPullItemRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\r\"L\n\x10SortItemsRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\r\x12\"\n\x07sort_by\x18\x02 \x01(\x0e\x32\x11.mruv.SortingMode\"7\n\x11SortItemsResponse\x12\"\n\tcontainer\x18\x01 \x01(\x0b\x32\x0f.mruv.Container\"h\n\x16GetNearestItemsRequest\x12 \n\x08position\x18\x01 \x01(\x0b\x32\x0e.mruv.Position\x12\x14\n\x0c\x63ontainer_id\x18\x02 \x01(\r\x12\x16\n\x0e\x64istance_limit\x18\x03 \x01(\x01\"9\n\x17GetNearestItemsResponse\x12\x1e\n\x04item\x18\x01 \x03(\x0b\x32\x10.mruv.InsideItem\"!\n\x0eUseItemRequest\x12\x0f\n\x07item_id\x18\x01 \x01(\r\"\"\n\x0fUseItemResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x32\xe7\x12\n\x0fMruVItemService\x12\x39\n\nCreateItem\x12\n.mruv.Item\x1a\x0c.mruv.ItemID\"\x11\x82\xd3\xe4\x93\x02\x0b\"\t/v1/items\x12;\n\x07GetItem\x12\x0c.mruv.ItemID\x1a\n.mruv.Item\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/items/{id}\x12@\n\nDeleteItem\x12\x0c.mruv.ItemID\x1a\x0c.mruv.ItemID\"\x16\x82\xd3\xe4\x93\x02\x10*\x0e/v1/items/{id}\x12X\n\x08GetItems\x12\x1b.mruv.items.GetItemsRequest\x1a\x1c.mruv.items.GetItemsResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\x12\t/v1/items\x12I\n\x0e\x43reateItemType\x12\x0e.mruv.ItemType\x1a\x10.mruv.ItemTypeID\"\x15\x82\xd3\xe4\x93\x02\x0f\"\r/v1/itemTypes\x12K\n\x0bGetItemType\x12\x10.mruv.ItemTypeID\x1a\x0e.mruv.ItemType\"\x1a\x82\xd3\xe4\x93\x02\x14\x12\x12/v1/itemTypes/{id}\x12P\n\x0e\x44\x65leteItemType\x12\x10.mruv.ItemTypeID\x1a\x10.mruv.ItemTypeID\"\x1a\x82\xd3\xe4\x93\x02\x14*\x12/v1/itemTypes/{id}\x12h\n\x0cGetItemTypes\x12\x1f.mruv.items.GetItemTypesRequest\x1a .mruv.items.GetItemTypesResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\x12\r/v1/itemTypes\x12M\n\x0f\x43reateContainer\x12\x0f.mruv.Container\x1a\x11.mruv.ContainerID\"\x16\x82\xd3\xe4\x93\x02\x10\"\x0e/v1/containers\x12O\n\x0cGetContainer\x12\x11.mruv.ContainerID\x1a\x0f.mruv.Container\"\x1b\x82\xd3\xe4\x93\x02\x15\x12\x13/v1/containers/{id}\x12T\n\x0f\x44\x65leteContainer\x12\x11.mruv.ContainerID\x1a\x11.mruv.ContainerID\"\x1b\x82\xd3\xe4\x93\x02\x15*\x13/v1/containers/{id}\x12l\n\rGetContainers\x12 .mruv.items.GetContainersRequest\x1a!.mruv.items.GetContainersResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/containers\x12]\n\x13\x43reateContainerType\x12\x13.mruv.ContainerType\x1a\x15.mruv.ContainerTypeID\"\x1a\x82\xd3\xe4\x93\x02\x14\"\x12/v1/containerTypes\x12_\n\x10GetContainerType\x12\x15.mruv.ContainerTypeID\x1a\x13.mruv.ContainerType\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/v1/containerTypes/{id}\x12\x64\n\x13\x44\x65leteContainerType\x12\x15.mruv.ContainerTypeID\x1a\x15.mruv.ContainerTypeID\"\x1f\x82\xd3\xe4\x93\x02\x19*\x17/v1/containerTypes/{id}\x12|\n\x11GetContainerTypes\x12$.mruv.items.GetContainerTypesRequest\x1a%.mruv.items.GetContainerTypesResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x12\x12/v1/containerTypes\x12\x8d\x01\n\x11GetContainerItems\x12$.mruv.items.GetContainerItemsRequest\x1a%.mruv.items.GetContainerItemsResponse\"+\x82\xd3\xe4\x93\x02%\x12#/v1/containers/{container_id}/items\x12j\n\x08PullItem\x12\x1b.mruv.items.PullItemRequest\x1a\n.mruv.Item\"5\x82\xd3\xe4\x93\x02/*-/v1/containers/{container_id}/items/{item_id}\x12y\n\x07PutItem\x12\x1a.mruv.items.PutItemRequest\x1a\x1b.mruv.items.PutItemResponse\"5\x82\xd3\xe4\x93\x02/\x1a-/v1/containers/{container_id}/items/{item_id}\x12\x84\x01\n\tSortItems\x12\x1c.mruv.items.SortItemsRequest\x1a\x1d.mruv.items.SortItemsResponse\":\x82\xd3\xe4\x93\x02\x34\x12\x32/v1/containers/{container_id}/items/sort/{sort_by}\x12\xbc\x01\n\x0fGetNearestItems\x12\".mruv.items.GetNearestItemsRequest\x1a#.mruv.items.GetNearestItemsResponse\"`\x82\xd3\xe4\x93\x02Z\x12X/v1/containers/{container_id}/items/nearest/x/{position.x}/y/{position.y}/z/{position.z}\x12\x63\n\x07UseItem\x12\x1a.mruv.items.UseItemRequest\x1a\x1b.mruv.items.UseItemResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/v1/items/{item_id}/use\x12\x65\n\x10GetServiceStatus\x12\x1a.mruv.ServiceStatusRequest\x1a\x1b.mruv.ServiceStatusResponse\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/items/status\x12[\n\x11GetServiceVersion\x12\x14.mruv.VersionRequest\x1a\x15.mruv.VersionResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/v1/items/versionB%Z#github.com/MruV-RP/mruv-pb-go/itemsb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,common_dot_health__pb2.DESCRIPTOR,items_dot_items__model__pb2.DESCRIPTOR,common_dot_spatial__pb2.DESCRIPTOR,])
 
@@ -33,13 +33,13 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _GETITEMSREQUEST = _descriptor.Descriptor(
   name='GetItemsRequest',
-  full_name='mruv.GetItemsRequest',
+  full_name='mruv.items.GetItemsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='limit', full_name='mruv.GetItemsRequest.limit', index=0,
+      name='limit', full_name='mruv.items.GetItemsRequest.limit', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -57,20 +57,20 @@ _GETITEMSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=125,
-  serialized_end=157,
+  serialized_start=131,
+  serialized_end=163,
 )
 
 
 _GETITEMSRESPONSE = _descriptor.Descriptor(
   name='GetItemsResponse',
-  full_name='mruv.GetItemsResponse',
+  full_name='mruv.items.GetItemsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='items', full_name='mruv.GetItemsResponse.items', index=0,
+      name='items', full_name='mruv.items.GetItemsResponse.items', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -88,20 +88,20 @@ _GETITEMSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=159,
-  serialized_end=204,
+  serialized_start=165,
+  serialized_end=210,
 )
 
 
 _GETITEMTYPESREQUEST = _descriptor.Descriptor(
   name='GetItemTypesRequest',
-  full_name='mruv.GetItemTypesRequest',
+  full_name='mruv.items.GetItemTypesRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='limit', full_name='mruv.GetItemTypesRequest.limit', index=0,
+      name='limit', full_name='mruv.items.GetItemTypesRequest.limit', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -119,20 +119,20 @@ _GETITEMTYPESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=206,
-  serialized_end=242,
+  serialized_start=212,
+  serialized_end=248,
 )
 
 
 _GETITEMTYPESRESPONSE = _descriptor.Descriptor(
   name='GetItemTypesResponse',
-  full_name='mruv.GetItemTypesResponse',
+  full_name='mruv.items.GetItemTypesResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='item_types', full_name='mruv.GetItemTypesResponse.item_types', index=0,
+      name='item_types', full_name='mruv.items.GetItemTypesResponse.item_types', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -150,20 +150,20 @@ _GETITEMTYPESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=244,
-  serialized_end=302,
+  serialized_start=250,
+  serialized_end=308,
 )
 
 
 _GETCONTAINERSREQUEST = _descriptor.Descriptor(
   name='GetContainersRequest',
-  full_name='mruv.GetContainersRequest',
+  full_name='mruv.items.GetContainersRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='limit', full_name='mruv.GetContainersRequest.limit', index=0,
+      name='limit', full_name='mruv.items.GetContainersRequest.limit', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -181,20 +181,20 @@ _GETCONTAINERSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=304,
-  serialized_end=341,
+  serialized_start=310,
+  serialized_end=347,
 )
 
 
 _GETCONTAINERSRESPONSE = _descriptor.Descriptor(
   name='GetContainersResponse',
-  full_name='mruv.GetContainersResponse',
+  full_name='mruv.items.GetContainersResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='containers', full_name='mruv.GetContainersResponse.containers', index=0,
+      name='containers', full_name='mruv.items.GetContainersResponse.containers', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -212,20 +212,20 @@ _GETCONTAINERSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=343,
-  serialized_end=403,
+  serialized_start=349,
+  serialized_end=409,
 )
 
 
 _GETCONTAINERTYPESREQUEST = _descriptor.Descriptor(
   name='GetContainerTypesRequest',
-  full_name='mruv.GetContainerTypesRequest',
+  full_name='mruv.items.GetContainerTypesRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='limit', full_name='mruv.GetContainerTypesRequest.limit', index=0,
+      name='limit', full_name='mruv.items.GetContainerTypesRequest.limit', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -243,20 +243,20 @@ _GETCONTAINERTYPESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=405,
-  serialized_end=446,
+  serialized_start=411,
+  serialized_end=452,
 )
 
 
 _GETCONTAINERTYPESRESPONSE = _descriptor.Descriptor(
   name='GetContainerTypesResponse',
-  full_name='mruv.GetContainerTypesResponse',
+  full_name='mruv.items.GetContainerTypesResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='container_types', full_name='mruv.GetContainerTypesResponse.container_types', index=0,
+      name='container_types', full_name='mruv.items.GetContainerTypesResponse.container_types', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -274,34 +274,34 @@ _GETCONTAINERTYPESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=448,
-  serialized_end=521,
+  serialized_start=454,
+  serialized_end=527,
 )
 
 
 _PUTITEMREQUEST = _descriptor.Descriptor(
   name='PutItemRequest',
-  full_name='mruv.PutItemRequest',
+  full_name='mruv.items.PutItemRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='container_id', full_name='mruv.PutItemRequest.container_id', index=0,
+      name='container_id', full_name='mruv.items.PutItemRequest.container_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='item_id', full_name='mruv.PutItemRequest.item_id', index=1,
+      name='item_id', full_name='mruv.items.PutItemRequest.item_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='slot', full_name='mruv.PutItemRequest.slot', index=2,
+      name='slot', full_name='mruv.items.PutItemRequest.slot', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -319,23 +319,23 @@ _PUTITEMREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
     _descriptor.OneofDescriptor(
-      name='where', full_name='mruv.PutItemRequest.where',
+      name='where', full_name='mruv.items.PutItemRequest.where',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=523,
-  serialized_end=603,
+  serialized_start=529,
+  serialized_end=609,
 )
 
 
 _PUTITEMRESPONSE = _descriptor.Descriptor(
   name='PutItemResponse',
-  full_name='mruv.PutItemResponse',
+  full_name='mruv.items.PutItemResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='inside_item', full_name='mruv.PutItemResponse.inside_item', index=0,
+      name='inside_item', full_name='mruv.items.PutItemResponse.inside_item', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -353,27 +353,27 @@ _PUTITEMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=605,
-  serialized_end=661,
+  serialized_start=611,
+  serialized_end=667,
 )
 
 
 _GETCONTAINERITEMSREQUEST = _descriptor.Descriptor(
   name='GetContainerItemsRequest',
-  full_name='mruv.GetContainerItemsRequest',
+  full_name='mruv.items.GetContainerItemsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='container_id', full_name='mruv.GetContainerItemsRequest.container_id', index=0,
+      name='container_id', full_name='mruv.items.GetContainerItemsRequest.container_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='limit', full_name='mruv.GetContainerItemsRequest.limit', index=1,
+      name='limit', full_name='mruv.items.GetContainerItemsRequest.limit', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -391,20 +391,20 @@ _GETCONTAINERITEMSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=663,
-  serialized_end=726,
+  serialized_start=669,
+  serialized_end=732,
 )
 
 
 _GETCONTAINERITEMSRESPONSE = _descriptor.Descriptor(
   name='GetContainerItemsResponse',
-  full_name='mruv.GetContainerItemsResponse',
+  full_name='mruv.items.GetContainerItemsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='items', full_name='mruv.GetContainerItemsResponse.items', index=0,
+      name='items', full_name='mruv.items.GetContainerItemsResponse.items', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -422,27 +422,27 @@ _GETCONTAINERITEMSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=728,
-  serialized_end=788,
+  serialized_start=734,
+  serialized_end=794,
 )
 
 
 _PULLITEMREQUEST = _descriptor.Descriptor(
   name='PullItemRequest',
-  full_name='mruv.PullItemRequest',
+  full_name='mruv.items.PullItemRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='container_id', full_name='mruv.PullItemRequest.container_id', index=0,
+      name='container_id', full_name='mruv.items.PullItemRequest.container_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='item_id', full_name='mruv.PullItemRequest.item_id', index=1,
+      name='item_id', full_name='mruv.items.PullItemRequest.item_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -460,27 +460,27 @@ _PULLITEMREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=790,
-  serialized_end=846,
+  serialized_start=796,
+  serialized_end=852,
 )
 
 
 _SORTITEMSREQUEST = _descriptor.Descriptor(
   name='SortItemsRequest',
-  full_name='mruv.SortItemsRequest',
+  full_name='mruv.items.SortItemsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='container_id', full_name='mruv.SortItemsRequest.container_id', index=0,
+      name='container_id', full_name='mruv.items.SortItemsRequest.container_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='sort_by', full_name='mruv.SortItemsRequest.sort_by', index=1,
+      name='sort_by', full_name='mruv.items.SortItemsRequest.sort_by', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -498,20 +498,20 @@ _SORTITEMSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=848,
-  serialized_end=924,
+  serialized_start=854,
+  serialized_end=930,
 )
 
 
 _SORTITEMSRESPONSE = _descriptor.Descriptor(
   name='SortItemsResponse',
-  full_name='mruv.SortItemsResponse',
+  full_name='mruv.items.SortItemsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='container', full_name='mruv.SortItemsResponse.container', index=0,
+      name='container', full_name='mruv.items.SortItemsResponse.container', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -529,34 +529,34 @@ _SORTITEMSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=926,
-  serialized_end=981,
+  serialized_start=932,
+  serialized_end=987,
 )
 
 
 _GETNEARESTITEMSREQUEST = _descriptor.Descriptor(
   name='GetNearestItemsRequest',
-  full_name='mruv.GetNearestItemsRequest',
+  full_name='mruv.items.GetNearestItemsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='position', full_name='mruv.GetNearestItemsRequest.position', index=0,
+      name='position', full_name='mruv.items.GetNearestItemsRequest.position', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='container_id', full_name='mruv.GetNearestItemsRequest.container_id', index=1,
+      name='container_id', full_name='mruv.items.GetNearestItemsRequest.container_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='distance_limit', full_name='mruv.GetNearestItemsRequest.distance_limit', index=2,
+      name='distance_limit', full_name='mruv.items.GetNearestItemsRequest.distance_limit', index=2,
       number=3, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -574,20 +574,20 @@ _GETNEARESTITEMSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=983,
-  serialized_end=1087,
+  serialized_start=989,
+  serialized_end=1093,
 )
 
 
 _GETNEARESTITEMSRESPONSE = _descriptor.Descriptor(
   name='GetNearestItemsResponse',
-  full_name='mruv.GetNearestItemsResponse',
+  full_name='mruv.items.GetNearestItemsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='item', full_name='mruv.GetNearestItemsResponse.item', index=0,
+      name='item', full_name='mruv.items.GetNearestItemsResponse.item', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -605,20 +605,20 @@ _GETNEARESTITEMSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1089,
-  serialized_end=1146,
+  serialized_start=1095,
+  serialized_end=1152,
 )
 
 
 _USEITEMREQUEST = _descriptor.Descriptor(
   name='UseItemRequest',
-  full_name='mruv.UseItemRequest',
+  full_name='mruv.items.UseItemRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='item_id', full_name='mruv.UseItemRequest.item_id', index=0,
+      name='item_id', full_name='mruv.items.UseItemRequest.item_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -636,20 +636,20 @@ _USEITEMREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1148,
-  serialized_end=1181,
+  serialized_start=1154,
+  serialized_end=1187,
 )
 
 
 _USEITEMRESPONSE = _descriptor.Descriptor(
   name='UseItemResponse',
-  full_name='mruv.UseItemResponse',
+  full_name='mruv.items.UseItemResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='success', full_name='mruv.UseItemResponse.success', index=0,
+      name='success', full_name='mruv.items.UseItemResponse.success', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -667,8 +667,8 @@ _USEITEMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1183,
-  serialized_end=1217,
+  serialized_start=1189,
+  serialized_end=1223,
 )
 
 _GETITEMSRESPONSE.fields_by_name['items'].message_type = items_dot_items__model__pb2._ITEM
@@ -708,133 +708,133 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 GetItemsRequest = _reflection.GeneratedProtocolMessageType('GetItemsRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETITEMSREQUEST,
   '__module__' : 'items.items_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetItemsRequest)
+  # @@protoc_insertion_point(class_scope:mruv.items.GetItemsRequest)
   })
 _sym_db.RegisterMessage(GetItemsRequest)
 
 GetItemsResponse = _reflection.GeneratedProtocolMessageType('GetItemsResponse', (_message.Message,), {
   'DESCRIPTOR' : _GETITEMSRESPONSE,
   '__module__' : 'items.items_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetItemsResponse)
+  # @@protoc_insertion_point(class_scope:mruv.items.GetItemsResponse)
   })
 _sym_db.RegisterMessage(GetItemsResponse)
 
 GetItemTypesRequest = _reflection.GeneratedProtocolMessageType('GetItemTypesRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETITEMTYPESREQUEST,
   '__module__' : 'items.items_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetItemTypesRequest)
+  # @@protoc_insertion_point(class_scope:mruv.items.GetItemTypesRequest)
   })
 _sym_db.RegisterMessage(GetItemTypesRequest)
 
 GetItemTypesResponse = _reflection.GeneratedProtocolMessageType('GetItemTypesResponse', (_message.Message,), {
   'DESCRIPTOR' : _GETITEMTYPESRESPONSE,
   '__module__' : 'items.items_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetItemTypesResponse)
+  # @@protoc_insertion_point(class_scope:mruv.items.GetItemTypesResponse)
   })
 _sym_db.RegisterMessage(GetItemTypesResponse)
 
 GetContainersRequest = _reflection.GeneratedProtocolMessageType('GetContainersRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETCONTAINERSREQUEST,
   '__module__' : 'items.items_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetContainersRequest)
+  # @@protoc_insertion_point(class_scope:mruv.items.GetContainersRequest)
   })
 _sym_db.RegisterMessage(GetContainersRequest)
 
 GetContainersResponse = _reflection.GeneratedProtocolMessageType('GetContainersResponse', (_message.Message,), {
   'DESCRIPTOR' : _GETCONTAINERSRESPONSE,
   '__module__' : 'items.items_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetContainersResponse)
+  # @@protoc_insertion_point(class_scope:mruv.items.GetContainersResponse)
   })
 _sym_db.RegisterMessage(GetContainersResponse)
 
 GetContainerTypesRequest = _reflection.GeneratedProtocolMessageType('GetContainerTypesRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETCONTAINERTYPESREQUEST,
   '__module__' : 'items.items_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetContainerTypesRequest)
+  # @@protoc_insertion_point(class_scope:mruv.items.GetContainerTypesRequest)
   })
 _sym_db.RegisterMessage(GetContainerTypesRequest)
 
 GetContainerTypesResponse = _reflection.GeneratedProtocolMessageType('GetContainerTypesResponse', (_message.Message,), {
   'DESCRIPTOR' : _GETCONTAINERTYPESRESPONSE,
   '__module__' : 'items.items_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetContainerTypesResponse)
+  # @@protoc_insertion_point(class_scope:mruv.items.GetContainerTypesResponse)
   })
 _sym_db.RegisterMessage(GetContainerTypesResponse)
 
 PutItemRequest = _reflection.GeneratedProtocolMessageType('PutItemRequest', (_message.Message,), {
   'DESCRIPTOR' : _PUTITEMREQUEST,
   '__module__' : 'items.items_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.PutItemRequest)
+  # @@protoc_insertion_point(class_scope:mruv.items.PutItemRequest)
   })
 _sym_db.RegisterMessage(PutItemRequest)
 
 PutItemResponse = _reflection.GeneratedProtocolMessageType('PutItemResponse', (_message.Message,), {
   'DESCRIPTOR' : _PUTITEMRESPONSE,
   '__module__' : 'items.items_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.PutItemResponse)
+  # @@protoc_insertion_point(class_scope:mruv.items.PutItemResponse)
   })
 _sym_db.RegisterMessage(PutItemResponse)
 
 GetContainerItemsRequest = _reflection.GeneratedProtocolMessageType('GetContainerItemsRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETCONTAINERITEMSREQUEST,
   '__module__' : 'items.items_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetContainerItemsRequest)
+  # @@protoc_insertion_point(class_scope:mruv.items.GetContainerItemsRequest)
   })
 _sym_db.RegisterMessage(GetContainerItemsRequest)
 
 GetContainerItemsResponse = _reflection.GeneratedProtocolMessageType('GetContainerItemsResponse', (_message.Message,), {
   'DESCRIPTOR' : _GETCONTAINERITEMSRESPONSE,
   '__module__' : 'items.items_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetContainerItemsResponse)
+  # @@protoc_insertion_point(class_scope:mruv.items.GetContainerItemsResponse)
   })
 _sym_db.RegisterMessage(GetContainerItemsResponse)
 
 PullItemRequest = _reflection.GeneratedProtocolMessageType('PullItemRequest', (_message.Message,), {
   'DESCRIPTOR' : _PULLITEMREQUEST,
   '__module__' : 'items.items_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.PullItemRequest)
+  # @@protoc_insertion_point(class_scope:mruv.items.PullItemRequest)
   })
 _sym_db.RegisterMessage(PullItemRequest)
 
 SortItemsRequest = _reflection.GeneratedProtocolMessageType('SortItemsRequest', (_message.Message,), {
   'DESCRIPTOR' : _SORTITEMSREQUEST,
   '__module__' : 'items.items_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.SortItemsRequest)
+  # @@protoc_insertion_point(class_scope:mruv.items.SortItemsRequest)
   })
 _sym_db.RegisterMessage(SortItemsRequest)
 
 SortItemsResponse = _reflection.GeneratedProtocolMessageType('SortItemsResponse', (_message.Message,), {
   'DESCRIPTOR' : _SORTITEMSRESPONSE,
   '__module__' : 'items.items_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.SortItemsResponse)
+  # @@protoc_insertion_point(class_scope:mruv.items.SortItemsResponse)
   })
 _sym_db.RegisterMessage(SortItemsResponse)
 
 GetNearestItemsRequest = _reflection.GeneratedProtocolMessageType('GetNearestItemsRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETNEARESTITEMSREQUEST,
   '__module__' : 'items.items_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetNearestItemsRequest)
+  # @@protoc_insertion_point(class_scope:mruv.items.GetNearestItemsRequest)
   })
 _sym_db.RegisterMessage(GetNearestItemsRequest)
 
 GetNearestItemsResponse = _reflection.GeneratedProtocolMessageType('GetNearestItemsResponse', (_message.Message,), {
   'DESCRIPTOR' : _GETNEARESTITEMSRESPONSE,
   '__module__' : 'items.items_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetNearestItemsResponse)
+  # @@protoc_insertion_point(class_scope:mruv.items.GetNearestItemsResponse)
   })
 _sym_db.RegisterMessage(GetNearestItemsResponse)
 
 UseItemRequest = _reflection.GeneratedProtocolMessageType('UseItemRequest', (_message.Message,), {
   'DESCRIPTOR' : _USEITEMREQUEST,
   '__module__' : 'items.items_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.UseItemRequest)
+  # @@protoc_insertion_point(class_scope:mruv.items.UseItemRequest)
   })
 _sym_db.RegisterMessage(UseItemRequest)
 
 UseItemResponse = _reflection.GeneratedProtocolMessageType('UseItemResponse', (_message.Message,), {
   'DESCRIPTOR' : _USEITEMRESPONSE,
   '__module__' : 'items.items_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.UseItemResponse)
+  # @@protoc_insertion_point(class_scope:mruv.items.UseItemResponse)
   })
 _sym_db.RegisterMessage(UseItemResponse)
 
@@ -843,16 +843,16 @@ DESCRIPTOR._options = None
 
 _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   name='MruVItemService',
-  full_name='mruv.MruVItemService',
+  full_name='mruv.items.MruVItemService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1220,
-  serialized_end=3512,
+  serialized_start=1226,
+  serialized_end=3633,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateItem',
-    full_name='mruv.MruVItemService.CreateItem',
+    full_name='mruv.items.MruVItemService.CreateItem',
     index=0,
     containing_service=None,
     input_type=items_dot_items__model__pb2._ITEM,
@@ -861,7 +861,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetItem',
-    full_name='mruv.MruVItemService.GetItem',
+    full_name='mruv.items.MruVItemService.GetItem',
     index=1,
     containing_service=None,
     input_type=items_dot_items__model__pb2._ITEMID,
@@ -870,7 +870,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='DeleteItem',
-    full_name='mruv.MruVItemService.DeleteItem',
+    full_name='mruv.items.MruVItemService.DeleteItem',
     index=2,
     containing_service=None,
     input_type=items_dot_items__model__pb2._ITEMID,
@@ -879,7 +879,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetItems',
-    full_name='mruv.MruVItemService.GetItems',
+    full_name='mruv.items.MruVItemService.GetItems',
     index=3,
     containing_service=None,
     input_type=_GETITEMSREQUEST,
@@ -888,7 +888,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='CreateItemType',
-    full_name='mruv.MruVItemService.CreateItemType',
+    full_name='mruv.items.MruVItemService.CreateItemType',
     index=4,
     containing_service=None,
     input_type=items_dot_items__model__pb2._ITEMTYPE,
@@ -897,7 +897,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetItemType',
-    full_name='mruv.MruVItemService.GetItemType',
+    full_name='mruv.items.MruVItemService.GetItemType',
     index=5,
     containing_service=None,
     input_type=items_dot_items__model__pb2._ITEMTYPEID,
@@ -906,7 +906,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='DeleteItemType',
-    full_name='mruv.MruVItemService.DeleteItemType',
+    full_name='mruv.items.MruVItemService.DeleteItemType',
     index=6,
     containing_service=None,
     input_type=items_dot_items__model__pb2._ITEMTYPEID,
@@ -915,7 +915,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetItemTypes',
-    full_name='mruv.MruVItemService.GetItemTypes',
+    full_name='mruv.items.MruVItemService.GetItemTypes',
     index=7,
     containing_service=None,
     input_type=_GETITEMTYPESREQUEST,
@@ -924,7 +924,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='CreateContainer',
-    full_name='mruv.MruVItemService.CreateContainer',
+    full_name='mruv.items.MruVItemService.CreateContainer',
     index=8,
     containing_service=None,
     input_type=items_dot_items__model__pb2._CONTAINER,
@@ -933,7 +933,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetContainer',
-    full_name='mruv.MruVItemService.GetContainer',
+    full_name='mruv.items.MruVItemService.GetContainer',
     index=9,
     containing_service=None,
     input_type=items_dot_items__model__pb2._CONTAINERID,
@@ -942,7 +942,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='DeleteContainer',
-    full_name='mruv.MruVItemService.DeleteContainer',
+    full_name='mruv.items.MruVItemService.DeleteContainer',
     index=10,
     containing_service=None,
     input_type=items_dot_items__model__pb2._CONTAINERID,
@@ -951,7 +951,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetContainers',
-    full_name='mruv.MruVItemService.GetContainers',
+    full_name='mruv.items.MruVItemService.GetContainers',
     index=11,
     containing_service=None,
     input_type=_GETCONTAINERSREQUEST,
@@ -960,7 +960,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='CreateContainerType',
-    full_name='mruv.MruVItemService.CreateContainerType',
+    full_name='mruv.items.MruVItemService.CreateContainerType',
     index=12,
     containing_service=None,
     input_type=items_dot_items__model__pb2._CONTAINERTYPE,
@@ -969,7 +969,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetContainerType',
-    full_name='mruv.MruVItemService.GetContainerType',
+    full_name='mruv.items.MruVItemService.GetContainerType',
     index=13,
     containing_service=None,
     input_type=items_dot_items__model__pb2._CONTAINERTYPEID,
@@ -978,7 +978,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='DeleteContainerType',
-    full_name='mruv.MruVItemService.DeleteContainerType',
+    full_name='mruv.items.MruVItemService.DeleteContainerType',
     index=14,
     containing_service=None,
     input_type=items_dot_items__model__pb2._CONTAINERTYPEID,
@@ -987,7 +987,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetContainerTypes',
-    full_name='mruv.MruVItemService.GetContainerTypes',
+    full_name='mruv.items.MruVItemService.GetContainerTypes',
     index=15,
     containing_service=None,
     input_type=_GETCONTAINERTYPESREQUEST,
@@ -996,7 +996,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetContainerItems',
-    full_name='mruv.MruVItemService.GetContainerItems',
+    full_name='mruv.items.MruVItemService.GetContainerItems',
     index=16,
     containing_service=None,
     input_type=_GETCONTAINERITEMSREQUEST,
@@ -1005,7 +1005,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='PullItem',
-    full_name='mruv.MruVItemService.PullItem',
+    full_name='mruv.items.MruVItemService.PullItem',
     index=17,
     containing_service=None,
     input_type=_PULLITEMREQUEST,
@@ -1014,7 +1014,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='PutItem',
-    full_name='mruv.MruVItemService.PutItem',
+    full_name='mruv.items.MruVItemService.PutItem',
     index=18,
     containing_service=None,
     input_type=_PUTITEMREQUEST,
@@ -1023,7 +1023,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='SortItems',
-    full_name='mruv.MruVItemService.SortItems',
+    full_name='mruv.items.MruVItemService.SortItems',
     index=19,
     containing_service=None,
     input_type=_SORTITEMSREQUEST,
@@ -1032,7 +1032,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetNearestItems',
-    full_name='mruv.MruVItemService.GetNearestItems',
+    full_name='mruv.items.MruVItemService.GetNearestItems',
     index=20,
     containing_service=None,
     input_type=_GETNEARESTITEMSREQUEST,
@@ -1041,7 +1041,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='UseItem',
-    full_name='mruv.MruVItemService.UseItem',
+    full_name='mruv.items.MruVItemService.UseItem',
     index=21,
     containing_service=None,
     input_type=_USEITEMREQUEST,
@@ -1050,7 +1050,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetServiceStatus',
-    full_name='mruv.MruVItemService.GetServiceStatus',
+    full_name='mruv.items.MruVItemService.GetServiceStatus',
     index=22,
     containing_service=None,
     input_type=common_dot_health__pb2._SERVICESTATUSREQUEST,
@@ -1059,7 +1059,7 @@ _MRUVITEMSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetServiceVersion',
-    full_name='mruv.MruVItemService.GetServiceVersion',
+    full_name='mruv.items.MruVItemService.GetServiceVersion',
     index=23,
     containing_service=None,
     input_type=common_dot_health__pb2._VERSIONREQUEST,

@@ -18,10 +18,10 @@ from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='texturestudio/texturestudio_manage.proto',
-  package='texture_studio',
+  package='mruv.texture_studio',
   syntax='proto3',
   serialized_options=_b('Z+github.com/MruV-RP/mruv-pb-go/texturestudio'),
-  serialized_pb=_b('\n(texturestudio/texturestudio_manage.proto\x12\x0etexture_studio\x1a\x1cgoogle/api/annotations.proto\"\'\n\x13\x43reateServerRequest\x12\x10\n\x08owner_id\x18\x01 \x01(\r\"0\n\x14\x43reateServerResponse\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04port\x18\x02 \x01(\r\"\x13\n\x11GetServersRequest\" \n\x12GetServersResponse\x12\n\n\x02id\x18\x01 \x03(\r\"\x11\n\x0fMyServerRequest\"\x1e\n\x10MyServerResponse\x12\n\n\x02id\x18\x01 \x01(\r\"?\n\x18TransferOwnershipRequest\x12\x11\n\tserver_id\x18\x01 \x01(\r\x12\x10\n\x08owner_id\x18\x02 \x01(\r\"\x1b\n\x19TransferOwnershipResponse\"!\n\x13\x44\x65leteServerRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x16\n\x14\x44\x65leteServerResponse2\xa6\x05\n\x1bTextureStudioManagerService\x12|\n\x0c\x43reateServer\x12#.texture_studio.CreateServerRequest\x1a$.texture_studio.CreateServerResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x19/v1/texturestudio/servers\x12v\n\nGetServers\x12!.texture_studio.GetServersRequest\x1a\".texture_studio.GetServersResponse\"!\x82\xd3\xe4\x93\x02\x1b\x12\x19/v1/texturestudio/servers\x12s\n\x08MyServer\x12\x1f.texture_studio.MyServerRequest\x1a .texture_studio.MyServerResponse\"$\x82\xd3\xe4\x93\x02\x1e\x12\x1c/v1/texturestudio/servers/my\x12\x97\x01\n\x11TransferOwnership\x12(.texture_studio.TransferOwnershipRequest\x1a).texture_studio.TransferOwnershipResponse\"-\x82\xd3\xe4\x93\x02\'2%/v1/texturestudio/servers/{server_id}\x12\x81\x01\n\x0c\x44\x65leteServer\x12#.texture_studio.DeleteServerRequest\x1a$.texture_studio.DeleteServerResponse\"&\x82\xd3\xe4\x93\x02 *\x1e/v1/texturestudio/servers/{id}B-Z+github.com/MruV-RP/mruv-pb-go/texturestudiob\x06proto3')
+  serialized_pb=_b('\n(texturestudio/texturestudio_manage.proto\x12\x13mruv.texture_studio\x1a\x1cgoogle/api/annotations.proto\"\'\n\x13\x43reateServerRequest\x12\x10\n\x08owner_id\x18\x01 \x01(\r\"0\n\x14\x43reateServerResponse\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04port\x18\x02 \x01(\r\"\x13\n\x11GetServersRequest\" \n\x12GetServersResponse\x12\n\n\x02id\x18\x01 \x03(\r\"\x11\n\x0fMyServerRequest\"\x1e\n\x10MyServerResponse\x12\n\n\x02id\x18\x01 \x01(\r\"?\n\x18TransferOwnershipRequest\x12\x11\n\tserver_id\x18\x01 \x01(\r\x12\x10\n\x08owner_id\x18\x02 \x01(\r\"\x1b\n\x19TransferOwnershipResponse\"!\n\x13\x44\x65leteServerRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x16\n\x14\x44\x65leteServerResponse2\xda\x05\n\x1bTextureStudioManagerService\x12\x86\x01\n\x0c\x43reateServer\x12(.mruv.texture_studio.CreateServerRequest\x1a).mruv.texture_studio.CreateServerResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x19/v1/texturestudio/servers\x12\x80\x01\n\nGetServers\x12&.mruv.texture_studio.GetServersRequest\x1a\'.mruv.texture_studio.GetServersResponse\"!\x82\xd3\xe4\x93\x02\x1b\x12\x19/v1/texturestudio/servers\x12}\n\x08MyServer\x12$.mruv.texture_studio.MyServerRequest\x1a%.mruv.texture_studio.MyServerResponse\"$\x82\xd3\xe4\x93\x02\x1e\x12\x1c/v1/texturestudio/servers/my\x12\xa1\x01\n\x11TransferOwnership\x12-.mruv.texture_studio.TransferOwnershipRequest\x1a..mruv.texture_studio.TransferOwnershipResponse\"-\x82\xd3\xe4\x93\x02\'2%/v1/texturestudio/servers/{server_id}\x12\x8b\x01\n\x0c\x44\x65leteServer\x12(.mruv.texture_studio.DeleteServerRequest\x1a).mruv.texture_studio.DeleteServerResponse\"&\x82\xd3\xe4\x93\x02 *\x1e/v1/texturestudio/servers/{id}B-Z+github.com/MruV-RP/mruv-pb-go/texturestudiob\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -30,13 +30,13 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _CREATESERVERREQUEST = _descriptor.Descriptor(
   name='CreateServerRequest',
-  full_name='texture_studio.CreateServerRequest',
+  full_name='mruv.texture_studio.CreateServerRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='owner_id', full_name='texture_studio.CreateServerRequest.owner_id', index=0,
+      name='owner_id', full_name='mruv.texture_studio.CreateServerRequest.owner_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -54,27 +54,27 @@ _CREATESERVERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=90,
-  serialized_end=129,
+  serialized_start=95,
+  serialized_end=134,
 )
 
 
 _CREATESERVERRESPONSE = _descriptor.Descriptor(
   name='CreateServerResponse',
-  full_name='texture_studio.CreateServerResponse',
+  full_name='mruv.texture_studio.CreateServerResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='texture_studio.CreateServerResponse.id', index=0,
+      name='id', full_name='mruv.texture_studio.CreateServerResponse.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='port', full_name='texture_studio.CreateServerResponse.port', index=1,
+      name='port', full_name='mruv.texture_studio.CreateServerResponse.port', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -92,14 +92,14 @@ _CREATESERVERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=131,
-  serialized_end=179,
+  serialized_start=136,
+  serialized_end=184,
 )
 
 
 _GETSERVERSREQUEST = _descriptor.Descriptor(
   name='GetServersRequest',
-  full_name='texture_studio.GetServersRequest',
+  full_name='mruv.texture_studio.GetServersRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -116,20 +116,20 @@ _GETSERVERSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=181,
-  serialized_end=200,
+  serialized_start=186,
+  serialized_end=205,
 )
 
 
 _GETSERVERSRESPONSE = _descriptor.Descriptor(
   name='GetServersResponse',
-  full_name='texture_studio.GetServersResponse',
+  full_name='mruv.texture_studio.GetServersResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='texture_studio.GetServersResponse.id', index=0,
+      name='id', full_name='mruv.texture_studio.GetServersResponse.id', index=0,
       number=1, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -147,14 +147,14 @@ _GETSERVERSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=202,
-  serialized_end=234,
+  serialized_start=207,
+  serialized_end=239,
 )
 
 
 _MYSERVERREQUEST = _descriptor.Descriptor(
   name='MyServerRequest',
-  full_name='texture_studio.MyServerRequest',
+  full_name='mruv.texture_studio.MyServerRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -171,20 +171,20 @@ _MYSERVERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=236,
-  serialized_end=253,
+  serialized_start=241,
+  serialized_end=258,
 )
 
 
 _MYSERVERRESPONSE = _descriptor.Descriptor(
   name='MyServerResponse',
-  full_name='texture_studio.MyServerResponse',
+  full_name='mruv.texture_studio.MyServerResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='texture_studio.MyServerResponse.id', index=0,
+      name='id', full_name='mruv.texture_studio.MyServerResponse.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -202,27 +202,27 @@ _MYSERVERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=255,
-  serialized_end=285,
+  serialized_start=260,
+  serialized_end=290,
 )
 
 
 _TRANSFEROWNERSHIPREQUEST = _descriptor.Descriptor(
   name='TransferOwnershipRequest',
-  full_name='texture_studio.TransferOwnershipRequest',
+  full_name='mruv.texture_studio.TransferOwnershipRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='server_id', full_name='texture_studio.TransferOwnershipRequest.server_id', index=0,
+      name='server_id', full_name='mruv.texture_studio.TransferOwnershipRequest.server_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='owner_id', full_name='texture_studio.TransferOwnershipRequest.owner_id', index=1,
+      name='owner_id', full_name='mruv.texture_studio.TransferOwnershipRequest.owner_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -240,14 +240,14 @@ _TRANSFEROWNERSHIPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=287,
-  serialized_end=350,
+  serialized_start=292,
+  serialized_end=355,
 )
 
 
 _TRANSFEROWNERSHIPRESPONSE = _descriptor.Descriptor(
   name='TransferOwnershipResponse',
-  full_name='texture_studio.TransferOwnershipResponse',
+  full_name='mruv.texture_studio.TransferOwnershipResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -264,20 +264,20 @@ _TRANSFEROWNERSHIPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=352,
-  serialized_end=379,
+  serialized_start=357,
+  serialized_end=384,
 )
 
 
 _DELETESERVERREQUEST = _descriptor.Descriptor(
   name='DeleteServerRequest',
-  full_name='texture_studio.DeleteServerRequest',
+  full_name='mruv.texture_studio.DeleteServerRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='texture_studio.DeleteServerRequest.id', index=0,
+      name='id', full_name='mruv.texture_studio.DeleteServerRequest.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -295,14 +295,14 @@ _DELETESERVERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=381,
-  serialized_end=414,
+  serialized_start=386,
+  serialized_end=419,
 )
 
 
 _DELETESERVERRESPONSE = _descriptor.Descriptor(
   name='DeleteServerResponse',
-  full_name='texture_studio.DeleteServerResponse',
+  full_name='mruv.texture_studio.DeleteServerResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -319,8 +319,8 @@ _DELETESERVERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=416,
-  serialized_end=438,
+  serialized_start=421,
+  serialized_end=443,
 )
 
 DESCRIPTOR.message_types_by_name['CreateServerRequest'] = _CREATESERVERREQUEST
@@ -338,70 +338,70 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 CreateServerRequest = _reflection.GeneratedProtocolMessageType('CreateServerRequest', (_message.Message,), {
   'DESCRIPTOR' : _CREATESERVERREQUEST,
   '__module__' : 'texturestudio.texturestudio_manage_pb2'
-  # @@protoc_insertion_point(class_scope:texture_studio.CreateServerRequest)
+  # @@protoc_insertion_point(class_scope:mruv.texture_studio.CreateServerRequest)
   })
 _sym_db.RegisterMessage(CreateServerRequest)
 
 CreateServerResponse = _reflection.GeneratedProtocolMessageType('CreateServerResponse', (_message.Message,), {
   'DESCRIPTOR' : _CREATESERVERRESPONSE,
   '__module__' : 'texturestudio.texturestudio_manage_pb2'
-  # @@protoc_insertion_point(class_scope:texture_studio.CreateServerResponse)
+  # @@protoc_insertion_point(class_scope:mruv.texture_studio.CreateServerResponse)
   })
 _sym_db.RegisterMessage(CreateServerResponse)
 
 GetServersRequest = _reflection.GeneratedProtocolMessageType('GetServersRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETSERVERSREQUEST,
   '__module__' : 'texturestudio.texturestudio_manage_pb2'
-  # @@protoc_insertion_point(class_scope:texture_studio.GetServersRequest)
+  # @@protoc_insertion_point(class_scope:mruv.texture_studio.GetServersRequest)
   })
 _sym_db.RegisterMessage(GetServersRequest)
 
 GetServersResponse = _reflection.GeneratedProtocolMessageType('GetServersResponse', (_message.Message,), {
   'DESCRIPTOR' : _GETSERVERSRESPONSE,
   '__module__' : 'texturestudio.texturestudio_manage_pb2'
-  # @@protoc_insertion_point(class_scope:texture_studio.GetServersResponse)
+  # @@protoc_insertion_point(class_scope:mruv.texture_studio.GetServersResponse)
   })
 _sym_db.RegisterMessage(GetServersResponse)
 
 MyServerRequest = _reflection.GeneratedProtocolMessageType('MyServerRequest', (_message.Message,), {
   'DESCRIPTOR' : _MYSERVERREQUEST,
   '__module__' : 'texturestudio.texturestudio_manage_pb2'
-  # @@protoc_insertion_point(class_scope:texture_studio.MyServerRequest)
+  # @@protoc_insertion_point(class_scope:mruv.texture_studio.MyServerRequest)
   })
 _sym_db.RegisterMessage(MyServerRequest)
 
 MyServerResponse = _reflection.GeneratedProtocolMessageType('MyServerResponse', (_message.Message,), {
   'DESCRIPTOR' : _MYSERVERRESPONSE,
   '__module__' : 'texturestudio.texturestudio_manage_pb2'
-  # @@protoc_insertion_point(class_scope:texture_studio.MyServerResponse)
+  # @@protoc_insertion_point(class_scope:mruv.texture_studio.MyServerResponse)
   })
 _sym_db.RegisterMessage(MyServerResponse)
 
 TransferOwnershipRequest = _reflection.GeneratedProtocolMessageType('TransferOwnershipRequest', (_message.Message,), {
   'DESCRIPTOR' : _TRANSFEROWNERSHIPREQUEST,
   '__module__' : 'texturestudio.texturestudio_manage_pb2'
-  # @@protoc_insertion_point(class_scope:texture_studio.TransferOwnershipRequest)
+  # @@protoc_insertion_point(class_scope:mruv.texture_studio.TransferOwnershipRequest)
   })
 _sym_db.RegisterMessage(TransferOwnershipRequest)
 
 TransferOwnershipResponse = _reflection.GeneratedProtocolMessageType('TransferOwnershipResponse', (_message.Message,), {
   'DESCRIPTOR' : _TRANSFEROWNERSHIPRESPONSE,
   '__module__' : 'texturestudio.texturestudio_manage_pb2'
-  # @@protoc_insertion_point(class_scope:texture_studio.TransferOwnershipResponse)
+  # @@protoc_insertion_point(class_scope:mruv.texture_studio.TransferOwnershipResponse)
   })
 _sym_db.RegisterMessage(TransferOwnershipResponse)
 
 DeleteServerRequest = _reflection.GeneratedProtocolMessageType('DeleteServerRequest', (_message.Message,), {
   'DESCRIPTOR' : _DELETESERVERREQUEST,
   '__module__' : 'texturestudio.texturestudio_manage_pb2'
-  # @@protoc_insertion_point(class_scope:texture_studio.DeleteServerRequest)
+  # @@protoc_insertion_point(class_scope:mruv.texture_studio.DeleteServerRequest)
   })
 _sym_db.RegisterMessage(DeleteServerRequest)
 
 DeleteServerResponse = _reflection.GeneratedProtocolMessageType('DeleteServerResponse', (_message.Message,), {
   'DESCRIPTOR' : _DELETESERVERRESPONSE,
   '__module__' : 'texturestudio.texturestudio_manage_pb2'
-  # @@protoc_insertion_point(class_scope:texture_studio.DeleteServerResponse)
+  # @@protoc_insertion_point(class_scope:mruv.texture_studio.DeleteServerResponse)
   })
 _sym_db.RegisterMessage(DeleteServerResponse)
 
@@ -410,16 +410,16 @@ DESCRIPTOR._options = None
 
 _TEXTURESTUDIOMANAGERSERVICE = _descriptor.ServiceDescriptor(
   name='TextureStudioManagerService',
-  full_name='texture_studio.TextureStudioManagerService',
+  full_name='mruv.texture_studio.TextureStudioManagerService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=441,
-  serialized_end=1119,
+  serialized_start=446,
+  serialized_end=1176,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateServer',
-    full_name='texture_studio.TextureStudioManagerService.CreateServer',
+    full_name='mruv.texture_studio.TextureStudioManagerService.CreateServer',
     index=0,
     containing_service=None,
     input_type=_CREATESERVERREQUEST,
@@ -428,7 +428,7 @@ _TEXTURESTUDIOMANAGERSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetServers',
-    full_name='texture_studio.TextureStudioManagerService.GetServers',
+    full_name='mruv.texture_studio.TextureStudioManagerService.GetServers',
     index=1,
     containing_service=None,
     input_type=_GETSERVERSREQUEST,
@@ -437,7 +437,7 @@ _TEXTURESTUDIOMANAGERSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='MyServer',
-    full_name='texture_studio.TextureStudioManagerService.MyServer',
+    full_name='mruv.texture_studio.TextureStudioManagerService.MyServer',
     index=2,
     containing_service=None,
     input_type=_MYSERVERREQUEST,
@@ -446,7 +446,7 @@ _TEXTURESTUDIOMANAGERSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='TransferOwnership',
-    full_name='texture_studio.TextureStudioManagerService.TransferOwnership',
+    full_name='mruv.texture_studio.TextureStudioManagerService.TransferOwnership',
     index=3,
     containing_service=None,
     input_type=_TRANSFEROWNERSHIPREQUEST,
@@ -455,7 +455,7 @@ _TEXTURESTUDIOMANAGERSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='DeleteServer',
-    full_name='texture_studio.TextureStudioManagerService.DeleteServer',
+    full_name='mruv.texture_studio.TextureStudioManagerService.DeleteServer',
     index=4,
     containing_service=None,
     input_type=_DELETESERVERREQUEST,

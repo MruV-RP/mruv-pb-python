@@ -14,161 +14,178 @@ class MruVPunishmentsServiceStub(object):
     Args:
       channel: A grpc.Channel.
     """
+    self.Punish = channel.unary_unary(
+        '/mruv.punishments.MruVPunishmentsService/Punish',
+        request_serializer=punishments_dot_punishments__pb2.PunishRequest.SerializeToString,
+        response_deserializer=punishments_dot_punishments__pb2.PunishResponse.FromString,
+        )
     self.Ban = channel.unary_unary(
-        '/mruv.economy.MruVPunishmentsService/Ban',
+        '/mruv.punishments.MruVPunishmentsService/Ban',
         request_serializer=punishments_dot_punishments__pb2.BanRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.BanResponse.FromString,
         )
     self.Block = channel.unary_unary(
-        '/mruv.economy.MruVPunishmentsService/Block',
+        '/mruv.punishments.MruVPunishmentsService/Block',
         request_serializer=punishments_dot_punishments__pb2.BlockRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.BlockResponse.FromString,
         )
     self.Warn = channel.unary_unary(
-        '/mruv.economy.MruVPunishmentsService/Warn',
+        '/mruv.punishments.MruVPunishmentsService/Warn',
         request_serializer=punishments_dot_punishments__pb2.WarnRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.WarnResponse.FromString,
         )
     self.AdminJail = channel.unary_unary(
-        '/mruv.economy.MruVPunishmentsService/AdminJail',
+        '/mruv.punishments.MruVPunishmentsService/AdminJail',
         request_serializer=punishments_dot_punishments__pb2.AdminJailRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.AdminJailResponse.FromString,
         )
     self.MuteGlobalChats = channel.unary_unary(
-        '/mruv.economy.MruVPunishmentsService/MuteGlobalChats',
+        '/mruv.punishments.MruVPunishmentsService/MuteGlobalChats',
         request_serializer=punishments_dot_punishments__pb2.MuteGlobalChatsRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.MuteGlobalChatsResponse.FromString,
         )
     self.UnBan = channel.unary_unary(
-        '/mruv.economy.MruVPunishmentsService/UnBan',
+        '/mruv.punishments.MruVPunishmentsService/UnBan',
         request_serializer=punishments_dot_punishments__pb2.UnBanRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.UnBanResponse.FromString,
         )
     self.UnBlock = channel.unary_unary(
-        '/mruv.economy.MruVPunishmentsService/UnBlock',
+        '/mruv.punishments.MruVPunishmentsService/UnBlock',
         request_serializer=punishments_dot_punishments__pb2.UnBlockRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.UnBlockResponse.FromString,
         )
     self.UnWarn = channel.unary_unary(
-        '/mruv.economy.MruVPunishmentsService/UnWarn',
+        '/mruv.punishments.MruVPunishmentsService/UnWarn',
         request_serializer=punishments_dot_punishments__pb2.UnWarnRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.UnWarnResponse.FromString,
         )
     self.UnAdminJail = channel.unary_unary(
-        '/mruv.economy.MruVPunishmentsService/UnAdminJail',
+        '/mruv.punishments.MruVPunishmentsService/UnAdminJail',
         request_serializer=punishments_dot_punishments__pb2.UnAdminJailRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.UnAdminJailResponse.FromString,
         )
     self.UnMuteGlobalChats = channel.unary_unary(
-        '/mruv.economy.MruVPunishmentsService/UnMuteGlobalChats',
+        '/mruv.punishments.MruVPunishmentsService/UnMuteGlobalChats',
         request_serializer=punishments_dot_punishments__pb2.UnMuteGlobalChatsRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.UnMuteGlobalChatsResponse.FromString,
         )
     self.GetPlayerBans = channel.unary_unary(
-        '/mruv.economy.MruVPunishmentsService/GetPlayerBans',
+        '/mruv.punishments.MruVPunishmentsService/GetPlayerBans',
         request_serializer=punishments_dot_punishments__pb2.GetPlayerBansRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.GetPlayerBansResponse.FromString,
         )
     self.GetPlayerWarns = channel.unary_unary(
-        '/mruv.economy.MruVPunishmentsService/GetPlayerWarns',
+        '/mruv.punishments.MruVPunishmentsService/GetPlayerWarns',
         request_serializer=punishments_dot_punishments__pb2.GetPlayerWarnsRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.GetPlayerWarnsResponse.FromString,
         )
     self.GetPlayerAdminJail = channel.unary_unary(
-        '/mruv.economy.MruVPunishmentsService/GetPlayerAdminJail',
+        '/mruv.punishments.MruVPunishmentsService/GetPlayerAdminJail',
         request_serializer=punishments_dot_punishments__pb2.GetPlayerAdminJailRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.GetPlayerAdminJailResponse.FromString,
         )
     self.GetBan = channel.unary_unary(
-        '/mruv.economy.MruVPunishmentsService/GetBan',
+        '/mruv.punishments.MruVPunishmentsService/GetBan',
         request_serializer=punishments_dot_punishments__pb2.GetBanRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.BanMessage.FromString,
         )
     self.GetWarn = channel.unary_unary(
-        '/mruv.economy.MruVPunishmentsService/GetWarn',
+        '/mruv.punishments.MruVPunishmentsService/GetWarn',
         request_serializer=punishments_dot_punishments__pb2.GetWarnRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.WarnMessage.FromString,
         )
     self.GetBlock = channel.unary_unary(
-        '/mruv.economy.MruVPunishmentsService/GetBlock',
+        '/mruv.punishments.MruVPunishmentsService/GetBlock',
         request_serializer=punishments_dot_punishments__pb2.GetBlockRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.BlockMessage.FromString,
         )
     self.IsPlayerBanned = channel.unary_unary(
-        '/mruv.economy.MruVPunishmentsService/IsPlayerBanned',
+        '/mruv.punishments.MruVPunishmentsService/IsPlayerBanned',
         request_serializer=punishments_dot_punishments__pb2.IsPlayerBannedRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.IsPlayerBannedResponse.FromString,
         )
     self.IsCharacterBlocked = channel.unary_unary(
-        '/mruv.economy.MruVPunishmentsService/IsCharacterBlocked',
+        '/mruv.punishments.MruVPunishmentsService/IsCharacterBlocked',
         request_serializer=punishments_dot_punishments__pb2.IsCharacterBlockedRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.IsCharacterBlockedResponse.FromString,
         )
     self.IsCharacterJailed = channel.unary_unary(
-        '/mruv.economy.MruVPunishmentsService/IsCharacterJailed',
+        '/mruv.punishments.MruVPunishmentsService/IsCharacterJailed',
         request_serializer=punishments_dot_punishments__pb2.IsCharacterJailedRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.IsCharacterJailedResponse.FromString,
         )
     self.WatchBans = channel.unary_stream(
-        '/mruv.economy.MruVPunishmentsService/WatchBans',
+        '/mruv.punishments.MruVPunishmentsService/WatchBans',
         request_serializer=punishments_dot_punishments__pb2.WatchBansRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.BanMessage.FromString,
         )
     self.WatchBlocks = channel.unary_stream(
-        '/mruv.economy.MruVPunishmentsService/WatchBlocks',
+        '/mruv.punishments.MruVPunishmentsService/WatchBlocks',
         request_serializer=punishments_dot_punishments__pb2.WatchBlocksRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.BlockMessage.FromString,
         )
     self.WatchWarns = channel.unary_stream(
-        '/mruv.economy.MruVPunishmentsService/WatchWarns',
+        '/mruv.punishments.MruVPunishmentsService/WatchWarns',
         request_serializer=punishments_dot_punishments__pb2.WatchWarnsRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.WarnMessage.FromString,
         )
     self.WatchAdminJails = channel.unary_stream(
-        '/mruv.economy.MruVPunishmentsService/WatchAdminJails',
+        '/mruv.punishments.MruVPunishmentsService/WatchAdminJails',
         request_serializer=punishments_dot_punishments__pb2.WatchAdminJailsRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.AdminJailMessage.FromString,
         )
     self.WatchUnBans = channel.unary_stream(
-        '/mruv.economy.MruVPunishmentsService/WatchUnBans',
+        '/mruv.punishments.MruVPunishmentsService/WatchUnBans',
         request_serializer=punishments_dot_punishments__pb2.WatchUnBansRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.UnBanMessage.FromString,
         )
     self.WatchUnBlocks = channel.unary_stream(
-        '/mruv.economy.MruVPunishmentsService/WatchUnBlocks',
+        '/mruv.punishments.MruVPunishmentsService/WatchUnBlocks',
         request_serializer=punishments_dot_punishments__pb2.WatchUnBlocksRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.UnBlockMessage.FromString,
         )
     self.WatchUnWarns = channel.unary_stream(
-        '/mruv.economy.MruVPunishmentsService/WatchUnWarns',
+        '/mruv.punishments.MruVPunishmentsService/WatchUnWarns',
         request_serializer=punishments_dot_punishments__pb2.WatchUnWarnsRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.UnWarnMessage.FromString,
         )
     self.WatchUnAdminJails = channel.unary_stream(
-        '/mruv.economy.MruVPunishmentsService/WatchUnAdminJails',
+        '/mruv.punishments.MruVPunishmentsService/WatchUnAdminJails',
         request_serializer=punishments_dot_punishments__pb2.WatchUnAdminJailsRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.UnAdminJailMessage.FromString,
         )
     self.WatchPlayerPunishments = channel.unary_stream(
-        '/mruv.economy.MruVPunishmentsService/WatchPlayerPunishments',
+        '/mruv.punishments.MruVPunishmentsService/WatchPlayerPunishments',
         request_serializer=punishments_dot_punishments__pb2.WatchPlayerPunishmentsRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.WatchPlayerPunishmentsResponse.FromString,
         )
     self.WatchPlayerAcquittals = channel.unary_stream(
-        '/mruv.economy.MruVPunishmentsService/WatchPlayerAcquittals',
+        '/mruv.punishments.MruVPunishmentsService/WatchPlayerAcquittals',
         request_serializer=punishments_dot_punishments__pb2.WatchPlayerAcquittalsRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.WatchPlayerAcquittalsResponse.FromString,
         )
     self.WatchPunishments = channel.unary_stream(
-        '/mruv.economy.MruVPunishmentsService/WatchPunishments',
+        '/mruv.punishments.MruVPunishmentsService/WatchPunishments',
         request_serializer=punishments_dot_punishments__pb2.WatchPunishmentsRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.WatchPunishmentsResponse.FromString,
+        )
+    self.WatchAcquittals = channel.unary_unary(
+        '/mruv.punishments.MruVPunishmentsService/WatchAcquittals',
+        request_serializer=punishments_dot_punishments__pb2.WatchAcquittalsRequest.SerializeToString,
+        response_deserializer=punishments_dot_punishments__pb2.WatchAcquittalsResponse.FromString,
         )
 
 
 class MruVPunishmentsServiceServicer(object):
   """This service provides interface for managing punishments for players.
   """
+
+  def Punish(self, request, context):
+    """Punish player with choosen punishment type.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
 
   def Ban(self, request, context):
     """Ban player on account and/or ip.
@@ -376,7 +393,14 @@ class MruVPunishmentsServiceServicer(object):
     raise NotImplementedError('Method not implemented!')
 
   def WatchPunishments(self, request, context):
-    """Subscribe to all punishments and acquittals events.
+    """Subscribe to all punishments events.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def WatchAcquittals(self, request, context):
+    """Subscribe to all acquittals events.
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
@@ -385,6 +409,11 @@ class MruVPunishmentsServiceServicer(object):
 
 def add_MruVPunishmentsServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
+      'Punish': grpc.unary_unary_rpc_method_handler(
+          servicer.Punish,
+          request_deserializer=punishments_dot_punishments__pb2.PunishRequest.FromString,
+          response_serializer=punishments_dot_punishments__pb2.PunishResponse.SerializeToString,
+      ),
       'Ban': grpc.unary_unary_rpc_method_handler(
           servicer.Ban,
           request_deserializer=punishments_dot_punishments__pb2.BanRequest.FromString,
@@ -535,7 +564,12 @@ def add_MruVPunishmentsServiceServicer_to_server(servicer, server):
           request_deserializer=punishments_dot_punishments__pb2.WatchPunishmentsRequest.FromString,
           response_serializer=punishments_dot_punishments__pb2.WatchPunishmentsResponse.SerializeToString,
       ),
+      'WatchAcquittals': grpc.unary_unary_rpc_method_handler(
+          servicer.WatchAcquittals,
+          request_deserializer=punishments_dot_punishments__pb2.WatchAcquittalsRequest.FromString,
+          response_serializer=punishments_dot_punishments__pb2.WatchAcquittalsResponse.SerializeToString,
+      ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'mruv.economy.MruVPunishmentsService', rpc_method_handlers)
+      'mruv.punishments.MruVPunishmentsService', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))
