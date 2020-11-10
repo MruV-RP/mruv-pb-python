@@ -14,11 +14,6 @@ class MruVPunishmentsServiceStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.Punish = channel.unary_unary(
-        '/mruv.punishments.MruVPunishmentsService/Punish',
-        request_serializer=punishments_dot_punishments__pb2.PunishRequest.SerializeToString,
-        response_deserializer=punishments_dot_punishments__pb2.PunishResponse.FromString,
-        )
     self.Ban = channel.unary_unary(
         '/mruv.punishments.MruVPunishmentsService/Ban',
         request_serializer=punishments_dot_punishments__pb2.BanRequest.SerializeToString,
@@ -169,23 +164,11 @@ class MruVPunishmentsServiceStub(object):
         request_serializer=punishments_dot_punishments__pb2.WatchPunishmentsRequest.SerializeToString,
         response_deserializer=punishments_dot_punishments__pb2.WatchPunishmentsResponse.FromString,
         )
-    self.WatchAcquittals = channel.unary_unary(
-        '/mruv.punishments.MruVPunishmentsService/WatchAcquittals',
-        request_serializer=punishments_dot_punishments__pb2.WatchAcquittalsRequest.SerializeToString,
-        response_deserializer=punishments_dot_punishments__pb2.WatchAcquittalsResponse.FromString,
-        )
 
 
 class MruVPunishmentsServiceServicer(object):
   """This service provides interface for managing punishments for players.
   """
-
-  def Punish(self, request, context):
-    """Punish player with choosen punishment type.
-    """
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
 
   def Ban(self, request, context):
     """Ban player on account and/or ip.
@@ -393,14 +376,7 @@ class MruVPunishmentsServiceServicer(object):
     raise NotImplementedError('Method not implemented!')
 
   def WatchPunishments(self, request, context):
-    """Subscribe to all punishments events.
-    """
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def WatchAcquittals(self, request, context):
-    """Subscribe to all acquittals events.
+    """Subscribe to all punishments and acquittals events.
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
@@ -409,11 +385,6 @@ class MruVPunishmentsServiceServicer(object):
 
 def add_MruVPunishmentsServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'Punish': grpc.unary_unary_rpc_method_handler(
-          servicer.Punish,
-          request_deserializer=punishments_dot_punishments__pb2.PunishRequest.FromString,
-          response_serializer=punishments_dot_punishments__pb2.PunishResponse.SerializeToString,
-      ),
       'Ban': grpc.unary_unary_rpc_method_handler(
           servicer.Ban,
           request_deserializer=punishments_dot_punishments__pb2.BanRequest.FromString,
@@ -563,11 +534,6 @@ def add_MruVPunishmentsServiceServicer_to_server(servicer, server):
           servicer.WatchPunishments,
           request_deserializer=punishments_dot_punishments__pb2.WatchPunishmentsRequest.FromString,
           response_serializer=punishments_dot_punishments__pb2.WatchPunishmentsResponse.SerializeToString,
-      ),
-      'WatchAcquittals': grpc.unary_unary_rpc_method_handler(
-          servicer.WatchAcquittals,
-          request_deserializer=punishments_dot_punishments__pb2.WatchAcquittalsRequest.FromString,
-          response_serializer=punishments_dot_punishments__pb2.WatchAcquittalsResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

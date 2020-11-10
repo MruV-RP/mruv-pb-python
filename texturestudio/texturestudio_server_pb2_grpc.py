@@ -15,42 +15,42 @@ class TextureStudioServerServiceStub(object):
       channel: A grpc.Channel.
     """
     self.StartServer = channel.unary_unary(
-        '/mruv.texture_studio.TextureStudioServerService/StartServer',
+        '/texture_studio.TextureStudioServerService/StartServer',
         request_serializer=texturestudio_dot_texturestudio__server__pb2.StartServerRequest.SerializeToString,
         response_deserializer=texturestudio_dot_texturestudio__server__pb2.StartServerResponse.FromString,
         )
     self.StopServer = channel.unary_unary(
-        '/mruv.texture_studio.TextureStudioServerService/StopServer',
+        '/texture_studio.TextureStudioServerService/StopServer',
         request_serializer=texturestudio_dot_texturestudio__server__pb2.StopServerRequest.SerializeToString,
         response_deserializer=texturestudio_dot_texturestudio__server__pb2.StopServerResponse.FromString,
         )
     self.RestartServer = channel.unary_unary(
-        '/mruv.texture_studio.TextureStudioServerService/RestartServer',
+        '/texture_studio.TextureStudioServerService/RestartServer',
         request_serializer=texturestudio_dot_texturestudio__server__pb2.RestartServerRequest.SerializeToString,
         response_deserializer=texturestudio_dot_texturestudio__server__pb2.RestartServerResponse.FromString,
         )
     self.ServerStatus = channel.unary_unary(
-        '/mruv.texture_studio.TextureStudioServerService/ServerStatus',
+        '/texture_studio.TextureStudioServerService/ServerStatus',
         request_serializer=texturestudio_dot_texturestudio__server__pb2.ServerStatusRequest.SerializeToString,
         response_deserializer=texturestudio_dot_texturestudio__server__pb2.ServerStatusResponse.FromString,
         )
     self.UploadProject = channel.unary_unary(
-        '/mruv.texture_studio.TextureStudioServerService/UploadProject',
+        '/texture_studio.TextureStudioServerService/UploadProject',
         request_serializer=texturestudio_dot_texturestudio__server__pb2.UploadProjectRequest.SerializeToString,
         response_deserializer=texturestudio_dot_texturestudio__server__pb2.UploadProjectResponse.FromString,
         )
     self.GetProject = channel.unary_unary(
-        '/mruv.texture_studio.TextureStudioServerService/GetProject',
+        '/texture_studio.TextureStudioServerService/GetProject',
         request_serializer=texturestudio_dot_texturestudio__server__pb2.GetProjectRequest.SerializeToString,
         response_deserializer=texturestudio_dot_texturestudio__server__pb2.GetProjectResponse.FromString,
         )
     self.GetProjects = channel.unary_unary(
-        '/mruv.texture_studio.TextureStudioServerService/GetProjects',
+        '/texture_studio.TextureStudioServerService/GetProjects',
         request_serializer=texturestudio_dot_texturestudio__server__pb2.GetProjectsRequest.SerializeToString,
         response_deserializer=texturestudio_dot_texturestudio__server__pb2.GetProjectsResponse.FromString,
         )
     self.SubscribeToProjectsChanges = channel.unary_stream(
-        '/mruv.texture_studio.TextureStudioServerService/SubscribeToProjectsChanges',
+        '/texture_studio.TextureStudioServerService/SubscribeToProjectsChanges',
         request_serializer=texturestudio_dot_texturestudio__server__pb2.SubscribeToProjectsChangesRequest.SerializeToString,
         response_deserializer=texturestudio_dot_texturestudio__server__pb2.SubscribeToProjectsChangesResponse.FromString,
         )
@@ -161,5 +161,5 @@ def add_TextureStudioServerServiceServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'mruv.texture_studio.TextureStudioServerService', rpc_method_handlers)
+      'texture_studio.TextureStudioServerService', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

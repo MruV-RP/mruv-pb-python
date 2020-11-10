@@ -19,16 +19,16 @@ from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='texturestudio/texturestudio_server.proto',
-  package='mruv.texture_studio',
+  package='texture_studio',
   syntax='proto3',
   serialized_options=_b('Z+github.com/MruV-RP/mruv-pb-go/texturestudio'),
-  serialized_pb=_b('\n(texturestudio/texturestudio_server.proto\x12\x13mruv.texture_studio\x1a\x1cgoogle/api/annotations.proto\" \n\x12StartServerRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x15\n\x13StartServerResponse\"\x1f\n\x11StopServerRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x14\n\x12StopServerResponse\"\"\n\x14RestartServerRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x17\n\x15RestartServerResponse\"!\n\x13ServerStatusRequest\x12\n\n\x02id\x18\x01 \x01(\r\"W\n\x14ServerStatusResponse\x12\x0c\n\x04port\x18\x01 \x01(\r\x12\x31\n\x06status\x18\x02 \x01(\x0e\x32!.mruv.texture_studio.ServerStatus\"j\n\x14UploadProjectRequest\x12\x11\n\tserver_id\x18\x01 \x01(\r\x12\x14\n\x0cproject_name\x18\x02 \x01(\t\x12\x0e\n\x04\x63ode\x18\x04 \x01(\tH\x00\x12\x0e\n\x04\x66ile\x18\x05 \x01(\x0cH\x00\x42\t\n\x07project\"\x17\n\x15UploadProjectResponse\"4\n\x11GetProjectRequest\x12\x11\n\tserver_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"\"\n\x12GetProjectResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\t\"\'\n\x12GetProjectsRequest\x12\x11\n\tserver_id\x18\x01 \x01(\r\"$\n\x13GetProjectsResponse\x12\r\n\x05names\x18\x01 \x03(\t\"6\n!SubscribeToProjectsChangesRequest\x12\x11\n\tserver_id\x18\x01 \x01(\r\"2\n\"SubscribeToProjectsChangesResponse\x12\x0c\n\x04name\x18\x01 \x01(\t*3\n\x0cServerStatus\x12\x12\n\x0eUNKNOWN_STATUS\x10\x00\x12\x06\n\x02ON\x10\x01\x12\x07\n\x03OFF\x10\x02\x32\xd3\t\n\x1aTextureStudioServerService\x12\x8d\x01\n\x0bStartServer\x12\'.mruv.texture_studio.StartServerRequest\x1a(.mruv.texture_studio.StartServerResponse\"+\x82\xd3\xe4\x93\x02%\"#/v1/texturestudio/server/{id}/start\x12\x89\x01\n\nStopServer\x12&.mruv.texture_studio.StopServerRequest\x1a\'.mruv.texture_studio.StopServerResponse\"*\x82\xd3\xe4\x93\x02$\"\"/v1/texturestudio/server/{id}/stop\x12\x95\x01\n\rRestartServer\x12).mruv.texture_studio.RestartServerRequest\x1a*.mruv.texture_studio.RestartServerResponse\"-\x82\xd3\xe4\x93\x02\'\"%/v1/texturestudio/server/{id}/restart\x12\x91\x01\n\x0cServerStatus\x12(.mruv.texture_studio.ServerStatusRequest\x1a).mruv.texture_studio.ServerStatusResponse\",\x82\xd3\xe4\x93\x02&\x12$/v1/texturestudio/server/{id}/status\x12\xa0\x01\n\rUploadProject\x12).mruv.texture_studio.UploadProjectRequest\x1a*.mruv.texture_studio.UploadProjectResponse\"8\x82\xd3\xe4\x93\x02\x32\"-/v1/texturestudio/server/{server_id}/projects:\x01*\x12\x9b\x01\n\nGetProject\x12&.mruv.texture_studio.GetProjectRequest\x1a\'.mruv.texture_studio.GetProjectResponse\"<\x82\xd3\xe4\x93\x02\x36\x12\x34/v1/texturestudio/server/{server_id}/projects/{name}\x12\x97\x01\n\x0bGetProjects\x12\'.mruv.texture_studio.GetProjectsRequest\x1a(.mruv.texture_studio.GetProjectsResponse\"5\x82\xd3\xe4\x93\x02/\x12-/v1/texturestudio/server/{server_id}/projects\x12\x91\x01\n\x1aSubscribeToProjectsChanges\x12\x36.mruv.texture_studio.SubscribeToProjectsChangesRequest\x1a\x37.mruv.texture_studio.SubscribeToProjectsChangesResponse\"\x00\x30\x01\x42-Z+github.com/MruV-RP/mruv-pb-go/texturestudiob\x06proto3')
+  serialized_pb=_b('\n(texturestudio/texturestudio_server.proto\x12\x0etexture_studio\x1a\x1cgoogle/api/annotations.proto\" \n\x12StartServerRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x15\n\x13StartServerResponse\"\x1f\n\x11StopServerRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x14\n\x12StopServerResponse\"\"\n\x14RestartServerRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x17\n\x15RestartServerResponse\"!\n\x13ServerStatusRequest\x12\n\n\x02id\x18\x01 \x01(\r\"R\n\x14ServerStatusResponse\x12\x0c\n\x04port\x18\x01 \x01(\r\x12,\n\x06status\x18\x02 \x01(\x0e\x32\x1c.texture_studio.ServerStatus\"j\n\x14UploadProjectRequest\x12\x11\n\tserver_id\x18\x01 \x01(\r\x12\x14\n\x0cproject_name\x18\x02 \x01(\t\x12\x0e\n\x04\x63ode\x18\x04 \x01(\tH\x00\x12\x0e\n\x04\x66ile\x18\x05 \x01(\x0cH\x00\x42\t\n\x07project\"\x17\n\x15UploadProjectResponse\"4\n\x11GetProjectRequest\x12\x11\n\tserver_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"\"\n\x12GetProjectResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\t\"\'\n\x12GetProjectsRequest\x12\x11\n\tserver_id\x18\x01 \x01(\r\"$\n\x13GetProjectsResponse\x12\r\n\x05names\x18\x01 \x03(\t\"6\n!SubscribeToProjectsChangesRequest\x12\x11\n\tserver_id\x18\x01 \x01(\r\"2\n\"SubscribeToProjectsChangesResponse\x12\x0c\n\x04name\x18\x01 \x01(\t*3\n\x0cServerStatus\x12\x12\n\x0eUNKNOWN_STATUS\x10\x00\x12\x06\n\x02ON\x10\x01\x12\x07\n\x03OFF\x10\x02\x32\x82\t\n\x1aTextureStudioServerService\x12\x83\x01\n\x0bStartServer\x12\".texture_studio.StartServerRequest\x1a#.texture_studio.StartServerResponse\"+\x82\xd3\xe4\x93\x02%\"#/v1/texturestudio/server/{id}/start\x12\x7f\n\nStopServer\x12!.texture_studio.StopServerRequest\x1a\".texture_studio.StopServerResponse\"*\x82\xd3\xe4\x93\x02$\"\"/v1/texturestudio/server/{id}/stop\x12\x8b\x01\n\rRestartServer\x12$.texture_studio.RestartServerRequest\x1a%.texture_studio.RestartServerResponse\"-\x82\xd3\xe4\x93\x02\'\"%/v1/texturestudio/server/{id}/restart\x12\x87\x01\n\x0cServerStatus\x12#.texture_studio.ServerStatusRequest\x1a$.texture_studio.ServerStatusResponse\",\x82\xd3\xe4\x93\x02&\x12$/v1/texturestudio/server/{id}/status\x12\x96\x01\n\rUploadProject\x12$.texture_studio.UploadProjectRequest\x1a%.texture_studio.UploadProjectResponse\"8\x82\xd3\xe4\x93\x02\x32\"-/v1/texturestudio/server/{server_id}/projects:\x01*\x12\x91\x01\n\nGetProject\x12!.texture_studio.GetProjectRequest\x1a\".texture_studio.GetProjectResponse\"<\x82\xd3\xe4\x93\x02\x36\x12\x34/v1/texturestudio/server/{server_id}/projects/{name}\x12\x8d\x01\n\x0bGetProjects\x12\".texture_studio.GetProjectsRequest\x1a#.texture_studio.GetProjectsResponse\"5\x82\xd3\xe4\x93\x02/\x12-/v1/texturestudio/server/{server_id}/projects\x12\x87\x01\n\x1aSubscribeToProjectsChanges\x12\x31.texture_studio.SubscribeToProjectsChangesRequest\x1a\x32.texture_studio.SubscribeToProjectsChangesResponse\"\x00\x30\x01\x42-Z+github.com/MruV-RP/mruv-pb-go/texturestudiob\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
 _SERVERSTATUS = _descriptor.EnumDescriptor(
   name='ServerStatus',
-  full_name='mruv.texture_studio.ServerStatus',
+  full_name='texture_studio.ServerStatus',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -47,8 +47,8 @@ _SERVERSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=802,
-  serialized_end=853,
+  serialized_start=792,
+  serialized_end=843,
 )
 _sym_db.RegisterEnumDescriptor(_SERVERSTATUS)
 
@@ -61,13 +61,13 @@ OFF = 2
 
 _STARTSERVERREQUEST = _descriptor.Descriptor(
   name='StartServerRequest',
-  full_name='mruv.texture_studio.StartServerRequest',
+  full_name='texture_studio.StartServerRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.texture_studio.StartServerRequest.id', index=0,
+      name='id', full_name='texture_studio.StartServerRequest.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -85,14 +85,14 @@ _STARTSERVERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=95,
-  serialized_end=127,
+  serialized_start=90,
+  serialized_end=122,
 )
 
 
 _STARTSERVERRESPONSE = _descriptor.Descriptor(
   name='StartServerResponse',
-  full_name='mruv.texture_studio.StartServerResponse',
+  full_name='texture_studio.StartServerResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -109,20 +109,20 @@ _STARTSERVERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=129,
-  serialized_end=150,
+  serialized_start=124,
+  serialized_end=145,
 )
 
 
 _STOPSERVERREQUEST = _descriptor.Descriptor(
   name='StopServerRequest',
-  full_name='mruv.texture_studio.StopServerRequest',
+  full_name='texture_studio.StopServerRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.texture_studio.StopServerRequest.id', index=0,
+      name='id', full_name='texture_studio.StopServerRequest.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -140,14 +140,14 @@ _STOPSERVERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=152,
-  serialized_end=183,
+  serialized_start=147,
+  serialized_end=178,
 )
 
 
 _STOPSERVERRESPONSE = _descriptor.Descriptor(
   name='StopServerResponse',
-  full_name='mruv.texture_studio.StopServerResponse',
+  full_name='texture_studio.StopServerResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -164,20 +164,20 @@ _STOPSERVERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=185,
-  serialized_end=205,
+  serialized_start=180,
+  serialized_end=200,
 )
 
 
 _RESTARTSERVERREQUEST = _descriptor.Descriptor(
   name='RestartServerRequest',
-  full_name='mruv.texture_studio.RestartServerRequest',
+  full_name='texture_studio.RestartServerRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.texture_studio.RestartServerRequest.id', index=0,
+      name='id', full_name='texture_studio.RestartServerRequest.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -195,14 +195,14 @@ _RESTARTSERVERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=207,
-  serialized_end=241,
+  serialized_start=202,
+  serialized_end=236,
 )
 
 
 _RESTARTSERVERRESPONSE = _descriptor.Descriptor(
   name='RestartServerResponse',
-  full_name='mruv.texture_studio.RestartServerResponse',
+  full_name='texture_studio.RestartServerResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -219,20 +219,20 @@ _RESTARTSERVERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=243,
-  serialized_end=266,
+  serialized_start=238,
+  serialized_end=261,
 )
 
 
 _SERVERSTATUSREQUEST = _descriptor.Descriptor(
   name='ServerStatusRequest',
-  full_name='mruv.texture_studio.ServerStatusRequest',
+  full_name='texture_studio.ServerStatusRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.texture_studio.ServerStatusRequest.id', index=0,
+      name='id', full_name='texture_studio.ServerStatusRequest.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -250,27 +250,27 @@ _SERVERSTATUSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=268,
-  serialized_end=301,
+  serialized_start=263,
+  serialized_end=296,
 )
 
 
 _SERVERSTATUSRESPONSE = _descriptor.Descriptor(
   name='ServerStatusResponse',
-  full_name='mruv.texture_studio.ServerStatusResponse',
+  full_name='texture_studio.ServerStatusResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='port', full_name='mruv.texture_studio.ServerStatusResponse.port', index=0,
+      name='port', full_name='texture_studio.ServerStatusResponse.port', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='status', full_name='mruv.texture_studio.ServerStatusResponse.status', index=1,
+      name='status', full_name='texture_studio.ServerStatusResponse.status', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -288,41 +288,41 @@ _SERVERSTATUSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=303,
-  serialized_end=390,
+  serialized_start=298,
+  serialized_end=380,
 )
 
 
 _UPLOADPROJECTREQUEST = _descriptor.Descriptor(
   name='UploadProjectRequest',
-  full_name='mruv.texture_studio.UploadProjectRequest',
+  full_name='texture_studio.UploadProjectRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='server_id', full_name='mruv.texture_studio.UploadProjectRequest.server_id', index=0,
+      name='server_id', full_name='texture_studio.UploadProjectRequest.server_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='project_name', full_name='mruv.texture_studio.UploadProjectRequest.project_name', index=1,
+      name='project_name', full_name='texture_studio.UploadProjectRequest.project_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='code', full_name='mruv.texture_studio.UploadProjectRequest.code', index=2,
+      name='code', full_name='texture_studio.UploadProjectRequest.code', index=2,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='file', full_name='mruv.texture_studio.UploadProjectRequest.file', index=3,
+      name='file', full_name='texture_studio.UploadProjectRequest.file', index=3,
       number=5, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
@@ -340,17 +340,17 @@ _UPLOADPROJECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
     _descriptor.OneofDescriptor(
-      name='project', full_name='mruv.texture_studio.UploadProjectRequest.project',
+      name='project', full_name='texture_studio.UploadProjectRequest.project',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=392,
-  serialized_end=498,
+  serialized_start=382,
+  serialized_end=488,
 )
 
 
 _UPLOADPROJECTRESPONSE = _descriptor.Descriptor(
   name='UploadProjectResponse',
-  full_name='mruv.texture_studio.UploadProjectResponse',
+  full_name='texture_studio.UploadProjectResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -367,27 +367,27 @@ _UPLOADPROJECTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=500,
-  serialized_end=523,
+  serialized_start=490,
+  serialized_end=513,
 )
 
 
 _GETPROJECTREQUEST = _descriptor.Descriptor(
   name='GetProjectRequest',
-  full_name='mruv.texture_studio.GetProjectRequest',
+  full_name='texture_studio.GetProjectRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='server_id', full_name='mruv.texture_studio.GetProjectRequest.server_id', index=0,
+      name='server_id', full_name='texture_studio.GetProjectRequest.server_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='name', full_name='mruv.texture_studio.GetProjectRequest.name', index=1,
+      name='name', full_name='texture_studio.GetProjectRequest.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -405,20 +405,20 @@ _GETPROJECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=525,
-  serialized_end=577,
+  serialized_start=515,
+  serialized_end=567,
 )
 
 
 _GETPROJECTRESPONSE = _descriptor.Descriptor(
   name='GetProjectResponse',
-  full_name='mruv.texture_studio.GetProjectResponse',
+  full_name='texture_studio.GetProjectResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='code', full_name='mruv.texture_studio.GetProjectResponse.code', index=0,
+      name='code', full_name='texture_studio.GetProjectResponse.code', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -436,20 +436,20 @@ _GETPROJECTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=579,
-  serialized_end=613,
+  serialized_start=569,
+  serialized_end=603,
 )
 
 
 _GETPROJECTSREQUEST = _descriptor.Descriptor(
   name='GetProjectsRequest',
-  full_name='mruv.texture_studio.GetProjectsRequest',
+  full_name='texture_studio.GetProjectsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='server_id', full_name='mruv.texture_studio.GetProjectsRequest.server_id', index=0,
+      name='server_id', full_name='texture_studio.GetProjectsRequest.server_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -467,20 +467,20 @@ _GETPROJECTSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=615,
-  serialized_end=654,
+  serialized_start=605,
+  serialized_end=644,
 )
 
 
 _GETPROJECTSRESPONSE = _descriptor.Descriptor(
   name='GetProjectsResponse',
-  full_name='mruv.texture_studio.GetProjectsResponse',
+  full_name='texture_studio.GetProjectsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='names', full_name='mruv.texture_studio.GetProjectsResponse.names', index=0,
+      name='names', full_name='texture_studio.GetProjectsResponse.names', index=0,
       number=1, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -498,20 +498,20 @@ _GETPROJECTSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=656,
-  serialized_end=692,
+  serialized_start=646,
+  serialized_end=682,
 )
 
 
 _SUBSCRIBETOPROJECTSCHANGESREQUEST = _descriptor.Descriptor(
   name='SubscribeToProjectsChangesRequest',
-  full_name='mruv.texture_studio.SubscribeToProjectsChangesRequest',
+  full_name='texture_studio.SubscribeToProjectsChangesRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='server_id', full_name='mruv.texture_studio.SubscribeToProjectsChangesRequest.server_id', index=0,
+      name='server_id', full_name='texture_studio.SubscribeToProjectsChangesRequest.server_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -529,20 +529,20 @@ _SUBSCRIBETOPROJECTSCHANGESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=694,
-  serialized_end=748,
+  serialized_start=684,
+  serialized_end=738,
 )
 
 
 _SUBSCRIBETOPROJECTSCHANGESRESPONSE = _descriptor.Descriptor(
   name='SubscribeToProjectsChangesResponse',
-  full_name='mruv.texture_studio.SubscribeToProjectsChangesResponse',
+  full_name='texture_studio.SubscribeToProjectsChangesResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='mruv.texture_studio.SubscribeToProjectsChangesResponse.name', index=0,
+      name='name', full_name='texture_studio.SubscribeToProjectsChangesResponse.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -560,8 +560,8 @@ _SUBSCRIBETOPROJECTSCHANGESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=750,
-  serialized_end=800,
+  serialized_start=740,
+  serialized_end=790,
 )
 
 _SERVERSTATUSRESPONSE.fields_by_name['status'].enum_type = _SERVERSTATUS
@@ -593,112 +593,112 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 StartServerRequest = _reflection.GeneratedProtocolMessageType('StartServerRequest', (_message.Message,), {
   'DESCRIPTOR' : _STARTSERVERREQUEST,
   '__module__' : 'texturestudio.texturestudio_server_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.texture_studio.StartServerRequest)
+  # @@protoc_insertion_point(class_scope:texture_studio.StartServerRequest)
   })
 _sym_db.RegisterMessage(StartServerRequest)
 
 StartServerResponse = _reflection.GeneratedProtocolMessageType('StartServerResponse', (_message.Message,), {
   'DESCRIPTOR' : _STARTSERVERRESPONSE,
   '__module__' : 'texturestudio.texturestudio_server_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.texture_studio.StartServerResponse)
+  # @@protoc_insertion_point(class_scope:texture_studio.StartServerResponse)
   })
 _sym_db.RegisterMessage(StartServerResponse)
 
 StopServerRequest = _reflection.GeneratedProtocolMessageType('StopServerRequest', (_message.Message,), {
   'DESCRIPTOR' : _STOPSERVERREQUEST,
   '__module__' : 'texturestudio.texturestudio_server_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.texture_studio.StopServerRequest)
+  # @@protoc_insertion_point(class_scope:texture_studio.StopServerRequest)
   })
 _sym_db.RegisterMessage(StopServerRequest)
 
 StopServerResponse = _reflection.GeneratedProtocolMessageType('StopServerResponse', (_message.Message,), {
   'DESCRIPTOR' : _STOPSERVERRESPONSE,
   '__module__' : 'texturestudio.texturestudio_server_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.texture_studio.StopServerResponse)
+  # @@protoc_insertion_point(class_scope:texture_studio.StopServerResponse)
   })
 _sym_db.RegisterMessage(StopServerResponse)
 
 RestartServerRequest = _reflection.GeneratedProtocolMessageType('RestartServerRequest', (_message.Message,), {
   'DESCRIPTOR' : _RESTARTSERVERREQUEST,
   '__module__' : 'texturestudio.texturestudio_server_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.texture_studio.RestartServerRequest)
+  # @@protoc_insertion_point(class_scope:texture_studio.RestartServerRequest)
   })
 _sym_db.RegisterMessage(RestartServerRequest)
 
 RestartServerResponse = _reflection.GeneratedProtocolMessageType('RestartServerResponse', (_message.Message,), {
   'DESCRIPTOR' : _RESTARTSERVERRESPONSE,
   '__module__' : 'texturestudio.texturestudio_server_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.texture_studio.RestartServerResponse)
+  # @@protoc_insertion_point(class_scope:texture_studio.RestartServerResponse)
   })
 _sym_db.RegisterMessage(RestartServerResponse)
 
 ServerStatusRequest = _reflection.GeneratedProtocolMessageType('ServerStatusRequest', (_message.Message,), {
   'DESCRIPTOR' : _SERVERSTATUSREQUEST,
   '__module__' : 'texturestudio.texturestudio_server_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.texture_studio.ServerStatusRequest)
+  # @@protoc_insertion_point(class_scope:texture_studio.ServerStatusRequest)
   })
 _sym_db.RegisterMessage(ServerStatusRequest)
 
 ServerStatusResponse = _reflection.GeneratedProtocolMessageType('ServerStatusResponse', (_message.Message,), {
   'DESCRIPTOR' : _SERVERSTATUSRESPONSE,
   '__module__' : 'texturestudio.texturestudio_server_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.texture_studio.ServerStatusResponse)
+  # @@protoc_insertion_point(class_scope:texture_studio.ServerStatusResponse)
   })
 _sym_db.RegisterMessage(ServerStatusResponse)
 
 UploadProjectRequest = _reflection.GeneratedProtocolMessageType('UploadProjectRequest', (_message.Message,), {
   'DESCRIPTOR' : _UPLOADPROJECTREQUEST,
   '__module__' : 'texturestudio.texturestudio_server_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.texture_studio.UploadProjectRequest)
+  # @@protoc_insertion_point(class_scope:texture_studio.UploadProjectRequest)
   })
 _sym_db.RegisterMessage(UploadProjectRequest)
 
 UploadProjectResponse = _reflection.GeneratedProtocolMessageType('UploadProjectResponse', (_message.Message,), {
   'DESCRIPTOR' : _UPLOADPROJECTRESPONSE,
   '__module__' : 'texturestudio.texturestudio_server_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.texture_studio.UploadProjectResponse)
+  # @@protoc_insertion_point(class_scope:texture_studio.UploadProjectResponse)
   })
 _sym_db.RegisterMessage(UploadProjectResponse)
 
 GetProjectRequest = _reflection.GeneratedProtocolMessageType('GetProjectRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETPROJECTREQUEST,
   '__module__' : 'texturestudio.texturestudio_server_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.texture_studio.GetProjectRequest)
+  # @@protoc_insertion_point(class_scope:texture_studio.GetProjectRequest)
   })
 _sym_db.RegisterMessage(GetProjectRequest)
 
 GetProjectResponse = _reflection.GeneratedProtocolMessageType('GetProjectResponse', (_message.Message,), {
   'DESCRIPTOR' : _GETPROJECTRESPONSE,
   '__module__' : 'texturestudio.texturestudio_server_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.texture_studio.GetProjectResponse)
+  # @@protoc_insertion_point(class_scope:texture_studio.GetProjectResponse)
   })
 _sym_db.RegisterMessage(GetProjectResponse)
 
 GetProjectsRequest = _reflection.GeneratedProtocolMessageType('GetProjectsRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETPROJECTSREQUEST,
   '__module__' : 'texturestudio.texturestudio_server_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.texture_studio.GetProjectsRequest)
+  # @@protoc_insertion_point(class_scope:texture_studio.GetProjectsRequest)
   })
 _sym_db.RegisterMessage(GetProjectsRequest)
 
 GetProjectsResponse = _reflection.GeneratedProtocolMessageType('GetProjectsResponse', (_message.Message,), {
   'DESCRIPTOR' : _GETPROJECTSRESPONSE,
   '__module__' : 'texturestudio.texturestudio_server_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.texture_studio.GetProjectsResponse)
+  # @@protoc_insertion_point(class_scope:texture_studio.GetProjectsResponse)
   })
 _sym_db.RegisterMessage(GetProjectsResponse)
 
 SubscribeToProjectsChangesRequest = _reflection.GeneratedProtocolMessageType('SubscribeToProjectsChangesRequest', (_message.Message,), {
   'DESCRIPTOR' : _SUBSCRIBETOPROJECTSCHANGESREQUEST,
   '__module__' : 'texturestudio.texturestudio_server_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.texture_studio.SubscribeToProjectsChangesRequest)
+  # @@protoc_insertion_point(class_scope:texture_studio.SubscribeToProjectsChangesRequest)
   })
 _sym_db.RegisterMessage(SubscribeToProjectsChangesRequest)
 
 SubscribeToProjectsChangesResponse = _reflection.GeneratedProtocolMessageType('SubscribeToProjectsChangesResponse', (_message.Message,), {
   'DESCRIPTOR' : _SUBSCRIBETOPROJECTSCHANGESRESPONSE,
   '__module__' : 'texturestudio.texturestudio_server_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.texture_studio.SubscribeToProjectsChangesResponse)
+  # @@protoc_insertion_point(class_scope:texture_studio.SubscribeToProjectsChangesResponse)
   })
 _sym_db.RegisterMessage(SubscribeToProjectsChangesResponse)
 
@@ -707,16 +707,16 @@ DESCRIPTOR._options = None
 
 _TEXTURESTUDIOSERVERSERVICE = _descriptor.ServiceDescriptor(
   name='TextureStudioServerService',
-  full_name='mruv.texture_studio.TextureStudioServerService',
+  full_name='texture_studio.TextureStudioServerService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=856,
-  serialized_end=2091,
+  serialized_start=846,
+  serialized_end=2000,
   methods=[
   _descriptor.MethodDescriptor(
     name='StartServer',
-    full_name='mruv.texture_studio.TextureStudioServerService.StartServer',
+    full_name='texture_studio.TextureStudioServerService.StartServer',
     index=0,
     containing_service=None,
     input_type=_STARTSERVERREQUEST,
@@ -725,7 +725,7 @@ _TEXTURESTUDIOSERVERSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='StopServer',
-    full_name='mruv.texture_studio.TextureStudioServerService.StopServer',
+    full_name='texture_studio.TextureStudioServerService.StopServer',
     index=1,
     containing_service=None,
     input_type=_STOPSERVERREQUEST,
@@ -734,7 +734,7 @@ _TEXTURESTUDIOSERVERSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='RestartServer',
-    full_name='mruv.texture_studio.TextureStudioServerService.RestartServer',
+    full_name='texture_studio.TextureStudioServerService.RestartServer',
     index=2,
     containing_service=None,
     input_type=_RESTARTSERVERREQUEST,
@@ -743,7 +743,7 @@ _TEXTURESTUDIOSERVERSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='ServerStatus',
-    full_name='mruv.texture_studio.TextureStudioServerService.ServerStatus',
+    full_name='texture_studio.TextureStudioServerService.ServerStatus',
     index=3,
     containing_service=None,
     input_type=_SERVERSTATUSREQUEST,
@@ -752,7 +752,7 @@ _TEXTURESTUDIOSERVERSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='UploadProject',
-    full_name='mruv.texture_studio.TextureStudioServerService.UploadProject',
+    full_name='texture_studio.TextureStudioServerService.UploadProject',
     index=4,
     containing_service=None,
     input_type=_UPLOADPROJECTREQUEST,
@@ -761,7 +761,7 @@ _TEXTURESTUDIOSERVERSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetProject',
-    full_name='mruv.texture_studio.TextureStudioServerService.GetProject',
+    full_name='texture_studio.TextureStudioServerService.GetProject',
     index=5,
     containing_service=None,
     input_type=_GETPROJECTREQUEST,
@@ -770,7 +770,7 @@ _TEXTURESTUDIOSERVERSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetProjects',
-    full_name='mruv.texture_studio.TextureStudioServerService.GetProjects',
+    full_name='texture_studio.TextureStudioServerService.GetProjects',
     index=6,
     containing_service=None,
     input_type=_GETPROJECTSREQUEST,
@@ -779,7 +779,7 @@ _TEXTURESTUDIOSERVERSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='SubscribeToProjectsChanges',
-    full_name='mruv.texture_studio.TextureStudioServerService.SubscribeToProjectsChanges',
+    full_name='texture_studio.TextureStudioServerService.SubscribeToProjectsChanges',
     index=7,
     containing_service=None,
     input_type=_SUBSCRIBETOPROJECTSCHANGESREQUEST,

@@ -17,122 +17,122 @@ class MruVItemServiceStub(object):
       channel: A grpc.Channel.
     """
     self.CreateItem = channel.unary_unary(
-        '/mruv.items.MruVItemService/CreateItem',
+        '/mruv.MruVItemService/CreateItem',
         request_serializer=items_dot_items__model__pb2.Item.SerializeToString,
         response_deserializer=items_dot_items__model__pb2.ItemID.FromString,
         )
     self.GetItem = channel.unary_unary(
-        '/mruv.items.MruVItemService/GetItem',
+        '/mruv.MruVItemService/GetItem',
         request_serializer=items_dot_items__model__pb2.ItemID.SerializeToString,
         response_deserializer=items_dot_items__model__pb2.Item.FromString,
         )
     self.DeleteItem = channel.unary_unary(
-        '/mruv.items.MruVItemService/DeleteItem',
+        '/mruv.MruVItemService/DeleteItem',
         request_serializer=items_dot_items__model__pb2.ItemID.SerializeToString,
         response_deserializer=items_dot_items__model__pb2.ItemID.FromString,
         )
     self.GetItems = channel.unary_unary(
-        '/mruv.items.MruVItemService/GetItems',
+        '/mruv.MruVItemService/GetItems',
         request_serializer=items_dot_items__pb2.GetItemsRequest.SerializeToString,
         response_deserializer=items_dot_items__pb2.GetItemsResponse.FromString,
         )
     self.CreateItemType = channel.unary_unary(
-        '/mruv.items.MruVItemService/CreateItemType',
+        '/mruv.MruVItemService/CreateItemType',
         request_serializer=items_dot_items__model__pb2.ItemType.SerializeToString,
         response_deserializer=items_dot_items__model__pb2.ItemTypeID.FromString,
         )
     self.GetItemType = channel.unary_unary(
-        '/mruv.items.MruVItemService/GetItemType',
+        '/mruv.MruVItemService/GetItemType',
         request_serializer=items_dot_items__model__pb2.ItemTypeID.SerializeToString,
         response_deserializer=items_dot_items__model__pb2.ItemType.FromString,
         )
     self.DeleteItemType = channel.unary_unary(
-        '/mruv.items.MruVItemService/DeleteItemType',
+        '/mruv.MruVItemService/DeleteItemType',
         request_serializer=items_dot_items__model__pb2.ItemTypeID.SerializeToString,
         response_deserializer=items_dot_items__model__pb2.ItemTypeID.FromString,
         )
     self.GetItemTypes = channel.unary_unary(
-        '/mruv.items.MruVItemService/GetItemTypes',
+        '/mruv.MruVItemService/GetItemTypes',
         request_serializer=items_dot_items__pb2.GetItemTypesRequest.SerializeToString,
         response_deserializer=items_dot_items__pb2.GetItemTypesResponse.FromString,
         )
     self.CreateContainer = channel.unary_unary(
-        '/mruv.items.MruVItemService/CreateContainer',
+        '/mruv.MruVItemService/CreateContainer',
         request_serializer=items_dot_items__model__pb2.Container.SerializeToString,
         response_deserializer=items_dot_items__model__pb2.ContainerID.FromString,
         )
     self.GetContainer = channel.unary_unary(
-        '/mruv.items.MruVItemService/GetContainer',
+        '/mruv.MruVItemService/GetContainer',
         request_serializer=items_dot_items__model__pb2.ContainerID.SerializeToString,
         response_deserializer=items_dot_items__model__pb2.Container.FromString,
         )
     self.DeleteContainer = channel.unary_unary(
-        '/mruv.items.MruVItemService/DeleteContainer',
+        '/mruv.MruVItemService/DeleteContainer',
         request_serializer=items_dot_items__model__pb2.ContainerID.SerializeToString,
         response_deserializer=items_dot_items__model__pb2.ContainerID.FromString,
         )
     self.GetContainers = channel.unary_unary(
-        '/mruv.items.MruVItemService/GetContainers',
+        '/mruv.MruVItemService/GetContainers',
         request_serializer=items_dot_items__pb2.GetContainersRequest.SerializeToString,
         response_deserializer=items_dot_items__pb2.GetContainersResponse.FromString,
         )
     self.CreateContainerType = channel.unary_unary(
-        '/mruv.items.MruVItemService/CreateContainerType',
+        '/mruv.MruVItemService/CreateContainerType',
         request_serializer=items_dot_items__model__pb2.ContainerType.SerializeToString,
         response_deserializer=items_dot_items__model__pb2.ContainerTypeID.FromString,
         )
     self.GetContainerType = channel.unary_unary(
-        '/mruv.items.MruVItemService/GetContainerType',
+        '/mruv.MruVItemService/GetContainerType',
         request_serializer=items_dot_items__model__pb2.ContainerTypeID.SerializeToString,
         response_deserializer=items_dot_items__model__pb2.ContainerType.FromString,
         )
     self.DeleteContainerType = channel.unary_unary(
-        '/mruv.items.MruVItemService/DeleteContainerType',
+        '/mruv.MruVItemService/DeleteContainerType',
         request_serializer=items_dot_items__model__pb2.ContainerTypeID.SerializeToString,
         response_deserializer=items_dot_items__model__pb2.ContainerTypeID.FromString,
         )
     self.GetContainerTypes = channel.unary_unary(
-        '/mruv.items.MruVItemService/GetContainerTypes',
+        '/mruv.MruVItemService/GetContainerTypes',
         request_serializer=items_dot_items__pb2.GetContainerTypesRequest.SerializeToString,
         response_deserializer=items_dot_items__pb2.GetContainerTypesResponse.FromString,
         )
     self.GetContainerItems = channel.unary_unary(
-        '/mruv.items.MruVItemService/GetContainerItems',
+        '/mruv.MruVItemService/GetContainerItems',
         request_serializer=items_dot_items__pb2.GetContainerItemsRequest.SerializeToString,
         response_deserializer=items_dot_items__pb2.GetContainerItemsResponse.FromString,
         )
     self.PullItem = channel.unary_unary(
-        '/mruv.items.MruVItemService/PullItem',
+        '/mruv.MruVItemService/PullItem',
         request_serializer=items_dot_items__pb2.PullItemRequest.SerializeToString,
         response_deserializer=items_dot_items__model__pb2.Item.FromString,
         )
     self.PutItem = channel.unary_unary(
-        '/mruv.items.MruVItemService/PutItem',
+        '/mruv.MruVItemService/PutItem',
         request_serializer=items_dot_items__pb2.PutItemRequest.SerializeToString,
         response_deserializer=items_dot_items__pb2.PutItemResponse.FromString,
         )
     self.SortItems = channel.unary_unary(
-        '/mruv.items.MruVItemService/SortItems',
+        '/mruv.MruVItemService/SortItems',
         request_serializer=items_dot_items__pb2.SortItemsRequest.SerializeToString,
         response_deserializer=items_dot_items__pb2.SortItemsResponse.FromString,
         )
     self.GetNearestItems = channel.unary_unary(
-        '/mruv.items.MruVItemService/GetNearestItems',
+        '/mruv.MruVItemService/GetNearestItems',
         request_serializer=items_dot_items__pb2.GetNearestItemsRequest.SerializeToString,
         response_deserializer=items_dot_items__pb2.GetNearestItemsResponse.FromString,
         )
     self.UseItem = channel.unary_unary(
-        '/mruv.items.MruVItemService/UseItem',
+        '/mruv.MruVItemService/UseItem',
         request_serializer=items_dot_items__pb2.UseItemRequest.SerializeToString,
         response_deserializer=items_dot_items__pb2.UseItemResponse.FromString,
         )
     self.GetServiceStatus = channel.unary_unary(
-        '/mruv.items.MruVItemService/GetServiceStatus',
+        '/mruv.MruVItemService/GetServiceStatus',
         request_serializer=common_dot_health__pb2.ServiceStatusRequest.SerializeToString,
         response_deserializer=common_dot_health__pb2.ServiceStatusResponse.FromString,
         )
     self.GetServiceVersion = channel.unary_unary(
-        '/mruv.items.MruVItemService/GetServiceVersion',
+        '/mruv.MruVItemService/GetServiceVersion',
         request_serializer=common_dot_health__pb2.VersionRequest.SerializeToString,
         response_deserializer=common_dot_health__pb2.VersionResponse.FromString,
         )
@@ -436,5 +436,5 @@ def add_MruVItemServiceServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'mruv.items.MruVItemService', rpc_method_handlers)
+      'mruv.MruVItemService', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

@@ -16,97 +16,97 @@ class MruVGroupsServiceStub(object):
       channel: A grpc.Channel.
     """
     self.CreateGroup = channel.unary_unary(
-        '/mruv.groups.MruVGroupsService/CreateGroup',
+        '/mruv.MruVGroupsService/CreateGroup',
         request_serializer=groups_dot_groups__pb2.CreateGroupRequest.SerializeToString,
         response_deserializer=groups_dot_groups__pb2.CreateGroupResponse.FromString,
         )
     self.GetGroup = channel.unary_unary(
-        '/mruv.groups.MruVGroupsService/GetGroup',
+        '/mruv.MruVGroupsService/GetGroup',
         request_serializer=groups_dot_groups__pb2.GetGroupRequest.SerializeToString,
         response_deserializer=groups_dot_groups__pb2.GetGroupResponse.FromString,
         )
     self.UpdateGroup = channel.unary_unary(
-        '/mruv.groups.MruVGroupsService/UpdateGroup',
+        '/mruv.MruVGroupsService/UpdateGroup',
         request_serializer=groups_dot_groups__pb2.UpdateGroupRequest.SerializeToString,
         response_deserializer=groups_dot_groups__pb2.UpdateGroupResponse.FromString,
         )
     self.DeleteGroup = channel.unary_unary(
-        '/mruv.groups.MruVGroupsService/DeleteGroup',
+        '/mruv.MruVGroupsService/DeleteGroup',
         request_serializer=groups_dot_groups__pb2.DeleteGroupRequest.SerializeToString,
         response_deserializer=groups_dot_groups__pb2.DeleteGroupResponse.FromString,
         )
     self.GetGroups = channel.unary_unary(
-        '/mruv.groups.MruVGroupsService/GetGroups',
+        '/mruv.MruVGroupsService/GetGroups',
         request_serializer=groups_dot_groups__pb2.GetGroupsRequest.SerializeToString,
         response_deserializer=groups_dot_groups__pb2.GetGroupsResponse.FromString,
         )
     self.AssignOwner = channel.unary_unary(
-        '/mruv.groups.MruVGroupsService/AssignOwner',
+        '/mruv.MruVGroupsService/AssignOwner',
         request_serializer=groups_dot_groups__pb2.AssignOwnerRequest.SerializeToString,
         response_deserializer=groups_dot_groups__pb2.AssignOwnerResponse.FromString,
         )
     self.GetOwner = channel.unary_unary(
-        '/mruv.groups.MruVGroupsService/GetOwner',
+        '/mruv.MruVGroupsService/GetOwner',
         request_serializer=groups_dot_groups__pb2.GetOwnerRequest.SerializeToString,
         response_deserializer=groups_dot_groups__pb2.GetOwnerResponse.FromString,
         )
     self.AddMember = channel.unary_unary(
-        '/mruv.groups.MruVGroupsService/AddMember',
+        '/mruv.MruVGroupsService/AddMember',
         request_serializer=groups_dot_groups__pb2.AddMemberRequest.SerializeToString,
         response_deserializer=groups_dot_groups__pb2.AddMemberResponse.FromString,
         )
     self.GetMembers = channel.unary_unary(
-        '/mruv.groups.MruVGroupsService/GetMembers',
+        '/mruv.MruVGroupsService/GetMembers',
         request_serializer=groups_dot_groups__pb2.GetMembersRequest.SerializeToString,
         response_deserializer=groups_dot_groups__pb2.GetMembersResponse.FromString,
         )
     self.RemoveMember = channel.unary_unary(
-        '/mruv.groups.MruVGroupsService/RemoveMember',
+        '/mruv.MruVGroupsService/RemoveMember',
         request_serializer=groups_dot_groups__pb2.RemoveMemberRequest.SerializeToString,
         response_deserializer=groups_dot_groups__pb2.RemoveMemberResponse.FromString,
         )
     self.AddPermission = channel.unary_unary(
-        '/mruv.groups.MruVGroupsService/AddPermission',
+        '/mruv.MruVGroupsService/AddPermission',
         request_serializer=groups_dot_groups__pb2.AddPermissionRequest.SerializeToString,
         response_deserializer=groups_dot_groups__pb2.AddPermissionResponse.FromString,
         )
     self.GetPermissions = channel.unary_unary(
-        '/mruv.groups.MruVGroupsService/GetPermissions',
+        '/mruv.MruVGroupsService/GetPermissions',
         request_serializer=groups_dot_groups__pb2.GetPermissionsRequest.SerializeToString,
         response_deserializer=groups_dot_groups__pb2.GetPermissionsResponse.FromString,
         )
     self.RemovePermission = channel.unary_unary(
-        '/mruv.groups.MruVGroupsService/RemovePermission',
+        '/mruv.MruVGroupsService/RemovePermission',
         request_serializer=groups_dot_groups__pb2.RemovePermissionRequest.SerializeToString,
         response_deserializer=groups_dot_groups__pb2.RemovePermissionResponse.FromString,
         )
     self.AddSubgroup = channel.unary_unary(
-        '/mruv.groups.MruVGroupsService/AddSubgroup',
+        '/mruv.MruVGroupsService/AddSubgroup',
         request_serializer=groups_dot_groups__pb2.AddSubgroupRequest.SerializeToString,
         response_deserializer=groups_dot_groups__pb2.AddSubgroupResponse.FromString,
         )
     self.GetSubgroups = channel.unary_unary(
-        '/mruv.groups.MruVGroupsService/GetSubgroups',
+        '/mruv.MruVGroupsService/GetSubgroups',
         request_serializer=groups_dot_groups__pb2.GetSubgroupsRequest.SerializeToString,
         response_deserializer=groups_dot_groups__pb2.GetSubgroupsResponse.FromString,
         )
     self.RemoveSubgroup = channel.unary_unary(
-        '/mruv.groups.MruVGroupsService/RemoveSubgroup',
+        '/mruv.MruVGroupsService/RemoveSubgroup',
         request_serializer=groups_dot_groups__pb2.RemoveSubgroupRequest.SerializeToString,
         response_deserializer=groups_dot_groups__pb2.RemoveSubgroupResponse.FromString,
         )
     self.IsPermitted = channel.unary_unary(
-        '/mruv.groups.MruVGroupsService/IsPermitted',
+        '/mruv.MruVGroupsService/IsPermitted',
         request_serializer=groups_dot_groups__pb2.IsPermittedRequest.SerializeToString,
         response_deserializer=groups_dot_groups__pb2.IsPermittedResponse.FromString,
         )
     self.GetServiceStatus = channel.unary_unary(
-        '/mruv.groups.MruVGroupsService/GetServiceStatus',
+        '/mruv.MruVGroupsService/GetServiceStatus',
         request_serializer=common_dot_health__pb2.ServiceStatusRequest.SerializeToString,
         response_deserializer=common_dot_health__pb2.ServiceStatusResponse.FromString,
         )
     self.GetServiceVersion = channel.unary_unary(
-        '/mruv.groups.MruVGroupsService/GetServiceVersion',
+        '/mruv.MruVGroupsService/GetServiceVersion',
         request_serializer=common_dot_health__pb2.VersionRequest.SerializeToString,
         response_deserializer=common_dot_health__pb2.VersionResponse.FromString,
         )
@@ -349,5 +349,5 @@ def add_MruVGroupsServiceServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'mruv.groups.MruVGroupsService', rpc_method_handlers)
+      'mruv.MruVGroupsService', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

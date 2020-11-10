@@ -16,47 +16,47 @@ class MruVCharactersServiceStub(object):
       channel: A grpc.Channel.
     """
     self.CreateCharacter = channel.unary_unary(
-        '/mruv.characters.MruVCharactersService/CreateCharacter',
+        '/mruv.MruVCharactersService/CreateCharacter',
         request_serializer=characters_dot_characters__pb2.CreateCharacterRequest.SerializeToString,
         response_deserializer=characters_dot_characters__pb2.CreateCharacterResponse.FromString,
         )
     self.GetCharacter = channel.unary_unary(
-        '/mruv.characters.MruVCharactersService/GetCharacter',
+        '/mruv.MruVCharactersService/GetCharacter',
         request_serializer=characters_dot_characters__pb2.GetCharacterRequest.SerializeToString,
         response_deserializer=characters_dot_characters__pb2.GetCharacterResponse.FromString,
         )
     self.UpdateCharacter = channel.unary_unary(
-        '/mruv.characters.MruVCharactersService/UpdateCharacter',
+        '/mruv.MruVCharactersService/UpdateCharacter',
         request_serializer=characters_dot_characters__pb2.UpdateCharacterRequest.SerializeToString,
         response_deserializer=characters_dot_characters__pb2.UpdateCharacterResponse.FromString,
         )
     self.DeleteCharacter = channel.unary_unary(
-        '/mruv.characters.MruVCharactersService/DeleteCharacter',
+        '/mruv.MruVCharactersService/DeleteCharacter',
         request_serializer=characters_dot_characters__pb2.DeleteCharacterRequest.SerializeToString,
         response_deserializer=characters_dot_characters__pb2.DeleteCharacterResponse.FromString,
         )
     self.PermanentCharacterKill = channel.unary_unary(
-        '/mruv.characters.MruVCharactersService/PermanentCharacterKill',
+        '/mruv.MruVCharactersService/PermanentCharacterKill',
         request_serializer=characters_dot_characters__pb2.CharacterID.SerializeToString,
         response_deserializer=characters_dot_characters__pb2.CharacterID.FromString,
         )
     self.ChangeClothes = channel.unary_unary(
-        '/mruv.characters.MruVCharactersService/ChangeClothes',
+        '/mruv.MruVCharactersService/ChangeClothes',
         request_serializer=characters_dot_characters__pb2.ChangeClothesRequest.SerializeToString,
         response_deserializer=characters_dot_characters__pb2.ChangeClothesResponse.FromString,
         )
     self.DeathsStream = channel.unary_stream(
-        '/mruv.characters.MruVCharactersService/DeathsStream',
+        '/mruv.MruVCharactersService/DeathsStream',
         request_serializer=characters_dot_characters__pb2.DeathStreamRequest.SerializeToString,
         response_deserializer=characters_dot_characters__pb2.DeathStreamResponse.FromString,
         )
     self.GetServiceStatus = channel.unary_unary(
-        '/mruv.characters.MruVCharactersService/GetServiceStatus',
+        '/mruv.MruVCharactersService/GetServiceStatus',
         request_serializer=common_dot_health__pb2.ServiceStatusRequest.SerializeToString,
         response_deserializer=common_dot_health__pb2.ServiceStatusResponse.FromString,
         )
     self.GetServiceVersion = channel.unary_unary(
-        '/mruv.characters.MruVCharactersService/GetServiceVersion',
+        '/mruv.MruVCharactersService/GetServiceVersion',
         request_serializer=common_dot_health__pb2.VersionRequest.SerializeToString,
         response_deserializer=common_dot_health__pb2.VersionResponse.FromString,
         )
@@ -179,5 +179,5 @@ def add_MruVCharactersServiceServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'mruv.characters.MruVCharactersService', rpc_method_handlers)
+      'mruv.MruVCharactersService', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))
