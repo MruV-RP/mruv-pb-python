@@ -18,17 +18,17 @@ from common import health_pb2 as common_dot_health__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='groups/groups.proto',
-  package='mruv',
+  package='mruv.groups',
   syntax='proto3',
   serialized_options=b'Z$github.com/MruV-RP/mruv-pb-go/groups',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13groups/groups.proto\x12\x04mruv\x1a\x1cgoogle/api/annotations.proto\x1a\x13\x63ommon/health.proto\"7\n\x12\x43reateGroupRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\'\n\x13\x43reateGroupResponse\x12\x10\n\x08group_id\x18\x01 \x01(\r\"#\n\x0fGetGroupRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\"5\n\x10GetGroupResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"I\n\x12UpdateGroupRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\"\x15\n\x13UpdateGroupResponse\"&\n\x12\x44\x65leteGroupRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\"\x15\n\x13\x44\x65leteGroupResponse\"5\n\x10GetGroupsRequest\x12\r\n\x05limit\x18\x01 \x01(\r\x12\x12\n\nbegin_from\x18\x02 \x01(\r\"z\n\x11GetGroupsResponse\x12-\n\x06groups\x18\x01 \x03(\x0b\x32\x1d.mruv.GetGroupsResponse.Group\x1a\x36\n\x05Group\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\"]\n\x12\x41ssignOwnerRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12#\n\nowner_type\x18\x03 \x01(\x0e\x32\x0f.mruv.OwnerType\x12\x10\n\x08owner_id\x18\x02 \x01(\r\"\x15\n\x13\x41ssignOwnerResponse\"#\n\x0fGetOwnerRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\"I\n\x10GetOwnerResponse\x12\x10\n\x08owner_id\x18\x01 \x01(\r\x12#\n\nowner_type\x18\x02 \x01(\x0e\x32\x0f.mruv.OwnerType\"7\n\x10\x41\x64\x64MemberRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x11\n\tmember_id\x18\x02 \x01(\r\"\x13\n\x11\x41\x64\x64MemberResponse\"%\n\x11GetMembersRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\"O\n\x12GetMembersResponse\x12%\n\x0bmember_type\x18\x01 \x01(\x0e\x32\x10.mruv.MemberType\x12\x12\n\nmember_ids\x18\x02 \x03(\r\":\n\x13RemoveMemberRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x11\n\tmember_id\x18\x02 \x01(\r\"\x16\n\x14RemoveMemberResponse\"J\n\x14\x41\x64\x64PermissionRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x12\n\ndefinition\x18\x03 \x01(\t\".\n\x15\x41\x64\x64PermissionResponse\x12\x15\n\rpermission_id\x18\x01 \x01(\r\")\n\x15GetPermissionsRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\"\x92\x01\n\x16GetPermissionsResponse\x12<\n\x0bpermissions\x18\x01 \x03(\x0b\x32\'.mruv.GetPermissionsResponse.Permission\x1a:\n\nPermission\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x12\n\ndefinition\x18\x03 \x01(\t\"B\n\x17RemovePermissionRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x15\n\rpermission_id\x18\x02 \x01(\r\"\x1a\n\x18RemovePermissionResponse\";\n\x12\x41\x64\x64SubgroupRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x13\n\x0bsubgroup_id\x18\x02 \x01(\r\"\x15\n\x13\x41\x64\x64SubgroupResponse\"\'\n\x13GetSubgroupsRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\",\n\x14GetSubgroupsResponse\x12\x14\n\x0csubgroup_ids\x18\x01 \x03(\r\">\n\x15RemoveSubgroupRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x13\n\x0bsubgroup_id\x18\x02 \x01(\r\"\x18\n\x16RemoveSubgroupResponse\"^\n\x12IsPermittedRequest\x12\x11\n\tmember_id\x18\x01 \x01(\r\x12%\n\x0bmember_type\x18\x02 \x01(\x0e\x32\x10.mruv.MemberType\x12\x0e\n\x06\x61\x63tion\x18\x03 \x01(\t\"(\n\x13IsPermittedResponse\x12\x11\n\tpermitted\x18\x01 \x01(\x08*k\n\tOwnerType\x12\x16\n\x12OWNER_TYPE_UNKNOWN\x10\x00\x12\x16\n\x12OWNER_TYPE_ACCOUNT\x10\x01\x12\x18\n\x14OWNER_TYPE_CHARACTER\x10\x02\x12\x14\n\x10OWNER_TYPE_GROUP\x10\x03*Y\n\nMemberType\x12\x17\n\x13MEMBER_TYPE_UNKNOWN\x10\x00\x12\x17\n\x13MEMBER_TYPE_ACCOUNT\x10\x01\x12\x19\n\x15MEMBER_TYPE_CHARACTER\x10\x02\x32\x90\x10\n\x11MruVGroupsService\x12V\n\x0b\x43reateGroup\x12\x18.mruv.CreateGroupRequest\x1a\x19.mruv.CreateGroupResponse\"\x12\x82\xd3\xe4\x93\x02\x0c\"\n/v1/groups\x12X\n\x08GetGroup\x12\x15.mruv.GetGroupRequest\x1a\x16.mruv.GetGroupResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/v1/groups/{group_id}\x12\x61\n\x0bUpdateGroup\x12\x18.mruv.UpdateGroupRequest\x1a\x19.mruv.UpdateGroupResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\x32\x15/v1/groups/{group_id}\x12\x61\n\x0b\x44\x65leteGroup\x12\x18.mruv.DeleteGroupRequest\x1a\x19.mruv.DeleteGroupResponse\"\x1d\x82\xd3\xe4\x93\x02\x17*\x15/v1/groups/{group_id}\x12P\n\tGetGroups\x12\x16.mruv.GetGroupsRequest\x1a\x17.mruv.GetGroupsResponse\"\x12\x82\xd3\xe4\x93\x02\x0c\x12\n/v1/groups\x12g\n\x0b\x41ssignOwner\x12\x18.mruv.AssignOwnerRequest\x1a\x19.mruv.AssignOwnerResponse\"#\x82\xd3\xe4\x93\x02\x1d\x1a\x1b/v1/groups/{group_id}/owner\x12^\n\x08GetOwner\x12\x15.mruv.GetOwnerRequest\x1a\x16.mruv.GetOwnerResponse\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/v1/groups/{group_id}/owner\x12o\n\tAddMember\x12\x16.mruv.AddMemberRequest\x1a\x17.mruv.AddMemberResponse\"1\x82\xd3\xe4\x93\x02+\")/v1/groups/{group_id}/members/{member_id}\x12\x66\n\nGetMembers\x12\x17.mruv.GetMembersRequest\x1a\x18.mruv.GetMembersResponse\"%\x82\xd3\xe4\x93\x02\x1f\x12\x1d/v1/groups/{group_id}/members\x12x\n\x0cRemoveMember\x12\x19.mruv.RemoveMemberRequest\x1a\x1a.mruv.RemoveMemberResponse\"1\x82\xd3\xe4\x93\x02+*)/v1/groups/{group_id}/members/{member_id}\x12s\n\rAddPermission\x12\x1a.mruv.AddPermissionRequest\x1a\x1b.mruv.AddPermissionResponse\")\x82\xd3\xe4\x93\x02#\"!/v1/groups/{group_id}/permissions\x12v\n\x0eGetPermissions\x12\x1b.mruv.GetPermissionsRequest\x1a\x1c.mruv.GetPermissionsResponse\")\x82\xd3\xe4\x93\x02#\x12!/v1/groups/{group_id}/permissions\x12|\n\x10RemovePermission\x12\x1d.mruv.RemovePermissionRequest\x1a\x1e.mruv.RemovePermissionResponse\")\x82\xd3\xe4\x93\x02#*!/v1/groups/{group_id}/permissions\x12y\n\x0b\x41\x64\x64Subgroup\x12\x18.mruv.AddSubgroupRequest\x1a\x19.mruv.AddSubgroupResponse\"5\x82\xd3\xe4\x93\x02/\"-/v1/groups/{group_id}/subgroups/{subgroup_id}\x12n\n\x0cGetSubgroups\x12\x19.mruv.GetSubgroupsRequest\x1a\x1a.mruv.GetSubgroupsResponse\"\'\x82\xd3\xe4\x93\x02!\x12\x1f/v1/groups/{group_id}/subgroups\x12\x82\x01\n\x0eRemoveSubgroup\x12\x1b.mruv.RemoveSubgroupRequest\x1a\x1c.mruv.RemoveSubgroupResponse\"5\x82\xd3\xe4\x93\x02/*-/v1/groups/{group_id}/subgroups/{subgroup_id}\x12t\n\x0bIsPermitted\x12\x18.mruv.IsPermittedRequest\x1a\x19.mruv.IsPermittedResponse\"0\x82\xd3\xe4\x93\x02*\x12(/v1/groups/members/{member_id}/permitted\x12\x66\n\x10GetServiceStatus\x12\x1a.mruv.ServiceStatusRequest\x1a\x1b.mruv.ServiceStatusResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/v1/groups/status\x12\\\n\x11GetServiceVersion\x12\x14.mruv.VersionRequest\x1a\x15.mruv.VersionResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x12\x12/v1/groups/versionB&Z$github.com/MruV-RP/mruv-pb-go/groupsb\x06proto3'
+  serialized_pb=b'\n\x13groups/groups.proto\x12\x0bmruv.groups\x1a\x1cgoogle/api/annotations.proto\x1a\x13\x63ommon/health.proto\"7\n\x12\x43reateGroupRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\'\n\x13\x43reateGroupResponse\x12\x10\n\x08group_id\x18\x01 \x01(\r\"#\n\x0fGetGroupRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\"5\n\x10GetGroupResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"I\n\x12UpdateGroupRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\"\x15\n\x13UpdateGroupResponse\"&\n\x12\x44\x65leteGroupRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\"\x15\n\x13\x44\x65leteGroupResponse\"5\n\x10GetGroupsRequest\x12\r\n\x05limit\x18\x01 \x01(\r\x12\x12\n\nbegin_from\x18\x02 \x01(\r\"\x81\x01\n\x11GetGroupsResponse\x12\x34\n\x06groups\x18\x01 \x03(\x0b\x32$.mruv.groups.GetGroupsResponse.Group\x1a\x36\n\x05Group\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\"d\n\x12\x41ssignOwnerRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12*\n\nowner_type\x18\x03 \x01(\x0e\x32\x16.mruv.groups.OwnerType\x12\x10\n\x08owner_id\x18\x02 \x01(\r\"\x15\n\x13\x41ssignOwnerResponse\"#\n\x0fGetOwnerRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\"P\n\x10GetOwnerResponse\x12\x10\n\x08owner_id\x18\x01 \x01(\r\x12*\n\nowner_type\x18\x02 \x01(\x0e\x32\x16.mruv.groups.OwnerType\"7\n\x10\x41\x64\x64MemberRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x11\n\tmember_id\x18\x02 \x01(\r\"\x13\n\x11\x41\x64\x64MemberResponse\"%\n\x11GetMembersRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\"V\n\x12GetMembersResponse\x12,\n\x0bmember_type\x18\x01 \x01(\x0e\x32\x17.mruv.groups.MemberType\x12\x12\n\nmember_ids\x18\x02 \x03(\r\":\n\x13RemoveMemberRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x11\n\tmember_id\x18\x02 \x01(\r\"\x16\n\x14RemoveMemberResponse\"J\n\x14\x41\x64\x64PermissionRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x12\n\ndefinition\x18\x03 \x01(\t\".\n\x15\x41\x64\x64PermissionResponse\x12\x15\n\rpermission_id\x18\x01 \x01(\r\")\n\x15GetPermissionsRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\"\x99\x01\n\x16GetPermissionsResponse\x12\x43\n\x0bpermissions\x18\x01 \x03(\x0b\x32..mruv.groups.GetPermissionsResponse.Permission\x1a:\n\nPermission\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x12\n\ndefinition\x18\x03 \x01(\t\"B\n\x17RemovePermissionRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x15\n\rpermission_id\x18\x02 \x01(\r\"\x1a\n\x18RemovePermissionResponse\";\n\x12\x41\x64\x64SubgroupRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x13\n\x0bsubgroup_id\x18\x02 \x01(\r\"\x15\n\x13\x41\x64\x64SubgroupResponse\"\'\n\x13GetSubgroupsRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\",\n\x14GetSubgroupsResponse\x12\x14\n\x0csubgroup_ids\x18\x01 \x03(\r\">\n\x15RemoveSubgroupRequest\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x13\n\x0bsubgroup_id\x18\x02 \x01(\r\"\x18\n\x16RemoveSubgroupResponse\"e\n\x12IsPermittedRequest\x12\x11\n\tmember_id\x18\x01 \x01(\r\x12,\n\x0bmember_type\x18\x02 \x01(\x0e\x32\x17.mruv.groups.MemberType\x12\x0e\n\x06\x61\x63tion\x18\x03 \x01(\t\"(\n\x13IsPermittedResponse\x12\x11\n\tpermitted\x18\x01 \x01(\x08*k\n\tOwnerType\x12\x16\n\x12OWNER_TYPE_UNKNOWN\x10\x00\x12\x16\n\x12OWNER_TYPE_ACCOUNT\x10\x01\x12\x18\n\x14OWNER_TYPE_CHARACTER\x10\x02\x12\x14\n\x10OWNER_TYPE_GROUP\x10\x03*Y\n\nMemberType\x12\x17\n\x13MEMBER_TYPE_UNKNOWN\x10\x00\x12\x17\n\x13MEMBER_TYPE_ACCOUNT\x10\x01\x12\x19\n\x15MEMBER_TYPE_CHARACTER\x10\x02\x32\xa0\x12\n\x11MruVGroupsService\x12\x64\n\x0b\x43reateGroup\x12\x1f.mruv.groups.CreateGroupRequest\x1a .mruv.groups.CreateGroupResponse\"\x12\x82\xd3\xe4\x93\x02\x0c\"\n/v1/groups\x12\x66\n\x08GetGroup\x12\x1c.mruv.groups.GetGroupRequest\x1a\x1d.mruv.groups.GetGroupResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/v1/groups/{group_id}\x12o\n\x0bUpdateGroup\x12\x1f.mruv.groups.UpdateGroupRequest\x1a .mruv.groups.UpdateGroupResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\x32\x15/v1/groups/{group_id}\x12o\n\x0b\x44\x65leteGroup\x12\x1f.mruv.groups.DeleteGroupRequest\x1a .mruv.groups.DeleteGroupResponse\"\x1d\x82\xd3\xe4\x93\x02\x17*\x15/v1/groups/{group_id}\x12^\n\tGetGroups\x12\x1d.mruv.groups.GetGroupsRequest\x1a\x1e.mruv.groups.GetGroupsResponse\"\x12\x82\xd3\xe4\x93\x02\x0c\x12\n/v1/groups\x12u\n\x0b\x41ssignOwner\x12\x1f.mruv.groups.AssignOwnerRequest\x1a .mruv.groups.AssignOwnerResponse\"#\x82\xd3\xe4\x93\x02\x1d\x1a\x1b/v1/groups/{group_id}/owner\x12l\n\x08GetOwner\x12\x1c.mruv.groups.GetOwnerRequest\x1a\x1d.mruv.groups.GetOwnerResponse\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/v1/groups/{group_id}/owner\x12}\n\tAddMember\x12\x1d.mruv.groups.AddMemberRequest\x1a\x1e.mruv.groups.AddMemberResponse\"1\x82\xd3\xe4\x93\x02+\")/v1/groups/{group_id}/members/{member_id}\x12t\n\nGetMembers\x12\x1e.mruv.groups.GetMembersRequest\x1a\x1f.mruv.groups.GetMembersResponse\"%\x82\xd3\xe4\x93\x02\x1f\x12\x1d/v1/groups/{group_id}/members\x12\x86\x01\n\x0cRemoveMember\x12 .mruv.groups.RemoveMemberRequest\x1a!.mruv.groups.RemoveMemberResponse\"1\x82\xd3\xe4\x93\x02+*)/v1/groups/{group_id}/members/{member_id}\x12\x81\x01\n\rAddPermission\x12!.mruv.groups.AddPermissionRequest\x1a\".mruv.groups.AddPermissionResponse\")\x82\xd3\xe4\x93\x02#\"!/v1/groups/{group_id}/permissions\x12\x84\x01\n\x0eGetPermissions\x12\".mruv.groups.GetPermissionsRequest\x1a#.mruv.groups.GetPermissionsResponse\")\x82\xd3\xe4\x93\x02#\x12!/v1/groups/{group_id}/permissions\x12\x8a\x01\n\x10RemovePermission\x12$.mruv.groups.RemovePermissionRequest\x1a%.mruv.groups.RemovePermissionResponse\")\x82\xd3\xe4\x93\x02#*!/v1/groups/{group_id}/permissions\x12\x87\x01\n\x0b\x41\x64\x64Subgroup\x12\x1f.mruv.groups.AddSubgroupRequest\x1a .mruv.groups.AddSubgroupResponse\"5\x82\xd3\xe4\x93\x02/\"-/v1/groups/{group_id}/subgroups/{subgroup_id}\x12|\n\x0cGetSubgroups\x12 .mruv.groups.GetSubgroupsRequest\x1a!.mruv.groups.GetSubgroupsResponse\"\'\x82\xd3\xe4\x93\x02!\x12\x1f/v1/groups/{group_id}/subgroups\x12\x90\x01\n\x0eRemoveSubgroup\x12\".mruv.groups.RemoveSubgroupRequest\x1a#.mruv.groups.RemoveSubgroupResponse\"5\x82\xd3\xe4\x93\x02/*-/v1/groups/{group_id}/subgroups/{subgroup_id}\x12\x82\x01\n\x0bIsPermitted\x12\x1f.mruv.groups.IsPermittedRequest\x1a .mruv.groups.IsPermittedResponse\"0\x82\xd3\xe4\x93\x02*\x12(/v1/groups/members/{member_id}/permitted\x12t\n\x10GetServiceStatus\x12!.mruv.common.ServiceStatusRequest\x1a\".mruv.common.ServiceStatusResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/v1/groups/status\x12j\n\x11GetServiceVersion\x12\x1b.mruv.common.VersionRequest\x1a\x1c.mruv.common.VersionResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x12\x12/v1/groups/versionB&Z$github.com/MruV-RP/mruv-pb-go/groupsb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,common_dot_health__pb2.DESCRIPTOR,])
 
 _OWNERTYPE = _descriptor.EnumDescriptor(
   name='OwnerType',
-  full_name='mruv.OwnerType',
+  full_name='mruv.groups.OwnerType',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -56,15 +56,15 @@ _OWNERTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1933,
-  serialized_end=2040,
+  serialized_start=1983,
+  serialized_end=2090,
 )
 _sym_db.RegisterEnumDescriptor(_OWNERTYPE)
 
 OwnerType = enum_type_wrapper.EnumTypeWrapper(_OWNERTYPE)
 _MEMBERTYPE = _descriptor.EnumDescriptor(
   name='MemberType',
-  full_name='mruv.MemberType',
+  full_name='mruv.groups.MemberType',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -87,8 +87,8 @@ _MEMBERTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2042,
-  serialized_end=2131,
+  serialized_start=2092,
+  serialized_end=2181,
 )
 _sym_db.RegisterEnumDescriptor(_MEMBERTYPE)
 
@@ -105,21 +105,21 @@ MEMBER_TYPE_CHARACTER = 2
 
 _CREATEGROUPREQUEST = _descriptor.Descriptor(
   name='CreateGroupRequest',
-  full_name='mruv.CreateGroupRequest',
+  full_name='mruv.groups.CreateGroupRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='mruv.CreateGroupRequest.name', index=0,
+      name='name', full_name='mruv.groups.CreateGroupRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='description', full_name='mruv.CreateGroupRequest.description', index=1,
+      name='description', full_name='mruv.groups.CreateGroupRequest.description', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -137,21 +137,21 @@ _CREATEGROUPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=80,
-  serialized_end=135,
+  serialized_start=87,
+  serialized_end=142,
 )
 
 
 _CREATEGROUPRESPONSE = _descriptor.Descriptor(
   name='CreateGroupResponse',
-  full_name='mruv.CreateGroupResponse',
+  full_name='mruv.groups.CreateGroupResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='group_id', full_name='mruv.CreateGroupResponse.group_id', index=0,
+      name='group_id', full_name='mruv.groups.CreateGroupResponse.group_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -169,21 +169,21 @@ _CREATEGROUPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=137,
-  serialized_end=176,
+  serialized_start=144,
+  serialized_end=183,
 )
 
 
 _GETGROUPREQUEST = _descriptor.Descriptor(
   name='GetGroupRequest',
-  full_name='mruv.GetGroupRequest',
+  full_name='mruv.groups.GetGroupRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='group_id', full_name='mruv.GetGroupRequest.group_id', index=0,
+      name='group_id', full_name='mruv.groups.GetGroupRequest.group_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -201,28 +201,28 @@ _GETGROUPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=178,
-  serialized_end=213,
+  serialized_start=185,
+  serialized_end=220,
 )
 
 
 _GETGROUPRESPONSE = _descriptor.Descriptor(
   name='GetGroupResponse',
-  full_name='mruv.GetGroupResponse',
+  full_name='mruv.groups.GetGroupResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='mruv.GetGroupResponse.name', index=0,
+      name='name', full_name='mruv.groups.GetGroupResponse.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='description', full_name='mruv.GetGroupResponse.description', index=1,
+      name='description', full_name='mruv.groups.GetGroupResponse.description', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -240,35 +240,35 @@ _GETGROUPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=215,
-  serialized_end=268,
+  serialized_start=222,
+  serialized_end=275,
 )
 
 
 _UPDATEGROUPREQUEST = _descriptor.Descriptor(
   name='UpdateGroupRequest',
-  full_name='mruv.UpdateGroupRequest',
+  full_name='mruv.groups.UpdateGroupRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='group_id', full_name='mruv.UpdateGroupRequest.group_id', index=0,
+      name='group_id', full_name='mruv.groups.UpdateGroupRequest.group_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='name', full_name='mruv.UpdateGroupRequest.name', index=1,
+      name='name', full_name='mruv.groups.UpdateGroupRequest.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='description', full_name='mruv.UpdateGroupRequest.description', index=2,
+      name='description', full_name='mruv.groups.UpdateGroupRequest.description', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -286,14 +286,14 @@ _UPDATEGROUPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=270,
-  serialized_end=343,
+  serialized_start=277,
+  serialized_end=350,
 )
 
 
 _UPDATEGROUPRESPONSE = _descriptor.Descriptor(
   name='UpdateGroupResponse',
-  full_name='mruv.UpdateGroupResponse',
+  full_name='mruv.groups.UpdateGroupResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -311,21 +311,21 @@ _UPDATEGROUPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=345,
-  serialized_end=366,
+  serialized_start=352,
+  serialized_end=373,
 )
 
 
 _DELETEGROUPREQUEST = _descriptor.Descriptor(
   name='DeleteGroupRequest',
-  full_name='mruv.DeleteGroupRequest',
+  full_name='mruv.groups.DeleteGroupRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='group_id', full_name='mruv.DeleteGroupRequest.group_id', index=0,
+      name='group_id', full_name='mruv.groups.DeleteGroupRequest.group_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -343,14 +343,14 @@ _DELETEGROUPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=368,
-  serialized_end=406,
+  serialized_start=375,
+  serialized_end=413,
 )
 
 
 _DELETEGROUPRESPONSE = _descriptor.Descriptor(
   name='DeleteGroupResponse',
-  full_name='mruv.DeleteGroupResponse',
+  full_name='mruv.groups.DeleteGroupResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -368,28 +368,28 @@ _DELETEGROUPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=408,
-  serialized_end=429,
+  serialized_start=415,
+  serialized_end=436,
 )
 
 
 _GETGROUPSREQUEST = _descriptor.Descriptor(
   name='GetGroupsRequest',
-  full_name='mruv.GetGroupsRequest',
+  full_name='mruv.groups.GetGroupsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='limit', full_name='mruv.GetGroupsRequest.limit', index=0,
+      name='limit', full_name='mruv.groups.GetGroupsRequest.limit', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='begin_from', full_name='mruv.GetGroupsRequest.begin_from', index=1,
+      name='begin_from', full_name='mruv.groups.GetGroupsRequest.begin_from', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -407,35 +407,35 @@ _GETGROUPSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=431,
-  serialized_end=484,
+  serialized_start=438,
+  serialized_end=491,
 )
 
 
 _GETGROUPSRESPONSE_GROUP = _descriptor.Descriptor(
   name='Group',
-  full_name='mruv.GetGroupsResponse.Group',
+  full_name='mruv.groups.GetGroupsResponse.Group',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.GetGroupsResponse.Group.id', index=0,
+      name='id', full_name='mruv.groups.GetGroupsResponse.Group.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='name', full_name='mruv.GetGroupsResponse.Group.name', index=1,
+      name='name', full_name='mruv.groups.GetGroupsResponse.Group.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='description', full_name='mruv.GetGroupsResponse.Group.description', index=2,
+      name='description', full_name='mruv.groups.GetGroupsResponse.Group.description', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -453,20 +453,20 @@ _GETGROUPSRESPONSE_GROUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=554,
-  serialized_end=608,
+  serialized_start=569,
+  serialized_end=623,
 )
 
 _GETGROUPSRESPONSE = _descriptor.Descriptor(
   name='GetGroupsResponse',
-  full_name='mruv.GetGroupsResponse',
+  full_name='mruv.groups.GetGroupsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='groups', full_name='mruv.GetGroupsResponse.groups', index=0,
+      name='groups', full_name='mruv.groups.GetGroupsResponse.groups', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -484,35 +484,35 @@ _GETGROUPSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=486,
-  serialized_end=608,
+  serialized_start=494,
+  serialized_end=623,
 )
 
 
 _ASSIGNOWNERREQUEST = _descriptor.Descriptor(
   name='AssignOwnerRequest',
-  full_name='mruv.AssignOwnerRequest',
+  full_name='mruv.groups.AssignOwnerRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='group_id', full_name='mruv.AssignOwnerRequest.group_id', index=0,
+      name='group_id', full_name='mruv.groups.AssignOwnerRequest.group_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='owner_type', full_name='mruv.AssignOwnerRequest.owner_type', index=1,
+      name='owner_type', full_name='mruv.groups.AssignOwnerRequest.owner_type', index=1,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='owner_id', full_name='mruv.AssignOwnerRequest.owner_id', index=2,
+      name='owner_id', full_name='mruv.groups.AssignOwnerRequest.owner_id', index=2,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -530,14 +530,14 @@ _ASSIGNOWNERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=610,
-  serialized_end=703,
+  serialized_start=625,
+  serialized_end=725,
 )
 
 
 _ASSIGNOWNERRESPONSE = _descriptor.Descriptor(
   name='AssignOwnerResponse',
-  full_name='mruv.AssignOwnerResponse',
+  full_name='mruv.groups.AssignOwnerResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -555,21 +555,21 @@ _ASSIGNOWNERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=705,
-  serialized_end=726,
+  serialized_start=727,
+  serialized_end=748,
 )
 
 
 _GETOWNERREQUEST = _descriptor.Descriptor(
   name='GetOwnerRequest',
-  full_name='mruv.GetOwnerRequest',
+  full_name='mruv.groups.GetOwnerRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='group_id', full_name='mruv.GetOwnerRequest.group_id', index=0,
+      name='group_id', full_name='mruv.groups.GetOwnerRequest.group_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -587,28 +587,28 @@ _GETOWNERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=728,
-  serialized_end=763,
+  serialized_start=750,
+  serialized_end=785,
 )
 
 
 _GETOWNERRESPONSE = _descriptor.Descriptor(
   name='GetOwnerResponse',
-  full_name='mruv.GetOwnerResponse',
+  full_name='mruv.groups.GetOwnerResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='owner_id', full_name='mruv.GetOwnerResponse.owner_id', index=0,
+      name='owner_id', full_name='mruv.groups.GetOwnerResponse.owner_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='owner_type', full_name='mruv.GetOwnerResponse.owner_type', index=1,
+      name='owner_type', full_name='mruv.groups.GetOwnerResponse.owner_type', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -626,28 +626,28 @@ _GETOWNERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=765,
-  serialized_end=838,
+  serialized_start=787,
+  serialized_end=867,
 )
 
 
 _ADDMEMBERREQUEST = _descriptor.Descriptor(
   name='AddMemberRequest',
-  full_name='mruv.AddMemberRequest',
+  full_name='mruv.groups.AddMemberRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='group_id', full_name='mruv.AddMemberRequest.group_id', index=0,
+      name='group_id', full_name='mruv.groups.AddMemberRequest.group_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='member_id', full_name='mruv.AddMemberRequest.member_id', index=1,
+      name='member_id', full_name='mruv.groups.AddMemberRequest.member_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -665,14 +665,14 @@ _ADDMEMBERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=840,
-  serialized_end=895,
+  serialized_start=869,
+  serialized_end=924,
 )
 
 
 _ADDMEMBERRESPONSE = _descriptor.Descriptor(
   name='AddMemberResponse',
-  full_name='mruv.AddMemberResponse',
+  full_name='mruv.groups.AddMemberResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -690,21 +690,21 @@ _ADDMEMBERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=897,
-  serialized_end=916,
+  serialized_start=926,
+  serialized_end=945,
 )
 
 
 _GETMEMBERSREQUEST = _descriptor.Descriptor(
   name='GetMembersRequest',
-  full_name='mruv.GetMembersRequest',
+  full_name='mruv.groups.GetMembersRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='group_id', full_name='mruv.GetMembersRequest.group_id', index=0,
+      name='group_id', full_name='mruv.groups.GetMembersRequest.group_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -722,28 +722,28 @@ _GETMEMBERSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=918,
-  serialized_end=955,
+  serialized_start=947,
+  serialized_end=984,
 )
 
 
 _GETMEMBERSRESPONSE = _descriptor.Descriptor(
   name='GetMembersResponse',
-  full_name='mruv.GetMembersResponse',
+  full_name='mruv.groups.GetMembersResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='member_type', full_name='mruv.GetMembersResponse.member_type', index=0,
+      name='member_type', full_name='mruv.groups.GetMembersResponse.member_type', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='member_ids', full_name='mruv.GetMembersResponse.member_ids', index=1,
+      name='member_ids', full_name='mruv.groups.GetMembersResponse.member_ids', index=1,
       number=2, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -761,28 +761,28 @@ _GETMEMBERSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=957,
-  serialized_end=1036,
+  serialized_start=986,
+  serialized_end=1072,
 )
 
 
 _REMOVEMEMBERREQUEST = _descriptor.Descriptor(
   name='RemoveMemberRequest',
-  full_name='mruv.RemoveMemberRequest',
+  full_name='mruv.groups.RemoveMemberRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='group_id', full_name='mruv.RemoveMemberRequest.group_id', index=0,
+      name='group_id', full_name='mruv.groups.RemoveMemberRequest.group_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='member_id', full_name='mruv.RemoveMemberRequest.member_id', index=1,
+      name='member_id', full_name='mruv.groups.RemoveMemberRequest.member_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -800,14 +800,14 @@ _REMOVEMEMBERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1038,
-  serialized_end=1096,
+  serialized_start=1074,
+  serialized_end=1132,
 )
 
 
 _REMOVEMEMBERRESPONSE = _descriptor.Descriptor(
   name='RemoveMemberResponse',
-  full_name='mruv.RemoveMemberResponse',
+  full_name='mruv.groups.RemoveMemberResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -825,35 +825,35 @@ _REMOVEMEMBERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1098,
-  serialized_end=1120,
+  serialized_start=1134,
+  serialized_end=1156,
 )
 
 
 _ADDPERMISSIONREQUEST = _descriptor.Descriptor(
   name='AddPermissionRequest',
-  full_name='mruv.AddPermissionRequest',
+  full_name='mruv.groups.AddPermissionRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='group_id', full_name='mruv.AddPermissionRequest.group_id', index=0,
+      name='group_id', full_name='mruv.groups.AddPermissionRequest.group_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='name', full_name='mruv.AddPermissionRequest.name', index=1,
+      name='name', full_name='mruv.groups.AddPermissionRequest.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='definition', full_name='mruv.AddPermissionRequest.definition', index=2,
+      name='definition', full_name='mruv.groups.AddPermissionRequest.definition', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -871,21 +871,21 @@ _ADDPERMISSIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1122,
-  serialized_end=1196,
+  serialized_start=1158,
+  serialized_end=1232,
 )
 
 
 _ADDPERMISSIONRESPONSE = _descriptor.Descriptor(
   name='AddPermissionResponse',
-  full_name='mruv.AddPermissionResponse',
+  full_name='mruv.groups.AddPermissionResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='permission_id', full_name='mruv.AddPermissionResponse.permission_id', index=0,
+      name='permission_id', full_name='mruv.groups.AddPermissionResponse.permission_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -903,21 +903,21 @@ _ADDPERMISSIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1198,
-  serialized_end=1244,
+  serialized_start=1234,
+  serialized_end=1280,
 )
 
 
 _GETPERMISSIONSREQUEST = _descriptor.Descriptor(
   name='GetPermissionsRequest',
-  full_name='mruv.GetPermissionsRequest',
+  full_name='mruv.groups.GetPermissionsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='group_id', full_name='mruv.GetPermissionsRequest.group_id', index=0,
+      name='group_id', full_name='mruv.groups.GetPermissionsRequest.group_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -935,35 +935,35 @@ _GETPERMISSIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1246,
-  serialized_end=1287,
+  serialized_start=1282,
+  serialized_end=1323,
 )
 
 
 _GETPERMISSIONSRESPONSE_PERMISSION = _descriptor.Descriptor(
   name='Permission',
-  full_name='mruv.GetPermissionsResponse.Permission',
+  full_name='mruv.groups.GetPermissionsResponse.Permission',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.GetPermissionsResponse.Permission.id', index=0,
+      name='id', full_name='mruv.groups.GetPermissionsResponse.Permission.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='name', full_name='mruv.GetPermissionsResponse.Permission.name', index=1,
+      name='name', full_name='mruv.groups.GetPermissionsResponse.Permission.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='definition', full_name='mruv.GetPermissionsResponse.Permission.definition', index=2,
+      name='definition', full_name='mruv.groups.GetPermissionsResponse.Permission.definition', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -981,20 +981,20 @@ _GETPERMISSIONSRESPONSE_PERMISSION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1378,
-  serialized_end=1436,
+  serialized_start=1421,
+  serialized_end=1479,
 )
 
 _GETPERMISSIONSRESPONSE = _descriptor.Descriptor(
   name='GetPermissionsResponse',
-  full_name='mruv.GetPermissionsResponse',
+  full_name='mruv.groups.GetPermissionsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='permissions', full_name='mruv.GetPermissionsResponse.permissions', index=0,
+      name='permissions', full_name='mruv.groups.GetPermissionsResponse.permissions', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1012,28 +1012,28 @@ _GETPERMISSIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1290,
-  serialized_end=1436,
+  serialized_start=1326,
+  serialized_end=1479,
 )
 
 
 _REMOVEPERMISSIONREQUEST = _descriptor.Descriptor(
   name='RemovePermissionRequest',
-  full_name='mruv.RemovePermissionRequest',
+  full_name='mruv.groups.RemovePermissionRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='group_id', full_name='mruv.RemovePermissionRequest.group_id', index=0,
+      name='group_id', full_name='mruv.groups.RemovePermissionRequest.group_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='permission_id', full_name='mruv.RemovePermissionRequest.permission_id', index=1,
+      name='permission_id', full_name='mruv.groups.RemovePermissionRequest.permission_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1051,14 +1051,14 @@ _REMOVEPERMISSIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1438,
-  serialized_end=1504,
+  serialized_start=1481,
+  serialized_end=1547,
 )
 
 
 _REMOVEPERMISSIONRESPONSE = _descriptor.Descriptor(
   name='RemovePermissionResponse',
-  full_name='mruv.RemovePermissionResponse',
+  full_name='mruv.groups.RemovePermissionResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -1076,28 +1076,28 @@ _REMOVEPERMISSIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1506,
-  serialized_end=1532,
+  serialized_start=1549,
+  serialized_end=1575,
 )
 
 
 _ADDSUBGROUPREQUEST = _descriptor.Descriptor(
   name='AddSubgroupRequest',
-  full_name='mruv.AddSubgroupRequest',
+  full_name='mruv.groups.AddSubgroupRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='group_id', full_name='mruv.AddSubgroupRequest.group_id', index=0,
+      name='group_id', full_name='mruv.groups.AddSubgroupRequest.group_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='subgroup_id', full_name='mruv.AddSubgroupRequest.subgroup_id', index=1,
+      name='subgroup_id', full_name='mruv.groups.AddSubgroupRequest.subgroup_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1115,14 +1115,14 @@ _ADDSUBGROUPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1534,
-  serialized_end=1593,
+  serialized_start=1577,
+  serialized_end=1636,
 )
 
 
 _ADDSUBGROUPRESPONSE = _descriptor.Descriptor(
   name='AddSubgroupResponse',
-  full_name='mruv.AddSubgroupResponse',
+  full_name='mruv.groups.AddSubgroupResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -1140,21 +1140,21 @@ _ADDSUBGROUPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1595,
-  serialized_end=1616,
+  serialized_start=1638,
+  serialized_end=1659,
 )
 
 
 _GETSUBGROUPSREQUEST = _descriptor.Descriptor(
   name='GetSubgroupsRequest',
-  full_name='mruv.GetSubgroupsRequest',
+  full_name='mruv.groups.GetSubgroupsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='group_id', full_name='mruv.GetSubgroupsRequest.group_id', index=0,
+      name='group_id', full_name='mruv.groups.GetSubgroupsRequest.group_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1172,21 +1172,21 @@ _GETSUBGROUPSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1618,
-  serialized_end=1657,
+  serialized_start=1661,
+  serialized_end=1700,
 )
 
 
 _GETSUBGROUPSRESPONSE = _descriptor.Descriptor(
   name='GetSubgroupsResponse',
-  full_name='mruv.GetSubgroupsResponse',
+  full_name='mruv.groups.GetSubgroupsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='subgroup_ids', full_name='mruv.GetSubgroupsResponse.subgroup_ids', index=0,
+      name='subgroup_ids', full_name='mruv.groups.GetSubgroupsResponse.subgroup_ids', index=0,
       number=1, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1204,28 +1204,28 @@ _GETSUBGROUPSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1659,
-  serialized_end=1703,
+  serialized_start=1702,
+  serialized_end=1746,
 )
 
 
 _REMOVESUBGROUPREQUEST = _descriptor.Descriptor(
   name='RemoveSubgroupRequest',
-  full_name='mruv.RemoveSubgroupRequest',
+  full_name='mruv.groups.RemoveSubgroupRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='group_id', full_name='mruv.RemoveSubgroupRequest.group_id', index=0,
+      name='group_id', full_name='mruv.groups.RemoveSubgroupRequest.group_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='subgroup_id', full_name='mruv.RemoveSubgroupRequest.subgroup_id', index=1,
+      name='subgroup_id', full_name='mruv.groups.RemoveSubgroupRequest.subgroup_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1243,14 +1243,14 @@ _REMOVESUBGROUPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1705,
-  serialized_end=1767,
+  serialized_start=1748,
+  serialized_end=1810,
 )
 
 
 _REMOVESUBGROUPRESPONSE = _descriptor.Descriptor(
   name='RemoveSubgroupResponse',
-  full_name='mruv.RemoveSubgroupResponse',
+  full_name='mruv.groups.RemoveSubgroupResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -1268,35 +1268,35 @@ _REMOVESUBGROUPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1769,
-  serialized_end=1793,
+  serialized_start=1812,
+  serialized_end=1836,
 )
 
 
 _ISPERMITTEDREQUEST = _descriptor.Descriptor(
   name='IsPermittedRequest',
-  full_name='mruv.IsPermittedRequest',
+  full_name='mruv.groups.IsPermittedRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='member_id', full_name='mruv.IsPermittedRequest.member_id', index=0,
+      name='member_id', full_name='mruv.groups.IsPermittedRequest.member_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='member_type', full_name='mruv.IsPermittedRequest.member_type', index=1,
+      name='member_type', full_name='mruv.groups.IsPermittedRequest.member_type', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='action', full_name='mruv.IsPermittedRequest.action', index=2,
+      name='action', full_name='mruv.groups.IsPermittedRequest.action', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -1314,21 +1314,21 @@ _ISPERMITTEDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1795,
-  serialized_end=1889,
+  serialized_start=1838,
+  serialized_end=1939,
 )
 
 
 _ISPERMITTEDRESPONSE = _descriptor.Descriptor(
   name='IsPermittedResponse',
-  full_name='mruv.IsPermittedResponse',
+  full_name='mruv.groups.IsPermittedResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='permitted', full_name='mruv.IsPermittedResponse.permitted', index=0,
+      name='permitted', full_name='mruv.groups.IsPermittedResponse.permitted', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -1346,8 +1346,8 @@ _ISPERMITTEDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1891,
-  serialized_end=1931,
+  serialized_start=1941,
+  serialized_end=1981,
 )
 
 _GETGROUPSRESPONSE_GROUP.containing_type = _GETGROUPSRESPONSE
@@ -1399,63 +1399,63 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 CreateGroupRequest = _reflection.GeneratedProtocolMessageType('CreateGroupRequest', (_message.Message,), {
   'DESCRIPTOR' : _CREATEGROUPREQUEST,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.CreateGroupRequest)
+  # @@protoc_insertion_point(class_scope:mruv.groups.CreateGroupRequest)
   })
 _sym_db.RegisterMessage(CreateGroupRequest)
 
 CreateGroupResponse = _reflection.GeneratedProtocolMessageType('CreateGroupResponse', (_message.Message,), {
   'DESCRIPTOR' : _CREATEGROUPRESPONSE,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.CreateGroupResponse)
+  # @@protoc_insertion_point(class_scope:mruv.groups.CreateGroupResponse)
   })
 _sym_db.RegisterMessage(CreateGroupResponse)
 
 GetGroupRequest = _reflection.GeneratedProtocolMessageType('GetGroupRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETGROUPREQUEST,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetGroupRequest)
+  # @@protoc_insertion_point(class_scope:mruv.groups.GetGroupRequest)
   })
 _sym_db.RegisterMessage(GetGroupRequest)
 
 GetGroupResponse = _reflection.GeneratedProtocolMessageType('GetGroupResponse', (_message.Message,), {
   'DESCRIPTOR' : _GETGROUPRESPONSE,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetGroupResponse)
+  # @@protoc_insertion_point(class_scope:mruv.groups.GetGroupResponse)
   })
 _sym_db.RegisterMessage(GetGroupResponse)
 
 UpdateGroupRequest = _reflection.GeneratedProtocolMessageType('UpdateGroupRequest', (_message.Message,), {
   'DESCRIPTOR' : _UPDATEGROUPREQUEST,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.UpdateGroupRequest)
+  # @@protoc_insertion_point(class_scope:mruv.groups.UpdateGroupRequest)
   })
 _sym_db.RegisterMessage(UpdateGroupRequest)
 
 UpdateGroupResponse = _reflection.GeneratedProtocolMessageType('UpdateGroupResponse', (_message.Message,), {
   'DESCRIPTOR' : _UPDATEGROUPRESPONSE,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.UpdateGroupResponse)
+  # @@protoc_insertion_point(class_scope:mruv.groups.UpdateGroupResponse)
   })
 _sym_db.RegisterMessage(UpdateGroupResponse)
 
 DeleteGroupRequest = _reflection.GeneratedProtocolMessageType('DeleteGroupRequest', (_message.Message,), {
   'DESCRIPTOR' : _DELETEGROUPREQUEST,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.DeleteGroupRequest)
+  # @@protoc_insertion_point(class_scope:mruv.groups.DeleteGroupRequest)
   })
 _sym_db.RegisterMessage(DeleteGroupRequest)
 
 DeleteGroupResponse = _reflection.GeneratedProtocolMessageType('DeleteGroupResponse', (_message.Message,), {
   'DESCRIPTOR' : _DELETEGROUPRESPONSE,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.DeleteGroupResponse)
+  # @@protoc_insertion_point(class_scope:mruv.groups.DeleteGroupResponse)
   })
 _sym_db.RegisterMessage(DeleteGroupResponse)
 
 GetGroupsRequest = _reflection.GeneratedProtocolMessageType('GetGroupsRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETGROUPSREQUEST,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetGroupsRequest)
+  # @@protoc_insertion_point(class_scope:mruv.groups.GetGroupsRequest)
   })
 _sym_db.RegisterMessage(GetGroupsRequest)
 
@@ -1464,12 +1464,12 @@ GetGroupsResponse = _reflection.GeneratedProtocolMessageType('GetGroupsResponse'
   'Group' : _reflection.GeneratedProtocolMessageType('Group', (_message.Message,), {
     'DESCRIPTOR' : _GETGROUPSRESPONSE_GROUP,
     '__module__' : 'groups.groups_pb2'
-    # @@protoc_insertion_point(class_scope:mruv.GetGroupsResponse.Group)
+    # @@protoc_insertion_point(class_scope:mruv.groups.GetGroupsResponse.Group)
     })
   ,
   'DESCRIPTOR' : _GETGROUPSRESPONSE,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetGroupsResponse)
+  # @@protoc_insertion_point(class_scope:mruv.groups.GetGroupsResponse)
   })
 _sym_db.RegisterMessage(GetGroupsResponse)
 _sym_db.RegisterMessage(GetGroupsResponse.Group)
@@ -1477,91 +1477,91 @@ _sym_db.RegisterMessage(GetGroupsResponse.Group)
 AssignOwnerRequest = _reflection.GeneratedProtocolMessageType('AssignOwnerRequest', (_message.Message,), {
   'DESCRIPTOR' : _ASSIGNOWNERREQUEST,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.AssignOwnerRequest)
+  # @@protoc_insertion_point(class_scope:mruv.groups.AssignOwnerRequest)
   })
 _sym_db.RegisterMessage(AssignOwnerRequest)
 
 AssignOwnerResponse = _reflection.GeneratedProtocolMessageType('AssignOwnerResponse', (_message.Message,), {
   'DESCRIPTOR' : _ASSIGNOWNERRESPONSE,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.AssignOwnerResponse)
+  # @@protoc_insertion_point(class_scope:mruv.groups.AssignOwnerResponse)
   })
 _sym_db.RegisterMessage(AssignOwnerResponse)
 
 GetOwnerRequest = _reflection.GeneratedProtocolMessageType('GetOwnerRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETOWNERREQUEST,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetOwnerRequest)
+  # @@protoc_insertion_point(class_scope:mruv.groups.GetOwnerRequest)
   })
 _sym_db.RegisterMessage(GetOwnerRequest)
 
 GetOwnerResponse = _reflection.GeneratedProtocolMessageType('GetOwnerResponse', (_message.Message,), {
   'DESCRIPTOR' : _GETOWNERRESPONSE,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetOwnerResponse)
+  # @@protoc_insertion_point(class_scope:mruv.groups.GetOwnerResponse)
   })
 _sym_db.RegisterMessage(GetOwnerResponse)
 
 AddMemberRequest = _reflection.GeneratedProtocolMessageType('AddMemberRequest', (_message.Message,), {
   'DESCRIPTOR' : _ADDMEMBERREQUEST,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.AddMemberRequest)
+  # @@protoc_insertion_point(class_scope:mruv.groups.AddMemberRequest)
   })
 _sym_db.RegisterMessage(AddMemberRequest)
 
 AddMemberResponse = _reflection.GeneratedProtocolMessageType('AddMemberResponse', (_message.Message,), {
   'DESCRIPTOR' : _ADDMEMBERRESPONSE,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.AddMemberResponse)
+  # @@protoc_insertion_point(class_scope:mruv.groups.AddMemberResponse)
   })
 _sym_db.RegisterMessage(AddMemberResponse)
 
 GetMembersRequest = _reflection.GeneratedProtocolMessageType('GetMembersRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETMEMBERSREQUEST,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetMembersRequest)
+  # @@protoc_insertion_point(class_scope:mruv.groups.GetMembersRequest)
   })
 _sym_db.RegisterMessage(GetMembersRequest)
 
 GetMembersResponse = _reflection.GeneratedProtocolMessageType('GetMembersResponse', (_message.Message,), {
   'DESCRIPTOR' : _GETMEMBERSRESPONSE,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetMembersResponse)
+  # @@protoc_insertion_point(class_scope:mruv.groups.GetMembersResponse)
   })
 _sym_db.RegisterMessage(GetMembersResponse)
 
 RemoveMemberRequest = _reflection.GeneratedProtocolMessageType('RemoveMemberRequest', (_message.Message,), {
   'DESCRIPTOR' : _REMOVEMEMBERREQUEST,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.RemoveMemberRequest)
+  # @@protoc_insertion_point(class_scope:mruv.groups.RemoveMemberRequest)
   })
 _sym_db.RegisterMessage(RemoveMemberRequest)
 
 RemoveMemberResponse = _reflection.GeneratedProtocolMessageType('RemoveMemberResponse', (_message.Message,), {
   'DESCRIPTOR' : _REMOVEMEMBERRESPONSE,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.RemoveMemberResponse)
+  # @@protoc_insertion_point(class_scope:mruv.groups.RemoveMemberResponse)
   })
 _sym_db.RegisterMessage(RemoveMemberResponse)
 
 AddPermissionRequest = _reflection.GeneratedProtocolMessageType('AddPermissionRequest', (_message.Message,), {
   'DESCRIPTOR' : _ADDPERMISSIONREQUEST,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.AddPermissionRequest)
+  # @@protoc_insertion_point(class_scope:mruv.groups.AddPermissionRequest)
   })
 _sym_db.RegisterMessage(AddPermissionRequest)
 
 AddPermissionResponse = _reflection.GeneratedProtocolMessageType('AddPermissionResponse', (_message.Message,), {
   'DESCRIPTOR' : _ADDPERMISSIONRESPONSE,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.AddPermissionResponse)
+  # @@protoc_insertion_point(class_scope:mruv.groups.AddPermissionResponse)
   })
 _sym_db.RegisterMessage(AddPermissionResponse)
 
 GetPermissionsRequest = _reflection.GeneratedProtocolMessageType('GetPermissionsRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETPERMISSIONSREQUEST,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetPermissionsRequest)
+  # @@protoc_insertion_point(class_scope:mruv.groups.GetPermissionsRequest)
   })
 _sym_db.RegisterMessage(GetPermissionsRequest)
 
@@ -1570,12 +1570,12 @@ GetPermissionsResponse = _reflection.GeneratedProtocolMessageType('GetPermission
   'Permission' : _reflection.GeneratedProtocolMessageType('Permission', (_message.Message,), {
     'DESCRIPTOR' : _GETPERMISSIONSRESPONSE_PERMISSION,
     '__module__' : 'groups.groups_pb2'
-    # @@protoc_insertion_point(class_scope:mruv.GetPermissionsResponse.Permission)
+    # @@protoc_insertion_point(class_scope:mruv.groups.GetPermissionsResponse.Permission)
     })
   ,
   'DESCRIPTOR' : _GETPERMISSIONSRESPONSE,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetPermissionsResponse)
+  # @@protoc_insertion_point(class_scope:mruv.groups.GetPermissionsResponse)
   })
 _sym_db.RegisterMessage(GetPermissionsResponse)
 _sym_db.RegisterMessage(GetPermissionsResponse.Permission)
@@ -1583,70 +1583,70 @@ _sym_db.RegisterMessage(GetPermissionsResponse.Permission)
 RemovePermissionRequest = _reflection.GeneratedProtocolMessageType('RemovePermissionRequest', (_message.Message,), {
   'DESCRIPTOR' : _REMOVEPERMISSIONREQUEST,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.RemovePermissionRequest)
+  # @@protoc_insertion_point(class_scope:mruv.groups.RemovePermissionRequest)
   })
 _sym_db.RegisterMessage(RemovePermissionRequest)
 
 RemovePermissionResponse = _reflection.GeneratedProtocolMessageType('RemovePermissionResponse', (_message.Message,), {
   'DESCRIPTOR' : _REMOVEPERMISSIONRESPONSE,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.RemovePermissionResponse)
+  # @@protoc_insertion_point(class_scope:mruv.groups.RemovePermissionResponse)
   })
 _sym_db.RegisterMessage(RemovePermissionResponse)
 
 AddSubgroupRequest = _reflection.GeneratedProtocolMessageType('AddSubgroupRequest', (_message.Message,), {
   'DESCRIPTOR' : _ADDSUBGROUPREQUEST,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.AddSubgroupRequest)
+  # @@protoc_insertion_point(class_scope:mruv.groups.AddSubgroupRequest)
   })
 _sym_db.RegisterMessage(AddSubgroupRequest)
 
 AddSubgroupResponse = _reflection.GeneratedProtocolMessageType('AddSubgroupResponse', (_message.Message,), {
   'DESCRIPTOR' : _ADDSUBGROUPRESPONSE,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.AddSubgroupResponse)
+  # @@protoc_insertion_point(class_scope:mruv.groups.AddSubgroupResponse)
   })
 _sym_db.RegisterMessage(AddSubgroupResponse)
 
 GetSubgroupsRequest = _reflection.GeneratedProtocolMessageType('GetSubgroupsRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETSUBGROUPSREQUEST,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetSubgroupsRequest)
+  # @@protoc_insertion_point(class_scope:mruv.groups.GetSubgroupsRequest)
   })
 _sym_db.RegisterMessage(GetSubgroupsRequest)
 
 GetSubgroupsResponse = _reflection.GeneratedProtocolMessageType('GetSubgroupsResponse', (_message.Message,), {
   'DESCRIPTOR' : _GETSUBGROUPSRESPONSE,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetSubgroupsResponse)
+  # @@protoc_insertion_point(class_scope:mruv.groups.GetSubgroupsResponse)
   })
 _sym_db.RegisterMessage(GetSubgroupsResponse)
 
 RemoveSubgroupRequest = _reflection.GeneratedProtocolMessageType('RemoveSubgroupRequest', (_message.Message,), {
   'DESCRIPTOR' : _REMOVESUBGROUPREQUEST,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.RemoveSubgroupRequest)
+  # @@protoc_insertion_point(class_scope:mruv.groups.RemoveSubgroupRequest)
   })
 _sym_db.RegisterMessage(RemoveSubgroupRequest)
 
 RemoveSubgroupResponse = _reflection.GeneratedProtocolMessageType('RemoveSubgroupResponse', (_message.Message,), {
   'DESCRIPTOR' : _REMOVESUBGROUPRESPONSE,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.RemoveSubgroupResponse)
+  # @@protoc_insertion_point(class_scope:mruv.groups.RemoveSubgroupResponse)
   })
 _sym_db.RegisterMessage(RemoveSubgroupResponse)
 
 IsPermittedRequest = _reflection.GeneratedProtocolMessageType('IsPermittedRequest', (_message.Message,), {
   'DESCRIPTOR' : _ISPERMITTEDREQUEST,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.IsPermittedRequest)
+  # @@protoc_insertion_point(class_scope:mruv.groups.IsPermittedRequest)
   })
 _sym_db.RegisterMessage(IsPermittedRequest)
 
 IsPermittedResponse = _reflection.GeneratedProtocolMessageType('IsPermittedResponse', (_message.Message,), {
   'DESCRIPTOR' : _ISPERMITTEDRESPONSE,
   '__module__' : 'groups.groups_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.IsPermittedResponse)
+  # @@protoc_insertion_point(class_scope:mruv.groups.IsPermittedResponse)
   })
 _sym_db.RegisterMessage(IsPermittedResponse)
 
@@ -1655,17 +1655,17 @@ DESCRIPTOR._options = None
 
 _MRUVGROUPSSERVICE = _descriptor.ServiceDescriptor(
   name='MruVGroupsService',
-  full_name='mruv.MruVGroupsService',
+  full_name='mruv.groups.MruVGroupsService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=2134,
-  serialized_end=4198,
+  serialized_start=2184,
+  serialized_end=4520,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateGroup',
-    full_name='mruv.MruVGroupsService.CreateGroup',
+    full_name='mruv.groups.MruVGroupsService.CreateGroup',
     index=0,
     containing_service=None,
     input_type=_CREATEGROUPREQUEST,
@@ -1675,7 +1675,7 @@ _MRUVGROUPSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetGroup',
-    full_name='mruv.MruVGroupsService.GetGroup',
+    full_name='mruv.groups.MruVGroupsService.GetGroup',
     index=1,
     containing_service=None,
     input_type=_GETGROUPREQUEST,
@@ -1685,7 +1685,7 @@ _MRUVGROUPSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='UpdateGroup',
-    full_name='mruv.MruVGroupsService.UpdateGroup',
+    full_name='mruv.groups.MruVGroupsService.UpdateGroup',
     index=2,
     containing_service=None,
     input_type=_UPDATEGROUPREQUEST,
@@ -1695,7 +1695,7 @@ _MRUVGROUPSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='DeleteGroup',
-    full_name='mruv.MruVGroupsService.DeleteGroup',
+    full_name='mruv.groups.MruVGroupsService.DeleteGroup',
     index=3,
     containing_service=None,
     input_type=_DELETEGROUPREQUEST,
@@ -1705,7 +1705,7 @@ _MRUVGROUPSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetGroups',
-    full_name='mruv.MruVGroupsService.GetGroups',
+    full_name='mruv.groups.MruVGroupsService.GetGroups',
     index=4,
     containing_service=None,
     input_type=_GETGROUPSREQUEST,
@@ -1715,7 +1715,7 @@ _MRUVGROUPSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='AssignOwner',
-    full_name='mruv.MruVGroupsService.AssignOwner',
+    full_name='mruv.groups.MruVGroupsService.AssignOwner',
     index=5,
     containing_service=None,
     input_type=_ASSIGNOWNERREQUEST,
@@ -1725,7 +1725,7 @@ _MRUVGROUPSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetOwner',
-    full_name='mruv.MruVGroupsService.GetOwner',
+    full_name='mruv.groups.MruVGroupsService.GetOwner',
     index=6,
     containing_service=None,
     input_type=_GETOWNERREQUEST,
@@ -1735,7 +1735,7 @@ _MRUVGROUPSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='AddMember',
-    full_name='mruv.MruVGroupsService.AddMember',
+    full_name='mruv.groups.MruVGroupsService.AddMember',
     index=7,
     containing_service=None,
     input_type=_ADDMEMBERREQUEST,
@@ -1745,7 +1745,7 @@ _MRUVGROUPSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetMembers',
-    full_name='mruv.MruVGroupsService.GetMembers',
+    full_name='mruv.groups.MruVGroupsService.GetMembers',
     index=8,
     containing_service=None,
     input_type=_GETMEMBERSREQUEST,
@@ -1755,7 +1755,7 @@ _MRUVGROUPSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='RemoveMember',
-    full_name='mruv.MruVGroupsService.RemoveMember',
+    full_name='mruv.groups.MruVGroupsService.RemoveMember',
     index=9,
     containing_service=None,
     input_type=_REMOVEMEMBERREQUEST,
@@ -1765,7 +1765,7 @@ _MRUVGROUPSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='AddPermission',
-    full_name='mruv.MruVGroupsService.AddPermission',
+    full_name='mruv.groups.MruVGroupsService.AddPermission',
     index=10,
     containing_service=None,
     input_type=_ADDPERMISSIONREQUEST,
@@ -1775,7 +1775,7 @@ _MRUVGROUPSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetPermissions',
-    full_name='mruv.MruVGroupsService.GetPermissions',
+    full_name='mruv.groups.MruVGroupsService.GetPermissions',
     index=11,
     containing_service=None,
     input_type=_GETPERMISSIONSREQUEST,
@@ -1785,7 +1785,7 @@ _MRUVGROUPSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='RemovePermission',
-    full_name='mruv.MruVGroupsService.RemovePermission',
+    full_name='mruv.groups.MruVGroupsService.RemovePermission',
     index=12,
     containing_service=None,
     input_type=_REMOVEPERMISSIONREQUEST,
@@ -1795,7 +1795,7 @@ _MRUVGROUPSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='AddSubgroup',
-    full_name='mruv.MruVGroupsService.AddSubgroup',
+    full_name='mruv.groups.MruVGroupsService.AddSubgroup',
     index=13,
     containing_service=None,
     input_type=_ADDSUBGROUPREQUEST,
@@ -1805,7 +1805,7 @@ _MRUVGROUPSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetSubgroups',
-    full_name='mruv.MruVGroupsService.GetSubgroups',
+    full_name='mruv.groups.MruVGroupsService.GetSubgroups',
     index=14,
     containing_service=None,
     input_type=_GETSUBGROUPSREQUEST,
@@ -1815,7 +1815,7 @@ _MRUVGROUPSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='RemoveSubgroup',
-    full_name='mruv.MruVGroupsService.RemoveSubgroup',
+    full_name='mruv.groups.MruVGroupsService.RemoveSubgroup',
     index=15,
     containing_service=None,
     input_type=_REMOVESUBGROUPREQUEST,
@@ -1825,7 +1825,7 @@ _MRUVGROUPSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='IsPermitted',
-    full_name='mruv.MruVGroupsService.IsPermitted',
+    full_name='mruv.groups.MruVGroupsService.IsPermitted',
     index=16,
     containing_service=None,
     input_type=_ISPERMITTEDREQUEST,
@@ -1835,7 +1835,7 @@ _MRUVGROUPSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetServiceStatus',
-    full_name='mruv.MruVGroupsService.GetServiceStatus',
+    full_name='mruv.groups.MruVGroupsService.GetServiceStatus',
     index=17,
     containing_service=None,
     input_type=common_dot_health__pb2._SERVICESTATUSREQUEST,
@@ -1845,7 +1845,7 @@ _MRUVGROUPSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetServiceVersion',
-    full_name='mruv.MruVGroupsService.GetServiceVersion',
+    full_name='mruv.groups.MruVGroupsService.GetServiceVersion',
     index=18,
     containing_service=None,
     input_type=common_dot_health__pb2._VERSIONREQUEST,

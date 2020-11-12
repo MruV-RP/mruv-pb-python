@@ -15,11 +15,11 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='common/health.proto',
-  package='mruv',
+  package='mruv.common',
   syntax='proto3',
   serialized_options=b'Z$github.com/MruV-RP/mruv-pb-go/common',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13\x63ommon/health.proto\x12\x04mruv\"\x16\n\x14ServiceStatusRequest\"\'\n\x15ServiceStatusResponse\x12\x0e\n\x06status\x18\x01 \x01(\t\"\x10\n\x0eVersionRequest\"W\n\x0fVersionResponse\x12\x0f\n\x07version\x18\x01 \x01(\t\x12\x12\n\nbuild_date\x18\x02 \x01(\t\x12\x0e\n\x06\x63ommit\x18\x03 \x01(\t\x12\x0f\n\x07os_arch\x18\x04 \x01(\tB&Z$github.com/MruV-RP/mruv-pb-go/commonb\x06proto3'
+  serialized_pb=b'\n\x13\x63ommon/health.proto\x12\x0bmruv.common\"\x16\n\x14ServiceStatusRequest\"\'\n\x15ServiceStatusResponse\x12\x0e\n\x06status\x18\x01 \x01(\t\"\x10\n\x0eVersionRequest\"W\n\x0fVersionResponse\x12\x0f\n\x07version\x18\x01 \x01(\t\x12\x12\n\nbuild_date\x18\x02 \x01(\t\x12\x0e\n\x06\x63ommit\x18\x03 \x01(\t\x12\x0f\n\x07os_arch\x18\x04 \x01(\tB&Z$github.com/MruV-RP/mruv-pb-go/commonb\x06proto3'
 )
 
 
@@ -27,7 +27,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _SERVICESTATUSREQUEST = _descriptor.Descriptor(
   name='ServiceStatusRequest',
-  full_name='mruv.ServiceStatusRequest',
+  full_name='mruv.common.ServiceStatusRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -45,21 +45,21 @@ _SERVICESTATUSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29,
-  serialized_end=51,
+  serialized_start=36,
+  serialized_end=58,
 )
 
 
 _SERVICESTATUSRESPONSE = _descriptor.Descriptor(
   name='ServiceStatusResponse',
-  full_name='mruv.ServiceStatusResponse',
+  full_name='mruv.common.ServiceStatusResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='mruv.ServiceStatusResponse.status', index=0,
+      name='status', full_name='mruv.common.ServiceStatusResponse.status', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -77,14 +77,14 @@ _SERVICESTATUSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=53,
-  serialized_end=92,
+  serialized_start=60,
+  serialized_end=99,
 )
 
 
 _VERSIONREQUEST = _descriptor.Descriptor(
   name='VersionRequest',
-  full_name='mruv.VersionRequest',
+  full_name='mruv.common.VersionRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -102,42 +102,42 @@ _VERSIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=94,
-  serialized_end=110,
+  serialized_start=101,
+  serialized_end=117,
 )
 
 
 _VERSIONRESPONSE = _descriptor.Descriptor(
   name='VersionResponse',
-  full_name='mruv.VersionResponse',
+  full_name='mruv.common.VersionResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='version', full_name='mruv.VersionResponse.version', index=0,
+      name='version', full_name='mruv.common.VersionResponse.version', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='build_date', full_name='mruv.VersionResponse.build_date', index=1,
+      name='build_date', full_name='mruv.common.VersionResponse.build_date', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='commit', full_name='mruv.VersionResponse.commit', index=2,
+      name='commit', full_name='mruv.common.VersionResponse.commit', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='os_arch', full_name='mruv.VersionResponse.os_arch', index=3,
+      name='os_arch', full_name='mruv.common.VersionResponse.os_arch', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -155,8 +155,8 @@ _VERSIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=112,
-  serialized_end=199,
+  serialized_start=119,
+  serialized_end=206,
 )
 
 DESCRIPTOR.message_types_by_name['ServiceStatusRequest'] = _SERVICESTATUSREQUEST
@@ -168,28 +168,28 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 ServiceStatusRequest = _reflection.GeneratedProtocolMessageType('ServiceStatusRequest', (_message.Message,), {
   'DESCRIPTOR' : _SERVICESTATUSREQUEST,
   '__module__' : 'common.health_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.ServiceStatusRequest)
+  # @@protoc_insertion_point(class_scope:mruv.common.ServiceStatusRequest)
   })
 _sym_db.RegisterMessage(ServiceStatusRequest)
 
 ServiceStatusResponse = _reflection.GeneratedProtocolMessageType('ServiceStatusResponse', (_message.Message,), {
   'DESCRIPTOR' : _SERVICESTATUSRESPONSE,
   '__module__' : 'common.health_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.ServiceStatusResponse)
+  # @@protoc_insertion_point(class_scope:mruv.common.ServiceStatusResponse)
   })
 _sym_db.RegisterMessage(ServiceStatusResponse)
 
 VersionRequest = _reflection.GeneratedProtocolMessageType('VersionRequest', (_message.Message,), {
   'DESCRIPTOR' : _VERSIONREQUEST,
   '__module__' : 'common.health_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.VersionRequest)
+  # @@protoc_insertion_point(class_scope:mruv.common.VersionRequest)
   })
 _sym_db.RegisterMessage(VersionRequest)
 
 VersionResponse = _reflection.GeneratedProtocolMessageType('VersionResponse', (_message.Message,), {
   'DESCRIPTOR' : _VERSIONRESPONSE,
   '__module__' : 'common.health_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.VersionResponse)
+  # @@protoc_insertion_point(class_scope:mruv.common.VersionResponse)
   })
 _sym_db.RegisterMessage(VersionResponse)
 

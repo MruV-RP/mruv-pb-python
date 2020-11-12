@@ -17,27 +17,27 @@ class MruVAccountsServiceStub(object):
             channel: A grpc.Channel.
         """
         self.RegisterAccount = channel.unary_unary(
-                '/mruv.MruVAccountsService/RegisterAccount',
+                '/mruv.accounts.MruVAccountsService/RegisterAccount',
                 request_serializer=accounts_dot_accounts__pb2.RegisterAccountRequest.SerializeToString,
                 response_deserializer=accounts_dot_accounts__pb2.RegisterAccountResponse.FromString,
                 )
         self.LogIn = channel.unary_unary(
-                '/mruv.MruVAccountsService/LogIn',
+                '/mruv.accounts.MruVAccountsService/LogIn',
                 request_serializer=accounts_dot_accounts__pb2.LogInRequest.SerializeToString,
                 response_deserializer=accounts_dot_accounts__pb2.LogInResponse.FromString,
                 )
         self.IsAccountExist = channel.unary_unary(
-                '/mruv.MruVAccountsService/IsAccountExist',
+                '/mruv.accounts.MruVAccountsService/IsAccountExist',
                 request_serializer=accounts_dot_accounts__pb2.IsAccountExistRequest.SerializeToString,
                 response_deserializer=accounts_dot_accounts__pb2.IsAccountExistResponse.FromString,
                 )
         self.GetAccount = channel.unary_unary(
-                '/mruv.MruVAccountsService/GetAccount',
+                '/mruv.accounts.MruVAccountsService/GetAccount',
                 request_serializer=accounts_dot_accounts__pb2.GetAccountRequest.SerializeToString,
                 response_deserializer=accounts_dot_accounts__pb2.GetAccountResponse.FromString,
                 )
         self.GetAccountCharacters = channel.unary_unary(
-                '/mruv.MruVAccountsService/GetAccountCharacters',
+                '/mruv.accounts.MruVAccountsService/GetAccountCharacters',
                 request_serializer=accounts_dot_accounts__pb2.GetAccountCharactersRequest.SerializeToString,
                 response_deserializer=accounts_dot_accounts__pb2.GetAccountCharactersResponse.FromString,
                 )
@@ -113,7 +113,7 @@ def add_MruVAccountsServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'mruv.MruVAccountsService', rpc_method_handlers)
+            'mruv.accounts.MruVAccountsService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -134,7 +134,7 @@ class MruVAccountsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVAccountsService/RegisterAccount',
+        return grpc.experimental.unary_unary(request, target, '/mruv.accounts.MruVAccountsService/RegisterAccount',
             accounts_dot_accounts__pb2.RegisterAccountRequest.SerializeToString,
             accounts_dot_accounts__pb2.RegisterAccountResponse.FromString,
             options, channel_credentials,
@@ -151,7 +151,7 @@ class MruVAccountsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVAccountsService/LogIn',
+        return grpc.experimental.unary_unary(request, target, '/mruv.accounts.MruVAccountsService/LogIn',
             accounts_dot_accounts__pb2.LogInRequest.SerializeToString,
             accounts_dot_accounts__pb2.LogInResponse.FromString,
             options, channel_credentials,
@@ -168,7 +168,7 @@ class MruVAccountsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVAccountsService/IsAccountExist',
+        return grpc.experimental.unary_unary(request, target, '/mruv.accounts.MruVAccountsService/IsAccountExist',
             accounts_dot_accounts__pb2.IsAccountExistRequest.SerializeToString,
             accounts_dot_accounts__pb2.IsAccountExistResponse.FromString,
             options, channel_credentials,
@@ -185,7 +185,7 @@ class MruVAccountsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVAccountsService/GetAccount',
+        return grpc.experimental.unary_unary(request, target, '/mruv.accounts.MruVAccountsService/GetAccount',
             accounts_dot_accounts__pb2.GetAccountRequest.SerializeToString,
             accounts_dot_accounts__pb2.GetAccountResponse.FromString,
             options, channel_credentials,
@@ -202,7 +202,7 @@ class MruVAccountsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVAccountsService/GetAccountCharacters',
+        return grpc.experimental.unary_unary(request, target, '/mruv.accounts.MruVAccountsService/GetAccountCharacters',
             accounts_dot_accounts__pb2.GetAccountCharactersRequest.SerializeToString,
             accounts_dot_accounts__pb2.GetAccountCharactersResponse.FromString,
             options, channel_credentials,

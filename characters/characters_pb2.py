@@ -18,17 +18,17 @@ from common import health_pb2 as common_dot_health__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='characters/characters.proto',
-  package='mruv',
+  package='mruv.characters',
   syntax='proto3',
   serialized_options=b'Z(github.com/MruV-RP/mruv-pb-go/characters',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1b\x63haracters/characters.proto\x12\x04mruv\x1a\x1cgoogle/api/annotations.proto\x1a\x13\x63ommon/health.proto\"\xa1\x01\n\tCharacter\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08owner_id\x18\x02 \x01(\r\x12\x12\n\nfirst_name\x18\x03 \x01(\t\x12\x13\n\x0bsecond_name\x18\x04 \x01(\t\x12\x0b\n\x03\x61ge\x18\x05 \x01(\r\x12\x0b\n\x03sex\x18\x06 \x01(\r\x12\x12\n\nclothes_id\x18\x07 \x01(\r\x12\t\n\x01x\x18\x08 \x01(\x02\x12\t\n\x01y\x18\t \x01(\x02\x12\t\n\x01z\x18\n \x01(\x02\"\x19\n\x0b\x43haracterID\x12\n\n\x02id\x18\x01 \x01(\r\"y\n\x16\x43reateCharacterRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08owner_id\x18\x02 \x01(\r\x12\x12\n\nfirst_name\x18\x03 \x01(\t\x12\x13\n\x0bsecond_name\x18\x04 \x01(\t\x12\x0b\n\x03\x61ge\x18\x05 \x01(\r\x12\x0b\n\x03sex\x18\x06 \x01(\r\"%\n\x17\x43reateCharacterResponse\x12\n\n\x02id\x18\x01 \x01(\r\"!\n\x13GetCharacterRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\xac\x01\n\x14GetCharacterResponse\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08owner_id\x18\x02 \x01(\r\x12\x12\n\nfirst_name\x18\x03 \x01(\t\x12\x13\n\x0bsecond_name\x18\x04 \x01(\t\x12\x0b\n\x03\x61ge\x18\x05 \x01(\r\x12\x0b\n\x03sex\x18\x06 \x01(\r\x12\x12\n\nclothes_id\x18\x07 \x01(\r\x12\t\n\x01x\x18\x08 \x01(\x02\x12\t\n\x01y\x18\t \x01(\x02\x12\t\n\x01z\x18\n \x01(\x02\"$\n\x16UpdateCharacterRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x19\n\x17UpdateCharacterResponse\"$\n\x16\x44\x65leteCharacterRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x19\n\x17\x44\x65leteCharacterResponse\"6\n\x14\x43hangeClothesRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x12\n\nclothes_id\x18\x02 \x01(\r\"\x17\n\x15\x43hangeClothesResponse\":\n\x12\x44\x65\x61thStreamRequest\x12$\n\x0b\x64\x65\x61th_types\x18\x01 \x03(\x0e\x32\x0f.mruv.DeathType\"^\n\x13\x44\x65\x61thStreamResponse\x12\"\n\tcharacter\x18\x01 \x01(\x0b\x32\x0f.mruv.Character\x12#\n\ndeath_type\x18\x02 \x01(\x0e\x32\x0f.mruv.DeathType*^\n\tDeathType\x12\x13\n\x0f\x44\x45\x41TH_TYPE_NONE\x10\x00\x12\x11\n\rDEATH_TYPE_BW\x10\x01\x12\x16\n\x12\x44\x45\x41TH_TYPE_BW_KILL\x10\x02\x12\x11\n\rDEATH_TYPE_CK\x10\x03\x32\xba\x07\n\x15MruVCharactersService\x12\x66\n\x0f\x43reateCharacter\x12\x1c.mruv.CreateCharacterRequest\x1a\x1d.mruv.CreateCharacterResponse\"\x16\x82\xd3\xe4\x93\x02\x10\"\x0e/v1/characters\x12\x62\n\x0cGetCharacter\x12\x19.mruv.GetCharacterRequest\x1a\x1a.mruv.GetCharacterResponse\"\x1b\x82\xd3\xe4\x93\x02\x15\x12\x13/v1/characters/{id}\x12k\n\x0fUpdateCharacter\x12\x1c.mruv.UpdateCharacterRequest\x1a\x1d.mruv.UpdateCharacterResponse\"\x1b\x82\xd3\xe4\x93\x02\x15\x32\x13/v1/characters/{id}\x12k\n\x0f\x44\x65leteCharacter\x12\x1c.mruv.DeleteCharacterRequest\x1a\x1d.mruv.DeleteCharacterResponse\"\x1b\x82\xd3\xe4\x93\x02\x15*\x13/v1/characters/{id}\x12i\n\x16PermanentCharacterKill\x12\x11.mruv.CharacterID\x1a\x11.mruv.CharacterID\")\x82\xd3\xe4\x93\x02#*!/v1/characters/permanentKill/{id}\x12y\n\rChangeClothes\x12\x1a.mruv.ChangeClothesRequest\x1a\x1b.mruv.ChangeClothesResponse\"/\x82\xd3\xe4\x93\x02)\x1a\'/v1/character/{id}/clothes/{clothes_id}\x12G\n\x0c\x44\x65\x61thsStream\x12\x18.mruv.DeathStreamRequest\x1a\x19.mruv.DeathStreamResponse\"\x00\x30\x01\x12j\n\x10GetServiceStatus\x12\x1a.mruv.ServiceStatusRequest\x1a\x1b.mruv.ServiceStatusResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/v1/characters/status\x12`\n\x11GetServiceVersion\x12\x14.mruv.VersionRequest\x1a\x15.mruv.VersionResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\x12\x16/v1/characters/versionB*Z(github.com/MruV-RP/mruv-pb-go/charactersb\x06proto3'
+  serialized_pb=b'\n\x1b\x63haracters/characters.proto\x12\x0fmruv.characters\x1a\x1cgoogle/api/annotations.proto\x1a\x13\x63ommon/health.proto\"\xa1\x01\n\tCharacter\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08owner_id\x18\x02 \x01(\r\x12\x12\n\nfirst_name\x18\x03 \x01(\t\x12\x13\n\x0bsecond_name\x18\x04 \x01(\t\x12\x0b\n\x03\x61ge\x18\x05 \x01(\r\x12\x0b\n\x03sex\x18\x06 \x01(\r\x12\x12\n\nclothes_id\x18\x07 \x01(\r\x12\t\n\x01x\x18\x08 \x01(\x02\x12\t\n\x01y\x18\t \x01(\x02\x12\t\n\x01z\x18\n \x01(\x02\"\x19\n\x0b\x43haracterID\x12\n\n\x02id\x18\x01 \x01(\r\"y\n\x16\x43reateCharacterRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08owner_id\x18\x02 \x01(\r\x12\x12\n\nfirst_name\x18\x03 \x01(\t\x12\x13\n\x0bsecond_name\x18\x04 \x01(\t\x12\x0b\n\x03\x61ge\x18\x05 \x01(\r\x12\x0b\n\x03sex\x18\x06 \x01(\r\"%\n\x17\x43reateCharacterResponse\x12\n\n\x02id\x18\x01 \x01(\r\"!\n\x13GetCharacterRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\xac\x01\n\x14GetCharacterResponse\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08owner_id\x18\x02 \x01(\r\x12\x12\n\nfirst_name\x18\x03 \x01(\t\x12\x13\n\x0bsecond_name\x18\x04 \x01(\t\x12\x0b\n\x03\x61ge\x18\x05 \x01(\r\x12\x0b\n\x03sex\x18\x06 \x01(\r\x12\x12\n\nclothes_id\x18\x07 \x01(\r\x12\t\n\x01x\x18\x08 \x01(\x02\x12\t\n\x01y\x18\t \x01(\x02\x12\t\n\x01z\x18\n \x01(\x02\"$\n\x16UpdateCharacterRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x19\n\x17UpdateCharacterResponse\"$\n\x16\x44\x65leteCharacterRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x19\n\x17\x44\x65leteCharacterResponse\"6\n\x14\x43hangeClothesRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x12\n\nclothes_id\x18\x02 \x01(\r\"\x17\n\x15\x43hangeClothesResponse\"E\n\x12\x44\x65\x61thStreamRequest\x12/\n\x0b\x64\x65\x61th_types\x18\x01 \x03(\x0e\x32\x1a.mruv.characters.DeathType\"t\n\x13\x44\x65\x61thStreamResponse\x12-\n\tcharacter\x18\x01 \x01(\x0b\x32\x1a.mruv.characters.Character\x12.\n\ndeath_type\x18\x02 \x01(\x0e\x32\x1a.mruv.characters.DeathType*^\n\tDeathType\x12\x13\n\x0f\x44\x45\x41TH_TYPE_NONE\x10\x00\x12\x11\n\rDEATH_TYPE_BW\x10\x01\x12\x16\n\x12\x44\x45\x41TH_TYPE_BW_KILL\x10\x02\x12\x11\n\rDEATH_TYPE_CK\x10\x03\x32\xf3\x08\n\x15MruVCharactersService\x12|\n\x0f\x43reateCharacter\x12\'.mruv.characters.CreateCharacterRequest\x1a(.mruv.characters.CreateCharacterResponse\"\x16\x82\xd3\xe4\x93\x02\x10\"\x0e/v1/characters\x12x\n\x0cGetCharacter\x12$.mruv.characters.GetCharacterRequest\x1a%.mruv.characters.GetCharacterResponse\"\x1b\x82\xd3\xe4\x93\x02\x15\x12\x13/v1/characters/{id}\x12\x81\x01\n\x0fUpdateCharacter\x12\'.mruv.characters.UpdateCharacterRequest\x1a(.mruv.characters.UpdateCharacterResponse\"\x1b\x82\xd3\xe4\x93\x02\x15\x32\x13/v1/characters/{id}\x12\x81\x01\n\x0f\x44\x65leteCharacter\x12\'.mruv.characters.DeleteCharacterRequest\x1a(.mruv.characters.DeleteCharacterResponse\"\x1b\x82\xd3\xe4\x93\x02\x15*\x13/v1/characters/{id}\x12\x7f\n\x16PermanentCharacterKill\x12\x1c.mruv.characters.CharacterID\x1a\x1c.mruv.characters.CharacterID\")\x82\xd3\xe4\x93\x02#*!/v1/characters/permanentKill/{id}\x12\x8f\x01\n\rChangeClothes\x12%.mruv.characters.ChangeClothesRequest\x1a&.mruv.characters.ChangeClothesResponse\"/\x82\xd3\xe4\x93\x02)\x1a\'/v1/character/{id}/clothes/{clothes_id}\x12]\n\x0c\x44\x65\x61thsStream\x12#.mruv.characters.DeathStreamRequest\x1a$.mruv.characters.DeathStreamResponse\"\x00\x30\x01\x12x\n\x10GetServiceStatus\x12!.mruv.common.ServiceStatusRequest\x1a\".mruv.common.ServiceStatusResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/v1/characters/status\x12n\n\x11GetServiceVersion\x12\x1b.mruv.common.VersionRequest\x1a\x1c.mruv.common.VersionResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\x12\x16/v1/characters/versionB*Z(github.com/MruV-RP/mruv-pb-go/charactersb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,common_dot_health__pb2.DESCRIPTOR,])
 
 _DEATHTYPE = _descriptor.EnumDescriptor(
   name='DeathType',
-  full_name='mruv.DeathType',
+  full_name='mruv.characters.DeathType',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -56,8 +56,8 @@ _DEATHTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1018,
-  serialized_end=1112,
+  serialized_start=1062,
+  serialized_end=1156,
 )
 _sym_db.RegisterEnumDescriptor(_DEATHTYPE)
 
@@ -71,77 +71,77 @@ DEATH_TYPE_CK = 3
 
 _CHARACTER = _descriptor.Descriptor(
   name='Character',
-  full_name='mruv.Character',
+  full_name='mruv.characters.Character',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.Character.id', index=0,
+      name='id', full_name='mruv.characters.Character.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='owner_id', full_name='mruv.Character.owner_id', index=1,
+      name='owner_id', full_name='mruv.characters.Character.owner_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='first_name', full_name='mruv.Character.first_name', index=2,
+      name='first_name', full_name='mruv.characters.Character.first_name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='second_name', full_name='mruv.Character.second_name', index=3,
+      name='second_name', full_name='mruv.characters.Character.second_name', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='age', full_name='mruv.Character.age', index=4,
+      name='age', full_name='mruv.characters.Character.age', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='sex', full_name='mruv.Character.sex', index=5,
+      name='sex', full_name='mruv.characters.Character.sex', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='clothes_id', full_name='mruv.Character.clothes_id', index=6,
+      name='clothes_id', full_name='mruv.characters.Character.clothes_id', index=6,
       number=7, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='x', full_name='mruv.Character.x', index=7,
+      name='x', full_name='mruv.characters.Character.x', index=7,
       number=8, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='y', full_name='mruv.Character.y', index=8,
+      name='y', full_name='mruv.characters.Character.y', index=8,
       number=9, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='z', full_name='mruv.Character.z', index=9,
+      name='z', full_name='mruv.characters.Character.z', index=9,
       number=10, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -159,21 +159,21 @@ _CHARACTER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=89,
-  serialized_end=250,
+  serialized_start=100,
+  serialized_end=261,
 )
 
 
 _CHARACTERID = _descriptor.Descriptor(
   name='CharacterID',
-  full_name='mruv.CharacterID',
+  full_name='mruv.characters.CharacterID',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.CharacterID.id', index=0,
+      name='id', full_name='mruv.characters.CharacterID.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -191,56 +191,56 @@ _CHARACTERID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=252,
-  serialized_end=277,
+  serialized_start=263,
+  serialized_end=288,
 )
 
 
 _CREATECHARACTERREQUEST = _descriptor.Descriptor(
   name='CreateCharacterRequest',
-  full_name='mruv.CreateCharacterRequest',
+  full_name='mruv.characters.CreateCharacterRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.CreateCharacterRequest.id', index=0,
+      name='id', full_name='mruv.characters.CreateCharacterRequest.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='owner_id', full_name='mruv.CreateCharacterRequest.owner_id', index=1,
+      name='owner_id', full_name='mruv.characters.CreateCharacterRequest.owner_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='first_name', full_name='mruv.CreateCharacterRequest.first_name', index=2,
+      name='first_name', full_name='mruv.characters.CreateCharacterRequest.first_name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='second_name', full_name='mruv.CreateCharacterRequest.second_name', index=3,
+      name='second_name', full_name='mruv.characters.CreateCharacterRequest.second_name', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='age', full_name='mruv.CreateCharacterRequest.age', index=4,
+      name='age', full_name='mruv.characters.CreateCharacterRequest.age', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='sex', full_name='mruv.CreateCharacterRequest.sex', index=5,
+      name='sex', full_name='mruv.characters.CreateCharacterRequest.sex', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -258,21 +258,21 @@ _CREATECHARACTERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=279,
-  serialized_end=400,
+  serialized_start=290,
+  serialized_end=411,
 )
 
 
 _CREATECHARACTERRESPONSE = _descriptor.Descriptor(
   name='CreateCharacterResponse',
-  full_name='mruv.CreateCharacterResponse',
+  full_name='mruv.characters.CreateCharacterResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.CreateCharacterResponse.id', index=0,
+      name='id', full_name='mruv.characters.CreateCharacterResponse.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -290,21 +290,21 @@ _CREATECHARACTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=402,
-  serialized_end=439,
+  serialized_start=413,
+  serialized_end=450,
 )
 
 
 _GETCHARACTERREQUEST = _descriptor.Descriptor(
   name='GetCharacterRequest',
-  full_name='mruv.GetCharacterRequest',
+  full_name='mruv.characters.GetCharacterRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.GetCharacterRequest.id', index=0,
+      name='id', full_name='mruv.characters.GetCharacterRequest.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -322,84 +322,84 @@ _GETCHARACTERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=441,
-  serialized_end=474,
+  serialized_start=452,
+  serialized_end=485,
 )
 
 
 _GETCHARACTERRESPONSE = _descriptor.Descriptor(
   name='GetCharacterResponse',
-  full_name='mruv.GetCharacterResponse',
+  full_name='mruv.characters.GetCharacterResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.GetCharacterResponse.id', index=0,
+      name='id', full_name='mruv.characters.GetCharacterResponse.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='owner_id', full_name='mruv.GetCharacterResponse.owner_id', index=1,
+      name='owner_id', full_name='mruv.characters.GetCharacterResponse.owner_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='first_name', full_name='mruv.GetCharacterResponse.first_name', index=2,
+      name='first_name', full_name='mruv.characters.GetCharacterResponse.first_name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='second_name', full_name='mruv.GetCharacterResponse.second_name', index=3,
+      name='second_name', full_name='mruv.characters.GetCharacterResponse.second_name', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='age', full_name='mruv.GetCharacterResponse.age', index=4,
+      name='age', full_name='mruv.characters.GetCharacterResponse.age', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='sex', full_name='mruv.GetCharacterResponse.sex', index=5,
+      name='sex', full_name='mruv.characters.GetCharacterResponse.sex', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='clothes_id', full_name='mruv.GetCharacterResponse.clothes_id', index=6,
+      name='clothes_id', full_name='mruv.characters.GetCharacterResponse.clothes_id', index=6,
       number=7, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='x', full_name='mruv.GetCharacterResponse.x', index=7,
+      name='x', full_name='mruv.characters.GetCharacterResponse.x', index=7,
       number=8, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='y', full_name='mruv.GetCharacterResponse.y', index=8,
+      name='y', full_name='mruv.characters.GetCharacterResponse.y', index=8,
       number=9, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='z', full_name='mruv.GetCharacterResponse.z', index=9,
+      name='z', full_name='mruv.characters.GetCharacterResponse.z', index=9,
       number=10, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -417,21 +417,21 @@ _GETCHARACTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=477,
-  serialized_end=649,
+  serialized_start=488,
+  serialized_end=660,
 )
 
 
 _UPDATECHARACTERREQUEST = _descriptor.Descriptor(
   name='UpdateCharacterRequest',
-  full_name='mruv.UpdateCharacterRequest',
+  full_name='mruv.characters.UpdateCharacterRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.UpdateCharacterRequest.id', index=0,
+      name='id', full_name='mruv.characters.UpdateCharacterRequest.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -449,14 +449,14 @@ _UPDATECHARACTERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=651,
-  serialized_end=687,
+  serialized_start=662,
+  serialized_end=698,
 )
 
 
 _UPDATECHARACTERRESPONSE = _descriptor.Descriptor(
   name='UpdateCharacterResponse',
-  full_name='mruv.UpdateCharacterResponse',
+  full_name='mruv.characters.UpdateCharacterResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -474,21 +474,21 @@ _UPDATECHARACTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=689,
-  serialized_end=714,
+  serialized_start=700,
+  serialized_end=725,
 )
 
 
 _DELETECHARACTERREQUEST = _descriptor.Descriptor(
   name='DeleteCharacterRequest',
-  full_name='mruv.DeleteCharacterRequest',
+  full_name='mruv.characters.DeleteCharacterRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.DeleteCharacterRequest.id', index=0,
+      name='id', full_name='mruv.characters.DeleteCharacterRequest.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -506,14 +506,14 @@ _DELETECHARACTERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=716,
-  serialized_end=752,
+  serialized_start=727,
+  serialized_end=763,
 )
 
 
 _DELETECHARACTERRESPONSE = _descriptor.Descriptor(
   name='DeleteCharacterResponse',
-  full_name='mruv.DeleteCharacterResponse',
+  full_name='mruv.characters.DeleteCharacterResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -531,28 +531,28 @@ _DELETECHARACTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=754,
-  serialized_end=779,
+  serialized_start=765,
+  serialized_end=790,
 )
 
 
 _CHANGECLOTHESREQUEST = _descriptor.Descriptor(
   name='ChangeClothesRequest',
-  full_name='mruv.ChangeClothesRequest',
+  full_name='mruv.characters.ChangeClothesRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.ChangeClothesRequest.id', index=0,
+      name='id', full_name='mruv.characters.ChangeClothesRequest.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='clothes_id', full_name='mruv.ChangeClothesRequest.clothes_id', index=1,
+      name='clothes_id', full_name='mruv.characters.ChangeClothesRequest.clothes_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -570,14 +570,14 @@ _CHANGECLOTHESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=781,
-  serialized_end=835,
+  serialized_start=792,
+  serialized_end=846,
 )
 
 
 _CHANGECLOTHESRESPONSE = _descriptor.Descriptor(
   name='ChangeClothesResponse',
-  full_name='mruv.ChangeClothesResponse',
+  full_name='mruv.characters.ChangeClothesResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -595,21 +595,21 @@ _CHANGECLOTHESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=837,
-  serialized_end=860,
+  serialized_start=848,
+  serialized_end=871,
 )
 
 
 _DEATHSTREAMREQUEST = _descriptor.Descriptor(
   name='DeathStreamRequest',
-  full_name='mruv.DeathStreamRequest',
+  full_name='mruv.characters.DeathStreamRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='death_types', full_name='mruv.DeathStreamRequest.death_types', index=0,
+      name='death_types', full_name='mruv.characters.DeathStreamRequest.death_types', index=0,
       number=1, type=14, cpp_type=8, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -627,28 +627,28 @@ _DEATHSTREAMREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=862,
-  serialized_end=920,
+  serialized_start=873,
+  serialized_end=942,
 )
 
 
 _DEATHSTREAMRESPONSE = _descriptor.Descriptor(
   name='DeathStreamResponse',
-  full_name='mruv.DeathStreamResponse',
+  full_name='mruv.characters.DeathStreamResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='character', full_name='mruv.DeathStreamResponse.character', index=0,
+      name='character', full_name='mruv.characters.DeathStreamResponse.character', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='death_type', full_name='mruv.DeathStreamResponse.death_type', index=1,
+      name='death_type', full_name='mruv.characters.DeathStreamResponse.death_type', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -666,8 +666,8 @@ _DEATHSTREAMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=922,
-  serialized_end=1016,
+  serialized_start=944,
+  serialized_end=1060,
 )
 
 _DEATHSTREAMREQUEST.fields_by_name['death_types'].enum_type = _DEATHTYPE
@@ -693,98 +693,98 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 Character = _reflection.GeneratedProtocolMessageType('Character', (_message.Message,), {
   'DESCRIPTOR' : _CHARACTER,
   '__module__' : 'characters.characters_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.Character)
+  # @@protoc_insertion_point(class_scope:mruv.characters.Character)
   })
 _sym_db.RegisterMessage(Character)
 
 CharacterID = _reflection.GeneratedProtocolMessageType('CharacterID', (_message.Message,), {
   'DESCRIPTOR' : _CHARACTERID,
   '__module__' : 'characters.characters_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.CharacterID)
+  # @@protoc_insertion_point(class_scope:mruv.characters.CharacterID)
   })
 _sym_db.RegisterMessage(CharacterID)
 
 CreateCharacterRequest = _reflection.GeneratedProtocolMessageType('CreateCharacterRequest', (_message.Message,), {
   'DESCRIPTOR' : _CREATECHARACTERREQUEST,
   '__module__' : 'characters.characters_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.CreateCharacterRequest)
+  # @@protoc_insertion_point(class_scope:mruv.characters.CreateCharacterRequest)
   })
 _sym_db.RegisterMessage(CreateCharacterRequest)
 
 CreateCharacterResponse = _reflection.GeneratedProtocolMessageType('CreateCharacterResponse', (_message.Message,), {
   'DESCRIPTOR' : _CREATECHARACTERRESPONSE,
   '__module__' : 'characters.characters_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.CreateCharacterResponse)
+  # @@protoc_insertion_point(class_scope:mruv.characters.CreateCharacterResponse)
   })
 _sym_db.RegisterMessage(CreateCharacterResponse)
 
 GetCharacterRequest = _reflection.GeneratedProtocolMessageType('GetCharacterRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETCHARACTERREQUEST,
   '__module__' : 'characters.characters_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetCharacterRequest)
+  # @@protoc_insertion_point(class_scope:mruv.characters.GetCharacterRequest)
   })
 _sym_db.RegisterMessage(GetCharacterRequest)
 
 GetCharacterResponse = _reflection.GeneratedProtocolMessageType('GetCharacterResponse', (_message.Message,), {
   'DESCRIPTOR' : _GETCHARACTERRESPONSE,
   '__module__' : 'characters.characters_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.GetCharacterResponse)
+  # @@protoc_insertion_point(class_scope:mruv.characters.GetCharacterResponse)
   })
 _sym_db.RegisterMessage(GetCharacterResponse)
 
 UpdateCharacterRequest = _reflection.GeneratedProtocolMessageType('UpdateCharacterRequest', (_message.Message,), {
   'DESCRIPTOR' : _UPDATECHARACTERREQUEST,
   '__module__' : 'characters.characters_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.UpdateCharacterRequest)
+  # @@protoc_insertion_point(class_scope:mruv.characters.UpdateCharacterRequest)
   })
 _sym_db.RegisterMessage(UpdateCharacterRequest)
 
 UpdateCharacterResponse = _reflection.GeneratedProtocolMessageType('UpdateCharacterResponse', (_message.Message,), {
   'DESCRIPTOR' : _UPDATECHARACTERRESPONSE,
   '__module__' : 'characters.characters_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.UpdateCharacterResponse)
+  # @@protoc_insertion_point(class_scope:mruv.characters.UpdateCharacterResponse)
   })
 _sym_db.RegisterMessage(UpdateCharacterResponse)
 
 DeleteCharacterRequest = _reflection.GeneratedProtocolMessageType('DeleteCharacterRequest', (_message.Message,), {
   'DESCRIPTOR' : _DELETECHARACTERREQUEST,
   '__module__' : 'characters.characters_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.DeleteCharacterRequest)
+  # @@protoc_insertion_point(class_scope:mruv.characters.DeleteCharacterRequest)
   })
 _sym_db.RegisterMessage(DeleteCharacterRequest)
 
 DeleteCharacterResponse = _reflection.GeneratedProtocolMessageType('DeleteCharacterResponse', (_message.Message,), {
   'DESCRIPTOR' : _DELETECHARACTERRESPONSE,
   '__module__' : 'characters.characters_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.DeleteCharacterResponse)
+  # @@protoc_insertion_point(class_scope:mruv.characters.DeleteCharacterResponse)
   })
 _sym_db.RegisterMessage(DeleteCharacterResponse)
 
 ChangeClothesRequest = _reflection.GeneratedProtocolMessageType('ChangeClothesRequest', (_message.Message,), {
   'DESCRIPTOR' : _CHANGECLOTHESREQUEST,
   '__module__' : 'characters.characters_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.ChangeClothesRequest)
+  # @@protoc_insertion_point(class_scope:mruv.characters.ChangeClothesRequest)
   })
 _sym_db.RegisterMessage(ChangeClothesRequest)
 
 ChangeClothesResponse = _reflection.GeneratedProtocolMessageType('ChangeClothesResponse', (_message.Message,), {
   'DESCRIPTOR' : _CHANGECLOTHESRESPONSE,
   '__module__' : 'characters.characters_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.ChangeClothesResponse)
+  # @@protoc_insertion_point(class_scope:mruv.characters.ChangeClothesResponse)
   })
 _sym_db.RegisterMessage(ChangeClothesResponse)
 
 DeathStreamRequest = _reflection.GeneratedProtocolMessageType('DeathStreamRequest', (_message.Message,), {
   'DESCRIPTOR' : _DEATHSTREAMREQUEST,
   '__module__' : 'characters.characters_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.DeathStreamRequest)
+  # @@protoc_insertion_point(class_scope:mruv.characters.DeathStreamRequest)
   })
 _sym_db.RegisterMessage(DeathStreamRequest)
 
 DeathStreamResponse = _reflection.GeneratedProtocolMessageType('DeathStreamResponse', (_message.Message,), {
   'DESCRIPTOR' : _DEATHSTREAMRESPONSE,
   '__module__' : 'characters.characters_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.DeathStreamResponse)
+  # @@protoc_insertion_point(class_scope:mruv.characters.DeathStreamResponse)
   })
 _sym_db.RegisterMessage(DeathStreamResponse)
 
@@ -793,17 +793,17 @@ DESCRIPTOR._options = None
 
 _MRUVCHARACTERSSERVICE = _descriptor.ServiceDescriptor(
   name='MruVCharactersService',
-  full_name='mruv.MruVCharactersService',
+  full_name='mruv.characters.MruVCharactersService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=1115,
-  serialized_end=2069,
+  serialized_start=1159,
+  serialized_end=2298,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateCharacter',
-    full_name='mruv.MruVCharactersService.CreateCharacter',
+    full_name='mruv.characters.MruVCharactersService.CreateCharacter',
     index=0,
     containing_service=None,
     input_type=_CREATECHARACTERREQUEST,
@@ -813,7 +813,7 @@ _MRUVCHARACTERSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetCharacter',
-    full_name='mruv.MruVCharactersService.GetCharacter',
+    full_name='mruv.characters.MruVCharactersService.GetCharacter',
     index=1,
     containing_service=None,
     input_type=_GETCHARACTERREQUEST,
@@ -823,7 +823,7 @@ _MRUVCHARACTERSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='UpdateCharacter',
-    full_name='mruv.MruVCharactersService.UpdateCharacter',
+    full_name='mruv.characters.MruVCharactersService.UpdateCharacter',
     index=2,
     containing_service=None,
     input_type=_UPDATECHARACTERREQUEST,
@@ -833,7 +833,7 @@ _MRUVCHARACTERSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='DeleteCharacter',
-    full_name='mruv.MruVCharactersService.DeleteCharacter',
+    full_name='mruv.characters.MruVCharactersService.DeleteCharacter',
     index=3,
     containing_service=None,
     input_type=_DELETECHARACTERREQUEST,
@@ -843,7 +843,7 @@ _MRUVCHARACTERSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='PermanentCharacterKill',
-    full_name='mruv.MruVCharactersService.PermanentCharacterKill',
+    full_name='mruv.characters.MruVCharactersService.PermanentCharacterKill',
     index=4,
     containing_service=None,
     input_type=_CHARACTERID,
@@ -853,7 +853,7 @@ _MRUVCHARACTERSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='ChangeClothes',
-    full_name='mruv.MruVCharactersService.ChangeClothes',
+    full_name='mruv.characters.MruVCharactersService.ChangeClothes',
     index=5,
     containing_service=None,
     input_type=_CHANGECLOTHESREQUEST,
@@ -863,7 +863,7 @@ _MRUVCHARACTERSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='DeathsStream',
-    full_name='mruv.MruVCharactersService.DeathsStream',
+    full_name='mruv.characters.MruVCharactersService.DeathsStream',
     index=6,
     containing_service=None,
     input_type=_DEATHSTREAMREQUEST,
@@ -873,7 +873,7 @@ _MRUVCHARACTERSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetServiceStatus',
-    full_name='mruv.MruVCharactersService.GetServiceStatus',
+    full_name='mruv.characters.MruVCharactersService.GetServiceStatus',
     index=7,
     containing_service=None,
     input_type=common_dot_health__pb2._SERVICESTATUSREQUEST,
@@ -883,7 +883,7 @@ _MRUVCHARACTERSSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetServiceVersion',
-    full_name='mruv.MruVCharactersService.GetServiceVersion',
+    full_name='mruv.characters.MruVCharactersService.GetServiceVersion',
     index=8,
     containing_service=None,
     input_type=common_dot_health__pb2._VERSIONREQUEST,

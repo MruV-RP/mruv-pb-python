@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z#github.com/MruV-RP/mruv-pb-go/plots',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x11plots/plots.proto\x12\nmruv.plots\x1a\x1cgoogle/api/annotations.proto\x1a\x14\x63ommon/spatial.proto\"I\n\x04Plot\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x1e\n\x06points\x18\x03 \x03(\x0b\x32\x0e.mruv.Position\"V\n\x11\x43reatePlotRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x1e\n\x06points\x18\x03 \x03(\x0b\x32\x0e.mruv.Position\" \n\x12\x43reatePlotResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1c\n\x0eGetPlotRequest\x12\n\n\x02id\x18\x01 \x01(\r\"b\n\x0fGetPlotResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x1e\n\x06points\x18\x03 \x03(\x0b\x32\x0e.mruv.Position\x12\x0c\n\x04\x61rea\x18\x04 \x01(\x01\"B\n\x11UpdatePlotRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\"\x14\n\x12UpdatePlotResponse\"\x1f\n\x11\x44\x65letePlotRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x14\n\x12\x44\x65letePlotResponse2\x98\x03\n\x10MruVPlotsService\x12^\n\nCreatePlot\x12\x1d.mruv.plots.CreatePlotRequest\x1a\x1e.mruv.plots.CreatePlotResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\"\t/v1/plots\x12Z\n\x07GetPlot\x12\x1a.mruv.plots.GetPlotRequest\x1a\x1b.mruv.plots.GetPlotResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/plots/{id}\x12\x63\n\nUpdatePlot\x12\x1d.mruv.plots.UpdatePlotRequest\x1a\x1e.mruv.plots.UpdatePlotResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x32\x0e/v1/plots/{id}\x12\x63\n\nDeletePlot\x12\x1d.mruv.plots.DeletePlotRequest\x1a\x1e.mruv.plots.DeletePlotResponse\"\x16\x82\xd3\xe4\x93\x02\x10*\x0e/v1/plots/{id}B%Z#github.com/MruV-RP/mruv-pb-go/plotsb\x06proto3'
+  serialized_pb=b'\n\x11plots/plots.proto\x12\nmruv.plots\x1a\x1cgoogle/api/annotations.proto\x1a\x14\x63ommon/spatial.proto\"P\n\x04Plot\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12%\n\x06points\x18\x03 \x03(\x0b\x32\x15.mruv.common.Position\"]\n\x11\x43reatePlotRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12%\n\x06points\x18\x03 \x03(\x0b\x32\x15.mruv.common.Position\" \n\x12\x43reatePlotResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1c\n\x0eGetPlotRequest\x12\n\n\x02id\x18\x01 \x01(\r\"i\n\x0fGetPlotResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12%\n\x06points\x18\x03 \x03(\x0b\x32\x15.mruv.common.Position\x12\x0c\n\x04\x61rea\x18\x04 \x01(\x01\"B\n\x11UpdatePlotRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\"\x14\n\x12UpdatePlotResponse\"\x1f\n\x11\x44\x65letePlotRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x14\n\x12\x44\x65letePlotResponse2\x98\x03\n\x10MruVPlotsService\x12^\n\nCreatePlot\x12\x1d.mruv.plots.CreatePlotRequest\x1a\x1e.mruv.plots.CreatePlotResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\"\t/v1/plots\x12Z\n\x07GetPlot\x12\x1a.mruv.plots.GetPlotRequest\x1a\x1b.mruv.plots.GetPlotResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/plots/{id}\x12\x63\n\nUpdatePlot\x12\x1d.mruv.plots.UpdatePlotRequest\x1a\x1e.mruv.plots.UpdatePlotResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x32\x0e/v1/plots/{id}\x12\x63\n\nDeletePlot\x12\x1d.mruv.plots.DeletePlotRequest\x1a\x1e.mruv.plots.DeletePlotResponse\"\x16\x82\xd3\xe4\x93\x02\x10*\x0e/v1/plots/{id}B%Z#github.com/MruV-RP/mruv-pb-go/plotsb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,common_dot_spatial__pb2.DESCRIPTOR,])
 
@@ -70,7 +70,7 @@ _PLOT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=85,
-  serialized_end=158,
+  serialized_end=165,
 )
 
 
@@ -115,8 +115,8 @@ _CREATEPLOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=160,
-  serialized_end=246,
+  serialized_start=167,
+  serialized_end=260,
 )
 
 
@@ -147,8 +147,8 @@ _CREATEPLOTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=248,
-  serialized_end=280,
+  serialized_start=262,
+  serialized_end=294,
 )
 
 
@@ -179,8 +179,8 @@ _GETPLOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=282,
-  serialized_end=310,
+  serialized_start=296,
+  serialized_end=324,
 )
 
 
@@ -232,8 +232,8 @@ _GETPLOTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=312,
-  serialized_end=410,
+  serialized_start=326,
+  serialized_end=431,
 )
 
 
@@ -278,8 +278,8 @@ _UPDATEPLOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=412,
-  serialized_end=478,
+  serialized_start=433,
+  serialized_end=499,
 )
 
 
@@ -303,8 +303,8 @@ _UPDATEPLOTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=480,
-  serialized_end=500,
+  serialized_start=501,
+  serialized_end=521,
 )
 
 
@@ -335,8 +335,8 @@ _DELETEPLOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=502,
-  serialized_end=533,
+  serialized_start=523,
+  serialized_end=554,
 )
 
 
@@ -360,8 +360,8 @@ _DELETEPLOTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=535,
-  serialized_end=555,
+  serialized_start=556,
+  serialized_end=576,
 )
 
 _PLOT.fields_by_name['points'].message_type = common_dot_spatial__pb2._POSITION
@@ -451,8 +451,8 @@ _MRUVPLOTSSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=558,
-  serialized_end=966,
+  serialized_start=579,
+  serialized_end=987,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreatePlot',

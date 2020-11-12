@@ -15,11 +15,11 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='common/spatial.proto',
-  package='mruv',
+  package='mruv.common',
   syntax='proto3',
   serialized_options=b'Z$github.com/MruV-RP/mruv-pb-go/common',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x14\x63ommon/spatial.proto\x12\x04mruv\"+\n\x08Position\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\".\n\x08Rotation\x12\n\n\x02rx\x18\x01 \x01(\x01\x12\n\n\x02ry\x18\x02 \x01(\x01\x12\n\n\x02rz\x18\x03 \x01(\x01\x42&Z$github.com/MruV-RP/mruv-pb-go/commonb\x06proto3'
+  serialized_pb=b'\n\x14\x63ommon/spatial.proto\x12\x0bmruv.common\"+\n\x08Position\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\".\n\x08Rotation\x12\n\n\x02rx\x18\x01 \x01(\x01\x12\n\n\x02ry\x18\x02 \x01(\x01\x12\n\n\x02rz\x18\x03 \x01(\x01\x42&Z$github.com/MruV-RP/mruv-pb-go/commonb\x06proto3'
 )
 
 
@@ -27,28 +27,28 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _POSITION = _descriptor.Descriptor(
   name='Position',
-  full_name='mruv.Position',
+  full_name='mruv.common.Position',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='x', full_name='mruv.Position.x', index=0,
+      name='x', full_name='mruv.common.Position.x', index=0,
       number=1, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='y', full_name='mruv.Position.y', index=1,
+      name='y', full_name='mruv.common.Position.y', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='z', full_name='mruv.Position.z', index=2,
+      name='z', full_name='mruv.common.Position.z', index=2,
       number=3, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -66,35 +66,35 @@ _POSITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30,
-  serialized_end=73,
+  serialized_start=37,
+  serialized_end=80,
 )
 
 
 _ROTATION = _descriptor.Descriptor(
   name='Rotation',
-  full_name='mruv.Rotation',
+  full_name='mruv.common.Rotation',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='rx', full_name='mruv.Rotation.rx', index=0,
+      name='rx', full_name='mruv.common.Rotation.rx', index=0,
       number=1, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ry', full_name='mruv.Rotation.ry', index=1,
+      name='ry', full_name='mruv.common.Rotation.ry', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='rz', full_name='mruv.Rotation.rz', index=2,
+      name='rz', full_name='mruv.common.Rotation.rz', index=2,
       number=3, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -112,8 +112,8 @@ _ROTATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=75,
-  serialized_end=121,
+  serialized_start=82,
+  serialized_end=128,
 )
 
 DESCRIPTOR.message_types_by_name['Position'] = _POSITION
@@ -123,14 +123,14 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 Position = _reflection.GeneratedProtocolMessageType('Position', (_message.Message,), {
   'DESCRIPTOR' : _POSITION,
   '__module__' : 'common.spatial_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.Position)
+  # @@protoc_insertion_point(class_scope:mruv.common.Position)
   })
 _sym_db.RegisterMessage(Position)
 
 Rotation = _reflection.GeneratedProtocolMessageType('Rotation', (_message.Message,), {
   'DESCRIPTOR' : _ROTATION,
   '__module__' : 'common.spatial_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.Rotation)
+  # @@protoc_insertion_point(class_scope:mruv.common.Rotation)
   })
 _sym_db.RegisterMessage(Rotation)
 

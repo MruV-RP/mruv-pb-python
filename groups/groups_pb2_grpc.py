@@ -17,97 +17,97 @@ class MruVGroupsServiceStub(object):
             channel: A grpc.Channel.
         """
         self.CreateGroup = channel.unary_unary(
-                '/mruv.MruVGroupsService/CreateGroup',
+                '/mruv.groups.MruVGroupsService/CreateGroup',
                 request_serializer=groups_dot_groups__pb2.CreateGroupRequest.SerializeToString,
                 response_deserializer=groups_dot_groups__pb2.CreateGroupResponse.FromString,
                 )
         self.GetGroup = channel.unary_unary(
-                '/mruv.MruVGroupsService/GetGroup',
+                '/mruv.groups.MruVGroupsService/GetGroup',
                 request_serializer=groups_dot_groups__pb2.GetGroupRequest.SerializeToString,
                 response_deserializer=groups_dot_groups__pb2.GetGroupResponse.FromString,
                 )
         self.UpdateGroup = channel.unary_unary(
-                '/mruv.MruVGroupsService/UpdateGroup',
+                '/mruv.groups.MruVGroupsService/UpdateGroup',
                 request_serializer=groups_dot_groups__pb2.UpdateGroupRequest.SerializeToString,
                 response_deserializer=groups_dot_groups__pb2.UpdateGroupResponse.FromString,
                 )
         self.DeleteGroup = channel.unary_unary(
-                '/mruv.MruVGroupsService/DeleteGroup',
+                '/mruv.groups.MruVGroupsService/DeleteGroup',
                 request_serializer=groups_dot_groups__pb2.DeleteGroupRequest.SerializeToString,
                 response_deserializer=groups_dot_groups__pb2.DeleteGroupResponse.FromString,
                 )
         self.GetGroups = channel.unary_unary(
-                '/mruv.MruVGroupsService/GetGroups',
+                '/mruv.groups.MruVGroupsService/GetGroups',
                 request_serializer=groups_dot_groups__pb2.GetGroupsRequest.SerializeToString,
                 response_deserializer=groups_dot_groups__pb2.GetGroupsResponse.FromString,
                 )
         self.AssignOwner = channel.unary_unary(
-                '/mruv.MruVGroupsService/AssignOwner',
+                '/mruv.groups.MruVGroupsService/AssignOwner',
                 request_serializer=groups_dot_groups__pb2.AssignOwnerRequest.SerializeToString,
                 response_deserializer=groups_dot_groups__pb2.AssignOwnerResponse.FromString,
                 )
         self.GetOwner = channel.unary_unary(
-                '/mruv.MruVGroupsService/GetOwner',
+                '/mruv.groups.MruVGroupsService/GetOwner',
                 request_serializer=groups_dot_groups__pb2.GetOwnerRequest.SerializeToString,
                 response_deserializer=groups_dot_groups__pb2.GetOwnerResponse.FromString,
                 )
         self.AddMember = channel.unary_unary(
-                '/mruv.MruVGroupsService/AddMember',
+                '/mruv.groups.MruVGroupsService/AddMember',
                 request_serializer=groups_dot_groups__pb2.AddMemberRequest.SerializeToString,
                 response_deserializer=groups_dot_groups__pb2.AddMemberResponse.FromString,
                 )
         self.GetMembers = channel.unary_unary(
-                '/mruv.MruVGroupsService/GetMembers',
+                '/mruv.groups.MruVGroupsService/GetMembers',
                 request_serializer=groups_dot_groups__pb2.GetMembersRequest.SerializeToString,
                 response_deserializer=groups_dot_groups__pb2.GetMembersResponse.FromString,
                 )
         self.RemoveMember = channel.unary_unary(
-                '/mruv.MruVGroupsService/RemoveMember',
+                '/mruv.groups.MruVGroupsService/RemoveMember',
                 request_serializer=groups_dot_groups__pb2.RemoveMemberRequest.SerializeToString,
                 response_deserializer=groups_dot_groups__pb2.RemoveMemberResponse.FromString,
                 )
         self.AddPermission = channel.unary_unary(
-                '/mruv.MruVGroupsService/AddPermission',
+                '/mruv.groups.MruVGroupsService/AddPermission',
                 request_serializer=groups_dot_groups__pb2.AddPermissionRequest.SerializeToString,
                 response_deserializer=groups_dot_groups__pb2.AddPermissionResponse.FromString,
                 )
         self.GetPermissions = channel.unary_unary(
-                '/mruv.MruVGroupsService/GetPermissions',
+                '/mruv.groups.MruVGroupsService/GetPermissions',
                 request_serializer=groups_dot_groups__pb2.GetPermissionsRequest.SerializeToString,
                 response_deserializer=groups_dot_groups__pb2.GetPermissionsResponse.FromString,
                 )
         self.RemovePermission = channel.unary_unary(
-                '/mruv.MruVGroupsService/RemovePermission',
+                '/mruv.groups.MruVGroupsService/RemovePermission',
                 request_serializer=groups_dot_groups__pb2.RemovePermissionRequest.SerializeToString,
                 response_deserializer=groups_dot_groups__pb2.RemovePermissionResponse.FromString,
                 )
         self.AddSubgroup = channel.unary_unary(
-                '/mruv.MruVGroupsService/AddSubgroup',
+                '/mruv.groups.MruVGroupsService/AddSubgroup',
                 request_serializer=groups_dot_groups__pb2.AddSubgroupRequest.SerializeToString,
                 response_deserializer=groups_dot_groups__pb2.AddSubgroupResponse.FromString,
                 )
         self.GetSubgroups = channel.unary_unary(
-                '/mruv.MruVGroupsService/GetSubgroups',
+                '/mruv.groups.MruVGroupsService/GetSubgroups',
                 request_serializer=groups_dot_groups__pb2.GetSubgroupsRequest.SerializeToString,
                 response_deserializer=groups_dot_groups__pb2.GetSubgroupsResponse.FromString,
                 )
         self.RemoveSubgroup = channel.unary_unary(
-                '/mruv.MruVGroupsService/RemoveSubgroup',
+                '/mruv.groups.MruVGroupsService/RemoveSubgroup',
                 request_serializer=groups_dot_groups__pb2.RemoveSubgroupRequest.SerializeToString,
                 response_deserializer=groups_dot_groups__pb2.RemoveSubgroupResponse.FromString,
                 )
         self.IsPermitted = channel.unary_unary(
-                '/mruv.MruVGroupsService/IsPermitted',
+                '/mruv.groups.MruVGroupsService/IsPermitted',
                 request_serializer=groups_dot_groups__pb2.IsPermittedRequest.SerializeToString,
                 response_deserializer=groups_dot_groups__pb2.IsPermittedResponse.FromString,
                 )
         self.GetServiceStatus = channel.unary_unary(
-                '/mruv.MruVGroupsService/GetServiceStatus',
+                '/mruv.groups.MruVGroupsService/GetServiceStatus',
                 request_serializer=common_dot_health__pb2.ServiceStatusRequest.SerializeToString,
                 response_deserializer=common_dot_health__pb2.ServiceStatusResponse.FromString,
                 )
         self.GetServiceVersion = channel.unary_unary(
-                '/mruv.MruVGroupsService/GetServiceVersion',
+                '/mruv.groups.MruVGroupsService/GetServiceVersion',
                 request_serializer=common_dot_health__pb2.VersionRequest.SerializeToString,
                 response_deserializer=common_dot_health__pb2.VersionResponse.FromString,
                 )
@@ -349,7 +349,7 @@ def add_MruVGroupsServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'mruv.MruVGroupsService', rpc_method_handlers)
+            'mruv.groups.MruVGroupsService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -369,7 +369,7 @@ class MruVGroupsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVGroupsService/CreateGroup',
+        return grpc.experimental.unary_unary(request, target, '/mruv.groups.MruVGroupsService/CreateGroup',
             groups_dot_groups__pb2.CreateGroupRequest.SerializeToString,
             groups_dot_groups__pb2.CreateGroupResponse.FromString,
             options, channel_credentials,
@@ -386,7 +386,7 @@ class MruVGroupsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVGroupsService/GetGroup',
+        return grpc.experimental.unary_unary(request, target, '/mruv.groups.MruVGroupsService/GetGroup',
             groups_dot_groups__pb2.GetGroupRequest.SerializeToString,
             groups_dot_groups__pb2.GetGroupResponse.FromString,
             options, channel_credentials,
@@ -403,7 +403,7 @@ class MruVGroupsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVGroupsService/UpdateGroup',
+        return grpc.experimental.unary_unary(request, target, '/mruv.groups.MruVGroupsService/UpdateGroup',
             groups_dot_groups__pb2.UpdateGroupRequest.SerializeToString,
             groups_dot_groups__pb2.UpdateGroupResponse.FromString,
             options, channel_credentials,
@@ -420,7 +420,7 @@ class MruVGroupsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVGroupsService/DeleteGroup',
+        return grpc.experimental.unary_unary(request, target, '/mruv.groups.MruVGroupsService/DeleteGroup',
             groups_dot_groups__pb2.DeleteGroupRequest.SerializeToString,
             groups_dot_groups__pb2.DeleteGroupResponse.FromString,
             options, channel_credentials,
@@ -437,7 +437,7 @@ class MruVGroupsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVGroupsService/GetGroups',
+        return grpc.experimental.unary_unary(request, target, '/mruv.groups.MruVGroupsService/GetGroups',
             groups_dot_groups__pb2.GetGroupsRequest.SerializeToString,
             groups_dot_groups__pb2.GetGroupsResponse.FromString,
             options, channel_credentials,
@@ -454,7 +454,7 @@ class MruVGroupsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVGroupsService/AssignOwner',
+        return grpc.experimental.unary_unary(request, target, '/mruv.groups.MruVGroupsService/AssignOwner',
             groups_dot_groups__pb2.AssignOwnerRequest.SerializeToString,
             groups_dot_groups__pb2.AssignOwnerResponse.FromString,
             options, channel_credentials,
@@ -471,7 +471,7 @@ class MruVGroupsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVGroupsService/GetOwner',
+        return grpc.experimental.unary_unary(request, target, '/mruv.groups.MruVGroupsService/GetOwner',
             groups_dot_groups__pb2.GetOwnerRequest.SerializeToString,
             groups_dot_groups__pb2.GetOwnerResponse.FromString,
             options, channel_credentials,
@@ -488,7 +488,7 @@ class MruVGroupsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVGroupsService/AddMember',
+        return grpc.experimental.unary_unary(request, target, '/mruv.groups.MruVGroupsService/AddMember',
             groups_dot_groups__pb2.AddMemberRequest.SerializeToString,
             groups_dot_groups__pb2.AddMemberResponse.FromString,
             options, channel_credentials,
@@ -505,7 +505,7 @@ class MruVGroupsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVGroupsService/GetMembers',
+        return grpc.experimental.unary_unary(request, target, '/mruv.groups.MruVGroupsService/GetMembers',
             groups_dot_groups__pb2.GetMembersRequest.SerializeToString,
             groups_dot_groups__pb2.GetMembersResponse.FromString,
             options, channel_credentials,
@@ -522,7 +522,7 @@ class MruVGroupsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVGroupsService/RemoveMember',
+        return grpc.experimental.unary_unary(request, target, '/mruv.groups.MruVGroupsService/RemoveMember',
             groups_dot_groups__pb2.RemoveMemberRequest.SerializeToString,
             groups_dot_groups__pb2.RemoveMemberResponse.FromString,
             options, channel_credentials,
@@ -539,7 +539,7 @@ class MruVGroupsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVGroupsService/AddPermission',
+        return grpc.experimental.unary_unary(request, target, '/mruv.groups.MruVGroupsService/AddPermission',
             groups_dot_groups__pb2.AddPermissionRequest.SerializeToString,
             groups_dot_groups__pb2.AddPermissionResponse.FromString,
             options, channel_credentials,
@@ -556,7 +556,7 @@ class MruVGroupsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVGroupsService/GetPermissions',
+        return grpc.experimental.unary_unary(request, target, '/mruv.groups.MruVGroupsService/GetPermissions',
             groups_dot_groups__pb2.GetPermissionsRequest.SerializeToString,
             groups_dot_groups__pb2.GetPermissionsResponse.FromString,
             options, channel_credentials,
@@ -573,7 +573,7 @@ class MruVGroupsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVGroupsService/RemovePermission',
+        return grpc.experimental.unary_unary(request, target, '/mruv.groups.MruVGroupsService/RemovePermission',
             groups_dot_groups__pb2.RemovePermissionRequest.SerializeToString,
             groups_dot_groups__pb2.RemovePermissionResponse.FromString,
             options, channel_credentials,
@@ -590,7 +590,7 @@ class MruVGroupsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVGroupsService/AddSubgroup',
+        return grpc.experimental.unary_unary(request, target, '/mruv.groups.MruVGroupsService/AddSubgroup',
             groups_dot_groups__pb2.AddSubgroupRequest.SerializeToString,
             groups_dot_groups__pb2.AddSubgroupResponse.FromString,
             options, channel_credentials,
@@ -607,7 +607,7 @@ class MruVGroupsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVGroupsService/GetSubgroups',
+        return grpc.experimental.unary_unary(request, target, '/mruv.groups.MruVGroupsService/GetSubgroups',
             groups_dot_groups__pb2.GetSubgroupsRequest.SerializeToString,
             groups_dot_groups__pb2.GetSubgroupsResponse.FromString,
             options, channel_credentials,
@@ -624,7 +624,7 @@ class MruVGroupsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVGroupsService/RemoveSubgroup',
+        return grpc.experimental.unary_unary(request, target, '/mruv.groups.MruVGroupsService/RemoveSubgroup',
             groups_dot_groups__pb2.RemoveSubgroupRequest.SerializeToString,
             groups_dot_groups__pb2.RemoveSubgroupResponse.FromString,
             options, channel_credentials,
@@ -641,7 +641,7 @@ class MruVGroupsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVGroupsService/IsPermitted',
+        return grpc.experimental.unary_unary(request, target, '/mruv.groups.MruVGroupsService/IsPermitted',
             groups_dot_groups__pb2.IsPermittedRequest.SerializeToString,
             groups_dot_groups__pb2.IsPermittedResponse.FromString,
             options, channel_credentials,
@@ -658,7 +658,7 @@ class MruVGroupsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVGroupsService/GetServiceStatus',
+        return grpc.experimental.unary_unary(request, target, '/mruv.groups.MruVGroupsService/GetServiceStatus',
             common_dot_health__pb2.ServiceStatusRequest.SerializeToString,
             common_dot_health__pb2.ServiceStatusResponse.FromString,
             options, channel_credentials,
@@ -675,7 +675,7 @@ class MruVGroupsService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/mruv.MruVGroupsService/GetServiceVersion',
+        return grpc.experimental.unary_unary(request, target, '/mruv.groups.MruVGroupsService/GetServiceVersion',
             common_dot_health__pb2.VersionRequest.SerializeToString,
             common_dot_health__pb2.VersionResponse.FromString,
             options, channel_credentials,

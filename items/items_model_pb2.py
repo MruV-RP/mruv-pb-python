@@ -16,16 +16,16 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='items/items_model.proto',
-  package='mruv',
+  package='mruv.items',
   syntax='proto3',
   serialized_options=b'Z#github.com/MruV-RP/mruv-pb-go/items',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x17items/items_model.proto\x12\x04mruv\"\x8b\x01\n\x08ItemType\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x13\n\x0b\x62\x61se_weight\x18\x04 \x01(\x02\x12\x13\n\x0b\x62\x61se_volume\x18\x05 \x01(\x02\x12\x12\n\nmodel_name\x18\x06 \x01(\t\x12\x12\n\nmodel_hash\x18\x07 \x01(\x05\"\x18\n\nItemTypeID\x12\n\n\x02id\x18\x01 \x01(\r\"H\n\x04Item\x12\n\n\x02id\x18\x01 \x01(\r\x12\x14\n\x0citem_type_id\x18\x02 \x01(\r\x12\x0e\n\x06weight\x18\x03 \x01(\x02\x12\x0e\n\x06volume\x18\x04 \x01(\x02\"\x14\n\x06ItemID\x12\n\n\x02id\x18\x01 \x01(\r\"\x91\x01\n\rContainerType\x12\n\n\x02id\x18\x01 \x01(\r\x12\x1e\n\x16\x63ontainer_item_type_id\x18\x02 \x01(\r\x12\x12\n\nmax_number\x18\x03 \x01(\r\x12\x12\n\nmax_volume\x18\x04 \x01(\x02\x12\x12\n\nmax_weight\x18\x05 \x01(\x02\x12\x18\n\x10valid_item_types\x18\x08 \x03(\x03\"\x1d\n\x0f\x43ontainerTypeID\x12\n\n\x02id\x18\x01 \x01(\r\"p\n\tContainer\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0f\n\x07type_id\x18\x02 \x01(\r\x12\x0f\n\x07item_id\x18\x03 \x01(\r\x12\x14\n\x0citems_inside\x18\x04 \x01(\r\x12\x1f\n\x05items\x18\x05 \x03(\x0b\x32\x10.mruv.InsideItem\"\x19\n\x0b\x43ontainerID\x12\n\n\x02id\x18\x01 \x01(\r\"q\n\nInsideItem\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\r\x12\x11\n\x07item_id\x18\x02 \x01(\rH\x00\x12\x1a\n\x04item\x18\x03 \x01(\x0b\x32\n.mruv.ItemH\x00\x12\x10\n\x08position\x18\x04 \x01(\x05\x42\x0c\n\nitem_or_id*\\\n\x0bSortingMode\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0f\n\x0bWEIGHT_DESC\x10\x01\x12\x0e\n\nWEIGHT_ASC\x10\x02\x12\x0f\n\x0bVOLUME_DESC\x10\x03\x12\x0e\n\nVOLUME_ASC\x10\x04\x42%Z#github.com/MruV-RP/mruv-pb-go/itemsb\x06proto3'
+  serialized_pb=b'\n\x17items/items_model.proto\x12\nmruv.items\"\x8b\x01\n\x08ItemType\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x13\n\x0b\x62\x61se_weight\x18\x04 \x01(\x02\x12\x13\n\x0b\x62\x61se_volume\x18\x05 \x01(\x02\x12\x12\n\nmodel_name\x18\x06 \x01(\t\x12\x12\n\nmodel_hash\x18\x07 \x01(\x05\"\x18\n\nItemTypeID\x12\n\n\x02id\x18\x01 \x01(\r\"H\n\x04Item\x12\n\n\x02id\x18\x01 \x01(\r\x12\x14\n\x0citem_type_id\x18\x02 \x01(\r\x12\x0e\n\x06weight\x18\x03 \x01(\x02\x12\x0e\n\x06volume\x18\x04 \x01(\x02\"\x14\n\x06ItemID\x12\n\n\x02id\x18\x01 \x01(\r\"\x91\x01\n\rContainerType\x12\n\n\x02id\x18\x01 \x01(\r\x12\x1e\n\x16\x63ontainer_item_type_id\x18\x02 \x01(\r\x12\x12\n\nmax_number\x18\x03 \x01(\r\x12\x12\n\nmax_volume\x18\x04 \x01(\x02\x12\x12\n\nmax_weight\x18\x05 \x01(\x02\x12\x18\n\x10valid_item_types\x18\x08 \x03(\x03\"\x1d\n\x0f\x43ontainerTypeID\x12\n\n\x02id\x18\x01 \x01(\r\"v\n\tContainer\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0f\n\x07type_id\x18\x02 \x01(\r\x12\x0f\n\x07item_id\x18\x03 \x01(\r\x12\x14\n\x0citems_inside\x18\x04 \x01(\r\x12%\n\x05items\x18\x05 \x03(\x0b\x32\x16.mruv.items.InsideItem\"\x19\n\x0b\x43ontainerID\x12\n\n\x02id\x18\x01 \x01(\r\"w\n\nInsideItem\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\r\x12\x11\n\x07item_id\x18\x02 \x01(\rH\x00\x12 \n\x04item\x18\x03 \x01(\x0b\x32\x10.mruv.items.ItemH\x00\x12\x10\n\x08position\x18\x04 \x01(\x05\x42\x0c\n\nitem_or_id*\\\n\x0bSortingMode\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0f\n\x0bWEIGHT_DESC\x10\x01\x12\x0e\n\nWEIGHT_ASC\x10\x02\x12\x0f\n\x0bVOLUME_DESC\x10\x03\x12\x0e\n\nVOLUME_ASC\x10\x04\x42%Z#github.com/MruV-RP/mruv-pb-go/itemsb\x06proto3'
 )
 
 _SORTINGMODE = _descriptor.EnumDescriptor(
   name='SortingMode',
-  full_name='mruv.SortingMode',
+  full_name='mruv.items.SortingMode',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -58,8 +58,8 @@ _SORTINGMODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=732,
-  serialized_end=824,
+  serialized_start=750,
+  serialized_end=842,
 )
 _sym_db.RegisterEnumDescriptor(_SORTINGMODE)
 
@@ -74,56 +74,56 @@ VOLUME_ASC = 4
 
 _ITEMTYPE = _descriptor.Descriptor(
   name='ItemType',
-  full_name='mruv.ItemType',
+  full_name='mruv.items.ItemType',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.ItemType.id', index=0,
+      name='id', full_name='mruv.items.ItemType.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='name', full_name='mruv.ItemType.name', index=1,
+      name='name', full_name='mruv.items.ItemType.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='description', full_name='mruv.ItemType.description', index=2,
+      name='description', full_name='mruv.items.ItemType.description', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='base_weight', full_name='mruv.ItemType.base_weight', index=3,
+      name='base_weight', full_name='mruv.items.ItemType.base_weight', index=3,
       number=4, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='base_volume', full_name='mruv.ItemType.base_volume', index=4,
+      name='base_volume', full_name='mruv.items.ItemType.base_volume', index=4,
       number=5, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='model_name', full_name='mruv.ItemType.model_name', index=5,
+      name='model_name', full_name='mruv.items.ItemType.model_name', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='model_hash', full_name='mruv.ItemType.model_hash', index=6,
+      name='model_hash', full_name='mruv.items.ItemType.model_hash', index=6,
       number=7, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -141,21 +141,21 @@ _ITEMTYPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34,
-  serialized_end=173,
+  serialized_start=40,
+  serialized_end=179,
 )
 
 
 _ITEMTYPEID = _descriptor.Descriptor(
   name='ItemTypeID',
-  full_name='mruv.ItemTypeID',
+  full_name='mruv.items.ItemTypeID',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.ItemTypeID.id', index=0,
+      name='id', full_name='mruv.items.ItemTypeID.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -173,42 +173,42 @@ _ITEMTYPEID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=175,
-  serialized_end=199,
+  serialized_start=181,
+  serialized_end=205,
 )
 
 
 _ITEM = _descriptor.Descriptor(
   name='Item',
-  full_name='mruv.Item',
+  full_name='mruv.items.Item',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.Item.id', index=0,
+      name='id', full_name='mruv.items.Item.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='item_type_id', full_name='mruv.Item.item_type_id', index=1,
+      name='item_type_id', full_name='mruv.items.Item.item_type_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='weight', full_name='mruv.Item.weight', index=2,
+      name='weight', full_name='mruv.items.Item.weight', index=2,
       number=3, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='volume', full_name='mruv.Item.volume', index=3,
+      name='volume', full_name='mruv.items.Item.volume', index=3,
       number=4, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -226,21 +226,21 @@ _ITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=201,
-  serialized_end=273,
+  serialized_start=207,
+  serialized_end=279,
 )
 
 
 _ITEMID = _descriptor.Descriptor(
   name='ItemID',
-  full_name='mruv.ItemID',
+  full_name='mruv.items.ItemID',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.ItemID.id', index=0,
+      name='id', full_name='mruv.items.ItemID.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -258,56 +258,56 @@ _ITEMID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=275,
-  serialized_end=295,
+  serialized_start=281,
+  serialized_end=301,
 )
 
 
 _CONTAINERTYPE = _descriptor.Descriptor(
   name='ContainerType',
-  full_name='mruv.ContainerType',
+  full_name='mruv.items.ContainerType',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.ContainerType.id', index=0,
+      name='id', full_name='mruv.items.ContainerType.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='container_item_type_id', full_name='mruv.ContainerType.container_item_type_id', index=1,
+      name='container_item_type_id', full_name='mruv.items.ContainerType.container_item_type_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='max_number', full_name='mruv.ContainerType.max_number', index=2,
+      name='max_number', full_name='mruv.items.ContainerType.max_number', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='max_volume', full_name='mruv.ContainerType.max_volume', index=3,
+      name='max_volume', full_name='mruv.items.ContainerType.max_volume', index=3,
       number=4, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='max_weight', full_name='mruv.ContainerType.max_weight', index=4,
+      name='max_weight', full_name='mruv.items.ContainerType.max_weight', index=4,
       number=5, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='valid_item_types', full_name='mruv.ContainerType.valid_item_types', index=5,
+      name='valid_item_types', full_name='mruv.items.ContainerType.valid_item_types', index=5,
       number=8, type=3, cpp_type=2, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -325,21 +325,21 @@ _CONTAINERTYPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=298,
-  serialized_end=443,
+  serialized_start=304,
+  serialized_end=449,
 )
 
 
 _CONTAINERTYPEID = _descriptor.Descriptor(
   name='ContainerTypeID',
-  full_name='mruv.ContainerTypeID',
+  full_name='mruv.items.ContainerTypeID',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.ContainerTypeID.id', index=0,
+      name='id', full_name='mruv.items.ContainerTypeID.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -357,49 +357,49 @@ _CONTAINERTYPEID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=445,
-  serialized_end=474,
+  serialized_start=451,
+  serialized_end=480,
 )
 
 
 _CONTAINER = _descriptor.Descriptor(
   name='Container',
-  full_name='mruv.Container',
+  full_name='mruv.items.Container',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.Container.id', index=0,
+      name='id', full_name='mruv.items.Container.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='type_id', full_name='mruv.Container.type_id', index=1,
+      name='type_id', full_name='mruv.items.Container.type_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='item_id', full_name='mruv.Container.item_id', index=2,
+      name='item_id', full_name='mruv.items.Container.item_id', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='items_inside', full_name='mruv.Container.items_inside', index=3,
+      name='items_inside', full_name='mruv.items.Container.items_inside', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='items', full_name='mruv.Container.items', index=4,
+      name='items', full_name='mruv.items.Container.items', index=4,
       number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -417,21 +417,21 @@ _CONTAINER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=476,
-  serialized_end=588,
+  serialized_start=482,
+  serialized_end=600,
 )
 
 
 _CONTAINERID = _descriptor.Descriptor(
   name='ContainerID',
-  full_name='mruv.ContainerID',
+  full_name='mruv.items.ContainerID',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='mruv.ContainerID.id', index=0,
+      name='id', full_name='mruv.items.ContainerID.id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -449,42 +449,42 @@ _CONTAINERID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=590,
-  serialized_end=615,
+  serialized_start=602,
+  serialized_end=627,
 )
 
 
 _INSIDEITEM = _descriptor.Descriptor(
   name='InsideItem',
-  full_name='mruv.InsideItem',
+  full_name='mruv.items.InsideItem',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='container_id', full_name='mruv.InsideItem.container_id', index=0,
+      name='container_id', full_name='mruv.items.InsideItem.container_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='item_id', full_name='mruv.InsideItem.item_id', index=1,
+      name='item_id', full_name='mruv.items.InsideItem.item_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='item', full_name='mruv.InsideItem.item', index=2,
+      name='item', full_name='mruv.items.InsideItem.item', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='position', full_name='mruv.InsideItem.position', index=3,
+      name='position', full_name='mruv.items.InsideItem.position', index=3,
       number=4, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -502,13 +502,13 @@ _INSIDEITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
     _descriptor.OneofDescriptor(
-      name='item_or_id', full_name='mruv.InsideItem.item_or_id',
+      name='item_or_id', full_name='mruv.items.InsideItem.item_or_id',
       index=0, containing_type=None,
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=617,
-  serialized_end=730,
+  serialized_start=629,
+  serialized_end=748,
 )
 
 _CONTAINER.fields_by_name['items'].message_type = _INSIDEITEM
@@ -534,63 +534,63 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 ItemType = _reflection.GeneratedProtocolMessageType('ItemType', (_message.Message,), {
   'DESCRIPTOR' : _ITEMTYPE,
   '__module__' : 'items.items_model_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.ItemType)
+  # @@protoc_insertion_point(class_scope:mruv.items.ItemType)
   })
 _sym_db.RegisterMessage(ItemType)
 
 ItemTypeID = _reflection.GeneratedProtocolMessageType('ItemTypeID', (_message.Message,), {
   'DESCRIPTOR' : _ITEMTYPEID,
   '__module__' : 'items.items_model_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.ItemTypeID)
+  # @@protoc_insertion_point(class_scope:mruv.items.ItemTypeID)
   })
 _sym_db.RegisterMessage(ItemTypeID)
 
 Item = _reflection.GeneratedProtocolMessageType('Item', (_message.Message,), {
   'DESCRIPTOR' : _ITEM,
   '__module__' : 'items.items_model_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.Item)
+  # @@protoc_insertion_point(class_scope:mruv.items.Item)
   })
 _sym_db.RegisterMessage(Item)
 
 ItemID = _reflection.GeneratedProtocolMessageType('ItemID', (_message.Message,), {
   'DESCRIPTOR' : _ITEMID,
   '__module__' : 'items.items_model_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.ItemID)
+  # @@protoc_insertion_point(class_scope:mruv.items.ItemID)
   })
 _sym_db.RegisterMessage(ItemID)
 
 ContainerType = _reflection.GeneratedProtocolMessageType('ContainerType', (_message.Message,), {
   'DESCRIPTOR' : _CONTAINERTYPE,
   '__module__' : 'items.items_model_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.ContainerType)
+  # @@protoc_insertion_point(class_scope:mruv.items.ContainerType)
   })
 _sym_db.RegisterMessage(ContainerType)
 
 ContainerTypeID = _reflection.GeneratedProtocolMessageType('ContainerTypeID', (_message.Message,), {
   'DESCRIPTOR' : _CONTAINERTYPEID,
   '__module__' : 'items.items_model_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.ContainerTypeID)
+  # @@protoc_insertion_point(class_scope:mruv.items.ContainerTypeID)
   })
 _sym_db.RegisterMessage(ContainerTypeID)
 
 Container = _reflection.GeneratedProtocolMessageType('Container', (_message.Message,), {
   'DESCRIPTOR' : _CONTAINER,
   '__module__' : 'items.items_model_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.Container)
+  # @@protoc_insertion_point(class_scope:mruv.items.Container)
   })
 _sym_db.RegisterMessage(Container)
 
 ContainerID = _reflection.GeneratedProtocolMessageType('ContainerID', (_message.Message,), {
   'DESCRIPTOR' : _CONTAINERID,
   '__module__' : 'items.items_model_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.ContainerID)
+  # @@protoc_insertion_point(class_scope:mruv.items.ContainerID)
   })
 _sym_db.RegisterMessage(ContainerID)
 
 InsideItem = _reflection.GeneratedProtocolMessageType('InsideItem', (_message.Message,), {
   'DESCRIPTOR' : _INSIDEITEM,
   '__module__' : 'items.items_model_pb2'
-  # @@protoc_insertion_point(class_scope:mruv.InsideItem)
+  # @@protoc_insertion_point(class_scope:mruv.items.InsideItem)
   })
 _sym_db.RegisterMessage(InsideItem)
 
