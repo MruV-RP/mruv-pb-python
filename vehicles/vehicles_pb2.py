@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z&github.com/MruV-RP/mruv-pb-go/vehicles',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x17vehicles/vehicles.proto\x12\rmruv.vehicles\x1a\x1cgoogle/api/annotations.proto\"\x16\n\x14\x43reateVehicleRequest\"\x17\n\x15\x43reateVehicleResponse\"\x1f\n\x11GetVehicleRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x14\n\x12GetVehicleResponse\"\"\n\x14UpdateVehicleRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x17\n\x15UpdateVehicleResponse\"\"\n\x14\x44\x65leteVehicleRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x17\n\x15\x44\x65leteVehicleResponse2\xe3\x03\n\x13MruVVehiclesService\x12p\n\rCreateVehicle\x12#.mruv.vehicles.CreateVehicleRequest\x1a$.mruv.vehicles.CreateVehicleResponse\"\x14\x82\xd3\xe4\x93\x02\x0e\"\x0c/v1/vehicles\x12l\n\nGetVehicle\x12 .mruv.vehicles.GetVehicleRequest\x1a!.mruv.vehicles.GetVehicleResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/v1/vehicles/{id}\x12u\n\rUpdateVehicle\x12#.mruv.vehicles.UpdateVehicleRequest\x1a$.mruv.vehicles.UpdateVehicleResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x32\x11/v1/vehicles/{id}\x12u\n\rDeleteVehicle\x12#.mruv.vehicles.DeleteVehicleRequest\x1a$.mruv.vehicles.DeleteVehicleResponse\"\x19\x82\xd3\xe4\x93\x02\x13*\x11/v1/vehicles/{id}B(Z&github.com/MruV-RP/mruv-pb-go/vehiclesb\x06proto3'
+  serialized_pb=b'\n\x17vehicles/vehicles.proto\x12\rmruv.vehicles\x1a\x1cgoogle/api/annotations.proto\"\x16\n\x14\x43reateVehicleRequest\"\x17\n\x15\x43reateVehicleResponse\"\x1f\n\x11GetVehicleRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x14\n\x12GetVehicleResponse\"\"\n\x14UpdateVehicleRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x17\n\x15UpdateVehicleResponse\"\"\n\x14\x44\x65leteVehicleRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x17\n\x15\x44\x65leteVehicleResponse2\xe9\x03\n\x13MruVVehiclesService\x12s\n\rCreateVehicle\x12#.mruv.vehicles.CreateVehicleRequest\x1a$.mruv.vehicles.CreateVehicleResponse\"\x17\x82\xd3\xe4\x93\x02\x11\"\x0c/v1/vehicles:\x01*\x12l\n\nGetVehicle\x12 .mruv.vehicles.GetVehicleRequest\x1a!.mruv.vehicles.GetVehicleResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/v1/vehicles/{id}\x12x\n\rUpdateVehicle\x12#.mruv.vehicles.UpdateVehicleRequest\x1a$.mruv.vehicles.UpdateVehicleResponse\"\x1c\x82\xd3\xe4\x93\x02\x16\x32\x11/v1/vehicles/{id}:\x01*\x12u\n\rDeleteVehicle\x12#.mruv.vehicles.DeleteVehicleRequest\x1a$.mruv.vehicles.DeleteVehicleResponse\"\x19\x82\xd3\xe4\x93\x02\x13*\x11/v1/vehicles/{id}B(Z&github.com/MruV-RP/mruv-pb-go/vehiclesb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -324,7 +324,7 @@ _MRUVVEHICLESSERVICE = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=299,
-  serialized_end=782,
+  serialized_end=788,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateVehicle',
@@ -333,7 +333,7 @@ _MRUVVEHICLESSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_CREATEVEHICLEREQUEST,
     output_type=_CREATEVEHICLERESPONSE,
-    serialized_options=b'\202\323\344\223\002\016\"\014/v1/vehicles',
+    serialized_options=b'\202\323\344\223\002\021\"\014/v1/vehicles:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -353,7 +353,7 @@ _MRUVVEHICLESSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_UPDATEVEHICLEREQUEST,
     output_type=_UPDATEVEHICLERESPONSE,
-    serialized_options=b'\202\323\344\223\002\0232\021/v1/vehicles/{id}',
+    serialized_options=b'\202\323\344\223\002\0262\021/v1/vehicles/{id}:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(

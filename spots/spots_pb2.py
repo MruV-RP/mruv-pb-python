@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z#github.com/MruV-RP/mruv-pb-go/spots',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x11spots/spots.proto\x12\nmruv.spots\x1a\x1cgoogle/api/annotations.proto\"}\n\x04Spot\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x0c\n\x04icon\x18\x03 \x01(\x05\x12\x0e\n\x06marker\x18\x04 \x01(\x05\x12\t\n\x01x\x18\x05 \x01(\x02\x12\t\n\x01y\x18\x06 \x01(\x02\x12\t\n\x01z\x18\x07 \x01(\x02\x12\n\n\x02vw\x18\x08 \x01(\x05\x12\x0b\n\x03int\x18\t \x01(\x05\"3\n\x11\x43reateSpotRequest\x12\x1e\n\x04spot\x18\x01 \x01(\x0b\x32\x10.mruv.spots.Spot\" \n\x12\x43reateSpotResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1c\n\x0eGetSpotRequest\x12\n\n\x02id\x18\x01 \x01(\r\"1\n\x0fGetSpotResponse\x12\x1e\n\x04spot\x18\x01 \x01(\x0b\x32\x10.mruv.spots.Spot\"?\n\x11UpdateSpotRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x1e\n\x04spot\x18\x02 \x01(\x0b\x32\x10.mruv.spots.Spot\"\x14\n\x12UpdateSpotResponse\"\x1f\n\x11\x44\x65leteSpotRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x14\n\x12\x44\x65leteSpotResponse\"*\n\x14\x46\x65tchAllSpotsRequest\x12\x12\n\nchunk_size\x18\x01 \x01(\r\"\x94\x01\n\x15\x46\x65tchAllSpotsResponse\x12;\n\x05spots\x18\x01 \x03(\x0b\x32,.mruv.spots.FetchAllSpotsResponse.SpotsEntry\x1a>\n\nSpotsEntry\x12\x0b\n\x03key\x18\x01 \x01(\r\x12\x1f\n\x05value\x18\x02 \x01(\x0b\x32\x10.mruv.spots.Spot:\x02\x38\x01\x32\xed\x03\n\x10MruVSpotsService\x12^\n\nCreateSpot\x12\x1d.mruv.spots.CreateSpotRequest\x1a\x1e.mruv.spots.CreateSpotResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\"\t/v1/spots\x12Z\n\x07GetSpot\x12\x1a.mruv.spots.GetSpotRequest\x1a\x1b.mruv.spots.GetSpotResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/spots/{id}\x12\x63\n\nUpdateSpot\x12\x1d.mruv.spots.UpdateSpotRequest\x1a\x1e.mruv.spots.UpdateSpotResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x32\x0e/v1/spots/{id}\x12\x63\n\nDeleteSpot\x12\x1d.mruv.spots.DeleteSpotRequest\x1a\x1e.mruv.spots.DeleteSpotResponse\"\x16\x82\xd3\xe4\x93\x02\x10*\x0e/v1/spots/{id}\x12S\n\x08\x46\x65tchAll\x12 .mruv.spots.FetchAllSpotsRequest\x1a!.mruv.spots.FetchAllSpotsResponse\"\x00\x30\x01\x42%Z#github.com/MruV-RP/mruv-pb-go/spotsb\x06proto3'
+  serialized_pb=b'\n\x11spots/spots.proto\x12\nmruv.spots\x1a\x1cgoogle/api/annotations.proto\"}\n\x04Spot\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x0c\n\x04icon\x18\x03 \x01(\x05\x12\x0e\n\x06marker\x18\x04 \x01(\x05\x12\t\n\x01x\x18\x05 \x01(\x02\x12\t\n\x01y\x18\x06 \x01(\x02\x12\t\n\x01z\x18\x07 \x01(\x02\x12\n\n\x02vw\x18\x08 \x01(\x05\x12\x0b\n\x03int\x18\t \x01(\x05\"3\n\x11\x43reateSpotRequest\x12\x1e\n\x04spot\x18\x01 \x01(\x0b\x32\x10.mruv.spots.Spot\" \n\x12\x43reateSpotResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1c\n\x0eGetSpotRequest\x12\n\n\x02id\x18\x01 \x01(\r\"1\n\x0fGetSpotResponse\x12\x1e\n\x04spot\x18\x01 \x01(\x0b\x32\x10.mruv.spots.Spot\"?\n\x11UpdateSpotRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x1e\n\x04spot\x18\x02 \x01(\x0b\x32\x10.mruv.spots.Spot\"\x14\n\x12UpdateSpotResponse\"\x1f\n\x11\x44\x65leteSpotRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x14\n\x12\x44\x65leteSpotResponse\"*\n\x14\x46\x65tchAllSpotsRequest\x12\x12\n\nchunk_size\x18\x01 \x01(\r\"\x94\x01\n\x15\x46\x65tchAllSpotsResponse\x12;\n\x05spots\x18\x01 \x03(\x0b\x32,.mruv.spots.FetchAllSpotsResponse.SpotsEntry\x1a>\n\nSpotsEntry\x12\x0b\n\x03key\x18\x01 \x01(\r\x12\x1f\n\x05value\x18\x02 \x01(\x0b\x32\x10.mruv.spots.Spot:\x02\x38\x01\x32\xf3\x03\n\x10MruVSpotsService\x12\x61\n\nCreateSpot\x12\x1d.mruv.spots.CreateSpotRequest\x1a\x1e.mruv.spots.CreateSpotResponse\"\x14\x82\xd3\xe4\x93\x02\x0e\"\t/v1/spots:\x01*\x12Z\n\x07GetSpot\x12\x1a.mruv.spots.GetSpotRequest\x1a\x1b.mruv.spots.GetSpotResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/spots/{id}\x12\x66\n\nUpdateSpot\x12\x1d.mruv.spots.UpdateSpotRequest\x1a\x1e.mruv.spots.UpdateSpotResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x32\x0e/v1/spots/{id}:\x01*\x12\x63\n\nDeleteSpot\x12\x1d.mruv.spots.DeleteSpotRequest\x1a\x1e.mruv.spots.DeleteSpotResponse\"\x16\x82\xd3\xe4\x93\x02\x10*\x0e/v1/spots/{id}\x12S\n\x08\x46\x65tchAll\x12 .mruv.spots.FetchAllSpotsRequest\x1a!.mruv.spots.FetchAllSpotsResponse\"\x00\x30\x01\x42%Z#github.com/MruV-RP/mruv-pb-go/spotsb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -581,7 +581,7 @@ _MRUVSPOTSSERVICE = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=696,
-  serialized_end=1189,
+  serialized_end=1195,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateSpot',
@@ -590,7 +590,7 @@ _MRUVSPOTSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_CREATESPOTREQUEST,
     output_type=_CREATESPOTRESPONSE,
-    serialized_options=b'\202\323\344\223\002\013\"\t/v1/spots',
+    serialized_options=b'\202\323\344\223\002\016\"\t/v1/spots:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -610,7 +610,7 @@ _MRUVSPOTSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_UPDATESPOTREQUEST,
     output_type=_UPDATESPOTRESPONSE,
-    serialized_options=b'\202\323\344\223\002\0202\016/v1/spots/{id}',
+    serialized_options=b'\202\323\344\223\002\0232\016/v1/spots/{id}:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(

@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z$github.com/MruV-RP/mruv-pb-go/offers',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13offers/offers.proto\x12\x0bmruv.offers\x1a\x1cgoogle/api/annotations.proto\"\xac\x01\n\x12\x43reateOfferRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\r\n\x05offer\x18\x03 \x01(\t\x12\x10\n\x08\x65nd_date\x18\x04 \x01(\x03\x12\r\n\x05price\x18\x05 \x01(\r\x12*\n\noffer_type\x18\x06 \x01(\x0e\x32\x16.mruv.offers.OfferType\x12\x17\n\x0foffer_entity_id\x18\x07 \x01(\r\"!\n\x13\x43reateOfferResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1d\n\x0fGetOfferRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x12\n\x10GetOfferResponse\" \n\x12UpdateOfferRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x15\n\x13UpdateOfferResponse\" \n\x12\x44\x65leteOfferRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x15\n\x13\x44\x65leteOfferResponse\" \n\x12\x41\x63\x63\x65ptOfferRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x15\n\x13\x41\x63\x63\x65ptOfferResponse*\x18\n\tOfferType\x12\x0b\n\x07UNKNOWN\x10\x00\x32\xa3\x04\n\x11MruVOffersService\x12\x64\n\x0b\x43reateOffer\x12\x1f.mruv.offers.CreateOfferRequest\x1a .mruv.offers.CreateOfferResponse\"\x12\x82\xd3\xe4\x93\x02\x0c\"\n/v1/offers\x12`\n\x08GetOffer\x12\x1c.mruv.offers.GetOfferRequest\x1a\x1d.mruv.offers.GetOfferResponse\"\x17\x82\xd3\xe4\x93\x02\x11\x12\x0f/v1/offers/{id}\x12i\n\x0bUpdateOffer\x12\x1f.mruv.offers.UpdateOfferRequest\x1a .mruv.offers.UpdateOfferResponse\"\x17\x82\xd3\xe4\x93\x02\x11\x32\x0f/v1/offers/{id}\x12i\n\x0b\x44\x65leteOffer\x12\x1f.mruv.offers.DeleteOfferRequest\x1a .mruv.offers.DeleteOfferResponse\"\x17\x82\xd3\xe4\x93\x02\x11*\x0f/v1/offers/{id}\x12p\n\x0b\x41\x63\x63\x65ptOffer\x12\x1f.mruv.offers.AcceptOfferRequest\x1a .mruv.offers.AcceptOfferResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\"\x16/v1/offers/{id}/acceptB&Z$github.com/MruV-RP/mruv-pb-go/offersb\x06proto3'
+  serialized_pb=b'\n\x13offers/offers.proto\x12\x0bmruv.offers\x1a\x1cgoogle/api/annotations.proto\"\xac\x01\n\x12\x43reateOfferRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\r\n\x05offer\x18\x03 \x01(\t\x12\x10\n\x08\x65nd_date\x18\x04 \x01(\x03\x12\r\n\x05price\x18\x05 \x01(\r\x12*\n\noffer_type\x18\x06 \x01(\x0e\x32\x16.mruv.offers.OfferType\x12\x17\n\x0foffer_entity_id\x18\x07 \x01(\r\"!\n\x13\x43reateOfferResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\x1d\n\x0fGetOfferRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x12\n\x10GetOfferResponse\" \n\x12UpdateOfferRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x15\n\x13UpdateOfferResponse\" \n\x12\x44\x65leteOfferRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x15\n\x13\x44\x65leteOfferResponse\" \n\x12\x41\x63\x63\x65ptOfferRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x15\n\x13\x41\x63\x63\x65ptOfferResponse*\x18\n\tOfferType\x12\x0b\n\x07UNKNOWN\x10\x00\x32\xac\x04\n\x11MruVOffersService\x12g\n\x0b\x43reateOffer\x12\x1f.mruv.offers.CreateOfferRequest\x1a .mruv.offers.CreateOfferResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\"\n/v1/offers:\x01*\x12`\n\x08GetOffer\x12\x1c.mruv.offers.GetOfferRequest\x1a\x1d.mruv.offers.GetOfferResponse\"\x17\x82\xd3\xe4\x93\x02\x11\x12\x0f/v1/offers/{id}\x12l\n\x0bUpdateOffer\x12\x1f.mruv.offers.UpdateOfferRequest\x1a .mruv.offers.UpdateOfferResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x32\x0f/v1/offers/{id}:\x01*\x12i\n\x0b\x44\x65leteOffer\x12\x1f.mruv.offers.DeleteOfferRequest\x1a .mruv.offers.DeleteOfferResponse\"\x17\x82\xd3\xe4\x93\x02\x11*\x0f/v1/offers/{id}\x12s\n\x0b\x41\x63\x63\x65ptOffer\x12\x1f.mruv.offers.AcceptOfferRequest\x1a .mruv.offers.AcceptOfferResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x16/v1/offers/{id}/accept:\x01*B&Z$github.com/MruV-RP/mruv-pb-go/offersb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -478,7 +478,7 @@ _MRUVOFFERSSERVICE = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=525,
-  serialized_end=1072,
+  serialized_end=1081,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateOffer',
@@ -487,7 +487,7 @@ _MRUVOFFERSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_CREATEOFFERREQUEST,
     output_type=_CREATEOFFERRESPONSE,
-    serialized_options=b'\202\323\344\223\002\014\"\n/v1/offers',
+    serialized_options=b'\202\323\344\223\002\017\"\n/v1/offers:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -507,7 +507,7 @@ _MRUVOFFERSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_UPDATEOFFERREQUEST,
     output_type=_UPDATEOFFERRESPONSE,
-    serialized_options=b'\202\323\344\223\002\0212\017/v1/offers/{id}',
+    serialized_options=b'\202\323\344\223\002\0242\017/v1/offers/{id}:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -527,7 +527,7 @@ _MRUVOFFERSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_ACCEPTOFFERREQUEST,
     output_type=_ACCEPTOFFERRESPONSE,
-    serialized_options=b'\202\323\344\223\002\030\"\026/v1/offers/{id}/accept',
+    serialized_options=b'\202\323\344\223\002\033\"\026/v1/offers/{id}/accept:\001*',
     create_key=_descriptor._internal_create_key,
   ),
 ])

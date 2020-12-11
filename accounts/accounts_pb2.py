@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z&github.com/MruV-RP/mruv-pb-go/accounts',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x17\x61\x63\x63ounts/accounts.proto\x12\rmruv.accounts\x1a\x1cgoogle/api/annotations.proto\"H\n\x16RegisterAccountRequest\x12\r\n\x05login\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\x12\r\n\x05\x65mail\x18\x03 \x01(\t\">\n\x17RegisterAccountResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\naccount_id\x18\x02 \x01(\r\"/\n\x0cLogInRequest\x12\r\n\x05login\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"4\n\rLogInResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\naccount_id\x18\x02 \x01(\r\"\"\n\x11GetAccountRequest\x12\r\n\x05login\x18\x01 \x01(\t\"2\n\x12GetAccountResponse\x12\r\n\x05login\x18\x01 \x01(\t\x12\r\n\x05\x65mail\x18\x02 \x01(\t\",\n\x1bGetAccountCharactersRequest\x12\r\n\x05login\x18\x01 \x01(\t\"5\n\x1cGetAccountCharactersResponse\x12\x15\n\rcharacter_ids\x18\x01 \x03(\r\"&\n\x15IsAccountExistRequest\x12\r\n\x05login\x18\x01 \x01(\t\"4\n\x16IsAccountExistResponse\x12\x0e\n\x06\x65xists\x18\x01 \x01(\x08\x12\n\n\x02id\x18\x02 \x01(\r2\x8b\x05\n\x13MruVAccountsService\x12\x7f\n\x0fRegisterAccount\x12%.mruv.accounts.RegisterAccountRequest\x1a&.mruv.accounts.RegisterAccountResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\"\x15/v1/accounts/register\x12^\n\x05LogIn\x12\x1b.mruv.accounts.LogInRequest\x1a\x1c.mruv.accounts.LogInResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\"\x12/v1/accounts/login\x12\x86\x01\n\x0eIsAccountExist\x12$.mruv.accounts.IsAccountExistRequest\x1a%.mruv.accounts.IsAccountExistResponse\"\'\x82\xd3\xe4\x93\x02!\x12\x1f/v1/accounts/{login}/registered\x12o\n\nGetAccount\x12 .mruv.accounts.GetAccountRequest\x1a!.mruv.accounts.GetAccountResponse\"\x1c\x82\xd3\xe4\x93\x02\x16\x12\x14/v1/accounts/{login}\x12\x98\x01\n\x14GetAccountCharacters\x12*.mruv.accounts.GetAccountCharactersRequest\x1a+.mruv.accounts.GetAccountCharactersResponse\"\'\x82\xd3\xe4\x93\x02!\x12\x1f/v1/accounts/{login}/charactersB(Z&github.com/MruV-RP/mruv-pb-go/accountsb\x06proto3'
+  serialized_pb=b'\n\x17\x61\x63\x63ounts/accounts.proto\x12\rmruv.accounts\x1a\x1cgoogle/api/annotations.proto\"H\n\x16RegisterAccountRequest\x12\r\n\x05login\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\x12\r\n\x05\x65mail\x18\x03 \x01(\t\">\n\x17RegisterAccountResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\naccount_id\x18\x02 \x01(\r\"/\n\x0cLogInRequest\x12\r\n\x05login\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"4\n\rLogInResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x12\n\naccount_id\x18\x02 \x01(\r\"\"\n\x11GetAccountRequest\x12\r\n\x05login\x18\x01 \x01(\t\"2\n\x12GetAccountResponse\x12\r\n\x05login\x18\x01 \x01(\t\x12\r\n\x05\x65mail\x18\x02 \x01(\t\",\n\x1bGetAccountCharactersRequest\x12\r\n\x05login\x18\x01 \x01(\t\"5\n\x1cGetAccountCharactersResponse\x12\x15\n\rcharacter_ids\x18\x01 \x03(\r\"&\n\x15IsAccountExistRequest\x12\r\n\x05login\x18\x01 \x01(\t\"4\n\x16IsAccountExistResponse\x12\x0e\n\x06\x65xists\x18\x01 \x01(\x08\x12\n\n\x02id\x18\x02 \x01(\r2\x92\x05\n\x13MruVAccountsService\x12\x82\x01\n\x0fRegisterAccount\x12%.mruv.accounts.RegisterAccountRequest\x1a&.mruv.accounts.RegisterAccountResponse\" \x82\xd3\xe4\x93\x02\x1a\"\x15/v1/accounts/register:\x01*\x12\x61\n\x05LogIn\x12\x1b.mruv.accounts.LogInRequest\x1a\x1c.mruv.accounts.LogInResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\"\x12/v1/accounts/login:\x01*\x12\x86\x01\n\x0eIsAccountExist\x12$.mruv.accounts.IsAccountExistRequest\x1a%.mruv.accounts.IsAccountExistResponse\"\'\x82\xd3\xe4\x93\x02!\x12\x1f/v1/accounts/{login}/registered\x12o\n\nGetAccount\x12 .mruv.accounts.GetAccountRequest\x1a!.mruv.accounts.GetAccountResponse\"\x1c\x82\xd3\xe4\x93\x02\x16\x12\x14/v1/accounts/{login}\x12\x98\x01\n\x14GetAccountCharacters\x12*.mruv.accounts.GetAccountCharactersRequest\x1a+.mruv.accounts.GetAccountCharactersResponse\"\'\x82\xd3\xe4\x93\x02!\x12\x1f/v1/accounts/{login}/charactersB(Z&github.com/MruV-RP/mruv-pb-go/accountsb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -488,7 +488,7 @@ _MRUVACCOUNTSSERVICE = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=597,
-  serialized_end=1248,
+  serialized_end=1255,
   methods=[
   _descriptor.MethodDescriptor(
     name='RegisterAccount',
@@ -497,7 +497,7 @@ _MRUVACCOUNTSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_REGISTERACCOUNTREQUEST,
     output_type=_REGISTERACCOUNTRESPONSE,
-    serialized_options=b'\202\323\344\223\002\027\"\025/v1/accounts/register',
+    serialized_options=b'\202\323\344\223\002\032\"\025/v1/accounts/register:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -507,7 +507,7 @@ _MRUVACCOUNTSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_LOGINREQUEST,
     output_type=_LOGINRESPONSE,
-    serialized_options=b'\202\323\344\223\002\024\"\022/v1/accounts/login',
+    serialized_options=b'\202\323\344\223\002\027\"\022/v1/accounts/login:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(

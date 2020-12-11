@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z%github.com/MruV-RP/mruv-pb-go/economy',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x15\x65\x63onomy/economy.proto\x12\x0cmruv.economy\x1a\x1cgoogle/api/annotations.proto\"\x90\x01\n\x16RegisterProductRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tfull_name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x13\n\x0bprice_class\x18\x04 \x01(\r\x12\x13\n\x0bprice_ratio\x18\x05 \x01(\x02\x12\x16\n\x0estarting_price\x18\x06 \x01(\r\"%\n\x17RegisterProductResponse\x12\n\n\x02id\x18\x01 \x01(\r\"-\n\x11GetProductRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"\x9b\x01\n\x12GetProductResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tfull_name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x13\n\x0bprice_class\x18\x04 \x01(\r\x12\x13\n\x0bprice_ratio\x18\x05 \x01(\x02\x12\x16\n\x0estarting_price\x18\x06 \x01(\r\x12\r\n\x05price\x18\x07 \x01(\r\"\x82\x01\n\x14UpdateProductRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x11\n\tfull_name\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12\x13\n\x0bprice_class\x18\x05 \x01(\r\x12\x13\n\x0bprice_ratio\x18\x06 \x01(\x02\"\x17\n\x15UpdateProductResponse\"A\n\x12UpdatePriceRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x11\n\tnew_price\x18\x03 \x01(\r\"\x15\n\x13UpdatePriceResponse\"0\n\x14\x44\x65leteProductRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"\x17\n\x15\x44\x65leteProductResponse\"+\n\x0fGetPriceRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"!\n\x10GetPriceResponse\x12\r\n\x05price\x18\x01 \x01(\r\"-\n\x11\x42uyProductRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"\x14\n\x12\x42uyProductResponse\"/\n\x13WatchProductRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"\xc9\x01\n\x14WatchProductResponse\x12>\n\x05\x65vent\x18\x01 \x01(\x0e\x32/.mruv.economy.WatchProductResponse.ProductEvent\"q\n\x0cProductEvent\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x11\n\rPRICE_CHANGED\x10\x01\x12\x12\n\x0ePRODUCT_BOUGHT\x10\x02\x12\x18\n\x14PRODUCT_INFO_UPDATED\x10\x03\x12\x13\n\x0fPRODUCT_DELETED\x10\x04\"-\n\x11WatchPriceRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"#\n\x12WatchPriceResponse\x12\r\n\x05price\x18\x01 \x01(\r2\xa3\x08\n\x12MruVEconomyService\x12|\n\x0fRegisterProduct\x12$.mruv.economy.RegisterProductRequest\x1a%.mruv.economy.RegisterProductResponse\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x14/v1/economy/products\x12t\n\nGetProduct\x12\x1f.mruv.economy.GetProductRequest\x1a .mruv.economy.GetProductResponse\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/v1/economy/products/{name}\x12}\n\rUpdateProduct\x12\".mruv.economy.UpdateProductRequest\x1a#.mruv.economy.UpdateProductResponse\"#\x82\xd3\xe4\x93\x02\x1d\x32\x1b/v1/economy/products/{name}\x12}\n\rDeleteProduct\x12\".mruv.economy.DeleteProductRequest\x1a#.mruv.economy.DeleteProductResponse\"#\x82\xd3\xe4\x93\x02\x1d*\x1b/v1/economy/products/{name}\x12}\n\x0bUpdatePrice\x12 .mruv.economy.UpdatePriceRequest\x1a!.mruv.economy.UpdatePriceResponse\")\x82\xd3\xe4\x93\x02#2!/v1/economy/products/{name}/price\x12s\n\x08GetPrice\x12\x1d.mruv.economy.GetPriceRequest\x1a\x1e.mruv.economy.GetPriceResponse\"(\x82\xd3\xe4\x93\x02\"\x12 /v1/economy/product/{name}/price\x12w\n\nBuyProduct\x12\x1f.mruv.economy.BuyProductRequest\x1a .mruv.economy.BuyProductResponse\"&\x82\xd3\xe4\x93\x02 \"\x1e/v1/economy/product/{name}/buy\x12Y\n\x0cWatchProduct\x12!.mruv.economy.WatchProductRequest\x1a\".mruv.economy.WatchProductResponse\"\x00\x30\x01\x12S\n\nWatchPrice\x12\x1f.mruv.economy.WatchPriceRequest\x1a .mruv.economy.WatchPriceResponse\"\x00\x30\x01\x42\'Z%github.com/MruV-RP/mruv-pb-go/economyb\x06proto3'
+  serialized_pb=b'\n\x15\x65\x63onomy/economy.proto\x12\x0cmruv.economy\x1a\x1cgoogle/api/annotations.proto\"\x90\x01\n\x16RegisterProductRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tfull_name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x13\n\x0bprice_class\x18\x04 \x01(\r\x12\x13\n\x0bprice_ratio\x18\x05 \x01(\x02\x12\x16\n\x0estarting_price\x18\x06 \x01(\r\"%\n\x17RegisterProductResponse\x12\n\n\x02id\x18\x01 \x01(\r\"-\n\x11GetProductRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"\x9b\x01\n\x12GetProductResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tfull_name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x13\n\x0bprice_class\x18\x04 \x01(\r\x12\x13\n\x0bprice_ratio\x18\x05 \x01(\x02\x12\x16\n\x0estarting_price\x18\x06 \x01(\r\x12\r\n\x05price\x18\x07 \x01(\r\"\x82\x01\n\x14UpdateProductRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x11\n\tfull_name\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12\x13\n\x0bprice_class\x18\x05 \x01(\r\x12\x13\n\x0bprice_ratio\x18\x06 \x01(\x02\"\x17\n\x15UpdateProductResponse\"A\n\x12UpdatePriceRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x11\n\tnew_price\x18\x03 \x01(\r\"\x15\n\x13UpdatePriceResponse\"0\n\x14\x44\x65leteProductRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"\x17\n\x15\x44\x65leteProductResponse\"+\n\x0fGetPriceRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"!\n\x10GetPriceResponse\x12\r\n\x05price\x18\x01 \x01(\r\"-\n\x11\x42uyProductRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"\x14\n\x12\x42uyProductResponse\"/\n\x13WatchProductRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"\xc9\x01\n\x14WatchProductResponse\x12>\n\x05\x65vent\x18\x01 \x01(\x0e\x32/.mruv.economy.WatchProductResponse.ProductEvent\"q\n\x0cProductEvent\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x11\n\rPRICE_CHANGED\x10\x01\x12\x12\n\x0ePRODUCT_BOUGHT\x10\x02\x12\x18\n\x14PRODUCT_INFO_UPDATED\x10\x03\x12\x13\n\x0fPRODUCT_DELETED\x10\x04\"-\n\x11WatchPriceRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"#\n\x12WatchPriceResponse\x12\r\n\x05price\x18\x01 \x01(\r2\xb1\x08\n\x12MruVEconomyService\x12\x7f\n\x0fRegisterProduct\x12$.mruv.economy.RegisterProductRequest\x1a%.mruv.economy.RegisterProductResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\"\x14/v1/economy/products:\x01*\x12t\n\nGetProduct\x12\x1f.mruv.economy.GetProductRequest\x1a .mruv.economy.GetProductResponse\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/v1/economy/products/{name}\x12\x80\x01\n\rUpdateProduct\x12\".mruv.economy.UpdateProductRequest\x1a#.mruv.economy.UpdateProductResponse\"&\x82\xd3\xe4\x93\x02 2\x1b/v1/economy/products/{name}:\x01*\x12}\n\rDeleteProduct\x12\".mruv.economy.DeleteProductRequest\x1a#.mruv.economy.DeleteProductResponse\"#\x82\xd3\xe4\x93\x02\x1d*\x1b/v1/economy/products/{name}\x12\x80\x01\n\x0bUpdatePrice\x12 .mruv.economy.UpdatePriceRequest\x1a!.mruv.economy.UpdatePriceResponse\",\x82\xd3\xe4\x93\x02&2!/v1/economy/products/{name}/price:\x01*\x12s\n\x08GetPrice\x12\x1d.mruv.economy.GetPriceRequest\x1a\x1e.mruv.economy.GetPriceResponse\"(\x82\xd3\xe4\x93\x02\"\x12 /v1/economy/product/{name}/price\x12z\n\nBuyProduct\x12\x1f.mruv.economy.BuyProductRequest\x1a .mruv.economy.BuyProductResponse\")\x82\xd3\xe4\x93\x02#\"\x1e/v1/economy/product/{name}/buy:\x01*\x12Y\n\x0cWatchProduct\x12!.mruv.economy.WatchProductRequest\x1a\".mruv.economy.WatchProductResponse\"\x00\x30\x01\x12S\n\nWatchPrice\x12\x1f.mruv.economy.WatchPriceRequest\x1a .mruv.economy.WatchPriceResponse\"\x00\x30\x01\x42\'Z%github.com/MruV-RP/mruv-pb-go/economyb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -942,7 +942,7 @@ _MRUVECONOMYSERVICE = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=1270,
-  serialized_end=2329,
+  serialized_end=2343,
   methods=[
   _descriptor.MethodDescriptor(
     name='RegisterProduct',
@@ -951,7 +951,7 @@ _MRUVECONOMYSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_REGISTERPRODUCTREQUEST,
     output_type=_REGISTERPRODUCTRESPONSE,
-    serialized_options=b'\202\323\344\223\002\026\"\024/v1/economy/products',
+    serialized_options=b'\202\323\344\223\002\031\"\024/v1/economy/products:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -971,7 +971,7 @@ _MRUVECONOMYSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_UPDATEPRODUCTREQUEST,
     output_type=_UPDATEPRODUCTRESPONSE,
-    serialized_options=b'\202\323\344\223\002\0352\033/v1/economy/products/{name}',
+    serialized_options=b'\202\323\344\223\002 2\033/v1/economy/products/{name}:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -991,7 +991,7 @@ _MRUVECONOMYSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_UPDATEPRICEREQUEST,
     output_type=_UPDATEPRICERESPONSE,
-    serialized_options=b'\202\323\344\223\002#2!/v1/economy/products/{name}/price',
+    serialized_options=b'\202\323\344\223\002&2!/v1/economy/products/{name}/price:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -1011,7 +1011,7 @@ _MRUVECONOMYSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_BUYPRODUCTREQUEST,
     output_type=_BUYPRODUCTRESPONSE,
-    serialized_options=b'\202\323\344\223\002 \"\036/v1/economy/product/{name}/buy',
+    serialized_options=b'\202\323\344\223\002#\"\036/v1/economy/product/{name}/buy:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(

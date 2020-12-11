@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z&github.com/MruV-RP/mruv-pb-go/business',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x17\x62usiness/business.proto\x12\rmruv.business\x1a\x1cgoogle/api/annotations.proto\"\xc5\x01\n\x08\x42usiness\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x12\n\nestate_ids\x18\x03 \x03(\x03\x12\x12\n\nproduct_id\x18\x04 \x01(\r\x12,\n\nowner_type\x18\x05 \x01(\x0e\x32\x18.mruv.business.OwnerType\x12\x10\n\x08owner_id\x18\x06 \x01(\r\x12\x16\n\x0e\x62usiness_items\x18\x07 \x03(\r\x12\x16\n\x0e\x62usiness_group\x18\x08 \x01(\r\"N\n\x15\x43reateBusinessRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x12\n\nproduct_id\x18\x03 \x01(\r\"$\n\x16\x43reateBusinessResponse\x12\n\n\x02id\x18\x01 \x01(\r\" \n\x12GetBusinessRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x15\n\x13GetBusinessResponse\"#\n\x15UpdateBusinessRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x18\n\x16UpdateBusinessResponse\"#\n\x15\x44\x65leteBusinessRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x18\n\x16\x44\x65leteBusinessResponse\" \n\x12\x41ssignOwnerRequest\x12\n\n\x02id\x18\x01 \x01(\r\"U\n\x13\x41ssignOwnerResponse\x12,\n\nowner_type\x18\x05 \x01(\x0e\x32\x18.mruv.business.OwnerType\x12\x10\n\x08owner_id\x18\x06 \x01(\r\"=\n\x13\x41ssignEstateRequest\x12\x13\n\x0b\x62usiness_id\x18\x01 \x01(\r\x12\x11\n\testate_id\x18\x02 \x01(\r\",\n\x14\x41ssignEstateResponse\x12\x14\n\x0c\x65state_count\x18\x01 \x01(\r\"?\n\x15UnassignEstateRequest\x12\x13\n\x0b\x62usiness_id\x18\x01 \x01(\r\x12\x11\n\testate_id\x18\x02 \x01(\r\".\n\x16UnassignEstateResponse\x12\x14\n\x0c\x65state_count\x18\x01 \x01(\r\"`\n\x12\x42uyBusinessRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12,\n\nbuyer_type\x18\x05 \x01(\x0e\x32\x18.mruv.business.OwnerType\x12\x10\n\x08\x62uyer_id\x18\x06 \x01(\r\"\x15\n\x13\x42uyBusinessResponse\"\x16\n\x14WatchBusinessRequest\"\x17\n\x15WatchBusinessResponse\"\x18\n\x16WatchBusinessesRequest\"\x19\n\x17WatchBusinessesResponse*;\n\tOwnerType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\n\n\x06PLAYER\x10\x01\x12\t\n\x05GROUP\x10\x02\x12\n\n\x06SYSTEM\x10\x03\x32\xa6\t\n\x13MruVBusinessService\x12s\n\x0e\x43reateBusiness\x12$.mruv.business.CreateBusinessRequest\x1a%.mruv.business.CreateBusinessResponse\"\x14\x82\xd3\xe4\x93\x02\x0e\"\x0c/v1/business\x12\x64\n\x0bGetBusiness\x12!.mruv.business.GetBusinessRequest\x1a\x17.mruv.business.Business\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/v1/business/{id}\x12j\n\x0eUpdateBusiness\x12$.mruv.business.UpdateBusinessRequest\x1a\x17.mruv.business.Business\"\x19\x82\xd3\xe4\x93\x02\x13\x32\x11/v1/business/{id}\x12x\n\x0e\x44\x65leteBusiness\x12$.mruv.business.DeleteBusinessRequest\x1a%.mruv.business.DeleteBusinessResponse\"\x19\x82\xd3\xe4\x93\x02\x13*\x11/v1/business/{id}\x12u\n\x0b\x41ssignOwner\x12!.mruv.business.AssignOwnerRequest\x1a\".mruv.business.AssignOwnerResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\"\x17/v1/business/{id}/owner\x12\x83\x01\n\x0c\x41ssignEstate\x12\".mruv.business.AssignEstateRequest\x1a#.mruv.business.AssignEstateResponse\"*\x82\xd3\xe4\x93\x02$\"\"/v1/business/{business_id}/estates\x12\x95\x01\n\x0eUnassignEstate\x12$.mruv.business.UnassignEstateRequest\x1a%.mruv.business.UnassignEstateResponse\"6\x82\xd3\xe4\x93\x02\x30*./v1/business/{business_id}/estates/{estate_id}\x12s\n\x0b\x42uyBusiness\x12!.mruv.business.BuyBusinessRequest\x1a\".mruv.business.BuyBusinessResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\"\x15/v1/business/{id}/buy\x12^\n\rWatchBusiness\x12#.mruv.business.WatchBusinessRequest\x1a$.mruv.business.WatchBusinessResponse\"\x00\x30\x01\x12\x64\n\x0fWatchBusinesses\x12%.mruv.business.WatchBusinessesRequest\x1a&.mruv.business.WatchBusinessesResponse\"\x00\x30\x01\x42(Z&github.com/MruV-RP/mruv-pb-go/businessb\x06proto3'
+  serialized_pb=b'\n\x17\x62usiness/business.proto\x12\rmruv.business\x1a\x1cgoogle/api/annotations.proto\"\xc5\x01\n\x08\x42usiness\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x12\n\nestate_ids\x18\x03 \x03(\x03\x12\x12\n\nproduct_id\x18\x04 \x01(\r\x12,\n\nowner_type\x18\x05 \x01(\x0e\x32\x18.mruv.business.OwnerType\x12\x10\n\x08owner_id\x18\x06 \x01(\r\x12\x16\n\x0e\x62usiness_items\x18\x07 \x03(\r\x12\x16\n\x0e\x62usiness_group\x18\x08 \x01(\r\"N\n\x15\x43reateBusinessRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x12\n\nproduct_id\x18\x03 \x01(\r\"$\n\x16\x43reateBusinessResponse\x12\n\n\x02id\x18\x01 \x01(\r\" \n\x12GetBusinessRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x15\n\x13GetBusinessResponse\"#\n\x15UpdateBusinessRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x18\n\x16UpdateBusinessResponse\"#\n\x15\x44\x65leteBusinessRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x18\n\x16\x44\x65leteBusinessResponse\" \n\x12\x41ssignOwnerRequest\x12\n\n\x02id\x18\x01 \x01(\r\"U\n\x13\x41ssignOwnerResponse\x12,\n\nowner_type\x18\x05 \x01(\x0e\x32\x18.mruv.business.OwnerType\x12\x10\n\x08owner_id\x18\x06 \x01(\r\"=\n\x13\x41ssignEstateRequest\x12\x13\n\x0b\x62usiness_id\x18\x01 \x01(\r\x12\x11\n\testate_id\x18\x02 \x01(\r\",\n\x14\x41ssignEstateResponse\x12\x14\n\x0c\x65state_count\x18\x01 \x01(\r\"?\n\x15UnassignEstateRequest\x12\x13\n\x0b\x62usiness_id\x18\x01 \x01(\r\x12\x11\n\testate_id\x18\x02 \x01(\r\".\n\x16UnassignEstateResponse\x12\x14\n\x0c\x65state_count\x18\x01 \x01(\r\"`\n\x12\x42uyBusinessRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12,\n\nbuyer_type\x18\x05 \x01(\x0e\x32\x18.mruv.business.OwnerType\x12\x10\n\x08\x62uyer_id\x18\x06 \x01(\r\"\x15\n\x13\x42uyBusinessResponse\"\x16\n\x14WatchBusinessRequest\"\x17\n\x15WatchBusinessResponse\"\x18\n\x16WatchBusinessesRequest\"\x19\n\x17WatchBusinessesResponse*;\n\tOwnerType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\n\n\x06PLAYER\x10\x01\x12\t\n\x05GROUP\x10\x02\x12\n\n\x06SYSTEM\x10\x03\x32\xb5\t\n\x13MruVBusinessService\x12v\n\x0e\x43reateBusiness\x12$.mruv.business.CreateBusinessRequest\x1a%.mruv.business.CreateBusinessResponse\"\x17\x82\xd3\xe4\x93\x02\x11\"\x0c/v1/business:\x01*\x12\x64\n\x0bGetBusiness\x12!.mruv.business.GetBusinessRequest\x1a\x17.mruv.business.Business\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/v1/business/{id}\x12m\n\x0eUpdateBusiness\x12$.mruv.business.UpdateBusinessRequest\x1a\x17.mruv.business.Business\"\x1c\x82\xd3\xe4\x93\x02\x16\x32\x11/v1/business/{id}:\x01*\x12x\n\x0e\x44\x65leteBusiness\x12$.mruv.business.DeleteBusinessRequest\x1a%.mruv.business.DeleteBusinessResponse\"\x19\x82\xd3\xe4\x93\x02\x13*\x11/v1/business/{id}\x12x\n\x0b\x41ssignOwner\x12!.mruv.business.AssignOwnerRequest\x1a\".mruv.business.AssignOwnerResponse\"\"\x82\xd3\xe4\x93\x02\x1c\"\x17/v1/business/{id}/owner:\x01*\x12\x86\x01\n\x0c\x41ssignEstate\x12\".mruv.business.AssignEstateRequest\x1a#.mruv.business.AssignEstateResponse\"-\x82\xd3\xe4\x93\x02\'\"\"/v1/business/{business_id}/estates:\x01*\x12\x95\x01\n\x0eUnassignEstate\x12$.mruv.business.UnassignEstateRequest\x1a%.mruv.business.UnassignEstateResponse\"6\x82\xd3\xe4\x93\x02\x30*./v1/business/{business_id}/estates/{estate_id}\x12v\n\x0b\x42uyBusiness\x12!.mruv.business.BuyBusinessRequest\x1a\".mruv.business.BuyBusinessResponse\" \x82\xd3\xe4\x93\x02\x1a\"\x15/v1/business/{id}/buy:\x01*\x12^\n\rWatchBusiness\x12#.mruv.business.WatchBusinessRequest\x1a$.mruv.business.WatchBusinessResponse\"\x00\x30\x01\x12\x64\n\x0fWatchBusinesses\x12%.mruv.business.WatchBusinessesRequest\x1a&.mruv.business.WatchBusinessesResponse\"\x00\x30\x01\x42(Z&github.com/MruV-RP/mruv-pb-go/businessb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -966,7 +966,7 @@ _MRUVBUSINESSSERVICE = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=1201,
-  serialized_end=2391,
+  serialized_end=2406,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateBusiness',
@@ -975,7 +975,7 @@ _MRUVBUSINESSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_CREATEBUSINESSREQUEST,
     output_type=_CREATEBUSINESSRESPONSE,
-    serialized_options=b'\202\323\344\223\002\016\"\014/v1/business',
+    serialized_options=b'\202\323\344\223\002\021\"\014/v1/business:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -995,7 +995,7 @@ _MRUVBUSINESSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_UPDATEBUSINESSREQUEST,
     output_type=_BUSINESS,
-    serialized_options=b'\202\323\344\223\002\0232\021/v1/business/{id}',
+    serialized_options=b'\202\323\344\223\002\0262\021/v1/business/{id}:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -1015,7 +1015,7 @@ _MRUVBUSINESSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_ASSIGNOWNERREQUEST,
     output_type=_ASSIGNOWNERRESPONSE,
-    serialized_options=b'\202\323\344\223\002\031\"\027/v1/business/{id}/owner',
+    serialized_options=b'\202\323\344\223\002\034\"\027/v1/business/{id}/owner:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -1025,7 +1025,7 @@ _MRUVBUSINESSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_ASSIGNESTATEREQUEST,
     output_type=_ASSIGNESTATERESPONSE,
-    serialized_options=b'\202\323\344\223\002$\"\"/v1/business/{business_id}/estates',
+    serialized_options=b'\202\323\344\223\002\'\"\"/v1/business/{business_id}/estates:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -1045,7 +1045,7 @@ _MRUVBUSINESSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_BUYBUSINESSREQUEST,
     output_type=_BUYBUSINESSRESPONSE,
-    serialized_options=b'\202\323\344\223\002\027\"\025/v1/business/{id}/buy',
+    serialized_options=b'\202\323\344\223\002\032\"\025/v1/business/{id}/buy:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(

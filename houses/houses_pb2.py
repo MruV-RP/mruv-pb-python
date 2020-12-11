@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z$github.com/MruV-RP/mruv-pb-go/houses',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13houses/houses.proto\x12\x0bmruv.houses\x1a\x1cgoogle/api/annotations.proto\"\x14\n\x12\x43reateHouseRequest\"\x15\n\x13\x43reateHouseResponse\"\x1d\n\x0fGetHouseRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x12\n\x10GetHouseResponse\" \n\x12UpdateHouseRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x15\n\x13UpdateHouseResponse\" \n\x12\x44\x65leteHouseRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x15\n\x13\x44\x65leteHouseResponse2\xb1\x03\n\x11MruVHousesService\x12\x64\n\x0b\x43reateHouse\x12\x1f.mruv.houses.CreateHouseRequest\x1a .mruv.houses.CreateHouseResponse\"\x12\x82\xd3\xe4\x93\x02\x0c\"\n/v1/houses\x12`\n\x08GetHouse\x12\x1c.mruv.houses.GetHouseRequest\x1a\x1d.mruv.houses.GetHouseResponse\"\x17\x82\xd3\xe4\x93\x02\x11\x12\x0f/v1/houses/{id}\x12i\n\x0bUpdateHouse\x12\x1f.mruv.houses.UpdateHouseRequest\x1a .mruv.houses.UpdateHouseResponse\"\x17\x82\xd3\xe4\x93\x02\x11\x32\x0f/v1/houses/{id}\x12i\n\x0b\x44\x65leteHouse\x12\x1f.mruv.houses.DeleteHouseRequest\x1a .mruv.houses.DeleteHouseResponse\"\x17\x82\xd3\xe4\x93\x02\x11*\x0f/v1/houses/{id}B&Z$github.com/MruV-RP/mruv-pb-go/housesb\x06proto3'
+  serialized_pb=b'\n\x13houses/houses.proto\x12\x0bmruv.houses\x1a\x1cgoogle/api/annotations.proto\"\x14\n\x12\x43reateHouseRequest\"\x15\n\x13\x43reateHouseResponse\"\x1d\n\x0fGetHouseRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x12\n\x10GetHouseResponse\" \n\x12UpdateHouseRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x15\n\x13UpdateHouseResponse\" \n\x12\x44\x65leteHouseRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x15\n\x13\x44\x65leteHouseResponse2\xb7\x03\n\x11MruVHousesService\x12g\n\x0b\x43reateHouse\x12\x1f.mruv.houses.CreateHouseRequest\x1a .mruv.houses.CreateHouseResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\"\n/v1/houses:\x01*\x12`\n\x08GetHouse\x12\x1c.mruv.houses.GetHouseRequest\x1a\x1d.mruv.houses.GetHouseResponse\"\x17\x82\xd3\xe4\x93\x02\x11\x12\x0f/v1/houses/{id}\x12l\n\x0bUpdateHouse\x12\x1f.mruv.houses.UpdateHouseRequest\x1a .mruv.houses.UpdateHouseResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x32\x0f/v1/houses/{id}:\x01*\x12i\n\x0b\x44\x65leteHouse\x12\x1f.mruv.houses.DeleteHouseRequest\x1a .mruv.houses.DeleteHouseResponse\"\x17\x82\xd3\xe4\x93\x02\x11*\x0f/v1/houses/{id}B&Z$github.com/MruV-RP/mruv-pb-go/housesb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -324,7 +324,7 @@ _MRUVHOUSESSERVICE = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=277,
-  serialized_end=710,
+  serialized_end=716,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateHouse',
@@ -333,7 +333,7 @@ _MRUVHOUSESSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_CREATEHOUSEREQUEST,
     output_type=_CREATEHOUSERESPONSE,
-    serialized_options=b'\202\323\344\223\002\014\"\n/v1/houses',
+    serialized_options=b'\202\323\344\223\002\017\"\n/v1/houses:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -353,7 +353,7 @@ _MRUVHOUSESSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_UPDATEHOUSEREQUEST,
     output_type=_UPDATEHOUSERESPONSE,
-    serialized_options=b'\202\323\344\223\002\0212\017/v1/houses/{id}',
+    serialized_options=b'\202\323\344\223\002\0242\017/v1/houses/{id}:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z+github.com/MruV-RP/mruv-pb-go/organizations',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n!organizations/organizations.proto\x12\x12mruv.organizations\x1a\x1cgoogle/api/annotations.proto\"\x1b\n\x19\x43reateOrganizationRequest\"\x1c\n\x1a\x43reateOrganizationResponse\"$\n\x16GetOrganizationRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x19\n\x17GetOrganizationResponse\"\'\n\x19UpdateOrganizationRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x1c\n\x1aUpdateOrganizationResponse\"\'\n\x19\x44\x65leteOrganizationRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x1c\n\x1a\x44\x65leteOrganizationResponse\"!\n\x13\x41ssignLeaderRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x16\n\x14\x41ssignLeaderResponse\"#\n\x15UnassignLeaderRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x18\n\x16UnassignLeaderResponse2\x80\x07\n\x18MruVOrganizationsService\x12\x8e\x01\n\x12\x43reateOrganization\x12-.mruv.organizations.CreateOrganizationRequest\x1a..mruv.organizations.CreateOrganizationResponse\"\x19\x82\xd3\xe4\x93\x02\x13\"\x11/v1/organizations\x12\x8a\x01\n\x0fGetOrganization\x12*.mruv.organizations.GetOrganizationRequest\x1a+.mruv.organizations.GetOrganizationResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\x12\x16/v1/organizations/{id}\x12\x93\x01\n\x12UpdateOrganization\x12-.mruv.organizations.UpdateOrganizationRequest\x1a..mruv.organizations.UpdateOrganizationResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\x32\x16/v1/organizations/{id}\x12\x93\x01\n\x12\x44\x65leteOrganization\x12-.mruv.organizations.DeleteOrganizationRequest\x1a..mruv.organizations.DeleteOrganizationResponse\"\x1e\x82\xd3\xe4\x93\x02\x18*\x16/v1/organizations/{id}\x12\x88\x01\n\x0c\x41ssignLeader\x12\'.mruv.organizations.AssignLeaderRequest\x1a(.mruv.organizations.AssignLeaderResponse\"%\x82\xd3\xe4\x93\x02\x1f\x1a\x1d/v1/organizations/{id}/leader\x12\x8e\x01\n\x0eUnassignLeader\x12).mruv.organizations.UnassignLeaderRequest\x1a*.mruv.organizations.UnassignLeaderResponse\"%\x82\xd3\xe4\x93\x02\x1f*\x1d/v1/organizations/{id}/leaderB-Z+github.com/MruV-RP/mruv-pb-go/organizationsb\x06proto3'
+  serialized_pb=b'\n!organizations/organizations.proto\x12\x12mruv.organizations\x1a\x1cgoogle/api/annotations.proto\"\x1b\n\x19\x43reateOrganizationRequest\"\x1c\n\x1a\x43reateOrganizationResponse\"$\n\x16GetOrganizationRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x19\n\x17GetOrganizationResponse\"\'\n\x19UpdateOrganizationRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x1c\n\x1aUpdateOrganizationResponse\"\'\n\x19\x44\x65leteOrganizationRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x1c\n\x1a\x44\x65leteOrganizationResponse\"!\n\x13\x41ssignLeaderRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x16\n\x14\x41ssignLeaderResponse\"#\n\x15UnassignLeaderRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x18\n\x16UnassignLeaderResponse2\x89\x07\n\x18MruVOrganizationsService\x12\x91\x01\n\x12\x43reateOrganization\x12-.mruv.organizations.CreateOrganizationRequest\x1a..mruv.organizations.CreateOrganizationResponse\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x11/v1/organizations:\x01*\x12\x8a\x01\n\x0fGetOrganization\x12*.mruv.organizations.GetOrganizationRequest\x1a+.mruv.organizations.GetOrganizationResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\x12\x16/v1/organizations/{id}\x12\x96\x01\n\x12UpdateOrganization\x12-.mruv.organizations.UpdateOrganizationRequest\x1a..mruv.organizations.UpdateOrganizationResponse\"!\x82\xd3\xe4\x93\x02\x1b\x32\x16/v1/organizations/{id}:\x01*\x12\x93\x01\n\x12\x44\x65leteOrganization\x12-.mruv.organizations.DeleteOrganizationRequest\x1a..mruv.organizations.DeleteOrganizationResponse\"\x1e\x82\xd3\xe4\x93\x02\x18*\x16/v1/organizations/{id}\x12\x8b\x01\n\x0c\x41ssignLeader\x12\'.mruv.organizations.AssignLeaderRequest\x1a(.mruv.organizations.AssignLeaderResponse\"(\x82\xd3\xe4\x93\x02\"\x1a\x1d/v1/organizations/{id}/leader:\x01*\x12\x8e\x01\n\x0eUnassignLeader\x12).mruv.organizations.UnassignLeaderRequest\x1a*.mruv.organizations.UnassignLeaderResponse\"%\x82\xd3\xe4\x93\x02\x1f*\x1d/v1/organizations/{id}/leaderB-Z+github.com/MruV-RP/mruv-pb-go/organizationsb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -470,7 +470,7 @@ _MRUVORGANIZATIONSSERVICE = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=476,
-  serialized_end=1372,
+  serialized_end=1381,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateOrganization',
@@ -479,7 +479,7 @@ _MRUVORGANIZATIONSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_CREATEORGANIZATIONREQUEST,
     output_type=_CREATEORGANIZATIONRESPONSE,
-    serialized_options=b'\202\323\344\223\002\023\"\021/v1/organizations',
+    serialized_options=b'\202\323\344\223\002\026\"\021/v1/organizations:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -499,7 +499,7 @@ _MRUVORGANIZATIONSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_UPDATEORGANIZATIONREQUEST,
     output_type=_UPDATEORGANIZATIONRESPONSE,
-    serialized_options=b'\202\323\344\223\002\0302\026/v1/organizations/{id}',
+    serialized_options=b'\202\323\344\223\002\0332\026/v1/organizations/{id}:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -519,7 +519,7 @@ _MRUVORGANIZATIONSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_ASSIGNLEADERREQUEST,
     output_type=_ASSIGNLEADERRESPONSE,
-    serialized_options=b'\202\323\344\223\002\037\032\035/v1/organizations/{id}/leader',
+    serialized_options=b'\202\323\344\223\002\"\032\035/v1/organizations/{id}/leader:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(

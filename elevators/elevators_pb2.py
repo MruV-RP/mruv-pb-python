@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\'github.com/MruV-RP/mruv-pb-go/elevators',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x19\x65levators/elevators.proto\x12\x0emruv.elevators\x1a\x1cgoogle/api/annotations.proto\"\x17\n\x15\x43reateElevatorRequest\"$\n\x16\x43reateElevatorResponse\x12\n\n\x02id\x18\x01 \x01(\r\" \n\x12GetElevatorRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x15\n\x13GetElevatorResponse\"#\n\x15UpdateElevatorRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x18\n\x16UpdateElevatorResponse\"#\n\x15\x44\x65leteElevatorRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x18\n\x16\x44\x65leteElevatorResponse\"&\n\x18GetElevatorFloorsRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x1b\n\x19GetElevatorFloorsResponse2\x8a\x05\n\x14MruVElevatorsService\x12v\n\x0e\x43reateElevator\x12%.mruv.elevators.CreateElevatorRequest\x1a&.mruv.elevators.CreateElevatorResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\"\r/v1/elevators\x12r\n\x0bGetElevator\x12\".mruv.elevators.GetElevatorRequest\x1a#.mruv.elevators.GetElevatorResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x12\x12/v1/elevators/{id}\x12{\n\x0eUpdateElevator\x12%.mruv.elevators.UpdateElevatorRequest\x1a&.mruv.elevators.UpdateElevatorResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x32\x12/v1/elevators/{id}\x12{\n\x0e\x44\x65leteElevator\x12%.mruv.elevators.DeleteElevatorRequest\x1a&.mruv.elevators.DeleteElevatorResponse\"\x1a\x82\xd3\xe4\x93\x02\x14*\x12/v1/elevators/{id}\x12\x8b\x01\n\x11GetElevatorFloors\x12(.mruv.elevators.GetElevatorFloorsRequest\x1a).mruv.elevators.GetElevatorFloorsResponse\"!\x82\xd3\xe4\x93\x02\x1b\x12\x19/v1/elevators/{id}/floorsB)Z\'github.com/MruV-RP/mruv-pb-go/elevatorsb\x06proto3'
+  serialized_pb=b'\n\x19\x65levators/elevators.proto\x12\x0emruv.elevators\x1a\x1cgoogle/api/annotations.proto\"\x17\n\x15\x43reateElevatorRequest\"$\n\x16\x43reateElevatorResponse\x12\n\n\x02id\x18\x01 \x01(\r\" \n\x12GetElevatorRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x15\n\x13GetElevatorResponse\"#\n\x15UpdateElevatorRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x18\n\x16UpdateElevatorResponse\"#\n\x15\x44\x65leteElevatorRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x18\n\x16\x44\x65leteElevatorResponse\"&\n\x18GetElevatorFloorsRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x1b\n\x19GetElevatorFloorsResponse2\x90\x05\n\x14MruVElevatorsService\x12y\n\x0e\x43reateElevator\x12%.mruv.elevators.CreateElevatorRequest\x1a&.mruv.elevators.CreateElevatorResponse\"\x18\x82\xd3\xe4\x93\x02\x12\"\r/v1/elevators:\x01*\x12r\n\x0bGetElevator\x12\".mruv.elevators.GetElevatorRequest\x1a#.mruv.elevators.GetElevatorResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x12\x12/v1/elevators/{id}\x12~\n\x0eUpdateElevator\x12%.mruv.elevators.UpdateElevatorRequest\x1a&.mruv.elevators.UpdateElevatorResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\x32\x12/v1/elevators/{id}:\x01*\x12{\n\x0e\x44\x65leteElevator\x12%.mruv.elevators.DeleteElevatorRequest\x1a&.mruv.elevators.DeleteElevatorResponse\"\x1a\x82\xd3\xe4\x93\x02\x14*\x12/v1/elevators/{id}\x12\x8b\x01\n\x11GetElevatorFloors\x12(.mruv.elevators.GetElevatorFloorsRequest\x1a).mruv.elevators.GetElevatorFloorsResponse\"!\x82\xd3\xe4\x93\x02\x1b\x12\x19/v1/elevators/{id}/floorsB)Z\'github.com/MruV-RP/mruv-pb-go/elevatorsb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -404,7 +404,7 @@ _MRUVELEVATORSSERVICE = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=391,
-  serialized_end=1041,
+  serialized_end=1047,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateElevator',
@@ -413,7 +413,7 @@ _MRUVELEVATORSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_CREATEELEVATORREQUEST,
     output_type=_CREATEELEVATORRESPONSE,
-    serialized_options=b'\202\323\344\223\002\017\"\r/v1/elevators',
+    serialized_options=b'\202\323\344\223\002\022\"\r/v1/elevators:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -433,7 +433,7 @@ _MRUVELEVATORSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_UPDATEELEVATORREQUEST,
     output_type=_UPDATEELEVATORRESPONSE,
-    serialized_options=b'\202\323\344\223\002\0242\022/v1/elevators/{id}',
+    serialized_options=b'\202\323\344\223\002\0272\022/v1/elevators/{id}:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(

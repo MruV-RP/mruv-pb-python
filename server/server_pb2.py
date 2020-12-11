@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z$github.com/MruV-RP/mruv-pb-go/server',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13server/server.proto\x12\x0bmruv.server\x1a\x1cgoogle/api/annotations.proto\x1a\x19server/server_model.proto\"\x1d\n\x1bGetRegisteredServersRequest\"H\n\x1cGetRegisteredServersResponse\x12(\n\x07servers\x18\x01 \x03(\x0b\x32\x17.mruv.server.ServerInfo\"c\n\x19UpdateServerStatusRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12)\n\x06status\x18\x02 \x01(\x0e\x32\x19.mruv.server.ServerStatus\x12\x0f\n\x07players\x18\x03 \x01(\r\"\x1c\n\x1aUpdateServerStatusResponse\"\'\n\x19ServerEventsStreamRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\xaa\x01\n\x0bServerEvent\x12\x36\n\x04type\x18\x01 \x01(\x0e\x32(.mruv.server.ServerEvent.ServerEventType\"c\n\x0fServerEventType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0e\n\nREGISTERED\x10\x01\x12\x0f\n\x0bSERVER_DOWN\x10\x02\x12\r\n\tSERVER_UP\x10\x03\x12\x13\n\x0fPLAYERS_CHANGED\x10\x04\x32\xad\x04\n\x11MruVServerService\x12U\n\x0eRegisterServer\x12\x17.mruv.server.ServerInfo\x1a\x15.mruv.server.ServerID\"\x13\x82\xd3\xe4\x93\x02\r\"\x0b/v1/servers\x12\x80\x01\n\x14GetRegisteredServers\x12(.mruv.server.GetRegisteredServersRequest\x1a).mruv.server.GetRegisteredServersResponse\"\x13\x82\xd3\xe4\x93\x02\r\x12\x0b/v1/servers\x12Y\n\rGetServerInfo\x12\x15.mruv.server.ServerID\x1a\x17.mruv.server.ServerInfo\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/servers/{id}\x12\x86\x01\n\x12UpdateServerStatus\x12&.mruv.server.UpdateServerStatusRequest\x1a\'.mruv.server.UpdateServerStatusResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\x32\x17/v1/servers/{id}/status\x12Z\n\x12ServerEventsStream\x12&.mruv.server.ServerEventsStreamRequest\x1a\x18.mruv.server.ServerEvent\"\x00\x30\x01\x42&Z$github.com/MruV-RP/mruv-pb-go/serverb\x06proto3'
+  serialized_pb=b'\n\x13server/server.proto\x12\x0bmruv.server\x1a\x1cgoogle/api/annotations.proto\x1a\x19server/server_model.proto\"\x1d\n\x1bGetRegisteredServersRequest\"H\n\x1cGetRegisteredServersResponse\x12(\n\x07servers\x18\x01 \x03(\x0b\x32\x17.mruv.server.ServerInfo\"c\n\x19UpdateServerStatusRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12)\n\x06status\x18\x02 \x01(\x0e\x32\x19.mruv.server.ServerStatus\x12\x0f\n\x07players\x18\x03 \x01(\r\"\x1c\n\x1aUpdateServerStatusResponse\"\'\n\x19ServerEventsStreamRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\xaa\x01\n\x0bServerEvent\x12\x36\n\x04type\x18\x01 \x01(\x0e\x32(.mruv.server.ServerEvent.ServerEventType\"c\n\x0fServerEventType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0e\n\nREGISTERED\x10\x01\x12\x0f\n\x0bSERVER_DOWN\x10\x02\x12\r\n\tSERVER_UP\x10\x03\x12\x13\n\x0fPLAYERS_CHANGED\x10\x04\x32\xb3\x04\n\x11MruVServerService\x12X\n\x0eRegisterServer\x12\x17.mruv.server.ServerInfo\x1a\x15.mruv.server.ServerID\"\x16\x82\xd3\xe4\x93\x02\x10\"\x0b/v1/servers:\x01*\x12\x80\x01\n\x14GetRegisteredServers\x12(.mruv.server.GetRegisteredServersRequest\x1a).mruv.server.GetRegisteredServersResponse\"\x13\x82\xd3\xe4\x93\x02\r\x12\x0b/v1/servers\x12Y\n\rGetServerInfo\x12\x15.mruv.server.ServerID\x1a\x17.mruv.server.ServerInfo\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/servers/{id}\x12\x89\x01\n\x12UpdateServerStatus\x12&.mruv.server.UpdateServerStatusRequest\x1a\'.mruv.server.UpdateServerStatusResponse\"\"\x82\xd3\xe4\x93\x02\x1c\x32\x17/v1/servers/{id}/status:\x01*\x12Z\n\x12ServerEventsStream\x12&.mruv.server.ServerEventsStreamRequest\x1a\x18.mruv.server.ServerEvent\"\x00\x30\x01\x42&Z$github.com/MruV-RP/mruv-pb-go/serverb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,server_dot_server__model__pb2.DESCRIPTOR,])
 
@@ -325,7 +325,7 @@ _MRUVSERVERSERVICE = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=544,
-  serialized_end=1101,
+  serialized_end=1107,
   methods=[
   _descriptor.MethodDescriptor(
     name='RegisterServer',
@@ -334,7 +334,7 @@ _MRUVSERVERSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=server_dot_server__model__pb2._SERVERINFO,
     output_type=server_dot_server__model__pb2._SERVERID,
-    serialized_options=b'\202\323\344\223\002\r\"\013/v1/servers',
+    serialized_options=b'\202\323\344\223\002\020\"\013/v1/servers:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -364,7 +364,7 @@ _MRUVSERVERSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_UPDATESERVERSTATUSREQUEST,
     output_type=_UPDATESERVERSTATUSRESPONSE,
-    serialized_options=b'\202\323\344\223\002\0312\027/v1/servers/{id}/status',
+    serialized_options=b'\202\323\344\223\002\0342\027/v1/servers/{id}/status:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(

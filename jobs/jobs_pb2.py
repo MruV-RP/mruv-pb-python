@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\"github.com/MruV-RP/mruv-pb-go/jobs',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0fjobs/jobs.proto\x12\tmruv.jobs\x1a\x1cgoogle/api/annotations.proto\"\x12\n\x10\x43reateJobRequest\"\x13\n\x11\x43reateJobResponse\"\x1b\n\rGetJobRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x10\n\x0eGetJobResponse\"\x1e\n\x10UpdateJobRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x13\n\x11UpdateJobResponse\"\x1e\n\x10\x44\x65leteJobRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x13\n\x11\x44\x65leteJobResponse2\xff\x02\n\x0fMruVJobsService\x12X\n\tCreateJob\x12\x1b.mruv.jobs.CreateJobRequest\x1a\x1c.mruv.jobs.CreateJobResponse\"\x10\x82\xd3\xe4\x93\x02\n\"\x08/v1/jobs\x12T\n\x06GetJob\x12\x18.mruv.jobs.GetJobRequest\x1a\x19.mruv.jobs.GetJobResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\x12\r/v1/jobs/{id}\x12]\n\tUpdateJob\x12\x1b.mruv.jobs.UpdateJobRequest\x1a\x1c.mruv.jobs.UpdateJobResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\x32\r/v1/jobs/{id}\x12]\n\tDeleteJob\x12\x1b.mruv.jobs.DeleteJobRequest\x1a\x1c.mruv.jobs.DeleteJobResponse\"\x15\x82\xd3\xe4\x93\x02\x0f*\r/v1/jobs/{id}B$Z\"github.com/MruV-RP/mruv-pb-go/jobsb\x06proto3'
+  serialized_pb=b'\n\x0fjobs/jobs.proto\x12\tmruv.jobs\x1a\x1cgoogle/api/annotations.proto\"\x12\n\x10\x43reateJobRequest\"\x13\n\x11\x43reateJobResponse\"\x1b\n\rGetJobRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x10\n\x0eGetJobResponse\"\x1e\n\x10UpdateJobRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x13\n\x11UpdateJobResponse\"\x1e\n\x10\x44\x65leteJobRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x13\n\x11\x44\x65leteJobResponse2\x85\x03\n\x0fMruVJobsService\x12[\n\tCreateJob\x12\x1b.mruv.jobs.CreateJobRequest\x1a\x1c.mruv.jobs.CreateJobResponse\"\x13\x82\xd3\xe4\x93\x02\r\"\x08/v1/jobs:\x01*\x12T\n\x06GetJob\x12\x18.mruv.jobs.GetJobRequest\x1a\x19.mruv.jobs.GetJobResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\x12\r/v1/jobs/{id}\x12`\n\tUpdateJob\x12\x1b.mruv.jobs.UpdateJobRequest\x1a\x1c.mruv.jobs.UpdateJobResponse\"\x18\x82\xd3\xe4\x93\x02\x12\x32\r/v1/jobs/{id}:\x01*\x12]\n\tDeleteJob\x12\x1b.mruv.jobs.DeleteJobRequest\x1a\x1c.mruv.jobs.DeleteJobResponse\"\x15\x82\xd3\xe4\x93\x02\x0f*\r/v1/jobs/{id}B$Z\"github.com/MruV-RP/mruv-pb-go/jobsb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -324,7 +324,7 @@ _MRUVJOBSSERVICE = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=255,
-  serialized_end=638,
+  serialized_end=644,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateJob',
@@ -333,7 +333,7 @@ _MRUVJOBSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_CREATEJOBREQUEST,
     output_type=_CREATEJOBRESPONSE,
-    serialized_options=b'\202\323\344\223\002\n\"\010/v1/jobs',
+    serialized_options=b'\202\323\344\223\002\r\"\010/v1/jobs:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -353,7 +353,7 @@ _MRUVJOBSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_UPDATEJOBREQUEST,
     output_type=_UPDATEJOBRESPONSE,
-    serialized_options=b'\202\323\344\223\002\0172\r/v1/jobs/{id}',
+    serialized_options=b'\202\323\344\223\002\0222\r/v1/jobs/{id}:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(

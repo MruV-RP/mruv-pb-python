@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z+github.com/MruV-RP/mruv-pb-go/texturestudio',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n(texturestudio/texturestudio_server.proto\x12\x0etexture_studio\x1a\x1cgoogle/api/annotations.proto\" \n\x12StartServerRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x15\n\x13StartServerResponse\"\x1f\n\x11StopServerRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x14\n\x12StopServerResponse\"\"\n\x14RestartServerRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x17\n\x15RestartServerResponse\"!\n\x13ServerStatusRequest\x12\n\n\x02id\x18\x01 \x01(\r\"R\n\x14ServerStatusResponse\x12\x0c\n\x04port\x18\x01 \x01(\r\x12,\n\x06status\x18\x02 \x01(\x0e\x32\x1c.texture_studio.ServerStatus\"j\n\x14UploadProjectRequest\x12\x11\n\tserver_id\x18\x01 \x01(\r\x12\x14\n\x0cproject_name\x18\x02 \x01(\t\x12\x0e\n\x04\x63ode\x18\x04 \x01(\tH\x00\x12\x0e\n\x04\x66ile\x18\x05 \x01(\x0cH\x00\x42\t\n\x07project\"\x17\n\x15UploadProjectResponse\"4\n\x11GetProjectRequest\x12\x11\n\tserver_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"\"\n\x12GetProjectResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\t\"\'\n\x12GetProjectsRequest\x12\x11\n\tserver_id\x18\x01 \x01(\r\"$\n\x13GetProjectsResponse\x12\r\n\x05names\x18\x01 \x03(\t\"6\n!SubscribeToProjectsChangesRequest\x12\x11\n\tserver_id\x18\x01 \x01(\r\"2\n\"SubscribeToProjectsChangesResponse\x12\x0c\n\x04name\x18\x01 \x01(\t*3\n\x0cServerStatus\x12\x12\n\x0eUNKNOWN_STATUS\x10\x00\x12\x06\n\x02ON\x10\x01\x12\x07\n\x03OFF\x10\x02\x32\x82\t\n\x1aTextureStudioServerService\x12\x83\x01\n\x0bStartServer\x12\".texture_studio.StartServerRequest\x1a#.texture_studio.StartServerResponse\"+\x82\xd3\xe4\x93\x02%\"#/v1/texturestudio/server/{id}/start\x12\x7f\n\nStopServer\x12!.texture_studio.StopServerRequest\x1a\".texture_studio.StopServerResponse\"*\x82\xd3\xe4\x93\x02$\"\"/v1/texturestudio/server/{id}/stop\x12\x8b\x01\n\rRestartServer\x12$.texture_studio.RestartServerRequest\x1a%.texture_studio.RestartServerResponse\"-\x82\xd3\xe4\x93\x02\'\"%/v1/texturestudio/server/{id}/restart\x12\x87\x01\n\x0cServerStatus\x12#.texture_studio.ServerStatusRequest\x1a$.texture_studio.ServerStatusResponse\",\x82\xd3\xe4\x93\x02&\x12$/v1/texturestudio/server/{id}/status\x12\x96\x01\n\rUploadProject\x12$.texture_studio.UploadProjectRequest\x1a%.texture_studio.UploadProjectResponse\"8\x82\xd3\xe4\x93\x02\x32\"-/v1/texturestudio/server/{server_id}/projects:\x01*\x12\x91\x01\n\nGetProject\x12!.texture_studio.GetProjectRequest\x1a\".texture_studio.GetProjectResponse\"<\x82\xd3\xe4\x93\x02\x36\x12\x34/v1/texturestudio/server/{server_id}/projects/{name}\x12\x8d\x01\n\x0bGetProjects\x12\".texture_studio.GetProjectsRequest\x1a#.texture_studio.GetProjectsResponse\"5\x82\xd3\xe4\x93\x02/\x12-/v1/texturestudio/server/{server_id}/projects\x12\x87\x01\n\x1aSubscribeToProjectsChanges\x12\x31.texture_studio.SubscribeToProjectsChangesRequest\x1a\x32.texture_studio.SubscribeToProjectsChangesResponse\"\x00\x30\x01\x42-Z+github.com/MruV-RP/mruv-pb-go/texturestudiob\x06proto3'
+  serialized_pb=b'\n(texturestudio/texturestudio_server.proto\x12\x0etexture_studio\x1a\x1cgoogle/api/annotations.proto\" \n\x12StartServerRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x15\n\x13StartServerResponse\"\x1f\n\x11StopServerRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x14\n\x12StopServerResponse\"\"\n\x14RestartServerRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x17\n\x15RestartServerResponse\"!\n\x13ServerStatusRequest\x12\n\n\x02id\x18\x01 \x01(\r\"R\n\x14ServerStatusResponse\x12\x0c\n\x04port\x18\x01 \x01(\r\x12,\n\x06status\x18\x02 \x01(\x0e\x32\x1c.texture_studio.ServerStatus\"j\n\x14UploadProjectRequest\x12\x11\n\tserver_id\x18\x01 \x01(\r\x12\x14\n\x0cproject_name\x18\x02 \x01(\t\x12\x0e\n\x04\x63ode\x18\x04 \x01(\tH\x00\x12\x0e\n\x04\x66ile\x18\x05 \x01(\x0cH\x00\x42\t\n\x07project\"\x17\n\x15UploadProjectResponse\"4\n\x11GetProjectRequest\x12\x11\n\tserver_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"\"\n\x12GetProjectResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\t\"\'\n\x12GetProjectsRequest\x12\x11\n\tserver_id\x18\x01 \x01(\r\"$\n\x13GetProjectsResponse\x12\r\n\x05names\x18\x01 \x03(\t\"6\n!SubscribeToProjectsChangesRequest\x12\x11\n\tserver_id\x18\x01 \x01(\r\"2\n\"SubscribeToProjectsChangesResponse\x12\x0c\n\x04name\x18\x01 \x01(\t*3\n\x0cServerStatus\x12\x12\n\x0eUNKNOWN_STATUS\x10\x00\x12\x06\n\x02ON\x10\x01\x12\x07\n\x03OFF\x10\x02\x32\x8c\t\n\x1aTextureStudioServerService\x12\x86\x01\n\x0bStartServer\x12\".texture_studio.StartServerRequest\x1a#.texture_studio.StartServerResponse\".\x82\xd3\xe4\x93\x02(\"#/v1/texturestudio/server/{id}/start:\x01*\x12\x82\x01\n\nStopServer\x12!.texture_studio.StopServerRequest\x1a\".texture_studio.StopServerResponse\"-\x82\xd3\xe4\x93\x02\'\"\"/v1/texturestudio/server/{id}/stop:\x01*\x12\x8e\x01\n\rRestartServer\x12$.texture_studio.RestartServerRequest\x1a%.texture_studio.RestartServerResponse\"0\x82\xd3\xe4\x93\x02*\"%/v1/texturestudio/server/{id}/restart:\x01*\x12\x87\x01\n\x0cServerStatus\x12#.texture_studio.ServerStatusRequest\x1a$.texture_studio.ServerStatusResponse\",\x82\xd3\xe4\x93\x02&\x12$/v1/texturestudio/server/{id}/status\x12\x96\x01\n\rUploadProject\x12$.texture_studio.UploadProjectRequest\x1a%.texture_studio.UploadProjectResponse\"8\x82\xd3\xe4\x93\x02\x32\"-/v1/texturestudio/server/{server_id}/projects:\x01*\x12\x91\x01\n\nGetProject\x12!.texture_studio.GetProjectRequest\x1a\".texture_studio.GetProjectResponse\"<\x82\xd3\xe4\x93\x02\x36\x12\x34/v1/texturestudio/server/{server_id}/projects/{name}\x12\x8d\x01\n\x0bGetProjects\x12\".texture_studio.GetProjectsRequest\x1a#.texture_studio.GetProjectsResponse\"5\x82\xd3\xe4\x93\x02/\x12-/v1/texturestudio/server/{server_id}/projects\x12\x87\x01\n\x1aSubscribeToProjectsChanges\x12\x31.texture_studio.SubscribeToProjectsChangesRequest\x1a\x32.texture_studio.SubscribeToProjectsChangesResponse\"\x00\x30\x01\x42-Z+github.com/MruV-RP/mruv-pb-go/texturestudiob\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -734,7 +734,7 @@ _TEXTURESTUDIOSERVERSERVICE = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=846,
-  serialized_end=2000,
+  serialized_end=2010,
   methods=[
   _descriptor.MethodDescriptor(
     name='StartServer',
@@ -743,7 +743,7 @@ _TEXTURESTUDIOSERVERSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_STARTSERVERREQUEST,
     output_type=_STARTSERVERRESPONSE,
-    serialized_options=b'\202\323\344\223\002%\"#/v1/texturestudio/server/{id}/start',
+    serialized_options=b'\202\323\344\223\002(\"#/v1/texturestudio/server/{id}/start:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -753,7 +753,7 @@ _TEXTURESTUDIOSERVERSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_STOPSERVERREQUEST,
     output_type=_STOPSERVERRESPONSE,
-    serialized_options=b'\202\323\344\223\002$\"\"/v1/texturestudio/server/{id}/stop',
+    serialized_options=b'\202\323\344\223\002\'\"\"/v1/texturestudio/server/{id}/stop:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -763,7 +763,7 @@ _TEXTURESTUDIOSERVERSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_RESTARTSERVERREQUEST,
     output_type=_RESTARTSERVERRESPONSE,
-    serialized_options=b'\202\323\344\223\002\'\"%/v1/texturestudio/server/{id}/restart',
+    serialized_options=b'\202\323\344\223\002*\"%/v1/texturestudio/server/{id}/restart:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(

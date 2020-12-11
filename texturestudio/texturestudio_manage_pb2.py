@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z+github.com/MruV-RP/mruv-pb-go/texturestudio',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n(texturestudio/texturestudio_manage.proto\x12\x0etexture_studio\x1a\x1cgoogle/api/annotations.proto\"\'\n\x13\x43reateServerRequest\x12\x10\n\x08owner_id\x18\x01 \x01(\r\"0\n\x14\x43reateServerResponse\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04port\x18\x02 \x01(\r\"\x13\n\x11GetServersRequest\" \n\x12GetServersResponse\x12\n\n\x02id\x18\x01 \x03(\r\"\x11\n\x0fMyServerRequest\"\x1e\n\x10MyServerResponse\x12\n\n\x02id\x18\x01 \x01(\r\"?\n\x18TransferOwnershipRequest\x12\x11\n\tserver_id\x18\x01 \x01(\r\x12\x10\n\x08owner_id\x18\x02 \x01(\r\"\x1b\n\x19TransferOwnershipResponse\"!\n\x13\x44\x65leteServerRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x16\n\x14\x44\x65leteServerResponse2\xa6\x05\n\x1bTextureStudioManagerService\x12|\n\x0c\x43reateServer\x12#.texture_studio.CreateServerRequest\x1a$.texture_studio.CreateServerResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x19/v1/texturestudio/servers\x12v\n\nGetServers\x12!.texture_studio.GetServersRequest\x1a\".texture_studio.GetServersResponse\"!\x82\xd3\xe4\x93\x02\x1b\x12\x19/v1/texturestudio/servers\x12s\n\x08MyServer\x12\x1f.texture_studio.MyServerRequest\x1a .texture_studio.MyServerResponse\"$\x82\xd3\xe4\x93\x02\x1e\x12\x1c/v1/texturestudio/servers/my\x12\x97\x01\n\x11TransferOwnership\x12(.texture_studio.TransferOwnershipRequest\x1a).texture_studio.TransferOwnershipResponse\"-\x82\xd3\xe4\x93\x02\'2%/v1/texturestudio/servers/{server_id}\x12\x81\x01\n\x0c\x44\x65leteServer\x12#.texture_studio.DeleteServerRequest\x1a$.texture_studio.DeleteServerResponse\"&\x82\xd3\xe4\x93\x02 *\x1e/v1/texturestudio/servers/{id}B-Z+github.com/MruV-RP/mruv-pb-go/texturestudiob\x06proto3'
+  serialized_pb=b'\n(texturestudio/texturestudio_manage.proto\x12\x0etexture_studio\x1a\x1cgoogle/api/annotations.proto\"\'\n\x13\x43reateServerRequest\x12\x10\n\x08owner_id\x18\x01 \x01(\r\"0\n\x14\x43reateServerResponse\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04port\x18\x02 \x01(\r\"\x13\n\x11GetServersRequest\" \n\x12GetServersResponse\x12\n\n\x02id\x18\x01 \x03(\r\"\x11\n\x0fMyServerRequest\"\x1e\n\x10MyServerResponse\x12\n\n\x02id\x18\x01 \x01(\r\"?\n\x18TransferOwnershipRequest\x12\x11\n\tserver_id\x18\x01 \x01(\r\x12\x10\n\x08owner_id\x18\x02 \x01(\r\"\x1b\n\x19TransferOwnershipResponse\"!\n\x13\x44\x65leteServerRequest\x12\n\n\x02id\x18\x01 \x01(\r\"\x16\n\x14\x44\x65leteServerResponse2\xac\x05\n\x1bTextureStudioManagerService\x12\x7f\n\x0c\x43reateServer\x12#.texture_studio.CreateServerRequest\x1a$.texture_studio.CreateServerResponse\"$\x82\xd3\xe4\x93\x02\x1e\"\x19/v1/texturestudio/servers:\x01*\x12v\n\nGetServers\x12!.texture_studio.GetServersRequest\x1a\".texture_studio.GetServersResponse\"!\x82\xd3\xe4\x93\x02\x1b\x12\x19/v1/texturestudio/servers\x12s\n\x08MyServer\x12\x1f.texture_studio.MyServerRequest\x1a .texture_studio.MyServerResponse\"$\x82\xd3\xe4\x93\x02\x1e\x12\x1c/v1/texturestudio/servers/my\x12\x9a\x01\n\x11TransferOwnership\x12(.texture_studio.TransferOwnershipRequest\x1a).texture_studio.TransferOwnershipResponse\"0\x82\xd3\xe4\x93\x02*2%/v1/texturestudio/servers/{server_id}:\x01*\x12\x81\x01\n\x0c\x44\x65leteServer\x12#.texture_studio.DeleteServerRequest\x1a$.texture_studio.DeleteServerResponse\"&\x82\xd3\xe4\x93\x02 *\x1e/v1/texturestudio/servers/{id}B-Z+github.com/MruV-RP/mruv-pb-go/texturestudiob\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -425,7 +425,7 @@ _TEXTURESTUDIOMANAGERSERVICE = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=441,
-  serialized_end=1119,
+  serialized_end=1125,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateServer',
@@ -434,7 +434,7 @@ _TEXTURESTUDIOMANAGERSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_CREATESERVERREQUEST,
     output_type=_CREATESERVERRESPONSE,
-    serialized_options=b'\202\323\344\223\002\033\"\031/v1/texturestudio/servers',
+    serialized_options=b'\202\323\344\223\002\036\"\031/v1/texturestudio/servers:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -464,7 +464,7 @@ _TEXTURESTUDIOMANAGERSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_TRANSFEROWNERSHIPREQUEST,
     output_type=_TRANSFEROWNERSHIPRESPONSE,
-    serialized_options=b'\202\323\344\223\002\'2%/v1/texturestudio/servers/{server_id}',
+    serialized_options=b'\202\323\344\223\002*2%/v1/texturestudio/servers/{server_id}:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
